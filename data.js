@@ -29,7 +29,7 @@ const AGENDA_DATA = [
     "Time": "10:25 - 11:05",
     "Activity Name": "Disclosure 2.0: Rethinking Transparency in the Age of Information Overload",
     "Format": "Panel Discussion",
-    "Speaker / Participant / Moderator": "Mr. Ajay Agarwal (Speaker)\nMr. Mahavir Lunawat (Speaker)\nMr. Sandip Bhagat (Speaker)",
+    "Speaker / Participant / Moderator": "Mr. Ajay Agarwal (Speaker)\nMr. Mahavir Lunawat (Speaker)\nMr. Sandip Bhagat (Speaker), Test (Moderator)",
     "Company Name": "HDFC Bank, Pantomath Financial Services Group, S&R Associates",
     "Location / Room": "Lotus 1",
     "Tracks": "Capital Markets, Governance, Trust",
