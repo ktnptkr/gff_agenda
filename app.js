@@ -19,7 +19,6 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 let isChatOpen = false;
 
-// Cleaned up announcements (no room capacity mentions)
 const LIVE_ANNOUNCEMENTS = [
     { text: "Welcome to Global Fintech Fest 2026! Explore tracks and network via attendee chat.", time: "10:15 AM" }
 ];
@@ -131,10 +130,67 @@ function subscribeToRealtimeChat() {
         .subscribe();
 }
 
+// Security: Comprehensive Profanity, Indian Slangs, and Spam Filtering Integration
+const PROFANITY_LIST = [
+    // General Profanity & Slurs
+    "damn", "hell", "crap", "ass", "asshole", "bastard", "bitch", "cunt", "dick", 
+    "fag", "faggot", "fuck", "motherfucker", "nigga", "nigger", "piss", "pussy", 
+    "shit", "slut", "whore", "cock", "prick", "twat", "wanker", "bollocks", 
+    "douche", "douchebag", "idiot", "moron", "stfu", "gtfo", "kys",
+
+    // Indian Slangs & Profanities
+    "chutiya", "bhenchod", "madarchod", "bhosdike", "gandu", "gaand", "harami", 
+    "kaminey", "kamina", "saala", "sala", "mc", "bc", "choot", "chodu", 
+    "jhaant", "lauda", "lund", "randi", "kamina", "tatti", "chipkali", "bsdk"
+
+    // Spam, Scams, & Commercial Solicitation Keywords
+    "crypto", "bitcoin", "btc", "eth", "giveaway", "airdrop", "free money", 
+    "earn cash", "passive income", "binary options", "forex signals", "investment scheme", 
+    "whatsapp me", "telegram me", "dm for promo", "buy followers", "loan approval", 
+    "instant loan", "work from home", "make money online", "click here", "subscribe now"
+];
+
+function containsProfanity(text) {
+    if (!text) return false;
+    
+    // Convert to lowercase and normalize substitute/leetspeak characters
+    const lowerText = text.toLowerCase();
+    const normalized = lowerText
+        .replace(/[@4]/g, 'a')
+        .replace(/[3]/g, 'e')
+        .replace(/[1!|]/g, 'i')
+        .replace(/[0]/g, 'o')
+        .replace(/[$5]/g, 's')
+        .replace(/[^a-z0-9\s]/g, ''); // strip punctuation/symbols used for evasion
+
+    // Check for exact word matches or substring matches against the denylist
+    return PROFANITY_LIST.some(word => {
+        // Use word boundary check for short words to avoid false positives (e.g., "class" containing "ass")
+        if (word.length <= 4) {
+            const regex = new RegExp(`\\b${word}\\b`, 'i');
+            return regex.test(normalized) || regex.test(lowerText);
+        }
+        return normalized.includes(word) || lowerText.includes(word);
+    });
+}
+
 async function sendChatMessage() {
     const msgInput = document.getElementById('chat-msg-input');
     const message = msgInput.value.trim();
     if (!message) return;
+
+    // Check for Profanity or Spam Keywords
+    if (containsProfanity(message)) {
+        showToast("Message blocked: Contains prohibited language or spam terms.", "⚠️");
+        return;
+    }
+
+    // Check for Duplicate Flood protection (comparing against last sent text)
+    const lastSent = sessionStorage.getItem('gff_last_msg') || '';
+    if (lastSent === message) {
+        showToast("Spam protection: Please avoid sending duplicate messages.", "⚠️");
+        return;
+    }
 
     const profile = JSON.parse(localStorage.getItem('gff_user_profile'));
     if (!profile) {
@@ -149,6 +205,7 @@ async function sendChatMessage() {
         .insert([{ user_name: displayName, message: message }]);
 
     if (!error) {
+        sessionStorage.setItem('gff_last_msg', message);
         msgInput.value = '';
         const dropdown = document.getElementById('chat-mention-dropdown');
         if(dropdown) dropdown.classList.add('hidden');
@@ -834,7 +891,7 @@ function openSearchEngine(platform, encodedQuery) {
     navigator.clipboard.writeText(query).then(() => {
         showToast(`Topic copied! Ready for ${platform.charAt(0).toUpperCase() + platform.slice(1)}`, "📋");
     }).catch(() => {
-        console.log("Clipboard copy failed");
+        console.log("Clipboard copy files failed");
     });
 
     if (isMobile) {
