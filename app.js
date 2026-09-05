@@ -9,7 +9,8 @@ let searchQuery = "";
 let viewMode = "all"; 
 let savedSessionIds = JSON.parse(localStorage.getItem('gff_saved_sessions')) || [];
 
-const CURRENT_TIME = new Date("2026-09-09T10:40:00+05:30"); 
+// Use actual real-time clock for "Live Now" matching
+const CURRENT_TIME = new Date(); 
 
 // Supabase Configuration
 const SUPABASE_URL = 'https://prsqblepuzjlucnqqvsd.supabase.co';
@@ -19,8 +20,8 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 let isChatOpen = false;
 
 const LIVE_ANNOUNCEMENTS = [
-    { text: "Hall 102 capacity is currently at 95%. Consider heading to overflow seating in Hall 103.", time: "10:35 AM" },
-    { text: "Room change: Keynote on Quantum AI has been moved from Jasmine 2 to The Grand Theatre.", time: "10:15 AM" }
+    { text: "Hall 102 events are underway. Check the agenda for live room updates.", time: "10:35 AM" },
+    { text: "Welcome to Global Fintech Fest 2026! Explore tracks and network via attendee chat.", time: "10:15 AM" }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(checkUpcomingReminders, 30000); 
 });
 
-// Chat Drawer & Validation Logic
+// Chat Drawer & Validation Logic with GTM Lead Storage
 function toggleChatDrawer() {
     isChatOpen = !isChatOpen;
     const drawer = document.getElementById('chat-drawer');
@@ -66,7 +67,7 @@ function checkChatValidationState() {
     }
 }
 
-function submitChatValidation() {
+async function submitChatValidation() {
     const name = document.getElementById('val-name').value.trim();
     const org = document.getElementById('val-org').value.trim();
     const email = document.getElementById('val-email').value.trim();
@@ -87,8 +88,24 @@ function submitChatValidation() {
     }
 
     const profile = { name, org, email, mobile, desig, attending };
+
+    // Store details in DB for GTM purposes
+    const { error } = await supabaseClient
+        .from('gff_leads')
+        .insert([{ 
+            name: name, 
+            organization: org, 
+            email: email, 
+            mobile: mobile || null, 
+            designation: desig, 
+            attending: attending 
+        }]);
+
+    if (error) {
+        console.error("Error saving lead to database:", error);
+    }
+
     localStorage.setItem('gff_user_profile', JSON.stringify(profile));
-    
     showToast("Profile verified successfully!", "✅");
     checkChatValidationState();
 }
@@ -215,8 +232,6 @@ function createMessageHTML(m) {
     const isMe = m.user_name === myDisplayName;
 
     let formattedMessage = escapeHTML(m.message || '');
-    
-    // Pattern 1: Standard @[Title](ID) format
     const tagRegex = /@\[(.*?)\]\((.*?)\)/g;
     formattedMessage = formattedMessage.replace(tagRegex, (match, title, id) => {
         let displayTitle = title;
@@ -224,14 +239,6 @@ function createMessageHTML(m) {
             const found = AGENDA_DATA.find(e => e.id === id);
             displayTitle = found ? found["Activity Name"] : "View Session";
         }
-        return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-white/20 text-white font-semibold px-2.5 py-1 rounded-md cursor-pointer hover:underline my-0.5 border border-white/30">📅 ${escapeHTML(displayTitle)}</span>`;
-    });
-
-    // Pattern 2: Fallback for raw session IDs or legacy formats
-    const rawIdRegex = /#session=([a-f0-9]{8})/g;
-    formattedMessage = formattedMessage.replace(rawIdRegex, (match, id) => {
-        const found = AGENDA_DATA.find(e => e.id === id);
-        const displayTitle = found ? found["Activity Name"] : "View Session";
         return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-white/20 text-white font-semibold px-2.5 py-1 rounded-md cursor-pointer hover:underline my-0.5 border border-white/30">📅 ${escapeHTML(displayTitle)}</span>`;
     });
 
@@ -244,11 +251,12 @@ function createMessageHTML(m) {
         </div>
     `;
 }
+
 function escapeHTML(str) {
     return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
 }
 
-// Announcements & Room Capacity Logic
+// Announcements Logic
 function checkAnnouncements() {
     const banner = document.getElementById('live-announcement-banner');
     const textEl = document.getElementById('announcement-text');
@@ -261,17 +269,6 @@ function checkAnnouncements() {
 function dismissAnnouncement() {
     document.getElementById('live-announcement-banner').classList.add('hidden');
     localStorage.setItem('dismissed_announcement', 'true');
-}
-
-function getRoomCapacity(eventId, hallName) {
-    let hash = 0;
-    for (let i = 0; i < eventId.length; i++) hash += eventId.charCodeAt(i);
-    const percentage = (hash % 65) + 30; 
-    let statusText = "Open Seating";
-    let badgeColor = "bg-emerald-100 text-emerald-700 border-emerald-200";
-    if (percentage > 85) { statusText = "Nearly Full 🔴"; badgeColor = "bg-red-100 text-red-700 border-red-200"; }
-    else if (percentage > 65) { statusText = "Filling Fast 🟡"; badgeColor = "bg-amber-100 text-amber-700 border-amber-200"; }
-    return { percentage, statusText, badgeColor };
 }
 
 // Deep Linking Handler
@@ -521,7 +518,6 @@ function renderAgenda() {
         grouped[timeKey].forEach(event => {
             const status = checkLiveStatus(event.Date, event.Time);
             const isSaved = savedSessionIds.includes(event.id);
-            const capacity = getRoomCapacity(event.id, event["Location / Room"]);
             
             let speakers = event["Speaker / Participant / Moderator"] ? event["Speaker / Participant / Moderator"].replace(/\n/g, ', ') : "";
             if(speakers.length > 50) speakers = speakers.substring(0, 50) + '...';
@@ -534,7 +530,6 @@ function renderAgenda() {
                         ${status.isImminent && !status.isLive ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-orange-100 text-orange-600 rounded-md uppercase tracking-wide">Starting Soon</span>' : ''}
                         ${status.isPast ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 border border-slate-200 rounded-md uppercase tracking-wide">Completed</span>' : ''}
                         <span class="text-xs font-semibold px-2 py-0.5 bg-slate-50 text-slate-600 border border-slate-100 rounded-md truncate max-w-[120px]">${event.Format || 'Session'}</span>
-                        <span class="text-[10px] font-bold px-2 py-0.5 border ${capacity.badgeColor} rounded-md">${capacity.statusText}</span>
                     </div>
                     
                     <div class="flex items-center gap-1 flex-shrink-0">
@@ -628,7 +623,6 @@ function shareItinerary() {
         return;
     }
     const shareUrl = `${window.location.origin}${window.location.pathname}#saved=${savedSessionIds.join(',')}`;
-    
     if (navigator.share) {
         navigator.share({ title: 'My GFF 2026 Itinerary', url: shareUrl }).catch(() => {});
     } else {
@@ -640,7 +634,6 @@ function shareSession(id, eventObj) {
     if(eventObj) eventObj.stopPropagation();
     const event = AGENDA_DATA.find(e => e.id === id);
     const shareUrl = `${window.location.origin}${window.location.pathname}#session=${id}`;
-    
     if (navigator.share) {
         navigator.share({
             title: event ? event["Activity Name"] : 'GFF 2026 Session',
