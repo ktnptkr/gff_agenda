@@ -1,28 +1,17 @@
-/* Custom Scrollbar Hiding for clean mobile view */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* MBB-grade Glassmorphism */
-.glass-nav {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+.glass-nav { background: rgba(248, 250, 252, 0.90); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.glass-drawer { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+
+/* Time-based states */
+.past-event { opacity: 0.6; filter: grayscale(80%); }
+.live-badge {
+    animation: pulse-border 2s infinite;
 }
 
-.glass-drawer {
-    background: rgba(248, 250, 252, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-/* Time-aware Logic Styling */
-.past-event {
-    opacity: 0.55;
-    filter: grayscale(80%);
-}
-.past-event-badge {
-    background-color: #fee2e2; 
-    color: #b91c1c; 
-    border: 1px solid #fecaca;
+@keyframes pulse-border {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    70% { box-shadow: 0 0 0 4px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
 }

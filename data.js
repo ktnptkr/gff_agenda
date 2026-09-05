@@ -9,7 +9,8 @@ const AGENDA_DATA = [
     "Company Name": "Axilor Ventures, National Payments Corporation of India, OneCard, and Chairman, FCC",
     "Location / Room": "Jasmine 2",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "This session will connect GFF 2026's three technology themes\u2014Agentic AI, tokenisation and quantum\u2014with the practical priorities of financial institutions and regulators. Perspectives from RBI, NPCI and industry leaders will focus on where these technologies can create measurable value, the safeguards required and the readiness needed for adoption at scale."
+    "Description": "This session will connect GFF 2026's three technology themes\u2014Agentic AI, tokenisation and quantum\u2014with the practical priorities of financial institutions and regulators. Perspectives from RBI, NPCI and industry leaders will focus on where these technologies can create measurable value, the safeguards required and the readiness needed for adoption at scale.",
+    "id": "a46d3930"
   },
   {
     "Date": "2026-09-09",
@@ -20,7 +21,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "From static disclosures to intelligent, contextual communication \u2014 how can investor disclosures evolve? Perspectives from SEBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "From static disclosures to intelligent, contextual communication \u2014 how can investor disclosures evolve? Perspectives from SEBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "7d7df670"
   },
   {
     "Date": "2026-09-09",
@@ -31,7 +33,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "Banking & Financial Institutions, RegTech & Compliance",
-    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "a45cdd5f"
   },
   {
     "Date": "2026-09-09",
@@ -42,7 +45,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "e8473081"
   },
   {
     "Date": "2026-09-09",
@@ -53,7 +57,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Banking & Financial Institutions, Cybersecurity & Trust",
-    "Description": "As AI and digital technologies transform financial services, trust remains the cornerstone of customer relationships. This session will explore how banks can combine innovation with purpose to create better outcomes for individuals, businesses, and society. The discussion will bring a financial-institution perspective on what works in practice, where the constraints lie and how to scale responsibly."
+    "Description": "As AI and digital technologies transform financial services, trust remains the cornerstone of customer relationships. This session will explore how banks can combine innovation with purpose to create better outcomes for individuals, businesses, and society. The discussion will bring a financial-institution perspective on what works in practice, where the constraints lie and how to scale responsibly.",
+    "id": "337a1c13"
   },
   {
     "Date": "2026-09-09",
@@ -64,7 +69,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Launch"
+    "Description": "Launch",
+    "id": "f4fd81cc"
   },
   {
     "Date": "2026-09-09",
@@ -75,7 +81,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Expanding into new international markets is a strategic imperative for most businesses in today\u2019s world. Yet, navigating local market nuances, complex regulations, and diverse consumer behaviors can turn global vision into operational friction. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "Expanding into new international markets is a strategic imperative for most businesses in today\u2019s world. Yet, navigating local market nuances, complex regulations, and diverse consumer behaviors can turn global vision into operational friction. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "cec54e0b"
   },
   {
     "Date": "2026-09-09",
@@ -86,7 +93,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "As AI adoption accelerates across banks, insurers and regulated entities, institutions need robust architectures that balance innovation with security, compliance and operational resilience. The discussion will focus on how regulated entities can move from experimentation to production-grade AI while maintaining trust, accountability and regulatory readiness. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value."
+    "Description": "As AI adoption accelerates across banks, insurers and regulated entities, institutions need robust architectures that balance innovation with security, compliance and operational resilience. The discussion will focus on how regulated entities can move from experimentation to production-grade AI while maintaining trust, accountability and regulatory readiness. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value.",
+    "id": "e38e303e"
   },
   {
     "Date": "2026-09-09",
@@ -97,7 +105,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Wealth & Capital Markets, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "Designing \"JanArth.AI\"-style apps for rural communities in Africa, LATAM & Other emerging economies Automating personalized alerts for government subsidies and savings goals. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "Designing \"JanArth.AI\"-style apps for rural communities in Africa, LATAM & Other emerging economies Automating personalized alerts for government subsidies and savings goals. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "ac5b70fe"
   },
   {
     "Date": "2026-09-09",
@@ -108,7 +117,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "RegTech & Compliance",
-    "Description": "Exploring next-generation approaches to detecting organised financial crime through network analytics, AI, and cross-institution collaboration. With RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Exploring next-generation approaches to detecting organised financial crime through network analytics, AI, and cross-institution collaboration. With RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "dc56d3af"
   },
   {
     "Date": "2026-09-09",
@@ -119,7 +129,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "As enterprises move AI from pilots to production, choosing the right model strategy is becoming a critical technology and governance decision. This technical session will compare fine-tuning, retrieval-augmented generation and foundation model approaches for enterprise deployment in financial services. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "As enterprises move AI from pilots to production, choosing the right model strategy is becoming a critical technology and governance decision. This technical session will compare fine-tuning, retrieval-augmented generation and foundation model approaches for enterprise deployment in financial services. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "2f0799b6"
   },
   {
     "Date": "2026-09-09",
@@ -130,7 +141,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Payments & Lending",
-    "Description": "TSPs are the connective tissue of the NBBL ecosystem, with new use cases across lending, collections, and enterprise payments emerging, there is a critical need to co-innovate than build in silos. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale."
+    "Description": "TSPs are the connective tissue of the NBBL ecosystem, with new use cases across lending, collections, and enterprise payments emerging, there is a critical need to co-innovate than build in silos. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale.",
+    "id": "b2667f11"
   },
   {
     "Date": "2026-09-09",
@@ -141,7 +153,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, Wealth & Capital Markets",
-    "Description": "The merchant experience is being transformed by tokenisation, soft-POS, and embedded lending. This discussion looks at how to redesign the merchant stack for safety, convenience, and better working capital access. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale."
+    "Description": "The merchant experience is being transformed by tokenisation, soft-POS, and embedded lending. This discussion looks at how to redesign the merchant stack for safety, convenience, and better working capital access. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale.",
+    "id": "500950aa"
   },
   {
     "Date": "2026-09-09",
@@ -152,7 +165,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "This session will introduce a new initiative or solution linked to Launch, Pensions. This session will mark the launch of a new initiative focused on wider pension access, simpler participation and long-term savings."
+    "Description": "This session will introduce a new initiative or solution linked to Launch, Pensions. This session will mark the launch of a new initiative focused on wider pension access, simpler participation and long-term savings.",
+    "id": "60faf315"
   },
   {
     "Date": "2026-09-09",
@@ -163,7 +177,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending, Wealth & Capital Markets",
-    "Description": "This session will examine how programmable money, AI orchestration, and tokenisation are transforming large\u2011scale bill payments into intelligent, rule\u2011based financial flows. Highlights new opportunities for trust, control, and scalability. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "This session will examine how programmable money, AI orchestration, and tokenisation are transforming large\u2011scale bill payments into intelligent, rule\u2011based financial flows. Highlights new opportunities for trust, control, and scalability. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "a38d59fd"
   },
   {
     "Date": "2026-09-09",
@@ -174,7 +189,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Product launch where In-Solutions Global will introduce ISG Labs AI Recon with A2A protocol"
+    "Description": "Product launch where In-Solutions Global will introduce ISG Labs AI Recon with A2A protocol",
+    "id": "992afb46"
   },
   {
     "Date": "2026-09-09",
@@ -185,7 +201,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "We'll unveil our new Spending Account with UPI integration live. Our CEO will walk visitors through the full flow - creating a spending account, linking it to UPI, and making an instant payment on stage. Visitors can try the product, ask the founders & product team questions . We'll also have a short 5-minute walkthrough running on loop for passersby, with the specialist available for deeper 1:1 demos and Q&A between sessions.\n\nWe are also planning to do a quick Fireside delivered with our founders & guests on record endorsing the proposition."
+    "Description": "We'll unveil our new Spending Account with UPI integration live. Our CEO will walk visitors through the full flow - creating a spending account, linking it to UPI, and making an instant payment on stage. Visitors can try the product, ask the founders & product team questions . We'll also have a short 5-minute walkthrough running on loop for passersby, with the specialist available for deeper 1:1 demos and Q&A between sessions.\n\nWe are also planning to do a quick Fireside delivered with our founders & guests on record endorsing the proposition.",
+    "id": "20e09332"
   },
   {
     "Date": "2026-09-09",
@@ -196,7 +213,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Will have product demos which are under Raise Securities and will have new app launches"
+    "Description": "Will have product demos which are under Raise Securities and will have new app launches",
+    "id": "db9b6707"
   },
   {
     "Date": "2026-09-09",
@@ -207,7 +225,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 103",
     "Tracks": "",
-    "Description": "Co-Creating a Future-Ready Talent Ecosystem for Financial Services"
+    "Description": "Co-Creating a Future-Ready Talent Ecosystem for Financial Services",
+    "id": "07ebf873"
   },
   {
     "Date": "2026-09-09",
@@ -218,7 +237,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 102",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "As AI becomes the substrate for underwriting, servicing, and risk, the edge no longer comes from access to a model, every institution can rent the same one, but from owning it: running and improving it inside your own environment, so it gets sharper with every interaction."
+    "Description": "As AI becomes the substrate for underwriting, servicing, and risk, the edge no longer comes from access to a model, every institution can rent the same one, but from owning it: running and improving it inside your own environment, so it gets sharper with every interaction.",
+    "id": "a69a915b"
   },
   {
     "Date": "2026-09-09",
@@ -229,7 +249,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Play an interactive Observability game, learn how it works, and stand a chance to win a goodie"
+    "Description": "Play an interactive Observability game, learn how it works, and stand a chance to win a goodie",
+    "id": "e7bc11cb"
   },
   {
     "Date": "2026-09-09",
@@ -240,7 +261,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with cyber resilience, threat detection and secure financial systems. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The discussion will connect strategic context with practical implementation and the conditions required for scale."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with cyber resilience, threat detection and secure financial systems. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The discussion will connect strategic context with practical implementation and the conditions required for scale.",
+    "id": "37faa408"
   },
   {
     "Date": "2026-09-09",
@@ -251,7 +273,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "As India\u2019s capital markets grow deeper, more digital and increasingly interconnected with global markets, exchanges and clearing corporations must evolve for a new era of scale, speed and resilience. Perspectives from SEBI, alongside technology leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "As India\u2019s capital markets grow deeper, more digital and increasingly interconnected with global markets, exchanges and clearing corporations must evolve for a new era of scale, speed and resilience. Perspectives from SEBI, alongside technology leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "dc2868fc"
   },
   {
     "Date": "2026-09-09",
@@ -262,7 +285,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The FIU-IND perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area."
+    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The FIU-IND perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area.",
+    "id": "2b5ecf8d"
   },
   {
     "Date": "2026-09-09",
@@ -273,7 +297,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "",
-    "Description": "India has emerged as one of the world\u2019s most dynamic fintech markets, giving founders the opportunity to build at exceptional scale and complexity. The next frontier is global: creating companies from India that can compete, expand and lead across international markets. This fireside explores what it takes to move from domestic scale to global relevance\u2014from product, capital and talent to regulation, market entry and long-term company building."
+    "Description": "India has emerged as one of the world\u2019s most dynamic fintech markets, giving founders the opportunity to build at exceptional scale and complexity. The next frontier is global: creating companies from India that can compete, expand and lead across international markets. This fireside explores what it takes to move from domestic scale to global relevance\u2014from product, capital and talent to regulation, market entry and long-term company building.",
+    "id": "bd5cb468"
   },
   {
     "Date": "2026-09-09",
@@ -284,7 +309,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "",
-    "Description": "As nations invest in AI capabilities, the focus is shifting from using AI to building AI. This session explores the role of sovereign models, trusted infrastructure and enterprise adoption in creating an AI ecosystem designed for India's scale, languages and economic priorities."
+    "Description": "As nations invest in AI capabilities, the focus is shifting from using AI to building AI. This session explores the role of sovereign models, trusted infrastructure and enterprise adoption in creating an AI ecosystem designed for India's scale, languages and economic priorities.",
+    "id": "08cbc0a5"
   },
   {
     "Date": "2026-09-09",
@@ -295,7 +321,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "Financial literacy is essential to sustaining inclusive economic growth and protecting consumers in a rapidly digitising ecosystem. This keynote address will outline strategic priorities for building nationwide financial awareness, capability and resilience. A financial education leadership perspective will share insights on multi-stakeholder initiatives and sustainable outreach models."
+    "Description": "Financial literacy is essential to sustaining inclusive economic growth and protecting consumers in a rapidly digitising ecosystem. This keynote address will outline strategic priorities for building nationwide financial awareness, capability and resilience. A financial education leadership perspective will share insights on multi-stakeholder initiatives and sustainable outreach models.",
+    "id": "c5615fc9"
   },
   {
     "Date": "2026-09-09",
@@ -306,7 +333,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Experience the launch of RevRag AI\u2019s In-App Co-Pilot Agent - an AI agent embedded directly within BFSI applications. See how it understands user context, proactively guides customers through digital journeys, and takes actions within the app to help users complete tasks faster and with fewer drop-offs."
+    "Description": "Experience the launch of RevRag AI\u2019s In-App Co-Pilot Agent - an AI agent embedded directly within BFSI applications. See how it understands user context, proactively guides customers through digital journeys, and takes actions within the app to help users complete tasks faster and with fewer drop-offs.",
+    "id": "52541930"
   },
   {
     "Date": "2026-09-09",
@@ -317,7 +345,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "AI is transforming how banks understand, engage and grow their customer relationships. From hyper-personalised engagement and real-time customer insights to intelligent cross-sell and next-best-action strategies, AI is enabling banks to move beyond traditional product-led approaches. This session will explore how banks can leverage AI and data to deepen customer relationships, improve engagement and unlock sustainable growth across retail, SME and corporate segments."
+    "Description": "AI is transforming how banks understand, engage and grow their customer relationships. From hyper-personalised engagement and real-time customer insights to intelligent cross-sell and next-best-action strategies, AI is enabling banks to move beyond traditional product-led approaches. This session will explore how banks can leverage AI and data to deepen customer relationships, improve engagement and unlock sustainable growth across retail, SME and corporate segments.",
+    "id": "baeccafc"
   },
   {
     "Date": "2026-09-09",
@@ -328,7 +357,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Retrieval-augmented generation is becoming a core architecture for deploying AI in financial services, especially where accuracy, source traceability and regulatory context are critical. This technical session will explore how enterprises can build reliable retrieval systems over financial, compliance and policy data. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale."
+    "Description": "Retrieval-augmented generation is becoming a core architecture for deploying AI in financial services, especially where accuracy, source traceability and regulatory context are critical. This technical session will explore how enterprises can build reliable retrieval systems over financial, compliance and policy data. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale.",
+    "id": "6968f612"
   },
   {
     "Date": "2026-09-09",
@@ -339,7 +369,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group, Axilor Ventures, HDFC Bank",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, Wealth & Capital Markets",
-    "Description": "This panel discussion will explore the growing role of GIFT City as a global hub for cross-border finance, financial services and emerging technologies. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "This panel discussion will explore the growing role of GIFT City as a global hub for cross-border finance, financial services and emerging technologies. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "8a314ba6"
   },
   {
     "Date": "2026-09-09",
@@ -350,7 +381,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "This panel explores how AI is transforming next-generation tolling and transit systems at the intersection of fintech and smart infrastructure. It highlights innovations enabling seamless, cashless mobility while improving efficiency and accessibility. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This panel explores how AI is transforming next-generation tolling and transit systems at the intersection of fintech and smart infrastructure. It highlights innovations enabling seamless, cashless mobility while improving efficiency and accessibility. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "f8f32ff4"
   },
   {
     "Date": "2026-09-09",
@@ -361,7 +393,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "As autonomous AI agents enter complex financial systems, maintaining mathematical determinism and architectural reliability becomes paramount. This masterclass breaks down the principles of designing fault-tolerant payment systems, domain modeling and algorithmic predictability under scale. Led by a payments technology chief executive, the session provides practical insights on balancing machine learning flexibility with strict transactional precision."
+    "Description": "As autonomous AI agents enter complex financial systems, maintaining mathematical determinism and architectural reliability becomes paramount. This masterclass breaks down the principles of designing fault-tolerant payment systems, domain modeling and algorithmic predictability under scale. Led by a payments technology chief executive, the session provides practical insights on balancing machine learning flexibility with strict transactional precision.",
+    "id": "86d3bf79"
   },
   {
     "Date": "2026-09-09",
@@ -372,7 +405,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Quantum technologies are set to fundamentally reshape how value is created, transferred, and settled across financial systems. This conversation explores how quantum could unlock new models in payments, liquidity, and transactions, beyond just security considerations. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "Quantum technologies are set to fundamentally reshape how value is created, transferred, and settled across financial systems. This conversation explores how quantum could unlock new models in payments, liquidity, and transactions, beyond just security considerations. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "f5be178f"
   },
   {
     "Date": "2026-09-09",
@@ -383,7 +417,8 @@ const AGENDA_DATA = [
     "Company Name": "S&R Associates",
     "Location / Room": "Golconda - Trident",
     "Tracks": "",
-    "Description": "A perspective on how India\u2019s rapid digitalisation and financial inclusion are reshaping the AML/CFT landscape. The session will explore the need to balance innovation and access with stronger safeguards against illicit finance, while building a resilient and trusted financial ecosystem. It will also examine how technology, data and risk-based approaches can strengthen financial integrity as India\u2019s digital economy continues to scale."
+    "Description": "A perspective on how India\u2019s rapid digitalisation and financial inclusion are reshaping the AML/CFT landscape. The session will explore the need to balance innovation and access with stronger safeguards against illicit finance, while building a resilient and trusted financial ecosystem. It will also examine how technology, data and risk-based approaches can strengthen financial integrity as India\u2019s digital economy continues to scale.",
+    "id": "b913b59e"
   },
   {
     "Date": "2026-09-09",
@@ -394,7 +429,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "This session will explore credit access, underwriting and responsible lending, together with fraud prevention, early detection and customer protection. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale."
+    "Description": "This session will explore credit access, underwriting and responsible lending, together with fraud prevention, early detection and customer protection. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale.",
+    "id": "e4778d72"
   },
   {
     "Date": "2026-09-09",
@@ -405,7 +441,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "Merchant payments are rapidly evolving beyond traditional acquiring into a unified layer of commerce infrastructure. This session will explore how payment providers are enabling seamless, scalable, and data-driven merchant ecosystems\u2014integrating acceptance, credit, and value-added services. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "Merchant payments are rapidly evolving beyond traditional acquiring into a unified layer of commerce infrastructure. This session will explore how payment providers are enabling seamless, scalable, and data-driven merchant ecosystems\u2014integrating acceptance, credit, and value-added services. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "61099e54"
   },
   {
     "Date": "2026-09-09",
@@ -416,7 +453,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Digital Public Infrastructure",
-    "Description": "Digital identity has become the foundation of India\u2019s digital economy, enabling trusted access to financial services at population scale. As the ecosystem evolves, the next frontier lies in moving beyond identity verification to consent-based data sharing, reusable digital credentials, AI-enabled authentication, and seamless cross-sector interoperability. With UIDAI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Digital identity has become the foundation of India\u2019s digital economy, enabling trusted access to financial services at population scale. As the ecosystem evolves, the next frontier lies in moving beyond identity verification to consent-based data sharing, reusable digital credentials, AI-enabled authentication, and seamless cross-sector interoperability. With UIDAI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "25bb7225"
   },
   {
     "Date": "2026-09-09",
@@ -427,7 +465,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "True inclusion goes beyond access. This panel discusses inclusive product design, affordability, trust, and scalable business models that expand financial participation across diverse consumer segments. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "True inclusion goes beyond access. This panel discusses inclusive product design, affordability, trust, and scalable business models that expand financial participation across diverse consumer segments. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "c71ea0fb"
   },
   {
     "Date": "2026-09-09",
@@ -438,7 +477,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "A forward-looking session on quantum computing\u2019s impact on encryption, trading systems, and financial security. With SEBI and technology leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "A forward-looking session on quantum computing\u2019s impact on encryption, trading systems, and financial security. With SEBI and technology leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "e116be6b"
   },
   {
     "Date": "2026-09-09",
@@ -449,7 +489,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Fundamento officially announces its flagship product launch to the GFF audience."
+    "Description": "Fundamento officially announces its flagship product launch to the GFF audience.",
+    "id": "6b8d5fe4"
   },
   {
     "Date": "2026-09-09",
@@ -460,7 +501,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Unveiling CAMS Lens 2.0"
+    "Description": "Unveiling CAMS Lens 2.0",
+    "id": "c127ab02"
   },
   {
     "Date": "2026-09-09",
@@ -471,7 +513,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "DIY Business Loan or Vehicle Evaluation with GenAI Powered by Dista Collect"
+    "Description": "DIY Business Loan or Vehicle Evaluation with GenAI Powered by Dista Collect",
+    "id": "a37e2f5a"
   },
   {
     "Date": "2026-09-09",
@@ -482,7 +525,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "A payment is more than an authenticated user. Identity, application, API, transaction and proof all have to hold together. See exactly where trust can break\u2014and what Fortytwo Labs verifies before money moves."
+    "Description": "A payment is more than an authenticated user. Identity, application, API, transaction and proof all have to hold together. See exactly where trust can break\u2014and what Fortytwo Labs verifies before money moves.",
+    "id": "cef7eb61"
   },
   {
     "Date": "2026-09-09",
@@ -493,7 +537,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "OPRIMES LIVE DEMO\nA live walkthrough of how human intelligence helps validate AI systems, uncover real-world gaps and build confidence in AI-powered experience"
+    "Description": "OPRIMES LIVE DEMO\nA live walkthrough of how human intelligence helps validate AI systems, uncover real-world gaps and build confidence in AI-powered experience",
+    "id": "2c3a76c3"
   },
   {
     "Date": "2026-09-09",
@@ -504,7 +549,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "As part of Winjit Premiere at GFF 2026, we will showcase and launch three digital banking applications built for HFCB, covering Retail Banking, Corporate Banking, and Branch Banking.\nAlongside these client-specific launches, we will also unveil a new feature for AuthSense, highlighting the continued evolution of Winjit\u2019s Intelligence Stack. \n\nHFCB Retail Banking Application\t12 P.M - 1 PM , 9th Sept 2026\nHFCB Corporate Banking Application\t12 P.M - 1 PM , 9th Sept 2026\nHFCB Branch Banking Application\t12 P.M - 1 PM , 9th Sept 2026\nAuthSense feature launch\t12 P.M - 1 PM , 9th Sept 2026"
+    "Description": "As part of Winjit Premiere at GFF 2026, we will showcase and launch three digital banking applications built for HFCB, covering Retail Banking, Corporate Banking, and Branch Banking.\nAlongside these client-specific launches, we will also unveil a new feature for AuthSense, highlighting the continued evolution of Winjit\u2019s Intelligence Stack. \n\nHFCB Retail Banking Application\t12 P.M - 1 PM , 9th Sept 2026\nHFCB Corporate Banking Application\t12 P.M - 1 PM , 9th Sept 2026\nHFCB Branch Banking Application\t12 P.M - 1 PM , 9th Sept 2026\nAuthSense feature launch\t12 P.M - 1 PM , 9th Sept 2026",
+    "id": "04c67c38"
   },
   {
     "Date": "2026-09-09",
@@ -515,7 +561,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "join us for the launch and live demonstration of our intelligent cfo dashboard. Discover a real-time overview of compliance, itc, refunds, and notices - all through one centralised dashboard."
+    "Description": "join us for the launch and live demonstration of our intelligent cfo dashboard. Discover a real-time overview of compliance, itc, refunds, and notices - all through one centralised dashboard.",
+    "id": "45df94f7"
   },
   {
     "Date": "2026-09-09",
@@ -526,7 +573,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "As digital payments scale, financial crime risks increasingly cut across institutions, customer segments and payment channels, making isolated controls less effective. This session will examine how Reporting Entities can strengthen AML outcomes by combining robust onboarding, continuous monitoring and network-level intelligence across the payments ecosystem. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "As digital payments scale, financial crime risks increasingly cut across institutions, customer segments and payment channels, making isolated controls less effective. This session will examine how Reporting Entities can strengthen AML outcomes by combining robust onboarding, continuous monitoring and network-level intelligence across the payments ecosystem. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "e55aca5f"
   },
   {
     "Date": "2026-09-09",
@@ -537,7 +585,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "This session will explore the future of banking, operating models and customer service, together with practical use of AI, automation and better decision-making. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The session will translate technology choices into practical considerations around architecture, controls and implementation."
+    "Description": "This session will explore the future of banking, operating models and customer service, together with practical use of AI, automation and better decision-making. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The session will translate technology choices into practical considerations around architecture, controls and implementation.",
+    "id": "f5caceb6"
   },
   {
     "Date": "2026-09-09",
@@ -548,7 +597,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "2a370628"
   },
   {
     "Date": "2026-09-09",
@@ -559,7 +609,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "As economic fragmentation and systemic risk reshape lenders' priorities in India, commercial and retail lending stands at an inflection point \u2014 caught between the need for rapid credit decisioning and the imperative of stronger risk governance. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "As economic fragmentation and systemic risk reshape lenders' priorities in India, commercial and retail lending stands at an inflection point \u2014 caught between the need for rapid credit decisioning and the imperative of stronger risk governance. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "2f9d082b"
   },
   {
     "Date": "2026-09-09",
@@ -570,7 +621,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "",
-    "Description": "Join Rahul Chari, Founder & CPTO, PhonePe as he takes you through a series of exclusive product walkthroughs, and reveals how PhonePe is evolving into a truly intent-led, intelligent financial platform. Discover the practical AI infrastructure driving efficiencies across Engineering, Customer & Merchant experience, Customer Support, Cybersecurity, and Internal Operations at PhonePe."
+    "Description": "Join Rahul Chari, Founder & CPTO, PhonePe as he takes you through a series of exclusive product walkthroughs, and reveals how PhonePe is evolving into a truly intent-led, intelligent financial platform. Discover the practical AI infrastructure driving efficiencies across Engineering, Customer & Merchant experience, Customer Support, Cybersecurity, and Internal Operations at PhonePe.",
+    "id": "cc72d5e4"
   },
   {
     "Date": "2026-09-09",
@@ -581,7 +633,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "This session will explore practical use of AI, automation and better decision-making, together with fintech growth, business models and ecosystem development. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. A public-policy lens will frame the discussion around execution, ecosystem development and wider economic impact."
+    "Description": "This session will explore practical use of AI, automation and better decision-making, together with fintech growth, business models and ecosystem development. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. A public-policy lens will frame the discussion around execution, ecosystem development and wider economic impact.",
+    "id": "a1526729"
   },
   {
     "Date": "2026-09-09",
@@ -592,7 +645,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Visitor will experience robotic bank locker. Working, demostration, Live experiance, Interacrion with technology"
+    "Description": "Visitor will experience robotic bank locker. Working, demostration, Live experiance, Interacrion with technology",
+    "id": "a326c9c1"
   },
   {
     "Date": "2026-09-09",
@@ -603,7 +657,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "AI has moved from experimentation to infrastructure. It now sits inside decisions on credit, risk, customer engagement and operations \u2014 decisions that increasingly shape real financial outcomes.\n\nThat raises a fundamental question: if an institution cannot fully explain or control how a decision is made, can it truly say the decision is its own?\n\nThis session launches Sovereign AI in Financial Services, a limited-edition CXO report exploring what it means for financial institutions to retain control over their data, models, decisions and institutional intelligence.\n\nGrounded in global research, emerging regulation and perspectives from 10+ senior leaders across banks, NBFCs and fintechs, the report brings the conversation firmly into the realities of Indian financial services.\n\nThe question is no longer whether financial institutions will use AI.\n\nIt is how much of their intelligence they will choose to own."
+    "Description": "AI has moved from experimentation to infrastructure. It now sits inside decisions on credit, risk, customer engagement and operations \u2014 decisions that increasingly shape real financial outcomes.\n\nThat raises a fundamental question: if an institution cannot fully explain or control how a decision is made, can it truly say the decision is its own?\n\nThis session launches Sovereign AI in Financial Services, a limited-edition CXO report exploring what it means for financial institutions to retain control over their data, models, decisions and institutional intelligence.\n\nGrounded in global research, emerging regulation and perspectives from 10+ senior leaders across banks, NBFCs and fintechs, the report brings the conversation firmly into the realities of Indian financial services.\n\nThe question is no longer whether financial institutions will use AI.\n\nIt is how much of their intelligence they will choose to own.",
+    "id": "04d9ee16"
   },
   {
     "Date": "2026-09-09",
@@ -614,7 +669,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Understanding the threat quantum computing poses to current financial cryptography. Steps developing nations must take today to future-proof their payment infrastructure. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes."
+    "Description": "Understanding the threat quantum computing poses to current financial cryptography. Steps developing nations must take today to future-proof their payment infrastructure. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes.",
+    "id": "85a12f54"
   },
   {
     "Date": "2026-09-09",
@@ -625,7 +681,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech, Rural Economic Empowerment",
-    "Description": "This session explores how AI is transforming credit assessment for underserved MSMEs by leveraging alternative data and advanced analytics. It highlights the ability to move beyond traditional credit histories to create more inclusive and accurate risk models. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "This session explores how AI is transforming credit assessment for underserved MSMEs by leveraging alternative data and advanced analytics. It highlights the ability to move beyond traditional credit histories to create more inclusive and accurate risk models. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "486f3e5d"
   },
   {
     "Date": "2026-09-09",
@@ -636,7 +693,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "As AI moves from experimentation to execution, lenders are reimagining how credit is originated, assessed and managed. This session explores how AI-native operating models can unlock faster decisions, better risk outcomes and more personalised credit experiences. Perspectives from RBI Innovation Hub, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "As AI moves from experimentation to execution, lenders are reimagining how credit is originated, assessed and managed. This session explores how AI-native operating models can unlock faster decisions, better risk outcomes and more personalised credit experiences. Perspectives from RBI Innovation Hub, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "696a3a11"
   },
   {
     "Date": "2026-09-09",
@@ -647,7 +705,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Evolution from GenAI assistants to end-to-end autonomous execution systems. As Generative AI matures, the focus is shifting from experimentation to execution. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness."
+    "Description": "Evolution from GenAI assistants to end-to-end autonomous execution systems. As Generative AI matures, the focus is shifting from experimentation to execution. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness.",
+    "id": "10e58729"
   },
   {
     "Date": "2026-09-09",
@@ -658,7 +717,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Financial institutions face a hard tension: ship faster to compete with digital-native challengers, while satisfying the control environment regulators, auditors, and risk committees demand. In this masterclass, Aparna Kapoor explores how Harness Engineering helps banks and fintechs move beyond AI coding copilots to end-to-end agentic software delivery - where AI agents translate business and regulatory requirements into design, build and test code, orchestrate deployments through defined control gates, and support production operations, all within an auditable, governed framework.\nDrawing on production-grade implementations from financial services, the session unpacks how this model delivers:\n\u2022\tVelocity - 3x engineering throughput and 50%+ faster time-to-market for new products, features, and regulatory-driven changes\n\u2022\tQuality - 95%+ test coverage with AI-driven testing, code review, and traceability at scale\n\u2022\tGuardrails & Controls - compliance and audit trails embedded as policy-as-code\n\u2022\tOperating Model - redefined tech delivery and engineering operating model: what CTOs and CIOs must rethink in team structure, governance, and talent to build software at the speed of AI"
+    "Description": "Financial institutions face a hard tension: ship faster to compete with digital-native challengers, while satisfying the control environment regulators, auditors, and risk committees demand. In this masterclass, Aparna Kapoor explores how Harness Engineering helps banks and fintechs move beyond AI coding copilots to end-to-end agentic software delivery - where AI agents translate business and regulatory requirements into design, build and test code, orchestrate deployments through defined control gates, and support production operations, all within an auditable, governed framework.\nDrawing on production-grade implementations from financial services, the session unpacks how this model delivers:\n\u2022\tVelocity - 3x engineering throughput and 50%+ faster time-to-market for new products, features, and regulatory-driven changes\n\u2022\tQuality - 95%+ test coverage with AI-driven testing, code review, and traceability at scale\n\u2022\tGuardrails & Controls - compliance and audit trails embedded as policy-as-code\n\u2022\tOperating Model - redefined tech delivery and engineering operating model: what CTOs and CIOs must rethink in team structure, governance, and talent to build software at the speed of AI",
+    "id": "466957be"
   },
   {
     "Date": "2026-09-09",
@@ -669,7 +729,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "Quantum computing poses a silent but existential threat to today\u2019s financial cryptography, with the potential to break encryption securing payments, tokenized assets, and AI models. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Quantum computing poses a silent but existential threat to today\u2019s financial cryptography, with the potential to break encryption securing payments, tokenized assets, and AI models. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "db38e5b6"
   },
   {
     "Date": "2026-09-09",
@@ -680,7 +741,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "Banking & Financial Institutions, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "Mule accounts have emerged as a critical link in the chain of cyber fraud and financial crime, enabling illicit funds to move rapidly across institutions and payment channels. With RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Mule accounts have emerged as a critical link in the chain of cyber fraud and financial crime, enabling illicit funds to move rapidly across institutions and payment channels. With RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "a1a2a8a8"
   },
   {
     "Date": "2026-09-09",
@@ -691,7 +753,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "This panel explores Japan\u2019s long-term commitment to India\u2019s innovation economy, and how that commitment is evolving into an end-to-end model spanning venture investing, growth financing, market access, and public market readiness. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "This panel explores Japan\u2019s long-term commitment to India\u2019s innovation economy, and how that commitment is evolving into an end-to-end model spanning venture investing, growth financing, market access, and public market readiness. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "b144e9fb"
   },
   {
     "Date": "2026-09-09",
@@ -702,7 +765,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "Deepfake KYC submissions, voice spoofing, and synthetic identities are testing the limits of traditional verification systems. This session examines how multimodal AI and risk-aware authentication are evolving to counter increasingly sophisticated identity attacks in financial services. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes."
+    "Description": "Deepfake KYC submissions, voice spoofing, and synthetic identities are testing the limits of traditional verification systems. This session examines how multimodal AI and risk-aware authentication are evolving to counter increasingly sophisticated identity attacks in financial services. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes.",
+    "id": "bc8bbbae"
   },
   {
     "Date": "2026-09-09",
@@ -713,7 +777,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "Use of AI in fund management, risk analytics, distribution and personalized investor journeys with regulatory implications. Further, as platforms blur lines between advice and distribution, what regulatory clarity is needed and how to balance commission structures, which align with investor protection and transparency. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes."
+    "Description": "Use of AI in fund management, risk analytics, distribution and personalized investor journeys with regulatory implications. Further, as platforms blur lines between advice and distribution, what regulatory clarity is needed and how to balance commission structures, which align with investor protection and transparency. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes.",
+    "id": "2d654698"
   },
   {
     "Date": "2026-09-09",
@@ -724,7 +789,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "Fraudsters can operate across institutions, while the information needed to stop them often remains fragmented. This session explores how the financial ecosystem can close that gap by connecting intelligence, improving information-sharing, and building a more co-ordinated defence."
+    "Description": "Fraudsters can operate across institutions, while the information needed to stop them often remains fragmented. This session explores how the financial ecosystem can close that gap by connecting intelligence, improving information-sharing, and building a more co-ordinated defence.",
+    "id": "7ceb110e"
   },
   {
     "Date": "2026-09-09",
@@ -735,7 +801,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "This session will explore digital representation of financial assets and trusted market use cases, together with market access, investor protection and efficient capital markets. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. With RBI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This session will explore digital representation of financial assets and trusted market use cases, together with market access, investor protection and efficient capital markets. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. With RBI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "98c17bdd"
   },
   {
     "Date": "2026-09-09",
@@ -746,7 +813,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will bring together capital and operating perspectives on scale, governance and long-term value creation."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will bring together capital and operating perspectives on scale, governance and long-term value creation.",
+    "id": "eae78125"
   },
   {
     "Date": "2026-09-09",
@@ -757,7 +825,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Explore how AI and specialised LLMs are transforming banking, financial services, research, risk, compliance and operations."
+    "Description": "Explore how AI and specialised LLMs are transforming banking, financial services, research, risk, compliance and operations.",
+    "id": "bfec68c0"
   },
   {
     "Date": "2026-09-09",
@@ -768,7 +837,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, Rural Economic Empowerment",
-    "Description": "This session will introduce a new credit solution aimed at sole proprietors and small businesses that often struggle to access formal working capital. The discussion will explain the customer need, product design and partnership model, and consider how digital data and payments can help expand responsible credit access."
+    "Description": "This session will introduce a new credit solution aimed at sole proprietors and small businesses that often struggle to access formal working capital. The discussion will explain the customer need, product design and partnership model, and consider how digital data and payments can help expand responsible credit access.",
+    "id": "b79b546d"
   },
   {
     "Date": "2026-09-09",
@@ -779,7 +849,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "The future of the digital economy will be shaped not only by advances in Artificial Intelligence, but by the trust that underpins its adoption. As Al accelerates innovation across financial services, commerce and digital infrastructure, it is also redefining the cyber threat landscape. In this keynote, Subra Kumaraswamy will share perspectives from safeguarding one of the world's most trusted payment networks and will discuss how leaders can strengthen resilience, foster innovation, and build enduring trust in an increasingly Al-powered world"
+    "Description": "The future of the digital economy will be shaped not only by advances in Artificial Intelligence, but by the trust that underpins its adoption. As Al accelerates innovation across financial services, commerce and digital infrastructure, it is also redefining the cyber threat landscape. In this keynote, Subra Kumaraswamy will share perspectives from safeguarding one of the world's most trusted payment networks and will discuss how leaders can strengthen resilience, foster innovation, and build enduring trust in an increasingly Al-powered world",
+    "id": "bb1ec0b4"
   },
   {
     "Date": "2026-09-09",
@@ -790,7 +861,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 203",
     "Tracks": "",
-    "Description": ""
+    "Description": "",
+    "id": "b92f1814"
   },
   {
     "Date": "2026-09-09",
@@ -801,7 +873,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "The first wave of financial inclusion focused on expanding access to bank accounts and digital payments. The next challenge is ensuring meaningful and sustained financial participation. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "The first wave of financial inclusion focused on expanding access to bank accounts and digital payments. The next challenge is ensuring meaningful and sustained financial participation. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "01ac8888"
   },
   {
     "Date": "2026-09-09",
@@ -812,7 +885,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "As AI systems move into production across financial services, robust guardrails are essential to ensure safety, reliability and trust. This technical session will explore how institutions can manage hallucinations, enforce policies, prevent misuse and reduce operational, compliance and customer risks in AI-led workflows. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption."
+    "Description": "As AI systems move into production across financial services, robust guardrails are essential to ensure safety, reliability and trust. This technical session will explore how institutions can manage hallucinations, enforce policies, prevent misuse and reduce operational, compliance and customer risks in AI-led workflows. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption.",
+    "id": "28fd2435"
   },
   {
     "Date": "2026-09-09",
@@ -823,7 +897,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "This session will examine how financial institutions can build AI decision engines that use live data to support faster risk, credit and customer decisions. Payments and fintech leaders will discuss architecture, data quality, human oversight and the controls needed to move from pilots to reliable production systems."
+    "Description": "This session will examine how financial institutions can build AI decision engines that use live data to support faster risk, credit and customer decisions. Payments and fintech leaders will discuss architecture, data quality, human oversight and the controls needed to move from pilots to reliable production systems.",
+    "id": "87fe303b"
   },
   {
     "Date": "2026-09-09",
@@ -834,7 +909,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Programmable payments unlock new logic at the transaction layer. Leaders discuss smart routing, conditional payments, embedded compliance, and orchestration across ecosystems. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "Programmable payments unlock new logic at the transaction layer. Leaders discuss smart routing, conditional payments, embedded compliance, and orchestration across ecosystems. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "143fddcf"
   },
   {
     "Date": "2026-09-09",
@@ -845,7 +921,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Lotus 3",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "A dedicated discussion with the Saudi Arabia delegation on opportunities for deeper financial and technology cooperation with India. The session will explore market priorities, investment, innovation and possible areas for institutional and industry partnership."
+    "Description": "A dedicated discussion with the Saudi Arabia delegation on opportunities for deeper financial and technology cooperation with India. The session will explore market priorities, investment, innovation and possible areas for institutional and industry partnership.",
+    "id": "26cba775"
   },
   {
     "Date": "2026-09-09",
@@ -856,7 +933,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "As Global Capability Centers (GCCs) evolve into strategic hubs for innovation, AI, and financial engineering, they are redefining the future of work in the financial services industry. Participants will discover the mindset, skills, and tools required to thrive in modern GCCs, where technology, creativity, and business strategy converge. Researchers and practitioners will connect emerging technology with real-world readiness, implementation choices and measurable outcomes."
+    "Description": "As Global Capability Centers (GCCs) evolve into strategic hubs for innovation, AI, and financial engineering, they are redefining the future of work in the financial services industry. Participants will discover the mindset, skills, and tools required to thrive in modern GCCs, where technology, creativity, and business strategy converge. Researchers and practitioners will connect emerging technology with real-world readiness, implementation choices and measurable outcomes.",
+    "id": "c3ae33fa"
   },
   {
     "Date": "2026-09-09",
@@ -867,7 +945,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "PhonePe has been at the forefront of India's digital payments revolution, building products that serve hundreds of millions of users at scale. This session will provide an inside look at the company's product innovation journey and how AI, data, and customer-centric design are shaping the next generation of financial services. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale."
+    "Description": "PhonePe has been at the forefront of India's digital payments revolution, building products that serve hundreds of millions of users at scale. This session will provide an inside look at the company's product innovation journey and how AI, data, and customer-centric design are shaping the next generation of financial services. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale.",
+    "id": "b17fcdac"
   },
   {
     "Date": "2026-09-09",
@@ -878,7 +957,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "India's digital collections ecosystem is rapidly evolving beyond traditional bill payments to enable loan repayments, enterprise receivables, merchant collections, insurance premiums, subscription mandates, education fees, and government payments. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale."
+    "Description": "India's digital collections ecosystem is rapidly evolving beyond traditional bill payments to enable loan repayments, enterprise receivables, merchant collections, insurance premiums, subscription mandates, education fees, and government payments. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale.",
+    "id": "2cfd3799"
   },
   {
     "Date": "2026-09-09",
@@ -889,7 +969,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Payments & Lending",
-    "Description": "This session will go inside the operating layer of modern payment systems, where speed, reliability and scale must work together. Financial-sector and technology leaders will discuss resilient architecture, real-time monitoring, incident response and the engineering choices required to support rising transaction volumes without compromising trust."
+    "Description": "This session will go inside the operating layer of modern payment systems, where speed, reliability and scale must work together. Financial-sector and technology leaders will discuss resilient architecture, real-time monitoring, incident response and the engineering choices required to support rising transaction volumes without compromising trust.",
+    "id": "0be3bef4"
   },
   {
     "Date": "2026-09-09",
@@ -900,7 +981,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 102",
     "Tracks": "RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "As India\u2019s BFSI ecosystem accelerates toward digital-first services, institutions face a dual challenge: enabling seamless customer onboarding while countering increasingly sophisticated fraud. With innovations like digital identity frameworks (Aadhaar, CKYC), silent verification technologies, and phone-based identity intelligence, the sector is entering a new era of secure yet frictionless transactions."
+    "Description": "As India\u2019s BFSI ecosystem accelerates toward digital-first services, institutions face a dual challenge: enabling seamless customer onboarding while countering increasingly sophisticated fraud. With innovations like digital identity frameworks (Aadhaar, CKYC), silent verification technologies, and phone-based identity intelligence, the sector is entering a new era of secure yet frictionless transactions.",
+    "id": "c72ec726"
   },
   {
     "Date": "2026-09-09",
@@ -911,7 +993,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Digital Public Infrastructure",
-    "Description": "India has demonstrated how digital public infrastructure can expand access to financial services at unprecedented scale. The next chapter is about turning access into regular usage, confidence and better financial outcomes. Financial-sector leaders will discuss savings, credit, protection, digital capability and service design for a more empowered customer base."
+    "Description": "India has demonstrated how digital public infrastructure can expand access to financial services at unprecedented scale. The next chapter is about turning access into regular usage, confidence and better financial outcomes. Financial-sector leaders will discuss savings, credit, protection, digital capability and service design for a more empowered customer base.",
+    "id": "0612d8df"
   },
   {
     "Date": "2026-09-09",
@@ -922,7 +1005,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "Central banks are prioritizing payments sovereignty by promoting domestic infrastructures (like real-time payment systems) to reduce reliance on global networks and improve resilience, oversight, and data control. With RBI, Bank of France and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Central banks are prioritizing payments sovereignty by promoting domestic infrastructures (like real-time payment systems) to reduce reliance on global networks and improve resilience, oversight, and data control. With RBI, Bank of France and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "fcaa40a3"
   },
   {
     "Date": "2026-09-09",
@@ -933,7 +1017,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "This session will examine how tokenisation could reshape issuance, trading, clearing and settlement in capital markets while preserving investor protection and market integrity. With SEBI, NPCI and industry perspectives represented, the discussion will focus on interoperability, operating models, governance and the steps required for trusted adoption."
+    "Description": "This session will examine how tokenisation could reshape issuance, trading, clearing and settlement in capital markets while preserving investor protection and market integrity. With SEBI, NPCI and industry perspectives represented, the discussion will focus on interoperability, operating models, governance and the steps required for trusted adoption.",
+    "id": "860faa74"
   },
   {
     "Date": "2026-09-09",
@@ -944,7 +1029,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending",
-    "Description": "Digital payments are reshaping global commerce by making cross-border transactions faster, more secure, and more inclusive. With the success of UPI and India's Digital Public Infrastructure, India has a unique opportunity to power the next generation of interoperable payment networks worldwide. With NPCI, Ministry of External Affairs and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Digital payments are reshaping global commerce by making cross-border transactions faster, more secure, and more inclusive. With the success of UPI and India's Digital Public Infrastructure, India has a unique opportunity to power the next generation of interoperable payment networks worldwide. With NPCI, Ministry of External Affairs and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "9a9e0c38"
   },
   {
     "Date": "2026-09-09",
@@ -955,7 +1041,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "As global commerce becomes increasingly real time, treasury functions are evolving from back-office operations into strategic enablers of international business. API-native treasury platforms, virtual accounts, multi-currency liquidity management, and intelligent FX solutions are helping banks, fintechs, and businesses optimise working capital while reducing settlement friction. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "As global commerce becomes increasingly real time, treasury functions are evolving from back-office operations into strategic enablers of international business. API-native treasury platforms, virtual accounts, multi-currency liquidity management, and intelligent FX solutions are helping banks, fintechs, and businesses optimise working capital while reducing settlement friction. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "d12b09b3"
   },
   {
     "Date": "2026-09-09",
@@ -966,7 +1053,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "A short, engaging podcast hosted at the CredResolve booth featuring conversations with industry leaders and BFSI professionals around credit, collections, technology, AI, and the future of financial services. The activity will create meaningful industry conversations while generating engaging content."
+    "Description": "A short, engaging podcast hosted at the CredResolve booth featuring conversations with industry leaders and BFSI professionals around credit, collections, technology, AI, and the future of financial services. The activity will create meaningful industry conversations while generating engaging content.",
+    "id": "22835ab0"
   },
   {
     "Date": "2026-09-09",
@@ -977,7 +1065,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Be among the first to experience HyperVerge Underwriting AI. Discover how intelligent AI Agents are transforming underwriting by reducing manual effort, enhancing risk assessment, and enabling financial institutions to make faster, smarter, and more consistent lending decisions."
+    "Description": "Be among the first to experience HyperVerge Underwriting AI. Discover how intelligent AI Agents are transforming underwriting by reducing manual effort, enhancing risk assessment, and enabling financial institutions to make faster, smarter, and more consistent lending decisions.",
+    "id": "0afad8cf"
   },
   {
     "Date": "2026-09-09",
@@ -988,7 +1077,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech, Rural Economic Empowerment",
-    "Description": "The session will explore how AI-enabled digital platforms and cooperative ecosystems can accelerate rural inclusion and improve access to financial and developmental services. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "The session will explore how AI-enabled digital platforms and cooperative ecosystems can accelerate rural inclusion and improve access to financial and developmental services. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "0b8687e0"
   },
   {
     "Date": "2026-09-09",
@@ -999,7 +1089,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "AI is reshaping financial services from product-led models to intelligent, personalised customer experiences. As AI, data and digital communication become embedded across banking, payments, lending, insurance and wealth, customer interactions are becoming more seamless, contextual and responsive. This session explores how financial institutions and technology providers are using AI to move beyond transactions and build more meaningful, trusted customer relationships. The discussion will also examine how these experiences can be scaled responsibly across the financial ecosystem."
+    "Description": "AI is reshaping financial services from product-led models to intelligent, personalised customer experiences. As AI, data and digital communication become embedded across banking, payments, lending, insurance and wealth, customer interactions are becoming more seamless, contextual and responsive. This session explores how financial institutions and technology providers are using AI to move beyond transactions and build more meaningful, trusted customer relationships. The discussion will also examine how these experiences can be scaled responsibly across the financial ecosystem.",
+    "id": "dc5fe01e"
   },
   {
     "Date": "2026-09-09",
@@ -1010,7 +1101,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "India's startup ecosystem is witnessing a reset as public market realities reshape private market expectations. With heightened market volatility, longer DRHP-to-listing timelines, and increased scrutiny on profitability and governance, IPO-bound companies are adapting to a new capital market environment. Founders, investors and market leaders will discuss business models, capital discipline and the conditions required for durable growth."
+    "Description": "India's startup ecosystem is witnessing a reset as public market realities reshape private market expectations. With heightened market volatility, longer DRHP-to-listing timelines, and increased scrutiny on profitability and governance, IPO-bound companies are adapting to a new capital market environment. Founders, investors and market leaders will discuss business models, capital discipline and the conditions required for durable growth.",
+    "id": "3a76bb98"
   },
   {
     "Date": "2026-09-09",
@@ -1021,7 +1113,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "Payments & Lending, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "This session will examine how real-time monitoring and early-warning systems can identify emerging operational and payment risks before they become larger incidents. It will focus on data signals, platform engineering, response mechanisms and the design of resilient, always-on payment infrastructure. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "This session will examine how real-time monitoring and early-warning systems can identify emerging operational and payment risks before they become larger incidents. It will focus on data signals, platform engineering, response mechanisms and the design of resilient, always-on payment infrastructure. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "0c612aa4"
   },
   {
     "Date": "2026-09-09",
@@ -1032,7 +1125,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "",
-    "Description": ""
+    "Description": "",
+    "id": "0c3a9f09"
   },
   {
     "Date": "2026-09-09",
@@ -1043,7 +1137,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Data Sutram will launch their proprietary AI-native Trust platform"
+    "Description": "Data Sutram will launch their proprietary AI-native Trust platform",
+    "id": "5c4d9a3d"
   },
   {
     "Date": "2026-09-09",
@@ -1054,7 +1149,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 203",
     "Tracks": "",
-    "Description": "Reserve Pay allows customers to block a budget (Rs.500 to Rs.10,000) from their bank account or RuPay Credit Card for a specific merchant and pay for every subsequent order with zero authentication - no UPI PIN, no OTP, no biometric - for up to 90 days. Money stays in the customer's bank account (blocked, not transferred), is debited only at the time of delivery, and can be cancelled or modified anytime at zero cost. For RuPay CC customers, this unlocks a first-of-its-kind zero-PIN checkout on UPI - a convenience unavailable anywhere else today. The result: a frictionless, failure-free ordering experience that eliminates the #1 drop-off point in quick commerce UPI payments while giving customers complete budget control and trust."
+    "Description": "Reserve Pay allows customers to block a budget (Rs.500 to Rs.10,000) from their bank account or RuPay Credit Card for a specific merchant and pay for every subsequent order with zero authentication - no UPI PIN, no OTP, no biometric - for up to 90 days. Money stays in the customer's bank account (blocked, not transferred), is debited only at the time of delivery, and can be cancelled or modified anytime at zero cost. For RuPay CC customers, this unlocks a first-of-its-kind zero-PIN checkout on UPI - a convenience unavailable anywhere else today. The result: a frictionless, failure-free ordering experience that eliminates the #1 drop-off point in quick commerce UPI payments while giving customers complete budget control and trust.",
+    "id": "2b7ce8be"
   },
   {
     "Date": "2026-09-09",
@@ -1065,7 +1161,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "This session brings together industry leaders to explore how banks are evolving at scale through strategic innovation, technology adoption, and new growth models. It examines the future competitive landscape, questioning whether traditional banks will retain dominance or be challenged by fintechs and platform players. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes."
+    "Description": "This session brings together industry leaders to explore how banks are evolving at scale through strategic innovation, technology adoption, and new growth models. It examines the future competitive landscape, questioning whether traditional banks will retain dominance or be challenged by fintechs and platform players. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes.",
+    "id": "f49bcf0a"
   },
   {
     "Date": "2026-09-09",
@@ -1076,7 +1173,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "eFPI 5 Day Onboarding"
+    "Description": "eFPI 5 Day Onboarding",
+    "id": "d67ce8cf"
   },
   {
     "Date": "2026-09-09",
@@ -1087,7 +1185,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "Fundraising has long been viewed as a delicate balance between analytical rigor and human intuition. In an increasingly competitive capital environment, founders, investors, and fund managers must navigate both data-driven decision-making and the intangible elements of storytelling, timing, relationships, and conviction. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value."
+    "Description": "Fundraising has long been viewed as a delicate balance between analytical rigor and human intuition. In an increasingly competitive capital environment, founders, investors, and fund managers must navigate both data-driven decision-making and the intangible elements of storytelling, timing, relationships, and conviction. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value.",
+    "id": "b45128fb"
   },
   {
     "Date": "2026-09-09",
@@ -1098,7 +1197,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "As VDA transactions become increasingly cross-border, effective AML/CFT controls require stronger coordination across jurisdictions. This session will explore the practical implementation of the FATF Travel Rule, challenges in dealing with offshore and unregistered VDA service providers, and mechanisms for effective information-sharing between FIUs and VASPs. The discussion will also examine regulatory arbitrage, jurisdictional gaps and the need for interoperable compliance standards across the global VDA ecosystem."
+    "Description": "As VDA transactions become increasingly cross-border, effective AML/CFT controls require stronger coordination across jurisdictions. This session will explore the practical implementation of the FATF Travel Rule, challenges in dealing with offshore and unregistered VDA service providers, and mechanisms for effective information-sharing between FIUs and VASPs. The discussion will also examine regulatory arbitrage, jurisdictional gaps and the need for interoperable compliance standards across the global VDA ecosystem.",
+    "id": "2316ef83"
   },
   {
     "Date": "2026-09-09",
@@ -1109,7 +1209,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "RegTech & Compliance",
-    "Description": "As India's digital payments ecosystem continues to evolve, prepaid payment instruments are expanding into new consumer, merchant, mobility, and enterprise use cases. With growing interoperability, changing customer expectations, and emerging product innovations, issuers are reimagining how prepaid solutions create value across the payments ecosystem. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "As India's digital payments ecosystem continues to evolve, prepaid payment instruments are expanding into new consumer, merchant, mobility, and enterprise use cases. With growing interoperability, changing customer expectations, and emerging product innovations, issuers are reimagining how prepaid solutions create value across the payments ecosystem. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "8454879b"
   },
   {
     "Date": "2026-09-09",
@@ -1120,7 +1221,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "A focused showcase of solutions and use cases linked to fraud prevention, financial-crime intelligence and stronger controls. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers."
+    "Description": "A focused showcase of solutions and use cases linked to fraud prevention, financial-crime intelligence and stronger controls. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers.",
+    "id": "cd2e3b6d"
   },
   {
     "Date": "2026-09-09",
@@ -1131,7 +1233,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "This session, featuring live demonstrations, takes you inside Zeta\u2019s platform-led approach to solving some of the toughest business and technology challenges faced by financial institutions. See how Zeta\u2019s banking platforms are powering innovative solutions across payments, card programs, merchant acquiring, and next-generation customer experiences. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "This session, featuring live demonstrations, takes you inside Zeta\u2019s platform-led approach to solving some of the toughest business and technology challenges faced by financial institutions. See how Zeta\u2019s banking platforms are powering innovative solutions across payments, card programs, merchant acquiring, and next-generation customer experiences. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "940ad4fe"
   },
   {
     "Date": "2026-09-09",
@@ -1142,7 +1245,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "India's next phase of financial inclusion will be defined by its ability to bring more individuals and businesses into the formal credit ecosystem. As digital footprints expand and data-driven underwriting evolves, new opportunities are emerging to help consumers build credit histories, improve financial resilience and access formal finance. This session will explore how credit infrastructure, financial institutions and technology providers can work together to expand credit access, strengthen trust and unlock economic opportunity at scale."
+    "Description": "India's next phase of financial inclusion will be defined by its ability to bring more individuals and businesses into the formal credit ecosystem. As digital footprints expand and data-driven underwriting evolves, new opportunities are emerging to help consumers build credit histories, improve financial resilience and access formal finance. This session will explore how credit infrastructure, financial institutions and technology providers can work together to expand credit access, strengthen trust and unlock economic opportunity at scale.",
+    "id": "4be0548c"
   },
   {
     "Date": "2026-09-09",
@@ -1153,7 +1257,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "How fraud actually operates across the global financial system today, drawn from the Bureau's annual study of the fraud economy. The session covers the scale of the problem, how organised and AI-assisted attacks now move across institutions, and what it means for banks, lenders, and fintechs. Attend the session to get your Free copy of the Global Fraud Report 2026"
+    "Description": "How fraud actually operates across the global financial system today, drawn from the Bureau's annual study of the fraud economy. The session covers the scale of the problem, how organised and AI-assisted attacks now move across institutions, and what it means for banks, lenders, and fintechs. Attend the session to get your Free copy of the Global Fraud Report 2026",
+    "id": "1a54e889"
   },
   {
     "Date": "2026-09-09",
@@ -1164,7 +1269,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "With increasing automation, how can SEBI ensure fairness, transparency, and systemic stability? Regulatory and industry perspectives will help balance innovation, operating realities and the safeguards required for trusted scale."
+    "Description": "With increasing automation, how can SEBI ensure fairness, transparency, and systemic stability? Regulatory and industry perspectives will help balance innovation, operating realities and the safeguards required for trusted scale.",
+    "id": "0162aeac"
   },
   {
     "Date": "2026-09-09",
@@ -1175,7 +1281,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 104 A&B",
     "Tracks": "RegTech & Compliance",
-    "Description": "This interactive session will provide a platform for fintech leaders to share perspectives on regulatory, operational, and market opportunities that can help strengthen India's digital financial ecosystem and support sustainable growth. Led by a Department of Financial Services perspective, the discussion will connect regulatory priorities with the next phase of market development."
+    "Description": "This interactive session will provide a platform for fintech leaders to share perspectives on regulatory, operational, and market opportunities that can help strengthen India's digital financial ecosystem and support sustainable growth. Led by a Department of Financial Services perspective, the discussion will connect regulatory priorities with the next phase of market development.",
+    "id": "6e28e8d0"
   },
   {
     "Date": "2026-09-09",
@@ -1186,7 +1293,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Golconda - Trident",
     "Tracks": "",
-    "Description": ""
+    "Description": "",
+    "id": "157b048b"
   },
   {
     "Date": "2026-09-09",
@@ -1197,7 +1305,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "AI is transforming commerce from a series of payment transactions into intelligent, personalised financial experiences. From contextual payments and embedded financial services to predictive offers, autonomous checkout and real-time decisioning, AI is redefining how consumers and businesses interact with money. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development."
+    "Description": "AI is transforming commerce from a series of payment transactions into intelligent, personalised financial experiences. From contextual payments and embedded financial services to predictive offers, autonomous checkout and real-time decisioning, AI is redefining how consumers and businesses interact with money. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development.",
+    "id": "90e33bc0"
   },
   {
     "Date": "2026-09-09",
@@ -1208,7 +1317,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "Digital Public Infrastructure (DPI) has demonstrated how foundational digital systems can accelerate financial inclusion, innovation, and economic growth at national scale. This session will explore how governments, regulators, payment operators, and the private sector can collaborate to build trusted, interoperable, and inclusive digital ecosystems. The mix of regulatory and industry voices will keep the discussion grounded in practical implementation, market safeguards and scalable outcomes."
+    "Description": "Digital Public Infrastructure (DPI) has demonstrated how foundational digital systems can accelerate financial inclusion, innovation, and economic growth at national scale. This session will explore how governments, regulators, payment operators, and the private sector can collaborate to build trusted, interoperable, and inclusive digital ecosystems. The mix of regulatory and industry voices will keep the discussion grounded in practical implementation, market safeguards and scalable outcomes.",
+    "id": "448ad7cb"
   },
   {
     "Date": "2026-09-09",
@@ -1219,7 +1329,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Banking & Financial Institutions, Digital Public Infrastructure",
-    "Description": "This session will explore the future of banking, operating models and customer service, together with wider access, affordability and meaningful financial inclusion. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "This session will explore the future of banking, operating models and customer service, together with wider access, affordability and meaningful financial inclusion. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "80be9514"
   },
   {
     "Date": "2026-09-09",
@@ -1230,7 +1341,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "A framework for auditing, explaining, and governing AI-driven decisions in banking and financial services, helping boards take real accountability as algorithms take on greater authority. Research and industry perspectives will help translate emerging technology into practical financial-services use cases."
+    "Description": "A framework for auditing, explaining, and governing AI-driven decisions in banking and financial services, helping boards take real accountability as algorithms take on greater authority. Research and industry perspectives will help translate emerging technology into practical financial-services use cases.",
+    "id": "2709deab"
   },
   {
     "Date": "2026-09-09",
@@ -1241,7 +1353,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "SCF penetration remains heavily concentrated among large anchor-linked vendors, while smaller suppliers continue to face working capital constraints. Focus on ecosystem-led models, operational challenges and data-driven approaches to financing deeper tiers of supply chains. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value."
+    "Description": "SCF penetration remains heavily concentrated among large anchor-linked vendors, while smaller suppliers continue to face working capital constraints. Focus on ecosystem-led models, operational challenges and data-driven approaches to financing deeper tiers of supply chains. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value.",
+    "id": "02b69545"
   },
   {
     "Date": "2026-09-09",
@@ -1252,7 +1365,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "As banking becomes increasingly digital and customer expectations shift toward instant, personalized experiences, financial institutions are leveraging AI agents to deliver real-time, context-aware decisioning across customer journeys. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "As banking becomes increasingly digital and customer expectations shift toward instant, personalized experiences, financial institutions are leveraging AI agents to deliver real-time, context-aware decisioning across customer journeys. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "275f8478"
   },
   {
     "Date": "2026-09-09",
@@ -1263,7 +1377,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "Payments & Lending, Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "As lending ecosystems become increasingly digital, the convergence of tokenisation and agentic AI is creating new possibilities for trusted, programmable credit. By enabling real-time verification, automated compliance, and intelligent decision-making across interconnected financial networks, these technologies can reduce friction in last-mile lending while expanding access for underserved individuals and MSMEs. With UIDAI, RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "As lending ecosystems become increasingly digital, the convergence of tokenisation and agentic AI is creating new possibilities for trusted, programmable credit. By enabling real-time verification, automated compliance, and intelligent decision-making across interconnected financial networks, these technologies can reduce friction in last-mile lending while expanding access for underserved individuals and MSMEs. With UIDAI, RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "68548836"
   },
   {
     "Date": "2026-09-09",
@@ -1274,7 +1389,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "This session will explore digital identity, verification and trusted onboarding, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Perspectives from CERSAI, alongside technology leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "This session will explore digital identity, verification and trusted onboarding, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Perspectives from CERSAI, alongside technology leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "85c2ee2f"
   },
   {
     "Date": "2026-09-09",
@@ -1285,7 +1401,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Why a single check at the door no longer holds, and what it takes to read risk across an entire session. The session covers how device intelligence and behavioural signals work together to step authentication up or down in real time, how that changes outcomes for onboarding and account takeover, and how it fits alongside the rest of a fraud and identity stack."
+    "Description": "Why a single check at the door no longer holds, and what it takes to read risk across an entire session. The session covers how device intelligence and behavioural signals work together to step authentication up or down in real time, how that changes outcomes for onboarding and account takeover, and how it fits alongside the rest of a fraud and identity stack.",
+    "id": "33e8e25b"
   },
   {
     "Date": "2026-09-09",
@@ -1296,7 +1413,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Arrowhead is launching its own in-house TTS engine and multilingual voice agents at GFF 2026. Faster, more natural conversations now in the languages your customers actually speak."
+    "Description": "Arrowhead is launching its own in-house TTS engine and multilingual voice agents at GFF 2026. Faster, more natural conversations now in the languages your customers actually speak.",
+    "id": "3df6cc7d"
   },
   {
     "Date": "2026-09-09",
@@ -1307,7 +1425,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "As the global VDA ecosystem evolves, so do the complexities of ML/TF/PF risks across stablecoins, DeFi, P2P transactions, mixers and unhosted wallets. This session will explore the shift from checklist-based compliance to risk-based monitoring and proactive detection, including the role of blockchain analytics and AI in identifying suspicious patterns. The discussion will also examine how the industry can enable responsible innovation while safeguarding the integrity and resilience of the financial system."
+    "Description": "As the global VDA ecosystem evolves, so do the complexities of ML/TF/PF risks across stablecoins, DeFi, P2P transactions, mixers and unhosted wallets. This session will explore the shift from checklist-based compliance to risk-based monitoring and proactive detection, including the role of blockchain analytics and AI in identifying suspicious patterns. The discussion will also examine how the industry can enable responsible innovation while safeguarding the integrity and resilience of the financial system.",
+    "id": "171e6ce2"
   },
   {
     "Date": "2026-09-09",
@@ -1318,7 +1437,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Experience InsightAI\u2019s Device Shield, an AI-powered Device Intelligence solution that identifies high-risk devices, suspicious user behaviour, account takeovers, bots, and coordinated fraud in real time. The demo will showcase how device fingerprinting, behavioural intelligence, and risk signals can help financial institutions detect fraud earlier while reducing friction for genuine users."
+    "Description": "Experience InsightAI\u2019s Device Shield, an AI-powered Device Intelligence solution that identifies high-risk devices, suspicious user behaviour, account takeovers, bots, and coordinated fraud in real time. The demo will showcase how device fingerprinting, behavioural intelligence, and risk signals can help financial institutions detect fraud earlier while reducing friction for genuine users.",
+    "id": "6108b998"
   },
   {
     "Date": "2026-09-09",
@@ -1329,7 +1449,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "\u2022\tBalancing rapid innovation with security, resilience and accountability. \n\u2022\tThe evolving role of AI in transforming fintech products and customer experiences. \n\u2022\tProtecting identities, digital journeys and transactions in an increasingly connected ecosystem. \n\u2022\tBuilding trust into technology and business strategy not treating it as an afterthought. \n\u2022\tThe founder\u2019s role in creating a culture of security, resilience and responsible innovation."
+    "Description": "\u2022\tBalancing rapid innovation with security, resilience and accountability. \n\u2022\tThe evolving role of AI in transforming fintech products and customer experiences. \n\u2022\tProtecting identities, digital journeys and transactions in an increasingly connected ecosystem. \n\u2022\tBuilding trust into technology and business strategy not treating it as an afterthought. \n\u2022\tThe founder\u2019s role in creating a culture of security, resilience and responsible innovation.",
+    "id": "5540daf4"
   },
   {
     "Date": "2026-09-09",
@@ -1340,7 +1461,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Bringing AI-powered customer interaction, intelligent ATM monitoring and proactive TMS into one multi-vendor platform. Enhancing ATM availability, security, compliance and customer experience through real-time intelligence."
+    "Description": "Bringing AI-powered customer interaction, intelligent ATM monitoring and proactive TMS into one multi-vendor platform. Enhancing ATM availability, security, compliance and customer experience through real-time intelligence.",
+    "id": "138ba968"
   },
   {
     "Date": "2026-09-09",
@@ -1351,7 +1473,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Demo of the product through mobile apps and our platform portals"
+    "Description": "Demo of the product through mobile apps and our platform portals",
+    "id": "768138f0"
   },
   {
     "Date": "2026-09-09",
@@ -1362,7 +1485,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "We will launch our product SpacePe"
+    "Description": "We will launch our product SpacePe",
+    "id": "87b5410f"
   },
   {
     "Date": "2026-09-09",
@@ -1373,7 +1497,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "We would be launching our products with visitors invited and a small round of Q/A"
+    "Description": "We would be launching our products with visitors invited and a small round of Q/A",
+    "id": "d7a1239d"
   },
   {
     "Date": "2026-09-09",
@@ -1384,7 +1509,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "We will schedule a 2hrs dedicated time at our booth for the signing books from the author, Founder and CTO of Aerospike."
+    "Description": "We will schedule a 2hrs dedicated time at our booth for the signing books from the author, Founder and CTO of Aerospike.",
+    "id": "f2b31921"
   },
   {
     "Date": "2026-09-09",
@@ -1395,7 +1521,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "RegTech & Compliance",
-    "Description": "Fintech doesn't scale without institutional backing. This session brings together leaders from Saudi Arabia's Ministry of Investment and Karnataka's Digital Economy Mission to discuss how sovereign institutions \u2014 through policy, capital, and infrastructure \u2014 are architecting fintech ecosystems at national scale. What does it take to move from startup hubs to fintech nations?"
+    "Description": "Fintech doesn't scale without institutional backing. This session brings together leaders from Saudi Arabia's Ministry of Investment and Karnataka's Digital Economy Mission to discuss how sovereign institutions \u2014 through policy, capital, and infrastructure \u2014 are architecting fintech ecosystems at national scale. What does it take to move from startup hubs to fintech nations?",
+    "id": "de912ee4"
   },
   {
     "Date": "2026-09-09",
@@ -1406,7 +1533,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "AI, Data & Emerging Tech, Climate & Green Finance",
-    "Description": "India stands at the intersection of three transformative forces: artificial intelligence, sustainable finance, and next-generation infrastructure. As the country accelerates toward becoming a multi-trillion-dollar digital economy, fintech innovation is increasingly shaping how capital is mobilized, risks are assessed, and inclusive growth is achieved. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "India stands at the intersection of three transformative forces: artificial intelligence, sustainable finance, and next-generation infrastructure. As the country accelerates toward becoming a multi-trillion-dollar digital economy, fintech innovation is increasingly shaping how capital is mobilized, risks are assessed, and inclusive growth is achieved. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "cc59da08"
   },
   {
     "Date": "2026-09-09",
@@ -1417,7 +1545,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "India's outward remittance market under LRS is growing rapidly, driven by education, overseas investments, global travel spending, and the growing cross-border payment needs of businesses and digital enterprises. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "India's outward remittance market under LRS is growing rapidly, driven by education, overseas investments, global travel spending, and the growing cross-border payment needs of businesses and digital enterprises. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "fb04a67e"
   },
   {
     "Date": "2026-09-09",
@@ -1428,7 +1557,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "We're building a fast, frictionless checkout experience on Amazon stores that leverages biometric authentication to eliminate OTPs & MPINs and skip the PSP redirect entirely \u2014 for both cards and UPI. The payment method is intelligently preselected and recommended based on the customer's last-used history and the best available offer, removing yet another decision point from the flow. The result is a true one-click payment: customers authenticate with a fingerprint or face, and the transaction completes instantly without leaving the merchant page. This dramatically reduces checkout drop-offs, cuts payment latency, and delivers a seamless shopping experience that sets a new standard for digital commerce in India."
+    "Description": "We're building a fast, frictionless checkout experience on Amazon stores that leverages biometric authentication to eliminate OTPs & MPINs and skip the PSP redirect entirely \u2014 for both cards and UPI. The payment method is intelligently preselected and recommended based on the customer's last-used history and the best available offer, removing yet another decision point from the flow. The result is a true one-click payment: customers authenticate with a fingerprint or face, and the transaction completes instantly without leaving the merchant page. This dramatically reduces checkout drop-offs, cuts payment latency, and delivers a seamless shopping experience that sets a new standard for digital commerce in India.",
+    "id": "8c64c51c"
   },
   {
     "Date": "2026-09-09",
@@ -1439,7 +1569,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "Aligning Indian market practices with global standards to improve ease of entry and participation. Perspectives from SEBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "Aligning Indian market practices with global standards to improve ease of entry and participation. Perspectives from SEBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "fb98f74d"
   },
   {
     "Date": "2026-09-09",
@@ -1450,7 +1581,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "AI is becoming central to detecting fraud and financial crime as threat patterns grow faster, more coordinated and more difficult to identify through rule-based monitoring alone. The discussion will examine data quality, model explainability, false-positive reduction, privacy-safe collaboration and governance frameworks required to build trusted financial crime intelligence systems. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale."
+    "Description": "AI is becoming central to detecting fraud and financial crime as threat patterns grow faster, more coordinated and more difficult to identify through rule-based monitoring alone. The discussion will examine data quality, model explainability, false-positive reduction, privacy-safe collaboration and governance frameworks required to build trusted financial crime intelligence systems. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale.",
+    "id": "d469ed1d"
   },
   {
     "Date": "2026-09-09",
@@ -1461,7 +1593,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "This session will examine how policymakers and financial institutions can evaluate emerging technologies through the lenses of usefulness, prudence and public trust. With RBI and financial-institution perspectives represented, the discussion will focus on where adoption can create value, what risks need to be managed and how policy can support responsible innovation."
+    "Description": "This session will examine how policymakers and financial institutions can evaluate emerging technologies through the lenses of usefulness, prudence and public trust. With RBI and financial-institution perspectives represented, the discussion will focus on where adoption can create value, what risks need to be managed and how policy can support responsible innovation.",
+    "id": "9b038a0c"
   },
   {
     "Date": "2026-09-09",
@@ -1472,7 +1605,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "India's fintech ecosystem has achieved unprecedented scale in digital payments, financial inclusion, and digital public infrastructure. The next phase of growth, however, will be defined by sustainable business models, trusted innovation, global expansion, and deeper customer impact. Bringing together RBI and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "India's fintech ecosystem has achieved unprecedented scale in digital payments, financial inclusion, and digital public infrastructure. The next phase of growth, however, will be defined by sustainable business models, trusted innovation, global expansion, and deeper customer impact. Bringing together RBI and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "4d80f242"
   },
   {
     "Date": "2026-09-09",
@@ -1483,7 +1617,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "Who pays and who earns in instant, interoperable, tokenised ecosystems Business models beyond interchange and float Where value shifts as infrastructure becomes faster and cheaper. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "Who pays and who earns in instant, interoperable, tokenised ecosystems Business models beyond interchange and float Where value shifts as infrastructure becomes faster and cheaper. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "7948ba29"
   },
   {
     "Date": "2026-09-09",
@@ -1494,7 +1629,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Live Product Demo - How AI led MSME Growth Infrastructure enables MSMEs to win more business while providing signals for embedding contextual credit while strengthening the underwriting"
+    "Description": "Live Product Demo - How AI led MSME Growth Infrastructure enables MSMEs to win more business while providing signals for embedding contextual credit while strengthening the underwriting",
+    "id": "a9b06654"
   },
   {
     "Date": "2026-09-09",
@@ -1505,7 +1641,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Official launch of Interestng's Borrower Intelligence platform, Borrowers see for the first time how to optimize existing loan portfolios, they can compare it from 60+ lenders, understand the likely reasons for rejection and how to fix it, and vet a sanction letter before signing. Live walkthrough of the complete borrower journey. Exclusive early access for those who sign up at the stall."
+    "Description": "Official launch of Interestng's Borrower Intelligence platform, Borrowers see for the first time how to optimize existing loan portfolios, they can compare it from 60+ lenders, understand the likely reasons for rejection and how to fix it, and vet a sanction letter before signing. Live walkthrough of the complete borrower journey. Exclusive early access for those who sign up at the stall.",
+    "id": "d4c39653"
   },
   {
     "Date": "2026-09-09",
@@ -1516,7 +1653,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Product launch showcasing our new product CardsXT along with iMoneyPay"
+    "Description": "Product launch showcasing our new product CardsXT along with iMoneyPay",
+    "id": "2e6c1331"
   },
   {
     "Date": "2026-09-09",
@@ -1527,7 +1665,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Payments & Lending, Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "Timely and accurate suspicious transaction reporting is essential for maintaining institutional integrity and compliance across digital asset markets. This session examines practical approaches to improving report quality, monitoring transaction flows and strengthening risk detection. Compliance officers and money laundering reporting officers from digital asset platforms will discuss surveillance frameworks and regulatory alignment."
+    "Description": "Timely and accurate suspicious transaction reporting is essential for maintaining institutional integrity and compliance across digital asset markets. This session examines practical approaches to improving report quality, monitoring transaction flows and strengthening risk detection. Compliance officers and money laundering reporting officers from digital asset platforms will discuss surveillance frameworks and regulatory alignment.",
+    "id": "120dbdeb"
   },
   {
     "Date": "2026-09-09",
@@ -1538,7 +1677,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "We will be demonstrating the AI/GenAI and patented location intelligence capabilities of Dista Collect. The product offers unified debt collection and recovery across pre delinquency, delinquency, repo-settlement, reconciliation and receipting. Also, witness AI/GenAI-enabled strategy builder and customer 360 for telecallers, collectors, agencies, strategy teams and collection leaders."
+    "Description": "We will be demonstrating the AI/GenAI and patented location intelligence capabilities of Dista Collect. The product offers unified debt collection and recovery across pre delinquency, delinquency, repo-settlement, reconciliation and receipting. Also, witness AI/GenAI-enabled strategy builder and customer 360 for telecallers, collectors, agencies, strategy teams and collection leaders.",
+    "id": "15061071"
   },
   {
     "Date": "2026-09-09",
@@ -1549,7 +1689,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "Banking & Financial Institutions, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "130 million rural cooperative bank members remain digitally excluded. The cooperative network\u2014over 1,500 DCCBs and StCBs\u2014reaches geographies private fintechs will not serve commercially. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "130 million rural cooperative bank members remain digitally excluded. The cooperative network\u2014over 1,500 DCCBs and StCBs\u2014reaches geographies private fintechs will not serve commercially. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "5cbb6c03"
   },
   {
     "Date": "2026-09-09",
@@ -1560,7 +1701,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, Banking & Financial Institutions",
-    "Description": "The rapid evolution of digital commerce is reshaping how businesses and consumers make and manage payments, with autonomous and intelligent banking systems enabling more seamless transactions. The conversation will also discuss opportunities and challenges for banks, fintechs and businesses as commerce moves towards increasingly automated payment experiences. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "The rapid evolution of digital commerce is reshaping how businesses and consumers make and manage payments, with autonomous and intelligent banking systems enabling more seamless transactions. The conversation will also discuss opportunities and challenges for banks, fintechs and businesses as commerce moves towards increasingly automated payment experiences. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "ba84d049"
   },
   {
     "Date": "2026-09-09",
@@ -1571,7 +1713,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "This session will explore quantum readiness, security and future financial infrastructure, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The session will draw on hands-on operating experience to examine adoption, customer outcomes and the next phase of growth."
+    "Description": "This session will explore quantum readiness, security and future financial infrastructure, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The session will draw on hands-on operating experience to examine adoption, customer outcomes and the next phase of growth.",
+    "id": "560af5ff"
   },
   {
     "Date": "2026-09-09",
@@ -1582,7 +1725,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Discover how Voice AI can transform outbound calling by reaching more of the right people, at the right time. Learn practical strategies to use AI-powered voice conversations to improve contact rates, reduce wasted calls, and achieve up to 3X more Right-Party Contacts."
+    "Description": "Discover how Voice AI can transform outbound calling by reaching more of the right people, at the right time. Learn practical strategies to use AI-powered voice conversations to improve contact rates, reduce wasted calls, and achieve up to 3X more Right-Party Contacts.",
+    "id": "9ebbfaef"
   },
   {
     "Date": "2026-09-09",
@@ -1593,7 +1737,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "Payments & Lending",
-    "Description": "As digital payment ecosystems expand across markets, the next challenge is connecting diverse domestic rails to enable seamless, interoperable and secure payment experiences. This session explores how fintechs and payment platforms are driving cross-border connectivity, expanding access and enabling businesses and consumers to move money more efficiently across markets. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "As digital payment ecosystems expand across markets, the next challenge is connecting diverse domestic rails to enable seamless, interoperable and secure payment experiences. This session explores how fintechs and payment platforms are driving cross-border connectivity, expanding access and enabling businesses and consumers to move money more efficiently across markets. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "37574645"
   },
   {
     "Date": "2026-09-09",
@@ -1604,7 +1749,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "RegTech & Compliance",
-    "Description": "India\u2019s economic transformation over the past decade has been shaped by structural reforms, policy innovation and a growing integration with global markets. This fireside chat will discuss India\u2019s evolving growth trajectory, the policy and institutional shifts driving its transformation, and the opportunities emerging across sectors. Bringing together NITI Aayog and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "India\u2019s economic transformation over the past decade has been shaped by structural reforms, policy innovation and a growing integration with global markets. This fireside chat will discuss India\u2019s evolving growth trajectory, the policy and institutional shifts driving its transformation, and the opportunities emerging across sectors. Bringing together NITI Aayog and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "181ba358"
   },
   {
     "Date": "2026-09-09",
@@ -1615,7 +1761,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 104 A&B",
     "Tracks": "Payments & Lending, Cybersecurity & Trust",
-    "Description": "As cross-border payments reshape global trade, remittances, and digital commerce, India is uniquely positioned to lead the development of trusted, interoperable, and inclusive payment networks. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "As cross-border payments reshape global trade, remittances, and digital commerce, India is uniquely positioned to lead the development of trusted, interoperable, and inclusive payment networks. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "8d45ca24"
   },
   {
     "Date": "2026-09-09",
@@ -1626,7 +1773,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "This session will examine gamification, social trading, and herd behaviour \u2014 and regulatory responses to protect investors in a digital-first ecosystem. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes."
+    "Description": "This session will examine gamification, social trading, and herd behaviour \u2014 and regulatory responses to protect investors in a digital-first ecosystem. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes.",
+    "id": "c09d2280"
   },
   {
     "Date": "2026-09-09",
@@ -1637,7 +1785,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending, Cybersecurity & Trust",
-    "Description": "India's digital payments success is increasingly becoming a catalyst for global commerce. As Indian businesses expand into international markets, the focus is shifting from domestic payment innovation to building trusted digital payment acceptance across borders. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "India's digital payments success is increasingly becoming a catalyst for global commerce. As Indian businesses expand into international markets, the focus is shifting from domestic payment innovation to building trusted digital payment acceptance across borders. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "5eb65d6b"
   },
   {
     "Date": "2026-09-09",
@@ -1648,7 +1797,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "An introduction to Vegaah\u2019s Cross-Border Payments solution, showcasing its capabilities and our vision for seamless, simplified, and efficient global payments through live demonstrations, interactive discussions, visitor engagement, and Q&A sessions that explore its real-world possibilities."
+    "Description": "An introduction to Vegaah\u2019s Cross-Border Payments solution, showcasing its capabilities and our vision for seamless, simplified, and efficient global payments through live demonstrations, interactive discussions, visitor engagement, and Q&A sessions that explore its real-world possibilities.",
+    "id": "0024f417"
   },
   {
     "Date": "2026-09-09",
@@ -1659,7 +1809,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "Early-stage founders will be showcasing their idea and vision to the investor community. The top 10 startups pitch on India\u2019s largest fintech stage before a jury of five senior venture investors and 30+ VCs, CVCs, and Family Offices. Drawing on an investor perspective, the session will focus on market opportunity, capital discipline and the ingredients of durable growth."
+    "Description": "Early-stage founders will be showcasing their idea and vision to the investor community. The top 10 startups pitch on India\u2019s largest fintech stage before a jury of five senior venture investors and 30+ VCs, CVCs, and Family Offices. Drawing on an investor perspective, the session will focus on market opportunity, capital discipline and the ingredients of durable growth.",
+    "id": "d9e71233"
   },
   {
     "Date": "2026-09-09",
@@ -1670,7 +1821,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 102",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "This Cisco roundtable will explore how organisations can move beyond reactive monitoring towards resilience-oriented decisions on fraud, outage risk, third-party exposure, and AI governance. The conversation will also dive deep into how enterprises can balance innovation, governance, and operational efficiency while building secure, resilient technology ecosystems."
+    "Description": "This Cisco roundtable will explore how organisations can move beyond reactive monitoring towards resilience-oriented decisions on fraud, outage risk, third-party exposure, and AI governance. The conversation will also dive deep into how enterprises can balance innovation, governance, and operational efficiency while building secure, resilient technology ecosystems.",
+    "id": "077ab6ca"
   },
   {
     "Date": "2026-09-09",
@@ -1681,7 +1833,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "Financial infrastructure is rapidly becoming programmable, allowing businesses to embed payments, banking, identity, lending, and financial services directly into digital experiences through APIs. As the API economy evolves, financial infrastructure is becoming the foundation upon which the next generation of commerce and digital businesses will be built. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale."
+    "Description": "Financial infrastructure is rapidly becoming programmable, allowing businesses to embed payments, banking, identity, lending, and financial services directly into digital experiences through APIs. As the API economy evolves, financial infrastructure is becoming the foundation upon which the next generation of commerce and digital businesses will be built. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale.",
+    "id": "b0f79ebe"
   },
   {
     "Date": "2026-09-09",
@@ -1692,7 +1845,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "As financial services distribution scales through digital and phygital models, improving unit economics while delivering better customer service has become increasingly important. AI offers practical opportunities to strengthen distribution across the value chain\u2014from assisted customer onboarding and multilingual voice interactions to document verification, loan origination and underwriting, fraud monitoring, intelligent customer support, and last-mile agent productivity. The session will explore how technology can be deployed effectively across these use cases, with a focus on architecture, implementation and thepath to scale"
+    "Description": "As financial services distribution scales through digital and phygital models, improving unit economics while delivering better customer service has become increasingly important. AI offers practical opportunities to strengthen distribution across the value chain\u2014from assisted customer onboarding and multilingual voice interactions to document verification, loan origination and underwriting, fraud monitoring, intelligent customer support, and last-mile agent productivity. The session will explore how technology can be deployed effectively across these use cases, with a focus on architecture, implementation and thepath to scale",
+    "id": "06094efe"
   },
   {
     "Date": "2026-09-09",
@@ -1703,7 +1857,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "AI-driven and embedded lending models are reshaping how consumers and businesses access credit across digital ecosystems. This session explores how alternative data, platform intelligence, and connected financial infrastructure are enabling scalable, contextual, and more inclusive credit experiences while balancing trust, transparency, and risk discipline. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "AI-driven and embedded lending models are reshaping how consumers and businesses access credit across digital ecosystems. This session explores how alternative data, platform intelligence, and connected financial infrastructure are enabling scalable, contextual, and more inclusive credit experiences while balancing trust, transparency, and risk discipline. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "208f1bc5"
   },
   {
     "Date": "2026-09-09",
@@ -1714,7 +1869,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "As banking operations become increasingly digital and high-volume, operational excellence now depends on more than just automation. This session explores how banks are combining RPA, AI, and intelligent workflows with organisational change and cultural readiness to build agile, scalable, and future-ready operations. Perspectives from NPCI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "As banking operations become increasingly digital and high-volume, operational excellence now depends on more than just automation. This session explores how banks are combining RPA, AI, and intelligent workflows with organisational change and cultural readiness to build agile, scalable, and future-ready operations. Perspectives from NPCI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "456149e6"
   },
   {
     "Date": "2026-09-09",
@@ -1725,7 +1881,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "This session will explore practical use of AI, automation and better decision-making, together with trusted data, analytics and real-time intelligence. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The session will translate technology choices into practical considerations around architecture, controls and implementation."
+    "Description": "This session will explore practical use of AI, automation and better decision-making, together with trusted data, analytics and real-time intelligence. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The session will translate technology choices into practical considerations around architecture, controls and implementation.",
+    "id": "40360909"
   },
   {
     "Date": "2026-09-09",
@@ -1736,7 +1893,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "Banking & Financial Institutions, Wealth & Capital Markets",
-    "Description": "The future of corporate treasury is programmable, tokenised, and embedded in the platforms where work happens. In this session, HSBC and SAP chart a journey from foundational bank connectivity - streamlining payment flows and reducing onboarding friction through SAP Multi-Bank Connectivity and BTP-native payment templates - to the emerging frontier of tokenised assets. Discover how HSBC and SAP are collaborating to integrate modern forms of payments and what this means for corporates."
+    "Description": "The future of corporate treasury is programmable, tokenised, and embedded in the platforms where work happens. In this session, HSBC and SAP chart a journey from foundational bank connectivity - streamlining payment flows and reducing onboarding friction through SAP Multi-Bank Connectivity and BTP-native payment templates - to the emerging frontier of tokenised assets. Discover how HSBC and SAP are collaborating to integrate modern forms of payments and what this means for corporates.",
+    "id": "d9fea2fe"
   },
   {
     "Date": "2026-09-09",
@@ -1747,7 +1905,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "This landmark hackathon brings together public sector banking leadership, cutting-edge technology, and emerging talent from across India. Addressing mission-critical challenges, the hackathon focuses on GenAI, Cybersecurity and Fraud Prevention. Led by a Department of Financial Services perspective, the discussion will connect regulatory priorities with the next phase of market development."
+    "Description": "This landmark hackathon brings together public sector banking leadership, cutting-edge technology, and emerging talent from across India. Addressing mission-critical challenges, the hackathon focuses on GenAI, Cybersecurity and Fraud Prevention. Led by a Department of Financial Services perspective, the discussion will connect regulatory priorities with the next phase of market development.",
+    "id": "9eef9673"
   },
   {
     "Date": "2026-09-09",
@@ -1758,7 +1917,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "In this keynote, Dr. Pratyush Kumar examines what banks, insurers and lenders must learn, build and retain as AI becomes central to customer relationships, decision-making and operations. Institutions that accumulate this judgment will become more capable with every deployment. The frontier lies not in automating more tasks, but in extending high-quality judgment across the financial system."
+    "Description": "In this keynote, Dr. Pratyush Kumar examines what banks, insurers and lenders must learn, build and retain as AI becomes central to customer relationships, decision-making and operations. Institutions that accumulate this judgment will become more capable with every deployment. The frontier lies not in automating more tasks, but in extending high-quality judgment across the financial system.",
+    "id": "c8d64b4e"
   },
   {
     "Date": "2026-09-09",
@@ -1769,7 +1929,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Discovery of products and solutions has been transformed with AI. Search has moved from links to answers, and consumers now want recommendations. \nGet a sneak peek into the state of AI visibility for fintech players in the payments and compliance space. See which players come out on top of AI search, and which sources AI engines trust the most. The session ends with a live AMA with the builders of \"AI search visibility for BFSI\""
+    "Description": "Discovery of products and solutions has been transformed with AI. Search has moved from links to answers, and consumers now want recommendations. \nGet a sneak peek into the state of AI visibility for fintech players in the payments and compliance space. See which players come out on top of AI search, and which sources AI engines trust the most. The session ends with a live AMA with the builders of \"AI search visibility for BFSI\"",
+    "id": "d7a7e741"
   },
   {
     "Date": "2026-09-09",
@@ -1780,7 +1941,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, Digital Public Infrastructure",
-    "Description": "Beyond record-keeping, reimagining depositories as real time trust, data and innovation engines for the Indian capital market. Bringing together SEBI and researchers, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "Beyond record-keeping, reimagining depositories as real time trust, data and innovation engines for the Indian capital market. Bringing together SEBI and researchers, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "9ccd6b4b"
   },
   {
     "Date": "2026-09-09",
@@ -1791,7 +1953,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "As AI systems move into production across financial services, continuous observability and monitoring are essential to ensure reliability, compliance and trust. This technical session will explore how institutions can track model performance, detect drift, measure explainability, maintain audit trails and identify emerging risks at scale. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "As AI systems move into production across financial services, continuous observability and monitoring are essential to ensure reliability, compliance and trust. This technical session will explore how institutions can track model performance, detect drift, measure explainability, maintain audit trails and identify emerging risks at scale. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "a30c868f"
   },
   {
     "Date": "2026-09-09",
@@ -1802,7 +1965,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "India's digital public infrastructure is creating the foundation for a new era of inclusive, interoperable, and intelligent credit. By leveraging open networks, digital identity, consent-based data sharing, and AI-driven underwriting, the next generation of credit infrastructure can expand access for individuals, MSMEs, and underserved segments while improving efficiency and trust. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "India's digital public infrastructure is creating the foundation for a new era of inclusive, interoperable, and intelligent credit. By leveraging open networks, digital identity, consent-based data sharing, and AI-driven underwriting, the next generation of credit infrastructure can expand access for individuals, MSMEs, and underserved segments while improving efficiency and trust. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "3edea489"
   },
   {
     "Date": "2026-09-09",
@@ -1813,7 +1977,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "Traditional underwriting models remain poorly suited for platform and gig economy workers with variable cash flows. A discussion on alternate income assessment models, repayment structures and product innovation for serving India\u2019s evolving workforce. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "Traditional underwriting models remain poorly suited for platform and gig economy workers with variable cash flows. A discussion on alternate income assessment models, repayment structures and product innovation for serving India\u2019s evolving workforce. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "02bb1780"
   },
   {
     "Date": "2026-09-09",
@@ -1824,7 +1989,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 202",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "FinKonnect is a structured platform where select Indian fintech startups present solutions directly to banks, NBFCs and other regulated entities."
+    "Description": "FinKonnect is a structured platform where select Indian fintech startups present solutions directly to banks, NBFCs and other regulated entities.",
+    "id": "3c2a9519"
   },
   {
     "Date": "2026-09-09",
@@ -1835,7 +2001,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "As AI evolves from copilots to autonomous agents, financial institutions have an opportunity to redefine how work gets done across customer engagement, operations, risk, and decision-making. This roundtable will explore how BFSI leaders can move beyond pilots and build AI-native operating models that drive sustainable growth, productivity, and competitive advantage."
+    "Description": "As AI evolves from copilots to autonomous agents, financial institutions have an opportunity to redefine how work gets done across customer engagement, operations, risk, and decision-making. This roundtable will explore how BFSI leaders can move beyond pilots and build AI-native operating models that drive sustainable growth, productivity, and competitive advantage.",
+    "id": "a933c093"
   },
   {
     "Date": "2026-09-09",
@@ -1846,7 +2013,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 102",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "Wealth management firms are under increasing pressure to modernise client engagement, improve advisor productivity, launch new capabilities faster and bring intelligence into every part of the wealth lifecycle. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale."
+    "Description": "Wealth management firms are under increasing pressure to modernise client engagement, improve advisor productivity, launch new capabilities faster and bring intelligence into every part of the wealth lifecycle. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale.",
+    "id": "fd6b9db6"
   },
   {
     "Date": "2026-09-09",
@@ -1857,7 +2025,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Persistent Systems invites you to The Persistent Leadership Circle an invitation only gathering of senior leaders from banking, financial services, insurance, payments, and fintech. Join industry peers to exchange perspectives on how organisations are leveraging AI to drive innovation, enhance customer experiences, modernise operations, and create sustainable competitive advantage."
+    "Description": "Persistent Systems invites you to The Persistent Leadership Circle an invitation only gathering of senior leaders from banking, financial services, insurance, payments, and fintech. Join industry peers to exchange perspectives on how organisations are leveraging AI to drive innovation, enhance customer experiences, modernise operations, and create sustainable competitive advantage.",
+    "id": "c39ef63c"
   },
   {
     "Date": "2026-09-09",
@@ -1868,7 +2037,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Lotus 1",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "Money no longer moves \u2013 it flows, instantly, intelligently, invisibly. As AI and real-time rails converge, the infrastructure of global finance is being rebuilt beneath the surface of everyday commerce, changing not just how value moves, but how it is understood, priced, and protected."
+    "Description": "Money no longer moves \u2013 it flows, instantly, intelligently, invisibly. As AI and real-time rails converge, the infrastructure of global finance is being rebuilt beneath the surface of everyday commerce, changing not just how value moves, but how it is understood, priced, and protected.",
+    "id": "60cf3808"
   },
   {
     "Date": "2026-09-09",
@@ -1879,7 +2049,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Jasmine 2",
     "Tracks": "",
-    "Description": "An invitation-led networking engagement centred on Networking, Leadership. It will give participants space for direct conversations, relationship building and follow-up discussions beyond the formal agenda."
+    "Description": "An invitation-led networking engagement centred on Networking, Leadership. It will give participants space for direct conversations, relationship building and follow-up discussions beyond the formal agenda.",
+    "id": "5378784c"
   },
   {
     "Date": "2026-09-09",
@@ -1890,7 +2061,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Indian Accent",
     "Tracks": "",
-    "Description": "HSBC India is the Innovation Leadership Partner, supporting conversations and collaborations that translate next-generation innovation into real-world impact. With a focus on the convergence of Agentic AI, Tokenisation and Quantum, this year\u2019s theme \u201cPotential to Impact: Trusted, Connected, Global Systems for Inclusive Finance\u201d highlights the shift towards a smarter, programmable and secure financial operating stack. To mark the opening day, HSBC India is co-hosting the Innovation Leadership Dinner on 9 September at Indian Accent, bringing together leading voices from finance and fintech."
+    "Description": "HSBC India is the Innovation Leadership Partner, supporting conversations and collaborations that translate next-generation innovation into real-world impact. With a focus on the convergence of Agentic AI, Tokenisation and Quantum, this year\u2019s theme \u201cPotential to Impact: Trusted, Connected, Global Systems for Inclusive Finance\u201d highlights the shift towards a smarter, programmable and secure financial operating stack. To mark the opening day, HSBC India is co-hosting the Innovation Leadership Dinner on 9 September at Indian Accent, bringing together leading voices from finance and fintech.",
+    "id": "7e6e1aa5"
   },
   {
     "Date": "2026-09-09",
@@ -1901,7 +2073,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "The Grand Theatre",
     "Tracks": "",
-    "Description": "A recognition platform celebrating institutions, teams and innovators creating meaningful impact across financial services. The programme will highlight strong ideas, responsible execution and solutions that are helping build a more inclusive, trusted and future-ready financial ecosystem."
+    "Description": "A recognition platform celebrating institutions, teams and innovators creating meaningful impact across financial services. The programme will highlight strong ideas, responsible execution and solutions that are helping build a more inclusive, trusted and future-ready financial ecosystem.",
+    "id": "202ce83d"
   },
   {
     "Date": "2026-09-10",
@@ -1912,7 +2085,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Digital Public Infrastructure",
-    "Description": "A curated breakfast for women leaders in finance and technology, bringing together senior voices across the industry for mentorship, dialogue, and networking."
+    "Description": "A curated breakfast for women leaders in finance and technology, bringing together senior voices across the industry for mentorship, dialogue, and networking.",
+    "id": "4159a420"
   },
   {
     "Date": "2026-09-10",
@@ -1923,7 +2097,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 105 A&B",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "A working session for IOSCO FTF members to review current priorities, exchange jurisdictional perspectives and advance collaborative work on technology and securities markets. The meeting will focus on regulatory coordination, emerging risks and practical areas for joint action."
+    "Description": "A working session for IOSCO FTF members to review current priorities, exchange jurisdictional perspectives and advance collaborative work on technology and securities markets. The meeting will focus on regulatory coordination, emerging risks and practical areas for joint action.",
+    "id": "2f7c9517"
   },
   {
     "Date": "2026-09-10",
@@ -1934,7 +2109,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "An In-App AI Agent provides proactive, contextual assistance within the app to guide users through complex journeys and drive conversion. It combines an Avatar Agent for conversational engagement with an In-App Co-pilot that assists users contextually and helps them complete actions."
+    "Description": "An In-App AI Agent provides proactive, contextual assistance within the app to guide users through complex journeys and drive conversion. It combines an Avatar Agent for conversational engagement with an In-App Co-pilot that assists users contextually and helps them complete actions.",
+    "id": "87ccef49"
   },
   {
     "Date": "2026-09-10",
@@ -1945,7 +2121,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Oli AI is building the next generation of enterprise conversation infrastructure bringing together Voice AI, Conversation Intelligence, Conversational Voice Agents, and Live AI Assistance to help enterprises understand, automate, and act on customer conversations. With a strong focus on accuracy across India\u2019s regional languages and dialects, Oli is evolving toward industry-specific, compliance-ready AI models, a secure conversation intelligence layer, and AI-powered commerce. \nOur vision is simple: transform every enterprise-customer conversation from a communication channel into an intelligent business interface"
+    "Description": "Oli AI is building the next generation of enterprise conversation infrastructure bringing together Voice AI, Conversation Intelligence, Conversational Voice Agents, and Live AI Assistance to help enterprises understand, automate, and act on customer conversations. With a strong focus on accuracy across India\u2019s regional languages and dialects, Oli is evolving toward industry-specific, compliance-ready AI models, a secure conversation intelligence layer, and AI-powered commerce. \nOur vision is simple: transform every enterprise-customer conversation from a communication channel into an intelligent business interface",
+    "id": "fe52a2d1"
   },
   {
     "Date": "2026-09-10",
@@ -1956,7 +2133,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, Cybersecurity & Trust",
-    "Description": "India has a fraud problem and digital authentication still relies heavily on OTPs, PINs and device-based signals that can be phished, intercepted, socially engineered or compromised.\n\nWhat if authentication was linked back to the person, rather than the device?\n\nIdenty brings inherence \u2014 Face, Palm and Finger \u2014 into the authentication layer, creating a cryptographically secured credential linked to the individual's identity rather than the device they happen to be using.\n\nThe result is a fundamentally different approach to digital trust: authenticate the person, not the possession.\n\nAt GFF 2026, we are making this tangible through a live Pay with Identity showcase. Visitors can select a product, enrol using their Face, Palm or Finger, and complete the checkout simply by presenting their biometric \u2014 no OTP, PIN or password required."
+    "Description": "India has a fraud problem and digital authentication still relies heavily on OTPs, PINs and device-based signals that can be phished, intercepted, socially engineered or compromised.\n\nWhat if authentication was linked back to the person, rather than the device?\n\nIdenty brings inherence \u2014 Face, Palm and Finger \u2014 into the authentication layer, creating a cryptographically secured credential linked to the individual's identity rather than the device they happen to be using.\n\nThe result is a fundamentally different approach to digital trust: authenticate the person, not the possession.\n\nAt GFF 2026, we are making this tangible through a live Pay with Identity showcase. Visitors can select a product, enrol using their Face, Palm or Finger, and complete the checkout simply by presenting their biometric \u2014 no OTP, PIN or password required.",
+    "id": "e569d445"
   },
   {
     "Date": "2026-09-10",
@@ -1967,7 +2145,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Lotus 1",
     "Tracks": "",
-    "Description": "Witness how BFSI teams use Bolna's Voice AI Suite to automate cross-channel customer engagement across all Indian languages without compromising on compliance. Deliver humanlike, context-aware conversations that build trust and drive customer retention at every stage of the customer journey."
+    "Description": "Witness how BFSI teams use Bolna's Voice AI Suite to automate cross-channel customer engagement across all Indian languages without compromising on compliance. Deliver humanlike, context-aware conversations that build trust and drive customer retention at every stage of the customer journey.",
+    "id": "670a7975"
   },
   {
     "Date": "2026-09-10",
@@ -1978,7 +2157,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "Alt\u00a0DRX India\u00a0is a D2C Marketplace\u00a0enabling middle India to buy & sell tokenized housing assets, 1 SQFT at a time, powered by algorithmic daily pricing, instant settlements & blockchain ledgers. We operate at an ARR of ~ Rs 40 crs, process about ~ half a million transactions\u00a0annually & have raised ~ Rs 45 crs\u00a0in growth capital\u00a0from marquee global and Indian investors. Alt DRX has a Regulations First Approach, having received an in-principle consent to tokenise off-shore assets from IFSCA @ GIFT City and is further licensed as a Token Service Provider\u00a0in Qatar Financial Centre."
+    "Description": "Alt\u00a0DRX India\u00a0is a D2C Marketplace\u00a0enabling middle India to buy & sell tokenized housing assets, 1 SQFT at a time, powered by algorithmic daily pricing, instant settlements & blockchain ledgers. We operate at an ARR of ~ Rs 40 crs, process about ~ half a million transactions\u00a0annually & have raised ~ Rs 45 crs\u00a0in growth capital\u00a0from marquee global and Indian investors. Alt DRX has a Regulations First Approach, having received an in-principle consent to tokenise off-shore assets from IFSCA @ GIFT City and is further licensed as a Token Service Provider\u00a0in Qatar Financial Centre.",
+    "id": "bd861fbc"
   },
   {
     "Date": "2026-09-10",
@@ -1989,7 +2169,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "CollectrIQ is an AI-native B2B accounts receivable collections platform that works every overdue invoice, not just the top 20 accounts. It runs coordinated, compliance-safe dunning across email, WhatsApp, and AI voice agents that speak in regional languages, so businesses finally cover the long tail of receivables human teams never reach. The outcome is measurable: lower DSO, faster cash conversion, and working capital freed back into the business, with existing collections capacity redeployed to the highest-value accounts. This showcase walks through ERP integration, risk scoring, and a live look at the voice agents in action."
+    "Description": "CollectrIQ is an AI-native B2B accounts receivable collections platform that works every overdue invoice, not just the top 20 accounts. It runs coordinated, compliance-safe dunning across email, WhatsApp, and AI voice agents that speak in regional languages, so businesses finally cover the long tail of receivables human teams never reach. The outcome is measurable: lower DSO, faster cash conversion, and working capital freed back into the business, with existing collections capacity redeployed to the highest-value accounts. This showcase walks through ERP integration, risk scoring, and a live look at the voice agents in action.",
+    "id": "ac30f987"
   },
   {
     "Date": "2026-09-10",
@@ -2000,7 +2181,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "ConsenPro is an integrated data privacy and DPDP compliance platform developed by Think360.ai, a CAMS company. It uses AI to discover, classify and map personal data across enterprise databases, cloud environments, endpoints, documents and other systems, helping organisations identify risks that may otherwise remain hidden. Its consent management layer enables businesses to manage purpose-specific consent, privacy notices, data principal rights and immutable audit trails across multiple channels. Designed as a full-stack, no-code platform, ConsenPro brings data discovery, consent management, privacy governance and continuous compliance into a unified architecture. It forms a trusted privacy infrastructure that works across the enterprise, enabling the visible outcome of responsible and compliant data use at scale."
+    "Description": "ConsenPro is an integrated data privacy and DPDP compliance platform developed by Think360.ai, a CAMS company. It uses AI to discover, classify and map personal data across enterprise databases, cloud environments, endpoints, documents and other systems, helping organisations identify risks that may otherwise remain hidden. Its consent management layer enables businesses to manage purpose-specific consent, privacy notices, data principal rights and immutable audit trails across multiple channels. Designed as a full-stack, no-code platform, ConsenPro brings data discovery, consent management, privacy governance and continuous compliance into a unified architecture. It forms a trusted privacy infrastructure that works across the enterprise, enabling the visible outcome of responsible and compliant data use at scale.",
+    "id": "ad22d09d"
   },
   {
     "Date": "2026-09-10",
@@ -2011,7 +2193,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "AI has changed what an attack on a mobile app looks like - tampered builds and reverse engineering attacks are now cheap, fast, and available to anyone - and the app itself has become the first place where fraud is attempted, rather than the last. NPCI's mobile application security framework responds to exactly this, making runtime protection and tamper detection mandatory across the ecosystem. But the harder question is whether your app can actually withstand what is coming, not just satisfy an audit. This showcase examines both - as Bureau launches its runtime application self-protection for regulated institutions."
+    "Description": "AI has changed what an attack on a mobile app looks like - tampered builds and reverse engineering attacks are now cheap, fast, and available to anyone - and the app itself has become the first place where fraud is attempted, rather than the last. NPCI's mobile application security framework responds to exactly this, making runtime protection and tamper detection mandatory across the ecosystem. But the harder question is whether your app can actually withstand what is coming, not just satisfy an audit. This showcase examines both - as Bureau launches its runtime application self-protection for regulated institutions.",
+    "id": "9125c9f7"
   },
   {
     "Date": "2026-09-10",
@@ -2022,7 +2205,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "",
-    "Description": "AI-native B2B Risk Assessment Platform covering Due Diligence, Compliances, Cybersecurity and AI Safety"
+    "Description": "AI-native B2B Risk Assessment Platform covering Due Diligence, Compliances, Cybersecurity and AI Safety",
+    "id": "f4d58360"
   },
   {
     "Date": "2026-09-10",
@@ -2033,7 +2217,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "",
-    "Description": "AI Agents for manual credit processes which helps to reduce TAT for large ticket loans and improves efficiency for credit managers"
+    "Description": "AI Agents for manual credit processes which helps to reduce TAT for large ticket loans and improves efficiency for credit managers",
+    "id": "cbccb16a"
   },
   {
     "Date": "2026-09-10",
@@ -2044,7 +2229,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Explore how conversational AI agents are reshaping customer interactions across the financial journey, from acquisition and onboarding to servicing and collections. Behind every conversation are meaningful action, real-time insight, and the governance and oversight financial institutions need to deploy AI confidently at enterprise scale."
+    "Description": "Explore how conversational AI agents are reshaping customer interactions across the financial journey, from acquisition and onboarding to servicing and collections. Behind every conversation are meaningful action, real-time insight, and the governance and oversight financial institutions need to deploy AI confidently at enterprise scale.",
+    "id": "8603c5e6"
   },
   {
     "Date": "2026-09-10",
@@ -2055,7 +2241,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "",
-    "Description": "The Future-Ready Enterprise Messaging Control Center, Delivering Unified Visibility, Complete Control, Optimized Costs, and Vendor-Agnostic Flexibility."
+    "Description": "The Future-Ready Enterprise Messaging Control Center, Delivering Unified Visibility, Complete Control, Optimized Costs, and Vendor-Agnostic Flexibility.",
+    "id": "beecb42b"
   },
   {
     "Date": "2026-09-10",
@@ -2066,7 +2253,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Wealth & Capital Markets, Cybersecurity & Trust",
-    "Description": "After a near-death accident exposed how easily a family can lose access to critical financial information, three childhood friends set out to address India\u2019s \u20b93.5 lakh crore unclaimed-assets crisis."
+    "Description": "After a near-death accident exposed how easily a family can lose access to critical financial information, three childhood friends set out to address India\u2019s \u20b93.5 lakh crore unclaimed-assets crisis.",
+    "id": "0ecdbd9c"
   },
   {
     "Date": "2026-09-10",
@@ -2077,7 +2265,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Location Intelligence + AI/GenAI-enabled Unified Debt Collection CRM - Dista Collect\n\nWe will be demonstrating the AI/GenAI and patented location intelligence capabilities of Dista Collect. The product offers unified debt collection and recovery across pre delinquency, delinquency, repo-settlement, reconciliation and receipting. Also, witness AI/GenAI-enabled strategy builder and customer 360 for telecallers, collectors, agencies, strategy teams and collection leaders. \nDista has worked with top 20 BFS and has demonstrated - \n- 20% increase in Collection Rate \n- \u206087% higher collector productivity \n- \u206025% higher true visit"
+    "Description": "Location Intelligence + AI/GenAI-enabled Unified Debt Collection CRM - Dista Collect\n\nWe will be demonstrating the AI/GenAI and patented location intelligence capabilities of Dista Collect. The product offers unified debt collection and recovery across pre delinquency, delinquency, repo-settlement, reconciliation and receipting. Also, witness AI/GenAI-enabled strategy builder and customer 360 for telecallers, collectors, agencies, strategy teams and collection leaders. \nDista has worked with top 20 BFS and has demonstrated - \n- 20% increase in Collection Rate \n- \u206087% higher collector productivity \n- \u206025% higher true visit",
+    "id": "9ed6bd70"
   },
   {
     "Date": "2026-09-10",
@@ -2088,7 +2277,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Large Language Models are driving a fundamental shift from application-centric software to intelligent, agent-driven ecosystems. This masterclass will explore how LLM-native platforms, AI agents, Model Context Protocol (MCP), and Agent-to-Agent (A2A) architectures are transforming the design of digital platforms. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Large Language Models are driving a fundamental shift from application-centric software to intelligent, agent-driven ecosystems. This masterclass will explore how LLM-native platforms, AI agents, Model Context Protocol (MCP), and Agent-to-Agent (A2A) architectures are transforming the design of digital platforms. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "571eb713"
   },
   {
     "Date": "2026-09-10",
@@ -2099,7 +2289,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Payment aggregators and gateways are moving beyond passive infrastructure as AI agents begin to initiate, route, and reconcile transactions autonomously, from delegated mandates to AI-driven treasury sweeps. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale."
+    "Description": "Payment aggregators and gateways are moving beyond passive infrastructure as AI agents begin to initiate, route, and reconcile transactions autonomously, from delegated mandates to AI-driven treasury sweeps. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale.",
+    "id": "282fd7a1"
   },
   {
     "Date": "2026-09-10",
@@ -2110,7 +2301,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "InsurTech, Cybersecurity & Trust",
-    "Description": "India\u2019s insurance sector has significant growth potential, but low penetration continues to reflect persistent trust gaps, product complexity and uneven customer experiences. This session will explore how insurers and digital platforms can simplify products, improve transparency, strengthen claims confidence and build more intuitive customer journeys. Government and industry voices will focus on how policy intent can translate into stronger infrastructure, innovation and customer outcomes."
+    "Description": "India\u2019s insurance sector has significant growth potential, but low penetration continues to reflect persistent trust gaps, product complexity and uneven customer experiences. This session will explore how insurers and digital platforms can simplify products, improve transparency, strengthen claims confidence and build more intuitive customer journeys. Government and industry voices will focus on how policy intent can translate into stronger infrastructure, innovation and customer outcomes.",
+    "id": "3ac2cd0e"
   },
   {
     "Date": "2026-09-10",
@@ -2121,7 +2313,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "As financial systems move to real-time, 24x7 operations, cyber resilience has become a strategic imperative rather than a technology function. Continuous payment ecosystems require robust security, operational resilience, coordinated incident response, and strong collaboration across financial institutions, payment operators, technology providers, and regulators. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "As financial systems move to real-time, 24x7 operations, cyber resilience has become a strategic imperative rather than a technology function. Continuous payment ecosystems require robust security, operational resilience, coordinated incident response, and strong collaboration across financial institutions, payment operators, technology providers, and regulators. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "1211286b"
   },
   {
     "Date": "2026-09-10",
@@ -2132,7 +2325,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Digital Public Infrastructure",
-    "Description": "This panel brings together women leaders to explore how financial inclusion can evolve from basic access to measurable impact. It highlights the role of digital platforms, data, and innovation in driving deeper engagement among underserved communities. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "This panel brings together women leaders to explore how financial inclusion can evolve from basic access to measurable impact. It highlights the role of digital platforms, data, and innovation in driving deeper engagement among underserved communities. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "9a26ca03"
   },
   {
     "Date": "2026-09-10",
@@ -2143,7 +2337,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "AI-native underwriting is transforming fintechs by enabling sharper risk assessment, more dynamic pricing and wider access to coverage for underserved customer segments. This session will explore how lenders are using data, automation and intelligent models to improve product design, recovery confidence and portfolio performance. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "AI-native underwriting is transforming fintechs by enabling sharper risk assessment, more dynamic pricing and wider access to coverage for underserved customer segments. This session will explore how lenders are using data, automation and intelligent models to improve product design, recovery confidence and portfolio performance. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "69d45b81"
   },
   {
     "Date": "2026-09-10",
@@ -2154,7 +2349,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 202",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "As digital ecosystems become more intelligent and interconnected, tokenisation and trust are emerging as critical investment themes. This discussion brings together investors and founders to explore how AI and tokenisation innovations are creating new opportunities across financial services and the broader digital economy, and where capital is finding the strongest long-term conviction."
+    "Description": "As digital ecosystems become more intelligent and interconnected, tokenisation and trust are emerging as critical investment themes. This discussion brings together investors and founders to explore how AI and tokenisation innovations are creating new opportunities across financial services and the broader digital economy, and where capital is finding the strongest long-term conviction.",
+    "id": "a854b0a0"
   },
   {
     "Date": "2026-09-10",
@@ -2165,7 +2361,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "As markets get more complex and faster, traditional risk management is evolving. \u00a0This master class will explore how AI and real time analytics, can transform traditional risk management to anticipate volatility and margin requirements. It will explore how smart risk engines will enable faster decision making."
+    "Description": "As markets get more complex and faster, traditional risk management is evolving. \u00a0This master class will explore how AI and real time analytics, can transform traditional risk management to anticipate volatility and margin requirements. It will explore how smart risk engines will enable faster decision making.",
+    "id": "91425bac"
   },
   {
     "Date": "2026-09-10",
@@ -2176,7 +2373,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "",
-    "Description": "The AML/CFT landscape is evolving rapidly with the emergence of new technologies, changing criminal typologies and increasingly interconnected financial systems. This invitation-only roundtable will bring together FATF leadership and senior industry representatives to discuss emerging risks, implementation challenges, global best practices and opportunities to strengthen public-private collaboration in shaping more effective and risk-based AML/CFT frameworks."
+    "Description": "The AML/CFT landscape is evolving rapidly with the emergence of new technologies, changing criminal typologies and increasingly interconnected financial systems. This invitation-only roundtable will bring together FATF leadership and senior industry representatives to discuss emerging risks, implementation challenges, global best practices and opportunities to strengthen public-private collaboration in shaping more effective and risk-based AML/CFT frameworks.",
+    "id": "71616562"
   },
   {
     "Date": "2026-09-10",
@@ -2187,7 +2385,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 102",
     "Tracks": "Banking & Financial Institutions, RegTech & Compliance",
-    "Description": "This exclusive closed-door roundtable will bring together banking leaders to exchange candid perspectives on the realities of AI-led transformation. The discussion will focus on governance, operating controls, customer outcomes and where human accountability must remain central as banks move from experimentation to scaled deployment."
+    "Description": "This exclusive closed-door roundtable will bring together banking leaders to exchange candid perspectives on the realities of AI-led transformation. The discussion will focus on governance, operating controls, customer outcomes and where human accountability must remain central as banks move from experimentation to scaled deployment.",
+    "id": "e9fc5205"
   },
   {
     "Date": "2026-09-10",
@@ -2198,7 +2397,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "This session will explore practical use of AI, automation and better decision-making, together with the future of banking, operating models and customer service. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on hands-on financial-sector experience, the session will focus on execution, customer outcomes and the realities of operating at scale."
+    "Description": "This session will explore practical use of AI, automation and better decision-making, together with the future of banking, operating models and customer service. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on hands-on financial-sector experience, the session will focus on execution, customer outcomes and the realities of operating at scale.",
+    "id": "22f9733f"
   },
   {
     "Date": "2026-09-10",
@@ -2209,7 +2409,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Golconda - Trident",
     "Tracks": "",
-    "Description": "As digital financial services rapidly scale, aligning technological innovation with systemic stability and financial integrity has become a strategic priority. This keynote address will set out a regulatory perspective on evolving supervisory standards, compliance expectations and the governance needed to foster responsible growth."
+    "Description": "As digital financial services rapidly scale, aligning technological innovation with systemic stability and financial integrity has become a strategic priority. This keynote address will set out a regulatory perspective on evolving supervisory standards, compliance expectations and the governance needed to foster responsible growth.",
+    "id": "0fe29cf7"
   },
   {
     "Date": "2026-09-10",
@@ -2220,7 +2421,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "RegTech & Compliance",
-    "Description": "As India advances towards becoming a developed economy, the next wave of reforms must move beyond regulation towards creating agile, technology-enabled institutions that can anticipate change, foster innovation, and deliver better outcomes for citizens and businesses. Bringing together NITI Aayog and technology leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "As India advances towards becoming a developed economy, the next wave of reforms must move beyond regulation towards creating agile, technology-enabled institutions that can anticipate change, foster innovation, and deliver better outcomes for citizens and businesses. Bringing together NITI Aayog and technology leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "22dc5a8c"
   },
   {
     "Date": "2026-09-10",
@@ -2231,7 +2433,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, Digital Public Infrastructure",
-    "Description": "Leveraging technology for increasing retail access to bond markets, simplified client onboarding processes and investing without friction with a platform. With SEBI and investors represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Leveraging technology for increasing retail access to bond markets, simplified client onboarding processes and investing without friction with a platform. With SEBI and investors represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "282f1d4b"
   },
   {
     "Date": "2026-09-10",
@@ -2242,7 +2445,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "This session will examine the emergence of an autonomous, AI\u2011driven layer atop India Stack that enables real\u2011time decisioning, reconciliation\u2011free flows, and scalable B2B digital commerce. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale."
+    "Description": "This session will examine the emergence of an autonomous, AI\u2011driven layer atop India Stack that enables real\u2011time decisioning, reconciliation\u2011free flows, and scalable B2B digital commerce. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale.",
+    "id": "ca82c94e"
   },
   {
     "Date": "2026-09-10",
@@ -2253,7 +2457,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Wealth & Capital Markets, Digital Public Infrastructure",
-    "Description": "India's Digital Public Infrastructure has transformed identity, payments, and consent-based data sharing, laying the foundation for the next frontier in financial services\u2014the Financial Advice Stack. As millions of first-time investors seek trusted guidance, technology can democratize access to personalized, affordable, and goal-based financial advice at scale. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale."
+    "Description": "India's Digital Public Infrastructure has transformed identity, payments, and consent-based data sharing, laying the foundation for the next frontier in financial services\u2014the Financial Advice Stack. As millions of first-time investors seek trusted guidance, technology can democratize access to personalized, affordable, and goal-based financial advice at scale. Payments and fintech leaders will focus on practical execution, customer value and the infrastructure needed to scale.",
+    "id": "995b2c85"
   },
   {
     "Date": "2026-09-10",
@@ -2264,7 +2469,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "This session will examine how cross-border payments can better meet regulatory goals without sacrificing speed, cost or customer experience. Financial-sector leaders will discuss last-mile settlement, local-currency delivery, shared standards and the role of instant payment networks in building safer and more predictable international flows."
+    "Description": "This session will examine how cross-border payments can better meet regulatory goals without sacrificing speed, cost or customer experience. Financial-sector leaders will discuss last-mile settlement, local-currency delivery, shared standards and the role of instant payment networks in building safer and more predictable international flows.",
+    "id": "e7de4847"
   },
   {
     "Date": "2026-09-10",
@@ -2275,7 +2481,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech, Rural Economic Empowerment",
-    "Description": "This discussion will examine how AI, Account Aggregators, ULI, satellite data, tokenized assets, and Digital Public Infrastructure can transform rural finance and drive financial inclusion at scale. Perspectives from Department of Financial Services, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "This discussion will examine how AI, Account Aggregators, ULI, satellite data, tokenized assets, and Digital Public Infrastructure can transform rural finance and drive financial inclusion at scale. Perspectives from Department of Financial Services, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "36f796d6"
   },
   {
     "Date": "2026-09-10",
@@ -2286,7 +2493,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "Leading international investors discuss why India continues to attract global capital, the sectors generating the strongest interest, evolving risk perceptions and what founders must demonstrate to secure long-term institutional investment. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value."
+    "Description": "Leading international investors discuss why India continues to attract global capital, the sectors generating the strongest interest, evolving risk perceptions and what founders must demonstrate to secure long-term institutional investment. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value.",
+    "id": "57ba62c5"
   },
   {
     "Date": "2026-09-10",
@@ -2297,7 +2505,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "This panel will examine how card issuers and payment players are innovating to accelerate adoption and drive sustained growth in a highly competitive landscape. Experts will discuss strategies to enhance customer loyalty through personalized experiences, rewards, and seamless journeys. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "This panel will examine how card issuers and payment players are innovating to accelerate adoption and drive sustained growth in a highly competitive landscape. Experts will discuss strategies to enhance customer loyalty through personalized experiences, rewards, and seamless journeys. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "9b17c43c"
   },
   {
     "Date": "2026-09-10",
@@ -2308,7 +2517,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "A showcase of how AI can be used to for multiple calling purposes"
+    "Description": "A showcase of how AI can be used to for multiple calling purposes",
+    "id": "277eda98"
   },
   {
     "Date": "2026-09-10",
@@ -2319,7 +2529,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Launch"
+    "Description": "Launch",
+    "id": "dc3904eb"
   },
   {
     "Date": "2026-09-10",
@@ -2330,7 +2541,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Live demonstration of ComplianceOS, showcasing how financial institutions can monitor regulations, convert circulars into actionable compliance requirements, assign responsibilities, track tasks and maintain audit-ready evidence."
+    "Description": "Live demonstration of ComplianceOS, showcasing how financial institutions can monitor regulations, convert circulars into actionable compliance requirements, assign responsibilities, track tasks and maintain audit-ready evidence.",
+    "id": "4e1a4c25"
   },
   {
     "Date": "2026-09-10",
@@ -2341,7 +2553,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Product launch where Elaboration on AI led services - AI-driven merchant and customer onboarding with full stack KYC, demography etc. and Risk underwriting will be demonstrated."
+    "Description": "Product launch where Elaboration on AI led services - AI-driven merchant and customer onboarding with full stack KYC, demography etc. and Risk underwriting will be demonstrated.",
+    "id": "2372a7f8"
   },
   {
     "Date": "2026-09-10",
@@ -2352,7 +2565,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Demo of deepfake"
+    "Description": "Demo of deepfake",
+    "id": "451b954e"
   },
   {
     "Date": "2026-09-10",
@@ -2363,7 +2577,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Experience how robotic testing platform mimics real human interactions to automate functional and regression testing of physical devices, enabling faster, consistent and scalable testing with minimal manual intervention."
+    "Description": "Experience how robotic testing platform mimics real human interactions to automate functional and regression testing of physical devices, enabling faster, consistent and scalable testing with minimal manual intervention.",
+    "id": "efc2767a"
   },
   {
     "Date": "2026-09-10",
@@ -2374,7 +2589,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Art Cafe",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "Financial institutions are facing a growing imbalance. Cyber threats are becoming more sophisticated and relentless, while experienced cybersecurity talent remains scarce."
+    "Description": "Financial institutions are facing a growing imbalance. Cyber threats are becoming more sophisticated and relentless, while experienced cybersecurity talent remains scarce.",
+    "id": "aa5094b5"
   },
   {
     "Date": "2026-09-10",
@@ -2385,7 +2601,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "Payments & Lending, Cybersecurity & Trust",
-    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "4150428d"
   },
   {
     "Date": "2026-09-10",
@@ -2396,7 +2613,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on a perspective from FIU-IND, the session will focus on practical policy choices, market development and trusted adoption."
+    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on a perspective from FIU-IND, the session will focus on practical policy choices, market development and trusted adoption.",
+    "id": "86b1f903"
   },
   {
     "Date": "2026-09-10",
@@ -2407,7 +2625,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Digital Public Infrastructure",
-    "Description": "This session will examine Aadhaar's evolution as foundational digital public infrastructure and its role in enabling India's fintech revolution. It will discuss interoperability principles, API-driven ecosystems, and how identity infrastructure scales to support emerging use cases from programmable finance to tokenised assets - offering a blueprint for trusted, connected global systems. The discussion will connect strategic context with practical implementation and the conditions required for scale."
+    "Description": "This session will examine Aadhaar's evolution as foundational digital public infrastructure and its role in enabling India's fintech revolution. It will discuss interoperability principles, API-driven ecosystems, and how identity infrastructure scales to support emerging use cases from programmable finance to tokenised assets - offering a blueprint for trusted, connected global systems. The discussion will connect strategic context with practical implementation and the conditions required for scale.",
+    "id": "d467b38d"
   },
   {
     "Date": "2026-09-10",
@@ -2418,7 +2637,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "RegTech & Compliance",
-    "Description": "This session will explore clear regulation, supervision and responsible innovation, together with fintech growth, business models and ecosystem development. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on a perspective from Department of Economic Affairs, the session will focus on practical policy choices, market development and trusted adoption."
+    "Description": "This session will explore clear regulation, supervision and responsible innovation, together with fintech growth, business models and ecosystem development. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on a perspective from Department of Economic Affairs, the session will focus on practical policy choices, market development and trusted adoption.",
+    "id": "83308d85"
   },
   {
     "Date": "2026-09-10",
@@ -2429,7 +2649,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 104 A&B",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "As India positions itself as a leading global financial hub, GIFT City is emerging as a strategic gateway for international finance, innovation, and cross-border capital flows. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development."
+    "Description": "As India positions itself as a leading global financial hub, GIFT City is emerging as a strategic gateway for international finance, innovation, and cross-border capital flows. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development.",
+    "id": "7cecfce6"
   },
   {
     "Date": "2026-09-10",
@@ -2440,7 +2661,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "As AI agents increasingly interact on behalf of consumers, financial institutions are entering a new era where conversations not applications become the primary interface for banking, payments and commerce."
+    "Description": "As AI agents increasingly interact on behalf of consumers, financial institutions are entering a new era where conversations not applications become the primary interface for banking, payments and commerce.",
+    "id": "20488411"
   },
   {
     "Date": "2026-09-10",
@@ -2451,7 +2673,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "RegTech & Compliance",
-    "Description": "As financial systems become more digital, interconnected and technology-driven, new opportunities for efficiency and inclusion are emerging alongside new risks to stability, resilience and trust. The discussion will focus on balancing innovation with safeguards, strengthening cross-border coordination and ensuring confidence in a rapidly transforming global financial system. The BIS perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area."
+    "Description": "As financial systems become more digital, interconnected and technology-driven, new opportunities for efficiency and inclusion are emerging alongside new risks to stability, resilience and trust. The discussion will focus on balancing innovation with safeguards, strengthening cross-border coordination and ensuring confidence in a rapidly transforming global financial system. The BIS perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area.",
+    "id": "02809a87"
   },
   {
     "Date": "2026-09-10",
@@ -2462,7 +2685,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "Lessons from NIPL\u2019s collaborations with the Bank of Namibia, Central Bank of Peru, and Trinidad & Tobago. Balancing national data sovereignty with global payment interoperability. Bringing together NPCI and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "Lessons from NIPL\u2019s collaborations with the Bank of Namibia, Central Bank of Peru, and Trinidad & Tobago. Balancing national data sovereignty with global payment interoperability. Bringing together NPCI and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "1029a604"
   },
   {
     "Date": "2026-09-10",
@@ -2473,7 +2697,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Live Product Demo - on OpportunityX the business opportunity platform for MSME manufacturers captures additional data point for credit underwriting"
+    "Description": "Live Product Demo - on OpportunityX the business opportunity platform for MSME manufacturers captures additional data point for credit underwriting",
+    "id": "3fe619ca"
   },
   {
     "Date": "2026-09-10",
@@ -2484,7 +2709,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. An operating perspective from financial services will anchor the session in customer needs, risk management and execution at scale."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. An operating perspective from financial services will anchor the session in customer needs, risk management and execution at scale.",
+    "id": "667750b8"
   },
   {
     "Date": "2026-09-10",
@@ -2495,7 +2721,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Fireside chat with delegates from LankaPay"
+    "Description": "Fireside chat with delegates from LankaPay",
+    "id": "2ef4222e"
   },
   {
     "Date": "2026-09-10",
@@ -2506,7 +2733,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "We would be launching our products with visitors invited and a small round of Q/A"
+    "Description": "We would be launching our products with visitors invited and a small round of Q/A",
+    "id": "6a5db1e4"
   },
   {
     "Date": "2026-09-10",
@@ -2517,7 +2745,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "This session will explore AI use cases across trading, compliance, surveillance, and investor engagement \u2014 and the need for regulatory guardrails. With SEBI and technology leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This session will explore AI use cases across trading, compliance, surveillance, and investor engagement \u2014 and the need for regulatory guardrails. With SEBI and technology leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "40639183"
   },
   {
     "Date": "2026-09-10",
@@ -2528,7 +2757,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "This session will explore the evolution of India\u2019s payments ecosystem from manual bill payments to AI\u2011driven autonomous payments. Focuses on agentic systems that can predict, initiate, and execute payments seamlessly across recurring and variable use cases. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale."
+    "Description": "This session will explore the evolution of India\u2019s payments ecosystem from manual bill payments to AI\u2011driven autonomous payments. Focuses on agentic systems that can predict, initiate, and execute payments seamlessly across recurring and variable use cases. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale.",
+    "id": "1deebcf7"
   },
   {
     "Date": "2026-09-10",
@@ -2539,7 +2769,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech, Rural Economic Empowerment",
-    "Description": "The discussion will focus on how technology can strengthen the outreach and effectiveness of rural financial institutions, moving beyond access towards intelligent, personalized, and inclusive financial services. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development."
+    "Description": "The discussion will focus on how technology can strengthen the outreach and effectiveness of rural financial institutions, moving beyond access towards intelligent, personalized, and inclusive financial services. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development.",
+    "id": "7c3d933d"
   },
   {
     "Date": "2026-09-10",
@@ -2550,7 +2781,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "The session will feature the launch of Amazon's Digital Credit & Inclusion Index (DCII), India's first composite index on digital credit inclusion. The DCII is India's first composite score tracking whether digital credit growth is reaching a broad cross-section of the population or mainly serving segments already well banked. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale."
+    "Description": "The session will feature the launch of Amazon's Digital Credit & Inclusion Index (DCII), India's first composite index on digital credit inclusion. The DCII is India's first composite score tracking whether digital credit growth is reaching a broad cross-section of the population or mainly serving segments already well banked. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale.",
+    "id": "279691d7"
   },
   {
     "Date": "2026-09-10",
@@ -2561,7 +2793,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "This session will explore effective compliance, reporting quality and implementation, together with risk identification, early warning and resilience. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "This session will explore effective compliance, reporting quality and implementation, together with risk identification, early warning and resilience. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "92e5652f"
   },
   {
     "Date": "2026-09-10",
@@ -2572,7 +2805,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending, Wealth & Capital Markets",
-    "Description": "Global messaging network represent three distinct layers of the converging payments-credit ecosystem. This panel examines how transaction data, programmable credit, and international interoperability are collapsing the boundary between moving money and lending it. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "Global messaging network represent three distinct layers of the converging payments-credit ecosystem. This panel examines how transaction data, programmable credit, and international interoperability are collapsing the boundary between moving money and lending it. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "0c29cfca"
   },
   {
     "Date": "2026-09-10",
@@ -2583,7 +2817,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, Cybersecurity & Trust",
-    "Description": "Cross-border payments are entering a new era driven by real-time payment linkages, interoperable digital infrastructure, and stronger international collaboration. As countries connect domestic payment systems, building trust through secure governance, transparent FX processes, robust dispute resolution, and common operating standards becomes essential. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes."
+    "Description": "Cross-border payments are entering a new era driven by real-time payment linkages, interoperable digital infrastructure, and stronger international collaboration. As countries connect domestic payment systems, building trust through secure governance, transparent FX processes, robust dispute resolution, and common operating standards becomes essential. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes.",
+    "id": "ac4756c2"
   },
   {
     "Date": "2026-09-10",
@@ -2594,7 +2829,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending, Banking & Financial Institutions",
-    "Description": "RBI's April 2026 draft BC directions introduce a structured two-tier framework, BC-Banking Outlets (BC-BO) and BC-Banking Touchpoints (BC-BT), replacing the Business Facilitator model and bringing NBFCs into BC networks. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "RBI's April 2026 draft BC directions introduce a structured two-tier framework, BC-Banking Outlets (BC-BO) and BC-Banking Touchpoints (BC-BT), replacing the Business Facilitator model and bringing NBFCs into BC networks. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "3887ed04"
   },
   {
     "Date": "2026-09-10",
@@ -2605,7 +2841,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "Most major wholesale financial markets now have a tokenisation initiative underway. Only a few can point clearly to the friction it removes. This masterclass seeks to tackle the question: what makes tokenisation worth doing at all? We will begin with what tokenisation actually changes about an asset and what it doesn\u2019t. Then the question that decides everything: money, as every tokenisation claim rests on what settles on the other side. We will look at what must exist before a tokenised market can form. We will share some of our experimental work \u2013 including the Synchro Lab."
+    "Description": "Most major wholesale financial markets now have a tokenisation initiative underway. Only a few can point clearly to the friction it removes. This masterclass seeks to tackle the question: what makes tokenisation worth doing at all? We will begin with what tokenisation actually changes about an asset and what it doesn\u2019t. Then the question that decides everything: money, as every tokenisation claim rests on what settles on the other side. We will look at what must exist before a tokenised market can form. We will share some of our experimental work \u2013 including the Synchro Lab.",
+    "id": "bc473764"
   },
   {
     "Date": "2026-09-10",
@@ -2616,7 +2853,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Golconda - Trident",
     "Tracks": "",
-    "Description": ""
+    "Description": "",
+    "id": "09141ab7"
   },
   {
     "Date": "2026-09-10",
@@ -2627,7 +2865,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Payments & Lending",
-    "Description": "As digital payment rails mature, financial networks are evolving from basic transactional pipes into intelligent, programmable platforms. A board-level payment infrastructure leader will set out a strategic vision for building systemic trust while harnessing artificial intelligence and programmable money."
+    "Description": "As digital payment rails mature, financial networks are evolving from basic transactional pipes into intelligent, programmable platforms. A board-level payment infrastructure leader will set out a strategic vision for building systemic trust while harnessing artificial intelligence and programmable money.",
+    "id": "bd510932"
   },
   {
     "Date": "2026-09-10",
@@ -2638,7 +2877,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "As banking becomes increasingly digital, AI and data are transforming how financial institutions understand, engage, and serve customers. From hyper-personalized experiences and predictive insights to real-time decision-making and intelligent automation, banks are redefining customer relationships at scale. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "As banking becomes increasingly digital, AI and data are transforming how financial institutions understand, engage, and serve customers. From hyper-personalized experiences and predictive insights to real-time decision-making and intelligent automation, banks are redefining customer relationships at scale. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "2a7b3282"
   },
   {
     "Date": "2026-09-10",
@@ -2649,7 +2889,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "The future of Indian Fintech will be defined by what users never have to think about. The best financial systems will prevent fraud before it happens, deliver credit exactly when it\u2019s needed, verify identity in the background, and make finance safer, simpler, and more accessible by design. With RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "The future of Indian Fintech will be defined by what users never have to think about. The best financial systems will prevent fraud before it happens, deliver credit exactly when it\u2019s needed, verify identity in the background, and make finance safer, simpler, and more accessible by design. With RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "52138970"
   },
   {
     "Date": "2026-09-10",
@@ -2660,7 +2901,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Payments & Lending",
-    "Description": "Expanding digital financial tools for small merchants requires simple, reliable technology built for daily commerce. This product launch unveils a new solution designed to streamline digital payments and credit access for micro-enterprises. Senior fintech leadership alongside a prominent sports icon will present the platform, highlighting its operational capabilities and user experience."
+    "Description": "Expanding digital financial tools for small merchants requires simple, reliable technology built for daily commerce. This product launch unveils a new solution designed to streamline digital payments and credit access for micro-enterprises. Senior fintech leadership alongside a prominent sports icon will present the platform, highlighting its operational capabilities and user experience.",
+    "id": "e11db63f"
   },
   {
     "Date": "2026-09-10",
@@ -2671,7 +2913,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "PRODUCT LAUNCH & CISO PANEL - AI MCP Security: Visibility, Control & Runtime Protection"
+    "Description": "PRODUCT LAUNCH & CISO PANEL - AI MCP Security: Visibility, Control & Runtime Protection",
+    "id": "d15f1258"
   },
   {
     "Date": "2026-09-10",
@@ -2682,7 +2925,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Launch of Kritika Voice Banking, CredenTek's AI-powered multilingual voice solution designed to transform customer interactions in banking. Visitors will experience how Kritika enables natural, intelligent and personalized voice conversations for customer service and banking interactions."
+    "Description": "Launch of Kritika Voice Banking, CredenTek's AI-powered multilingual voice solution designed to transform customer interactions in banking. Visitors will experience how Kritika enables natural, intelligent and personalized voice conversations for customer service and banking interactions.",
+    "id": "703015dd"
   },
   {
     "Date": "2026-09-10",
@@ -2693,7 +2937,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "The 810D Retransfer printer will be launched at GFF through a product showcase highlighting its capabilities, key features and practical applications.\n\nThe session will feature a product presentation and live demonstration, allowing visitors to experience the retransfer printer in operation and understand its value for efficient card printing."
+    "Description": "The 810D Retransfer printer will be launched at GFF through a product showcase highlighting its capabilities, key features and practical applications.\n\nThe session will feature a product presentation and live demonstration, allowing visitors to experience the retransfer printer in operation and understand its value for efficient card printing.",
+    "id": "4036e92f"
   },
   {
     "Date": "2026-09-10",
@@ -2704,7 +2949,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Join us as we unveil new product features designed to give you a clearer view of the resilience in your IT ecosystem."
+    "Description": "Join us as we unveil new product features designed to give you a clearer view of the resilience in your IT ecosystem.",
+    "id": "c54daec8"
   },
   {
     "Date": "2026-09-10",
@@ -2715,7 +2961,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Join us for the launch of The State of Digital Onboarding report and gain exclusive insights into the evolving onboarding landscape. Explore emerging fraud trends, customer expectations, and best practices that are shaping the next generation of digital onboarding."
+    "Description": "Join us for the launch of The State of Digital Onboarding report and gain exclusive insights into the evolving onboarding landscape. Explore emerging fraud trends, customer expectations, and best practices that are shaping the next generation of digital onboarding.",
+    "id": "65d8a512"
   },
   {
     "Date": "2026-09-10",
@@ -2726,7 +2973,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "In a live Q&A, Fundamento's founders walk through Signal OS\u2122 \u2014 the what, the how, and why it's a shift for contact centers."
+    "Description": "In a live Q&A, Fundamento's founders walk through Signal OS\u2122 \u2014 the what, the how, and why it's a shift for contact centers.",
+    "id": "3735c0dd"
   },
   {
     "Date": "2026-09-10",
@@ -2737,7 +2985,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Core Features of DatazenX\n\nUnified Layer: Combines data ingestion, cataloging, and governance into a single framework to eliminate fragmented point tools.\n\nLineage Tracking: Provides real-time data lineage tracking from original source systems straight through to analytical dashboards.\n\nBFSI Integration: Features built-in modules like an NPA Defence Suite and Early Warning Systems tailored for financial compliance and risk mitigation."
+    "Description": "Core Features of DatazenX\n\nUnified Layer: Combines data ingestion, cataloging, and governance into a single framework to eliminate fragmented point tools.\n\nLineage Tracking: Provides real-time data lineage tracking from original source systems straight through to analytical dashboards.\n\nBFSI Integration: Features built-in modules like an NPA Defence Suite and Early Warning Systems tailored for financial compliance and risk mitigation.",
+    "id": "c27317b7"
   },
   {
     "Date": "2026-09-10",
@@ -2748,7 +2997,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Aarambh - Tab based onboarding\nComplete AI stack - Website, Whatsapp, Investap and Partner ecosystem\nInvestack Solutions for Partners"
+    "Description": "Aarambh - Tab based onboarding\nComplete AI stack - Website, Whatsapp, Investap and Partner ecosystem\nInvestack Solutions for Partners",
+    "id": "b268a75d"
   },
   {
     "Date": "2026-09-10",
@@ -2759,7 +3009,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Day 2 will showcase three major launches\u2014CIM Finance\u2019s next leap, the Utkarsh Retail Banking Application, and the CustomerX Research Report, highlighting innovation across digital banking and AI-led customer experience.\n\nCim Finance - The next leap \t12 P.M - 1 PM , 10th Sept 2026\nUtkarsh Retail Banking Application\t12 P.M - 1 PM , 10th Sept 2026\nCustomerX Research Report Launch 12 P.M - 1 PM , 10th Sept 2026"
+    "Description": "Day 2 will showcase three major launches\u2014CIM Finance\u2019s next leap, the Utkarsh Retail Banking Application, and the CustomerX Research Report, highlighting innovation across digital banking and AI-led customer experience.\n\nCim Finance - The next leap \t12 P.M - 1 PM , 10th Sept 2026\nUtkarsh Retail Banking Application\t12 P.M - 1 PM , 10th Sept 2026\nCustomerX Research Report Launch 12 P.M - 1 PM , 10th Sept 2026",
+    "id": "e7dcff64"
   },
   {
     "Date": "2026-09-10",
@@ -2770,7 +3021,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Visitors will get a first look at a new banking technology solution, with a live demonstration of how it can simplify financial processes, improve operational efficiency, and enable smarter, more seamless banking experiences."
+    "Description": "Visitors will get a first look at a new banking technology solution, with a live demonstration of how it can simplify financial processes, improve operational efficiency, and enable smarter, more seamless banking experiences.",
+    "id": "4e0ad42b"
   },
   {
     "Date": "2026-09-10",
@@ -2781,7 +3033,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "74309f29"
   },
   {
     "Date": "2026-09-10",
@@ -2792,7 +3045,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "This session will explore digital identity, verification and trusted onboarding, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on operating experience, the session will focus on what works in practice, the barriers to scale and the next opportunities for growth."
+    "Description": "This session will explore digital identity, verification and trusted onboarding, together with effective compliance, reporting quality and implementation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Drawing on operating experience, the session will focus on what works in practice, the barriers to scale and the next opportunities for growth.",
+    "id": "764f9ec8"
   },
   {
     "Date": "2026-09-10",
@@ -2803,7 +3057,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "This panel explores the rise of algorithmic commerce, where AI is transforming trade, finance, and cross-border systems through automation and predictive intelligence. It focuses on building ecosystems that are intelligent, trusted, and inclusive, while addressing challenges around governance, transparency, and access. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This panel explores the rise of algorithmic commerce, where AI is transforming trade, finance, and cross-border systems through automation and predictive intelligence. It focuses on building ecosystems that are intelligent, trusted, and inclusive, while addressing challenges around governance, transparency, and access. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "940ce848"
   },
   {
     "Date": "2026-09-10",
@@ -2814,7 +3069,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "Exploring access, monetisation, and governance of financial market data in a digital economy. Balancing open access, commercialisation, and regulatory control of market data. Perspectives from SEBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "Exploring access, monetisation, and governance of financial market data in a digital economy. Balancing open access, commercialisation, and regulatory control of market data. Perspectives from SEBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "2bab2a43"
   },
   {
     "Date": "2026-09-10",
@@ -2825,7 +3081,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "Digital identity interoperability is becoming a critical enabler for the next phase of fintech growth, allowing users, institutions and platforms to interact across ecosystems with greater trust, speed and security. With UIDAI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Digital identity interoperability is becoming a critical enabler for the next phase of fintech growth, allowing users, institutions and platforms to interact across ecosystems with greater trust, speed and security. With UIDAI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "111c8ee7"
   },
   {
     "Date": "2026-09-10",
@@ -2836,7 +3093,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending",
-    "Description": "In a highly competitive digital economy, retaining customers requires more than transactional engagement. Leading consumer platforms are redefining loyalty through subscriptions, gamification, content, and seamless payment integration. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "In a highly competitive digital economy, retaining customers requires more than transactional engagement. Leading consumer platforms are redefining loyalty through subscriptions, gamification, content, and seamless payment integration. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "f1e5c626"
   },
   {
     "Date": "2026-09-10",
@@ -2847,7 +3105,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "This power-packed panel brings together trailblazing women leaders shaping the future of finance, governance, and technology. Aligned with the GFF theme, it explores how AI, tokenisation, and emerging technologies are unlocking new avenues for impact and leadership. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "This power-packed panel brings together trailblazing women leaders shaping the future of finance, governance, and technology. Aligned with the GFF theme, it explores how AI, tokenisation, and emerging technologies are unlocking new avenues for impact and leadership. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "14f6ac7e"
   },
   {
     "Date": "2026-09-10",
@@ -2858,7 +3117,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "AI has made tampered builds, instrumented sessions, and automated attacks cheap and widely available, and the mobile app is now where fraud is attempted first. NPCI's mobile application security framework has responded by making runtime protection and tamper detection mandatory. The session examines what the framework actually asks for, where most implementations stop short, and how the same signals that satisfy a regulator can strengthen real-time fraud decisions."
+    "Description": "AI has made tampered builds, instrumented sessions, and automated attacks cheap and widely available, and the mobile app is now where fraud is attempted first. NPCI's mobile application security framework has responded by making runtime protection and tamper detection mandatory. The session examines what the framework actually asks for, where most implementations stop short, and how the same signals that satisfy a regulator can strengthen real-time fraud decisions.",
+    "id": "f34c1297"
   },
   {
     "Date": "2026-09-10",
@@ -2869,7 +3129,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Every financial institutions pay commissions to the people who sell for them, and designing those payout rules is slow, technical work that usually takes SMEs days. \nIn this session, you can simply describes an incentive plan in ordinary English \u2014 who gets paid, on what, at what rate, with what conditions. Our AI agent builds the complete working rule set live on screen, catches errors in the logic before they can cause a wrong payment, and explains each fix in plain language. No formulas, no code, no technical background needed. \nAttend the demo at the launch and see for yourself. ACT21 Software, Booth JB 8."
+    "Description": "Every financial institutions pay commissions to the people who sell for them, and designing those payout rules is slow, technical work that usually takes SMEs days. \nIn this session, you can simply describes an incentive plan in ordinary English \u2014 who gets paid, on what, at what rate, with what conditions. Our AI agent builds the complete working rule set live on screen, catches errors in the logic before they can cause a wrong payment, and explains each fix in plain language. No formulas, no code, no technical background needed. \nAttend the demo at the launch and see for yourself. ACT21 Software, Booth JB 8.",
+    "id": "3be121e2"
   },
   {
     "Date": "2026-09-10",
@@ -2880,7 +3141,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Witness the next frontier of the JioFinance app"
+    "Description": "Witness the next frontier of the JioFinance app",
+    "id": "e8c9d209"
   },
   {
     "Date": "2026-09-10",
@@ -2891,7 +3153,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "This session will examine innovations transforming cross-border payment systems from slow, expensive processes to real-time, low-cost solutions. This panel discusses UPI international expansion, central bank digital currencies for cross-border settlement, programmable foreign exchange, and how tokenisation can reduce intermediaries. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale."
+    "Description": "This session will examine innovations transforming cross-border payment systems from slow, expensive processes to real-time, low-cost solutions. This panel discusses UPI international expansion, central bank digital currencies for cross-border settlement, programmable foreign exchange, and how tokenisation can reduce intermediaries. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale.",
+    "id": "03ddafd3"
   },
   {
     "Date": "2026-09-10",
@@ -2902,7 +3165,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "Interoperable QR and low-cost acceptance for small merchants Consumer trust and merchant incentives in new markets Cross-border acceptance for travellers and diaspora users. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness."
+    "Description": "Interoperable QR and low-cost acceptance for small merchants Consumer trust and merchant incentives in new markets Cross-border acceptance for travellers and diaspora users. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness.",
+    "id": "9ee87787"
   },
   {
     "Date": "2026-09-10",
@@ -2913,7 +3177,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "Address expanding pension participation across India's diverse workforce - from formal sector employees to gig workers and informal economy participants. This keynote examines PFRDA's initiatives eliminating transaction barriers, enabling micro-contributions as low as \u20b920-30, and leveraging digital public infrastructure for seamless pension enrollment. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value."
+    "Description": "Address expanding pension participation across India's diverse workforce - from formal sector employees to gig workers and informal economy participants. This keynote examines PFRDA's initiatives eliminating transaction barriers, enabling micro-contributions as low as \u20b920-30, and leveraging digital public infrastructure for seamless pension enrollment. Investor and operator perspectives will focus on market opportunity, execution discipline and what creates sustainable value.",
+    "id": "bc6eeccc"
   },
   {
     "Date": "2026-09-10",
@@ -2924,7 +3189,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, Cybersecurity & Trust",
-    "Description": "Trusted organizational identity is emerging as a foundational enabler of the digital economy. Government and industry voices will focus on how policy intent can translate into stronger infrastructure, innovation and customer outcomes."
+    "Description": "Trusted organizational identity is emerging as a foundational enabler of the digital economy. Government and industry voices will focus on how policy intent can translate into stronger infrastructure, innovation and customer outcomes.",
+    "id": "1a77f36d"
   },
   {
     "Date": "2026-09-10",
@@ -2935,7 +3201,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 203",
     "Tracks": "Payments & Lending",
-    "Description": "This session will explore bill payment infrastructure, collections and business use cases, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes."
+    "Description": "This session will explore bill payment infrastructure, collections and business use cases, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes.",
+    "id": "7aaee563"
   },
   {
     "Date": "2026-09-10",
@@ -2946,7 +3213,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "Fostering technological innovation within capital markets relies on creating structured avenues for developer talent and regulatory engagement. This session celebrates the standout solutions developed during a market innovation hackathon aimed at strengthening market integrity and investor protection. A senior market regulator will recognise the winning innovations and discuss the role of tech-led solutions in financial regulation."
+    "Description": "Fostering technological innovation within capital markets relies on creating structured avenues for developer talent and regulatory engagement. This session celebrates the standout solutions developed during a market innovation hackathon aimed at strengthening market integrity and investor protection. A senior market regulator will recognise the winning innovations and discuss the role of tech-led solutions in financial regulation.",
+    "id": "88792cea"
   },
   {
     "Date": "2026-09-10",
@@ -2957,7 +3225,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Payments & Lending, Banking & Financial Institutions, RegTech & Compliance",
-    "Description": "BHIM Vishwas is enabling banks to seamlessly integrate secure UPI payment capabilities through embedded Payer PSP services, reducing complexity while accelerating digital payment innovation. This masterclass will showcase how banks can leverage BHIM Vishwas to offer trusted, interoperable, and scalable payment experiences within their own digital channels. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "BHIM Vishwas is enabling banks to seamlessly integrate secure UPI payment capabilities through embedded Payer PSP services, reducing complexity while accelerating digital payment innovation. This masterclass will showcase how banks can leverage BHIM Vishwas to offer trusted, interoperable, and scalable payment experiences within their own digital channels. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "7f416e55"
   },
   {
     "Date": "2026-09-10",
@@ -2968,7 +3237,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending",
-    "Description": "Payments are no longer just transaction rails\u2014they are becoming powerful growth enablers for businesses. Leading platforms are leveraging data, AI, and infrastructure to create end-to-end ecosystems that drive customer acquisition, retention, and monetization. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "Payments are no longer just transaction rails\u2014they are becoming powerful growth enablers for businesses. Leading platforms are leveraging data, AI, and infrastructure to create end-to-end ecosystems that drive customer acquisition, retention, and monetization. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "bcce8095"
   },
   {
     "Date": "2026-09-10",
@@ -2979,7 +3249,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "The Digital Personal Data Protection (DPDP) Act has redefined how organisations collect, manage, and govern personal data. CoTrust enables enterprises to become DPDP-ready by discovering their data estate, mapping processing activities, managing consent, automating data principal requests, and creating continuous compliance workflows. An operator perspective will keep the discussion centred on execution, customer value and the choices required to scale."
+    "Description": "The Digital Personal Data Protection (DPDP) Act has redefined how organisations collect, manage, and govern personal data. CoTrust enables enterprises to become DPDP-ready by discovering their data estate, mapping processing activities, managing consent, automating data principal requests, and creating continuous compliance workflows. An operator perspective will keep the discussion centred on execution, customer value and the choices required to scale.",
+    "id": "6c305464"
   },
   {
     "Date": "2026-09-10",
@@ -2990,7 +3261,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "As cross-border commerce, remittances and digital payments continue to grow, financial institutions face increasing pressure to deliver seamless customer experiences while navigating complex compliance and identity requirements. Industry leaders will discuss how technology can reduce friction, strengthen compliance and enable a more connected global financial system. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "As cross-border commerce, remittances and digital payments continue to grow, financial institutions face increasing pressure to deliver seamless customer experiences while navigating complex compliance and identity requirements. Industry leaders will discuss how technology can reduce friction, strengthen compliance and enable a more connected global financial system. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "5b332b88"
   },
   {
     "Date": "2026-09-10",
@@ -3001,7 +3273,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "As financial services become increasingly digital, intelligent and borderless, the global fight against money laundering, terrorist financing and proliferation financing is entering a new era. This fireside explores FATF's priorities for addressing AI-enabled financial crime, digital assets, cross-border payments, and emerging technologies while preserving innovation and financial inclusion. Perspectives from FATF, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "As financial services become increasingly digital, intelligent and borderless, the global fight against money laundering, terrorist financing and proliferation financing is entering a new era. This fireside explores FATF's priorities for addressing AI-enabled financial crime, digital assets, cross-border payments, and emerging technologies while preserving innovation and financial inclusion. Perspectives from FATF, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "ca7519fe"
   },
   {
     "Date": "2026-09-10",
@@ -3012,7 +3285,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "As financial crime becomes faster, more coordinated and increasingly technology-enabled, institutions need defence systems that can learn, adapt and respond in real time. This session will explore how AI can strengthen fraud prevention through anomaly detection, behavioural analytics, network intelligence and automated risk scoring. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale."
+    "Description": "As financial crime becomes faster, more coordinated and increasingly technology-enabled, institutions need defence systems that can learn, adapt and respond in real time. This session will explore how AI can strengthen fraud prevention through anomaly detection, behavioural analytics, network intelligence and automated risk scoring. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale.",
+    "id": "42f5ccb3"
   },
   {
     "Date": "2026-09-10",
@@ -3023,7 +3297,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "Open standards versus walled-garden models How banks, schemes, fintechs, and infrastructure players divide roles Whether interoperability will be the main competitive differentiator. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes."
+    "Description": "Open standards versus walled-garden models How banks, schemes, fintechs, and infrastructure players divide roles Whether interoperability will be the main competitive differentiator. The speaker mix will bring practical financial-sector experience on implementation, risk and customer outcomes.",
+    "id": "542b93df"
   },
   {
     "Date": "2026-09-10",
@@ -3034,7 +3309,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Quantum computing has the potential to fundamentally transform how financial systems operate, compete, and innovate. As the worlds of advanced computing, artificial intelligence, and finance converge, new possibilities are emerging across investment management, financial product innovation, market infrastructure, fraud detection, and digital assets. Bringing together IFSCA and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "Quantum computing has the potential to fundamentally transform how financial systems operate, compete, and innovate. As the worlds of advanced computing, artificial intelligence, and finance converge, new possibilities are emerging across investment management, financial product innovation, market infrastructure, fraud detection, and digital assets. Bringing together IFSCA and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "4fcc5a5e"
   },
   {
     "Date": "2026-09-10",
@@ -3045,7 +3321,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "This session will explore faster, safer and more reliable payments, together with financial crime prevention, intelligence and effective reporting. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Led by a FIU-IND perspective, the discussion will connect regulatory priorities with the next phase of market development."
+    "Description": "This session will explore faster, safer and more reliable payments, together with financial crime prevention, intelligence and effective reporting. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Led by a FIU-IND perspective, the discussion will connect regulatory priorities with the next phase of market development.",
+    "id": "da0b75c4"
   },
   {
     "Date": "2026-09-10",
@@ -3056,7 +3333,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending, Wealth & Capital Markets",
-    "Description": "As payment networks become increasingly interoperable and financial services more digital, fintechs have an opportunity to create seamless financial ecosystems that transcend traditional product boundaries. This session examines the technologies and business models driving this transformation."
+    "Description": "As payment networks become increasingly interoperable and financial services more digital, fintechs have an opportunity to create seamless financial ecosystems that transcend traditional product boundaries. This session examines the technologies and business models driving this transformation.",
+    "id": "1a18c8f3"
   },
   {
     "Date": "2026-09-10",
@@ -3067,7 +3345,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "Technological innovation is reshaping capital markets. Artificial intelligence, tokenization and quantum computing each present new opportunities, risks and regulatory considerations for market participants and regulators alike. This panel will bring together leaders of the IOSCO Fintech Task Force to discuss how securities regulators are responding to these developments. Drawing on IOSCO's recent work, the discussion will explore emerging trends, key regulatory considerations, and the steps needed to ensure that capital markets remain fair, efficient and resilient as technology continues to evolve."
+    "Description": "Technological innovation is reshaping capital markets. Artificial intelligence, tokenization and quantum computing each present new opportunities, risks and regulatory considerations for market participants and regulators alike. This panel will bring together leaders of the IOSCO Fintech Task Force to discuss how securities regulators are responding to these developments. Drawing on IOSCO's recent work, the discussion will explore emerging trends, key regulatory considerations, and the steps needed to ensure that capital markets remain fair, efficient and resilient as technology continues to evolve.",
+    "id": "9cad480e"
   },
   {
     "Date": "2026-09-10",
@@ -3078,7 +3357,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 102",
     "Tracks": "Payments & Lending, Cybersecurity & Trust",
-    "Description": "For BFSI and fintech brands in India, communication is the business. Every acquisition, onboarding, collection, renewal, and cross-sell process runs through a call, message, or notification."
+    "Description": "For BFSI and fintech brands in India, communication is the business. Every acquisition, onboarding, collection, renewal, and cross-sell process runs through a call, message, or notification.",
+    "id": "ceac8ff8"
   },
   {
     "Date": "2026-09-10",
@@ -3089,7 +3369,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "A focused showcase of solutions and use cases linked to fraud prevention, financial-crime intelligence and stronger controls. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers."
+    "Description": "A focused showcase of solutions and use cases linked to fraud prevention, financial-crime intelligence and stronger controls. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers.",
+    "id": "5f0f493a"
   },
   {
     "Date": "2026-09-10",
@@ -3100,7 +3381,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "Chart the evolution from digital payments infrastructure to autonomous financial systems where AI agents execute complex transactions on behalf of users. Drawing insights from \"Cashless Nation: How UPI Changed Everything,\" this keynote explores how programmable finance and intelligent automation can deliver hyper-personalized, inclusive financial services at population scale. Drawing on a technology and product perspective, the session will focus on architecture, implementation and the path from idea to scale."
+    "Description": "Chart the evolution from digital payments infrastructure to autonomous financial systems where AI agents execute complex transactions on behalf of users. Drawing insights from \"Cashless Nation: How UPI Changed Everything,\" this keynote explores how programmable finance and intelligent automation can deliver hyper-personalized, inclusive financial services at population scale. Drawing on a technology and product perspective, the session will focus on architecture, implementation and the path from idea to scale.",
+    "id": "9090cf7c"
   },
   {
     "Date": "2026-09-10",
@@ -3111,7 +3393,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 103",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "This session will examine Bharat TradeNet as a shared digital layer for trade, connecting data, documents, payments and financing across participants. The discussion will focus on how national trade infrastructure can reduce friction, improve trust and make domestic and cross-border trade easier for businesses."
+    "Description": "This session will examine Bharat TradeNet as a shared digital layer for trade, connecting data, documents, payments and financing across participants. The discussion will focus on how national trade infrastructure can reduce friction, improve trust and make domestic and cross-border trade easier for businesses.",
+    "id": "817e0c41"
   },
   {
     "Date": "2026-09-10",
@@ -3122,7 +3405,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "Payments & Lending",
-    "Description": ""
+    "Description": "",
+    "id": "71d949fc"
   },
   {
     "Date": "2026-09-10",
@@ -3133,7 +3417,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "RegTech & Compliance",
-    "Description": "As fintech enters its next phase of growth, policy frameworks must evolve to support innovation, investment and global competitiveness. This session will examine the priorities shaping India's digital economy, including Digital Public Infrastructure, digital finance, AI, data-driven innovation, cross-border collaboration and emerging business models. With Department of Economic Affairs and investors represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "As fintech enters its next phase of growth, policy frameworks must evolve to support innovation, investment and global competitiveness. This session will examine the priorities shaping India's digital economy, including Digital Public Infrastructure, digital finance, AI, data-driven innovation, cross-border collaboration and emerging business models. With Department of Economic Affairs and investors represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "e08ec5b5"
   },
   {
     "Date": "2026-09-10",
@@ -3144,7 +3429,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "As digital payment volumes surge, onboarding merchants efficiently while detecting complex fraud typologies has become a critical operational priority. This panel will examine strategies for real-time risk assessment, data-driven merchant verification and emerging threat patterns across payment networks. Chief executives and product leaders from digital payments platforms will share practical insights on balancing risk controls with merchant growth."
+    "Description": "As digital payment volumes surge, onboarding merchants efficiently while detecting complex fraud typologies has become a critical operational priority. This panel will examine strategies for real-time risk assessment, data-driven merchant verification and emerging threat patterns across payment networks. Chief executives and product leaders from digital payments platforms will share practical insights on balancing risk controls with merchant growth.",
+    "id": "692332bc"
   },
   {
     "Date": "2026-09-10",
@@ -3155,7 +3441,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Banking & Financial Institutions, RegTech & Compliance",
-    "Description": "India has become the world's benchmark for population-scale digital finance. From instant payments and digital lending to embedded finance and real-time customer experiences, the country's financial ecosystem continues to set the pace for innovation."
+    "Description": "India has become the world's benchmark for population-scale digital finance. From instant payments and digital lending to embedded finance and real-time customer experiences, the country's financial ecosystem continues to set the pace for innovation.",
+    "id": "a9dded3b"
   },
   {
     "Date": "2026-09-10",
@@ -3166,7 +3453,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "As Indian fintechs increasingly look beyond domestic markets, GIFT IFSC offers a platform for international expansion and innovation. This discussion will focus on opportunities for fintechs, financial institutions, and investors to build globally connected businesses through the IFSC ecosystem. The IFSCA perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area."
+    "Description": "As Indian fintechs increasingly look beyond domestic markets, GIFT IFSC offers a platform for international expansion and innovation. This discussion will focus on opportunities for fintechs, financial institutions, and investors to build globally connected businesses through the IFSC ecosystem. The IFSCA perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area.",
+    "id": "833d9d84"
   },
   {
     "Date": "2026-09-10",
@@ -3177,7 +3465,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "The future of lending will be defined by intelligent decision-making, real-time risk assessment and seamless customer experiences. This session examines how AI is reshaping commercial and retail lending across origination, underwriting, monitoring and collections, while helping institutions balance growth, efficiency and responsible lending. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "The future of lending will be defined by intelligent decision-making, real-time risk assessment and seamless customer experiences. This session examines how AI is reshaping commercial and retail lending across origination, underwriting, monitoring and collections, while helping institutions balance growth, efficiency and responsible lending. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "589af2ea"
   },
   {
     "Date": "2026-09-10",
@@ -3188,7 +3477,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with fraud prevention, early detection and customer protection. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with fraud prevention, early detection and customer protection. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale.",
+    "id": "028c72aa"
   },
   {
     "Date": "2026-09-10",
@@ -3199,7 +3489,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Product Launch \u2013 VISA Virtual Card"
+    "Description": "Product Launch \u2013 VISA Virtual Card",
+    "id": "37c8d119"
   },
   {
     "Date": "2026-09-10",
@@ -3210,7 +3501,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Our team will engage with attendees across the GFF floor by asking them one thought-provoking question related to the BFSI industry. Responses will be recorded as short video bytes, capturing diverse perspectives from industry professionals and creating an engaging GFF content series."
+    "Description": "Our team will engage with attendees across the GFF floor by asking them one thought-provoking question related to the BFSI industry. Responses will be recorded as short video bytes, capturing diverse perspectives from industry professionals and creating an engaging GFF content series.",
+    "id": "0d8c1296"
   },
   {
     "Date": "2026-09-10",
@@ -3221,7 +3513,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "AI has the potential to transform financial inclusion by making services more accessible, personalised and efficient. However, as institutions increasingly rely on data-driven decision-making, questions around trust, fairness, privacy and governance are becoming equally important. Bringing together leaders from regulation, policy, payments and lending, this session will explore how India can leverage AI and data responsibly to build a more inclusive, resilient and trusted financial ecosystem."
+    "Description": "AI has the potential to transform financial inclusion by making services more accessible, personalised and efficient. However, as institutions increasingly rely on data-driven decision-making, questions around trust, fairness, privacy and governance are becoming equally important. Bringing together leaders from regulation, policy, payments and lending, this session will explore how India can leverage AI and data responsibly to build a more inclusive, resilient and trusted financial ecosystem.",
+    "id": "367daecc"
   },
   {
     "Date": "2026-09-10",
@@ -3232,7 +3525,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "The convergence of Aadhaar and AI has the potential to redefine trusted digital interactions across financial services and the broader digital economy. This session will explore how AI can enhance identity verification, onboarding, fraud prevention, customer authentication and service delivery while preserving privacy, consent and security. Perspectives from UIDAI, alongside technology leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "The convergence of Aadhaar and AI has the potential to redefine trusted digital interactions across financial services and the broader digital economy. This session will explore how AI can enhance identity verification, onboarding, fraud prevention, customer authentication and service delivery while preserving privacy, consent and security. Perspectives from UIDAI, alongside technology leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "0e846aeb"
   },
   {
     "Date": "2026-09-10",
@@ -3243,7 +3537,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "This session explores how Zeta's Digital Credit as a Service helps financial institutions expand credit access by distributing credit through the ecosystems customers already use. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "This session explores how Zeta's Digital Credit as a Service helps financial institutions expand credit access by distributing credit through the ecosystems customers already use. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "873340cb"
   },
   {
     "Date": "2026-09-10",
@@ -3254,7 +3549,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "Leveraging fast payment networks to ensure instant wage settlements. Reducing exorbitant remittance fees that disproportionately impact gig workers. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "Leveraging fast payment networks to ensure instant wage settlements. Reducing exorbitant remittance fees that disproportionately impact gig workers. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "a05d5841"
   },
   {
     "Date": "2026-09-10",
@@ -3265,7 +3561,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "India's fintech story is entering a new phase as AI, Digital Public Infrastructure, embedded finance and new regulatory frameworks reshape the market. This session explores where investors see the next generation of high-growth opportunities\u2014from financial infrastructure and B2B fintech to wealthtech, insuretech, rural finance and enterprise AI. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "India's fintech story is entering a new phase as AI, Digital Public Infrastructure, embedded finance and new regulatory frameworks reshape the market. This session explores where investors see the next generation of high-growth opportunities\u2014from financial infrastructure and B2B fintech to wealthtech, insuretech, rural finance and enterprise AI. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "37808c9c"
   },
   {
     "Date": "2026-09-10",
@@ -3276,7 +3573,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "From real-time foreign currency settlement and international capital markets to fintech, AI and digital financial infrastructure, GIFT IFSC continues to redefine India's global financial ambitions. Discover the newest initiatives shaping its future. Drawing on a perspective from IFSCA, the session will focus on practical policy choices, market development and trusted adoption."
+    "Description": "From real-time foreign currency settlement and international capital markets to fintech, AI and digital financial infrastructure, GIFT IFSC continues to redefine India's global financial ambitions. Discover the newest initiatives shaping its future. Drawing on a perspective from IFSCA, the session will focus on practical policy choices, market development and trusted adoption.",
+    "id": "5ef3f995"
   },
   {
     "Date": "2026-09-10",
@@ -3287,7 +3585,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Demonstrates how Agentic AI combined with MongoDB flexible document model simplifies payment format conversion across legacy SWIFT, modern ISO 20022, and emerging payment rails."
+    "Description": "Demonstrates how Agentic AI combined with MongoDB flexible document model simplifies payment format conversion across legacy SWIFT, modern ISO 20022, and emerging payment rails.",
+    "id": "66f1b537"
   },
   {
     "Date": "2026-09-10",
@@ -3298,7 +3597,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "This session examines how organizations can build a clear, measurable business case for AI beyond the buzzwords. It highlights real-world use cases that deliver tangible ROI, operational efficiency, and competitive advantage. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "This session examines how organizations can build a clear, measurable business case for AI beyond the buzzwords. It highlights real-world use cases that deliver tangible ROI, operational efficiency, and competitive advantage. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "f0e76166"
   },
   {
     "Date": "2026-09-10",
@@ -3309,7 +3609,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "AI inference creates new personal data without explicit collection or consent. Regulators and firms must rethink privacy, ownership, and lawful processing. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "AI inference creates new personal data without explicit collection or consent. Regulators and firms must rethink privacy, ownership, and lawful processing. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "edb7dcbe"
   },
   {
     "Date": "2026-09-10",
@@ -3320,7 +3621,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "AI agents are transforming software engineering by enabling autonomous development, testing, deployment, and operations across the Software Development Life Cycle (SDLC). This masterclass will explore how self-driving SDLCs leverage Agentic AI to automate coding, quality assurance, security, DevOps, and continuous delivery while keeping humans in control of governance and oversight. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "AI agents are transforming software engineering by enabling autonomous development, testing, deployment, and operations across the Software Development Life Cycle (SDLC). This masterclass will explore how self-driving SDLCs leverage Agentic AI to automate coding, quality assurance, security, DevOps, and continuous delivery while keeping humans in control of governance and oversight. With NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "c6a0e9f7"
   },
   {
     "Date": "2026-09-10",
@@ -3331,7 +3633,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "This session will explore faster, safer and more reliable payments, together with card technology, acceptance and payment innovation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "This session will explore faster, safer and more reliable payments, together with card technology, acceptance and payment innovation. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "ca0c0013"
   },
   {
     "Date": "2026-09-10",
@@ -3342,7 +3645,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "This session will combine a keynote perspective with a panel discussion on the changing securities market and the role of technology in regulation and market development. It will bring together Indian and international regulatory viewpoints on innovation, investor protection and market resilience. With SEBI, NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This session will combine a keynote perspective with a panel discussion on the changing securities market and the role of technology in regulation and market development. It will bring together Indian and international regulatory viewpoints on innovation, investor protection and market resilience. With SEBI, NPCI and payments industry leaders represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "96b6fc04"
   },
   {
     "Date": "2026-09-10",
@@ -3353,7 +3657,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "",
-    "Description": ""
+    "Description": "",
+    "id": "0b8a5c88"
   },
   {
     "Date": "2026-09-10",
@@ -3364,7 +3669,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "",
-    "Description": "Achieving the vision of Viksit Bharat will require significantly greater investment across infrastructure, industry, technology, and innovation. This closed-door discussion will examine how India can strengthen its financial architecture to improve the availability of long-term investment capital, mobilize domestic and global funds, and enable sustained economic growth through more effective financing mechanisms."
+    "Description": "Achieving the vision of Viksit Bharat will require significantly greater investment across infrastructure, industry, technology, and innovation. This closed-door discussion will examine how India can strengthen its financial architecture to improve the availability of long-term investment capital, mobilize domestic and global funds, and enable sustained economic growth through more effective financing mechanisms.",
+    "id": "b455a590"
   },
   {
     "Date": "2026-09-10",
@@ -3375,7 +3681,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Golconda - Trident",
     "Tracks": "RegTech & Compliance",
-    "Description": "Effective risk management and supervisory compliance are vital for maintaining systemic stability across regulated entities. This interactive workshop brings together senior bank compliance officers and central bank supervisors to examine evolving regulatory standards, risk frameworks and reporting requirements."
+    "Description": "Effective risk management and supervisory compliance are vital for maintaining systemic stability across regulated entities. This interactive workshop brings together senior bank compliance officers and central bank supervisors to examine evolving regulatory standards, risk frameworks and reporting requirements.",
+    "id": "3a9321a7"
   },
   {
     "Date": "2026-09-10",
@@ -3386,7 +3693,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "AI agents for collections, dispute handling, treasury, and merchant support Interoperability between AI systems, bank rails, and fintech platforms Governance models for AI-led decisioning in regulated environments. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "AI agents for collections, dispute handling, treasury, and merchant support Interoperability between AI systems, bank rails, and fintech platforms Governance models for AI-led decisioning in regulated environments. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "2e00db5e"
   },
   {
     "Date": "2026-09-10",
@@ -3397,7 +3705,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Thousands of dealers, advisors and partners sell on behalf of financial institutions, and almost all of them have the same recurring question: why is my commission this amount, and where is the rest of my money? Today that question travels through spreadsheets, emails and helpdesk tickets. \nHere, you can interrogate our conversational AI assistant directly on live data \u2014 what was earned and why, which payments are held up and exactly what will release them, forward-looking scenarios such as what a person would earn if they closed two more deals. Every answer arrives with charts and tables, traced back to the exact rule and transaction behind it, and restricted to what that individual is permitted to see.\nAttend the demo at the launch and see for yourself. ACT21 Software, Booth JB 8."
+    "Description": "Thousands of dealers, advisors and partners sell on behalf of financial institutions, and almost all of them have the same recurring question: why is my commission this amount, and where is the rest of my money? Today that question travels through spreadsheets, emails and helpdesk tickets. \nHere, you can interrogate our conversational AI assistant directly on live data \u2014 what was earned and why, which payments are held up and exactly what will release them, forward-looking scenarios such as what a person would earn if they closed two more deals. Every answer arrives with charts and tables, traced back to the exact rule and transaction behind it, and restricted to what that individual is permitted to see.\nAttend the demo at the launch and see for yourself. ACT21 Software, Booth JB 8.",
+    "id": "f64485af"
   },
   {
     "Date": "2026-09-10",
@@ -3408,7 +3717,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Unveiling ID2Pay device and a product run-through"
+    "Description": "Unveiling ID2Pay device and a product run-through",
+    "id": "1990b992"
   },
   {
     "Date": "2026-09-10",
@@ -3419,7 +3729,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Arrowhead is launching its own in-house TTS engine and multilingual voice agents at GFF 2026. Faster, more natural conversations now in the languages your customers actually speak."
+    "Description": "Arrowhead is launching its own in-house TTS engine and multilingual voice agents at GFF 2026. Faster, more natural conversations now in the languages your customers actually speak.",
+    "id": "7ddbb24f"
   },
   {
     "Date": "2026-09-10",
@@ -3430,7 +3741,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Discussion on IFSCA FinTech Sandbox Framework"
+    "Description": "Discussion on IFSCA FinTech Sandbox Framework",
+    "id": "e88656d8"
   },
   {
     "Date": "2026-09-10",
@@ -3441,7 +3753,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Mindgate and SBI will showcase an A2A payment automation use case, highlighting intelligent automation for seamless and scalable payment transactions."
+    "Description": "Mindgate and SBI will showcase an A2A payment automation use case, highlighting intelligent automation for seamless and scalable payment transactions.",
+    "id": "962d35ad"
   },
   {
     "Date": "2026-09-10",
@@ -3452,7 +3765,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "A live demonstration of Parasoft Service virtualization & AI-driven software testing, API testing for banking and fintech. The session will showcase how organizations can improve software quality, accelerate testing, and build secure, reliable, and trusted financial systems."
+    "Description": "A live demonstration of Parasoft Service virtualization & AI-driven software testing, API testing for banking and fintech. The session will showcase how organizations can improve software quality, accelerate testing, and build secure, reliable, and trusted financial systems.",
+    "id": "5aee9c6c"
   },
   {
     "Date": "2026-09-10",
@@ -3463,7 +3777,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "As banks and fintechs move toward AI-native operating models, multi-agent systems are reshaping how financial institutions run complex workflows from lending and onboarding to fraud prevention, compliance, and customer service. But no institution will run on a single agent, or a single vendor's agents. The future is open and connected: an institution's own agents working alongside those of its partners and platforms, which makes interoperability and orchestration the real foundation of what comes next. And because every agentic decision is ultimately experienced by a customer, trust becomes the defining challenge grounding agents in governed knowledge and embedding governance directly into how they operate, so that DPDP compliance and responsible use of customer data are built in rather than bolted on. Bringing together perspectives from lending, digital infrastructure, onboarding, experience, and regulation, this session explores how financial institutions can harness open, connected multi-agent systems while sustaining trust across increasingly autonomous financial ecosystems."
+    "Description": "As banks and fintechs move toward AI-native operating models, multi-agent systems are reshaping how financial institutions run complex workflows from lending and onboarding to fraud prevention, compliance, and customer service. But no institution will run on a single agent, or a single vendor's agents. The future is open and connected: an institution's own agents working alongside those of its partners and platforms, which makes interoperability and orchestration the real foundation of what comes next. And because every agentic decision is ultimately experienced by a customer, trust becomes the defining challenge grounding agents in governed knowledge and embedding governance directly into how they operate, so that DPDP compliance and responsible use of customer data are built in rather than bolted on. Bringing together perspectives from lending, digital infrastructure, onboarding, experience, and regulation, this session explores how financial institutions can harness open, connected multi-agent systems while sustaining trust across increasingly autonomous financial ecosystems.",
+    "id": "e63aa23f"
   },
   {
     "Date": "2026-09-10",
@@ -3474,7 +3789,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "This session will explore clear regulation, supervision and responsible innovation, together with practical innovation and scalable business outcomes. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale."
+    "Description": "This session will explore clear regulation, supervision and responsible innovation, together with practical innovation and scalable business outcomes. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale.",
+    "id": "67113ec0"
   },
   {
     "Date": "2026-09-10",
@@ -3485,7 +3801,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "As payments evolve beyond transactions, the convergence of intelligent payment infrastructure, embedded credit, and seamless digital experiences is reshaping commerce. It will explore how fintech innovation is helping businesses and consumers unlock new growth opportunities. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness."
+    "Description": "As payments evolve beyond transactions, the convergence of intelligent payment infrastructure, embedded credit, and seamless digital experiences is reshaping commerce. It will explore how fintech innovation is helping businesses and consumers unlock new growth opportunities. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness.",
+    "id": "6aa04d7a"
   },
   {
     "Date": "2026-09-10",
@@ -3496,7 +3813,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "A live product launch unveiling SAMAH, an AI-powered financial operations platform for banks, payment aggregators, central banks, and interchanges.\n\nThe session will introduce three flagship modules:\n\nAI-powered Escrow Payin & Merchant Payout Management\nNext-Gen Automated Clearing & Settlement for Central Banks & Interchanges\nReconciliation, Dispute Management & GL/Tally automation across Cards, UPI, ATM, IMPS, NEFT & RTGS"
+    "Description": "A live product launch unveiling SAMAH, an AI-powered financial operations platform for banks, payment aggregators, central banks, and interchanges.\n\nThe session will introduce three flagship modules:\n\nAI-powered Escrow Payin & Merchant Payout Management\nNext-Gen Automated Clearing & Settlement for Central Banks & Interchanges\nReconciliation, Dispute Management & GL/Tally automation across Cards, UPI, ATM, IMPS, NEFT & RTGS",
+    "id": "1229953c"
   },
   {
     "Date": "2026-09-10",
@@ -3507,7 +3825,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Demo to our flagship product bRUID ACS"
+    "Description": "Demo to our flagship product bRUID ACS",
+    "id": "e46127ca"
   },
   {
     "Date": "2026-09-10",
@@ -3518,7 +3837,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with fraud prevention, early detection and customer protection. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "This session will explore financial crime prevention, intelligence and effective reporting, together with fraud prevention, early detection and customer protection. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "61642345"
   },
   {
     "Date": "2026-09-10",
@@ -3529,7 +3849,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Digital Public Infrastructure",
-    "Description": "India's digital transformation is being powered by the convergence of connectivity, payments infrastructure and financial innovation. This session will explore how telecom networks, digital public infrastructure, banking and technology are working together to expand access, improve customer outcomes and enable inclusive financial growth at scale."
+    "Description": "India's digital transformation is being powered by the convergence of connectivity, payments infrastructure and financial innovation. This session will explore how telecom networks, digital public infrastructure, banking and technology are working together to expand access, improve customer outcomes and enable inclusive financial growth at scale.",
+    "id": "fa785b2b"
   },
   {
     "Date": "2026-09-10",
@@ -3540,7 +3861,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "A practical masterclass on preserving product truth, compliance, disclosure and institutional alignment before financial communication scales."
+    "Description": "A practical masterclass on preserving product truth, compliance, disclosure and institutional alignment before financial communication scales.",
+    "id": "ceb62c16"
   },
   {
     "Date": "2026-09-10",
@@ -3551,7 +3873,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "India has reached an inflection point in its banking journey. With India entering the Digital Banking Era, there is a need to have Banks that are built digitally first. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "India has reached an inflection point in its banking journey. With India entering the Digital Banking Era, there is a need to have Banks that are built digitally first. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "4bd81e7c"
   },
   {
     "Date": "2026-09-10",
@@ -3562,7 +3885,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Stop by our booth for the launch of Payhuddle Diagnostics, a new decision layer for EMV Level 3 (L3) and Card Personalization Validation (CPV) testing.\n\nBuilt for acquirers, issuers, networks, card manufacturers, and terminal vendors, Payhuddle Diagnostics reads test results across Tecto and Tropo and pinpoints exactly where a test failed, how it failed, and what to fix. You no longer have to dig through logs to find the needle.\n\nIt runs alongside existing pass/fail testing, and in host-level simulations, it\u2019s already catching functional bugs that manual review misses in up to half of all test runs. That\u2019s not a small edge; that\u2019s half your bug list, found automatically. \n\nCome see it live at our booth: EMV and card personalization working in real time. That\u2019s what\u2019s next for payment certification."
+    "Description": "Stop by our booth for the launch of Payhuddle Diagnostics, a new decision layer for EMV Level 3 (L3) and Card Personalization Validation (CPV) testing.\n\nBuilt for acquirers, issuers, networks, card manufacturers, and terminal vendors, Payhuddle Diagnostics reads test results across Tecto and Tropo and pinpoints exactly where a test failed, how it failed, and what to fix. You no longer have to dig through logs to find the needle.\n\nIt runs alongside existing pass/fail testing, and in host-level simulations, it\u2019s already catching functional bugs that manual review misses in up to half of all test runs. That\u2019s not a small edge; that\u2019s half your bug list, found automatically. \n\nCome see it live at our booth: EMV and card personalization working in real time. That\u2019s what\u2019s next for payment certification.",
+    "id": "1a5d7bc7"
   },
   {
     "Date": "2026-09-10",
@@ -3573,7 +3897,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Official launch of Interestng's Loan distribution intelligence Platform, Lenders see for the first time how they can set their parameters, receive only eligibility-matched borrowers, connect with top-performing tech-enabled agents, and manage their entire sourcing channel from one dashboard. Live walkthrough from parameters setup to lead receipt to agent performance tracking. Exclusive early access for lenders who sign up at the stall."
+    "Description": "Official launch of Interestng's Loan distribution intelligence Platform, Lenders see for the first time how they can set their parameters, receive only eligibility-matched borrowers, connect with top-performing tech-enabled agents, and manage their entire sourcing channel from one dashboard. Live walkthrough from parameters setup to lead receipt to agent performance tracking. Exclusive early access for lenders who sign up at the stall.",
+    "id": "c9f2f72d"
   },
   {
     "Date": "2026-09-10",
@@ -3584,7 +3909,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "J.P. Morgan launches UPI solution on Mindgate platform for its corporate and merchant clients"
+    "Description": "J.P. Morgan launches UPI solution on Mindgate platform for its corporate and merchant clients",
+    "id": "54b32b6f"
   },
   {
     "Date": "2026-09-10",
@@ -3595,7 +3921,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group, Axilor Ventures, OneCard, and Chairman, FCC",
     "Location / Room": "Jasmine 2",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "a5f9ef89"
   },
   {
     "Date": "2026-09-10",
@@ -3606,7 +3933,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "See HyperVerge's Deepfake Detection solution in action as it identifies AI-generated faces and impersonation attempts in real time. Discover how financial institutions can stay ahead of evolving fraud threats with intelligent detection."
+    "Description": "See HyperVerge's Deepfake Detection solution in action as it identifies AI-generated faces and impersonation attempts in real time. Discover how financial institutions can stay ahead of evolving fraud threats with intelligent detection.",
+    "id": "3fe5e3a6"
   },
   {
     "Date": "2026-09-10",
@@ -3617,7 +3945,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "We have a panel discussion on the payment landscape of MSE, how he can navigate between Payments and different platform to run their business, accounts, reconciliation and GST"
+    "Description": "We have a panel discussion on the payment landscape of MSE, how he can navigate between Payments and different platform to run their business, accounts, reconciliation and GST",
+    "id": "d91ea428"
   },
   {
     "Date": "2026-09-10",
@@ -3628,7 +3957,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Discovery of products and solutions has been transformed with AI. Search has moved from links to answers, and consumers now want recommendations. \nGet a sneak peek into the state of AI visibility for banking and lending. See which players come out on top of AI search, and which sources AI engines trust the most. The session ends with a live AMA with the builders of \"AI search visibility for BFSI\""
+    "Description": "Discovery of products and solutions has been transformed with AI. Search has moved from links to answers, and consumers now want recommendations. \nGet a sneak peek into the state of AI visibility for banking and lending. See which players come out on top of AI search, and which sources AI engines trust the most. The session ends with a live AMA with the builders of \"AI search visibility for BFSI\"",
+    "id": "7500a1b5"
   },
   {
     "Date": "2026-09-10",
@@ -3639,7 +3969,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Jasmine 2",
     "Tracks": "",
-    "Description": ""
+    "Description": "",
+    "id": "d16281e3"
   },
   {
     "Date": "2026-09-10",
@@ -3650,7 +3981,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Jasmine 2",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "Robust digital public infrastructure forms the foundation for secure, inclusive financial services in an increasingly AI-driven economy. This keynote address examines how connectivity, digital governance and policy frameworks expand access and foster trusted economic participation across regions. A senior government leader will set out the strategic vision for empowering financial ecosystems through resilient national technology foundations."
+    "Description": "Robust digital public infrastructure forms the foundation for secure, inclusive financial services in an increasingly AI-driven economy. This keynote address examines how connectivity, digital governance and policy frameworks expand access and foster trusted economic participation across regions. A senior government leader will set out the strategic vision for empowering financial ecosystems through resilient national technology foundations.",
+    "id": "61f498c5"
   },
   {
     "Date": "2026-09-10",
@@ -3661,7 +3993,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cullinan - Trident",
     "Tracks": "Banking & Financial Institutions, Digital Public Infrastructure",
-    "Description": "The Business Correspondents Forum of India (BCFI) Annual Meet will bring together business correspondents and financial inclusion leaders to discuss the evolving role of the BC ecosystem in expanding last-mile access to financial services. A technology perspective will keep the discussion practical, from system design and readiness to deployment at scale."
+    "Description": "The Business Correspondents Forum of India (BCFI) Annual Meet will bring together business correspondents and financial inclusion leaders to discuss the evolving role of the BC ecosystem in expanding last-mile access to financial services. A technology perspective will keep the discussion practical, from system design and readiness to deployment at scale.",
+    "id": "386559dd"
   },
   {
     "Date": "2026-09-10",
@@ -3672,7 +4005,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Art Cafe",
     "Tracks": "",
-    "Description": "AI is moving customer engagement from isolated automation to connected, context-aware conversations across every touchpoint. For collections and recovery, context-aware also means compliance-aware, knowing what's been disclosed, recorded and said before the next call begins. This roundtable brings together CX, customer service and contact centre leaders, including those in collections and recovery, to explore how AI is reshaping enterprise communication, building trusted AI-human collaboration and turning every conversation into a source of enterprise intelligence."
+    "Description": "AI is moving customer engagement from isolated automation to connected, context-aware conversations across every touchpoint. For collections and recovery, context-aware also means compliance-aware, knowing what's been disclosed, recorded and said before the next call begins. This roundtable brings together CX, customer service and contact centre leaders, including those in collections and recovery, to explore how AI is reshaping enterprise communication, building trusted AI-human collaboration and turning every conversation into a source of enterprise intelligence.",
+    "id": "2a7d7ebf"
   },
   {
     "Date": "2026-09-10",
@@ -3683,7 +4017,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 102",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "As banks, insurers, NBFCs and fintechs scale AI beyond isolated pilots, the real challenge is building a foundation that can support enterprise-wide adoption with governance, visibility and control."
+    "Description": "As banks, insurers, NBFCs and fintechs scale AI beyond isolated pilots, the real challenge is building a foundation that can support enterprise-wide adoption with governance, visibility and control.",
+    "id": "23e0953f"
   },
   {
     "Date": "2026-09-10",
@@ -3694,7 +4029,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 104 A&B",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "India's fintech ecosystem is being reshaped by AI, Digital Public Infrastructure, embedded finance, and real-time data sharing. This roundtable will explore how banks, NBFCs, insurers, and fintechs can collaborate to create the next generation of intelligent, personalized, and seamlessly connected financial services."
+    "Description": "India's fintech ecosystem is being reshaped by AI, Digital Public Infrastructure, embedded finance, and real-time data sharing. This roundtable will explore how banks, NBFCs, insurers, and fintechs can collaborate to create the next generation of intelligent, personalized, and seamlessly connected financial services.",
+    "id": "3389a8fb"
   },
   {
     "Date": "2026-09-10",
@@ -3705,7 +4041,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 202",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "This roundtable will bring together leading UK fintech and financial services firms with key Indian regulators, banks, investors, NBFCs and fintechs to explore collaboration opportunities arising from the newly implemented India\u2013UK CETA."
+    "Description": "This roundtable will bring together leading UK fintech and financial services firms with key Indian regulators, banks, investors, NBFCs and fintechs to explore collaboration opportunities arising from the newly implemented India\u2013UK CETA.",
+    "id": "f5dc20a7"
   },
   {
     "Date": "2026-09-10",
@@ -3716,7 +4053,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "In an era where customer experience is a key competitive differentiator, BFSI leaders are reimagining engagement through conversational platforms like WhatsApp and RCS, supported by omnichannel orchestration and data-driven personalization."
+    "Description": "In an era where customer experience is a key competitive differentiator, BFSI leaders are reimagining engagement through conversational platforms like WhatsApp and RCS, supported by omnichannel orchestration and data-driven personalization.",
+    "id": "07b4b16b"
   },
   {
     "Date": "2026-09-10",
@@ -3727,7 +4065,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Indian Accent",
     "Tracks": "Payments & Lending, Banking & Financial Institutions",
-    "Description": "Adyen is hosting a relaxed and intimate evening of great food, refreshing drinks, and meaningful conversations at an invite-only gathering. No presentations, no rigid schedules, and no pitch decks; just a private setting to unwind and connect with industry peers, fellow leaders and the global Adyen team. It is a space to exchange ideas, forge new connections, and turn the day\u2019s insights into lasting partnerships"
+    "Description": "Adyen is hosting a relaxed and intimate evening of great food, refreshing drinks, and meaningful conversations at an invite-only gathering. No presentations, no rigid schedules, and no pitch decks; just a private setting to unwind and connect with industry peers, fellow leaders and the global Adyen team. It is a space to exchange ideas, forge new connections, and turn the day\u2019s insights into lasting partnerships",
+    "id": "a18baa9f"
   },
   {
     "Date": "2026-09-10",
@@ -3738,7 +4077,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "The next phase of Agentic AI will not be defined by the number of agents an enterprise deploys, but by the measurable business outcomes those agents deliver."
+    "Description": "The next phase of Agentic AI will not be defined by the number of agents an enterprise deploys, but by the measurable business outcomes those agents deliver.",
+    "id": "59e496e0"
   },
   {
     "Date": "2026-09-10",
@@ -3749,7 +4089,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "A focused showcase of solutions and use cases linked to practical AI adoption, governance and measurable business value. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers."
+    "Description": "A focused showcase of solutions and use cases linked to practical AI adoption, governance and measurable business value. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers.",
+    "id": "621a23b7"
   },
   {
     "Date": "2026-09-10",
@@ -3760,7 +4101,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Taftoon",
     "Tracks": "Payments & Lending",
-    "Description": "As the day transitions into night, join GetePay Night Fest \u2014 an exclusive evening where fintech leaders, innovators, and creators come together to unwind, connect, and celebrate. Expect engaging conversations, vibrant networking, great food, and memorable moments in an atmosphere designed to spark meaningful connections."
+    "Description": "As the day transitions into night, join GetePay Night Fest \u2014 an exclusive evening where fintech leaders, innovators, and creators come together to unwind, connect, and celebrate. Expect engaging conversations, vibrant networking, great food, and memorable moments in an atmosphere designed to spark meaningful connections.",
+    "id": "d702fed0"
   },
   {
     "Date": "2026-09-10",
@@ -3771,7 +4113,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Lotus 1",
     "Tracks": "",
-    "Description": "An invitation-led networking engagement centred on Networking, Fintech. It will give participants space for direct conversations, relationship building and follow-up discussions beyond the formal agenda."
+    "Description": "An invitation-led networking engagement centred on Networking, Fintech. It will give participants space for direct conversations, relationship building and follow-up discussions beyond the formal agenda.",
+    "id": "0bc390ab"
   },
   {
     "Date": "2026-09-10",
@@ -3782,7 +4125,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "The Grand Theatre",
     "Tracks": "",
-    "Description": "Get ready for an electrifying musical sundowner by Scapia, featuring the legendary Salim Sulaiman, live at Global Fintech Fest 2026. Entry is open to registered delegates."
+    "Description": "Get ready for an electrifying musical sundowner by Scapia, featuring the legendary Salim Sulaiman, live at Global Fintech Fest 2026. Entry is open to registered delegates.",
+    "id": "2615451d"
   },
   {
     "Date": "2026-09-11",
@@ -3793,7 +4137,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 105 A&B",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "A working session for IOSCO FTF members to review current priorities, exchange jurisdictional perspectives and advance collaborative work on technology and securities markets. The meeting will focus on regulatory coordination, emerging risks and practical areas for joint action."
+    "Description": "A working session for IOSCO FTF members to review current priorities, exchange jurisdictional perspectives and advance collaborative work on technology and securities markets. The meeting will focus on regulatory coordination, emerging risks and practical areas for joint action.",
+    "id": "bfde5ea3"
   },
   {
     "Date": "2026-09-11",
@@ -3804,7 +4149,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Every enterprise marketing team is sitting on signals they never act on fast enough.\nA customer shows high intent on Tuesday. The campaign fires on Thursday. The competitor called on Wednesday.\nEddie changes that.\nEddie is FirstHive's agentic AI \u2014 the intelligence layer that reads every customer signal in real time, determines the next best action, and activates it automatically. Not as a recommendation. Not as a dashboard alert. As an action.\nAsk Eddie for an audience segment in plain language \u2014 it builds it in seconds. Point Eddie at a revenue signal \u2014 it triggers the right campaign before the moment passes.\nAI that does not advise. AI that acts.\nThat is Eddie. That is FirstHive."
+    "Description": "Every enterprise marketing team is sitting on signals they never act on fast enough.\nA customer shows high intent on Tuesday. The campaign fires on Thursday. The competitor called on Wednesday.\nEddie changes that.\nEddie is FirstHive's agentic AI \u2014 the intelligence layer that reads every customer signal in real time, determines the next best action, and activates it automatically. Not as a recommendation. Not as a dashboard alert. As an action.\nAsk Eddie for an audience segment in plain language \u2014 it builds it in seconds. Point Eddie at a revenue signal \u2014 it triggers the right campaign before the moment passes.\nAI that does not advise. AI that acts.\nThat is Eddie. That is FirstHive.",
+    "id": "c249ac80"
   },
   {
     "Date": "2026-09-11",
@@ -3815,7 +4161,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "As the world prepares for the post-quantum era, organisations first need to understand where cryptography exists, what cryptographic assets they depend on, and which systems may be vulnerable to emerging quantum threats. QuLens provides organisations with comprehensive cryptographic visibility by discovering and inventorying cryptographic assets across their technology environment and creating a Cryptographic Bill of Materials (CBOM). The platform helps identify algorithms, certificates, keys, protocols, and cryptographic dependencies, assess their quantum readiness, and establish a structured roadmap toward Post-Quantum Cryptography (PQC) migration and crypto-agility. The launch will highlight how cryptographic discovery and CBOM can become the foundation for organisations preparing for the transition to a quantum-safe digital infrastructure."
+    "Description": "As the world prepares for the post-quantum era, organisations first need to understand where cryptography exists, what cryptographic assets they depend on, and which systems may be vulnerable to emerging quantum threats. QuLens provides organisations with comprehensive cryptographic visibility by discovering and inventorying cryptographic assets across their technology environment and creating a Cryptographic Bill of Materials (CBOM). The platform helps identify algorithms, certificates, keys, protocols, and cryptographic dependencies, assess their quantum readiness, and establish a structured roadmap toward Post-Quantum Cryptography (PQC) migration and crypto-agility. The launch will highlight how cryptographic discovery and CBOM can become the foundation for organisations preparing for the transition to a quantum-safe digital infrastructure.",
+    "id": "0eddab61"
   },
   {
     "Date": "2026-09-11",
@@ -3826,7 +4173,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "This session will explore practical use of AI, automation and better decision-making, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "This session will explore practical use of AI, automation and better decision-making, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "150eef85"
   },
   {
     "Date": "2026-09-11",
@@ -3837,7 +4185,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "AuthSense is a next-generation centralized authentication engine designed to make security smarter, adaptive, and seamless. It brings multiple authentication methods together while leveraging behavioural intelligence to understand how users interact, identify unusual patterns, and assess risk in real time.\n\nInstead of relying on a one-size-fits-all approach, AuthSense dynamically determines the right authentication challenge at the right moment, strengthening security when risk increases while keeping trusted interactions frictionless.\n\nOne engine. Multiple authentication possibilities. Intelligence that adapts to every interaction."
+    "Description": "AuthSense is a next-generation centralized authentication engine designed to make security smarter, adaptive, and seamless. It brings multiple authentication methods together while leveraging behavioural intelligence to understand how users interact, identify unusual patterns, and assess risk in real time.\n\nInstead of relying on a one-size-fits-all approach, AuthSense dynamically determines the right authentication challenge at the right moment, strengthening security when risk increases while keeping trusted interactions frictionless.\n\nOne engine. Multiple authentication possibilities. Intelligence that adapts to every interaction.",
+    "id": "f0402d29"
   },
   {
     "Date": "2026-09-11",
@@ -3848,7 +4197,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance",
-    "Description": "Drawing on 15 years of technology experience, they built Safebox, a SEBI-regulated platform that helps families effortlessly organise, track, protect and selectively share their wealth and critical information."
+    "Description": "Drawing on 15 years of technology experience, they built Safebox, a SEBI-regulated platform that helps families effortlessly organise, track, protect and selectively share their wealth and critical information.",
+    "id": "fb2b77af"
   },
   {
     "Date": "2026-09-11",
@@ -3859,7 +4209,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech, Rural Economic Empowerment",
-    "Description": "Meta Business Agent is an AI-powered assistant built into the WhatsApp Business App that enables small businesses to automate customer interactions and complete commerce, including UPI payments, entirely within a WhatsApp conversation. Already used by over 1 million businesses globally and available in 200+ markets, the agent answers customer queries 24/7, qualifies leads, books appointments, and initiates UPI payment requests in-thread turning WhatsApp into a fully functional, AI-powered digital storefront.\n\nResponses are tailored to each business's unique voice and offerings, so customers get a personalized experience that feels authentic. Business owners retain full control, with the flexibility to switch between AI-assisted and manual modes at any time, or define specific schedules and preferences for when the agent is active.\n\nMeta Business Agent providesan AI partner that works from day one, requiring no technical expertise, and no upfront investment. The conversation becomes the entire transaction: from discovery to payment, without leaving the chat.\nBy combining an always-on AI agent with seamless in-thread UPI payments on WhatsApp, it empowers every SMB owner to respond to customers around the clock and offer a fully integrated checkout experience with every business starting free and scaling affordably as they grow. It extends digital public infrastructure from offline QR payments to online conversational commerce, enabling businesses to serve customers beyond their physical radius and convert intent into transactions the moment it happens."
+    "Description": "Meta Business Agent is an AI-powered assistant built into the WhatsApp Business App that enables small businesses to automate customer interactions and complete commerce, including UPI payments, entirely within a WhatsApp conversation. Already used by over 1 million businesses globally and available in 200+ markets, the agent answers customer queries 24/7, qualifies leads, books appointments, and initiates UPI payment requests in-thread turning WhatsApp into a fully functional, AI-powered digital storefront.\n\nResponses are tailored to each business's unique voice and offerings, so customers get a personalized experience that feels authentic. Business owners retain full control, with the flexibility to switch between AI-assisted and manual modes at any time, or define specific schedules and preferences for when the agent is active.\n\nMeta Business Agent providesan AI partner that works from day one, requiring no technical expertise, and no upfront investment. The conversation becomes the entire transaction: from discovery to payment, without leaving the chat.\nBy combining an always-on AI agent with seamless in-thread UPI payments on WhatsApp, it empowers every SMB owner to respond to customers around the clock and offer a fully integrated checkout experience with every business starting free and scaling affordably as they grow. It extends digital public infrastructure from offline QR payments to online conversational commerce, enabling businesses to serve customers beyond their physical radius and convert intent into transactions the moment it happens.",
+    "id": "5e4a8cee"
   },
   {
     "Date": "2026-09-11",
@@ -3870,7 +4221,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "Aerospike is the operational database for systems that cannot afford to make late decisions, such as fraud detection, payment authorization, and recommendation engines. It keeps applications responsive at any scale, even on peak days, without requiring constant attention. Aerospike customers can adapt to new requirements and continued growth without worrying that the database will become the constraint"
+    "Description": "Aerospike is the operational database for systems that cannot afford to make late decisions, such as fraud detection, payment authorization, and recommendation engines. It keeps applications responsive at any scale, even on peak days, without requiring constant attention. Aerospike customers can adapt to new requirements and continued growth without worrying that the database will become the constraint",
+    "id": "1d097100"
   },
   {
     "Date": "2026-09-11",
@@ -3881,7 +4233,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Alternative data \u2014 UPI transaction patterns, GST filings, utility payments, AA-consented cash flows \u2014 has expanded who gets evaluated for credit, but has it actually improved who gets repaid? Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "Alternative data \u2014 UPI transaction patterns, GST filings, utility payments, AA-consented cash flows \u2014 has expanded who gets evaluated for credit, but has it actually improved who gets repaid? Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "662a6673"
   },
   {
     "Date": "2026-09-11",
@@ -3892,7 +4245,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "As AI transforms financial services, the focus is shifting from experimentation to responsible and scalable adoption. This session explores how banks, regulators, fintechs, and ecosystem players are collaboratively building AI governance frameworks that balance innovation with trust, transparency, security, and compliance. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "As AI transforms financial services, the focus is shifting from experimentation to responsible and scalable adoption. This session explores how banks, regulators, fintechs, and ecosystem players are collaboratively building AI governance frameworks that balance innovation with trust, transparency, security, and compliance. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "50a6905a"
   },
   {
     "Date": "2026-09-11",
@@ -3903,7 +4257,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "RegTech & Compliance",
-    "Description": "As financial services become increasingly digital, compliance is shifting from a control function to a design principle. This session will explore how organisations are embedding privacy, consumer protection, fraud controls and regulatory requirements directly into product architecture and customer journeys. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale."
+    "Description": "As financial services become increasingly digital, compliance is shifting from a control function to a design principle. This session will explore how organisations are embedding privacy, consumer protection, fraud controls and regulatory requirements directly into product architecture and customer journeys. Financial-sector and technology leaders will focus on implementation choices, risk controls and the customer outcomes that matter at scale.",
+    "id": "aabfa654"
   },
   {
     "Date": "2026-09-11",
@@ -3914,7 +4269,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 102",
     "Tracks": "Payments & Lending, Banking & Financial Institutions",
-    "Description": "From merchant ecosystems and marketplaces to enterprise supply chains, embedded finance is reshaping how credit is originated, underwritten and delivered. This discussion explores the infrastructure, partnerships and regulatory frameworks that will define the next generation of digital lending."
+    "Description": "From merchant ecosystems and marketplaces to enterprise supply chains, embedded finance is reshaping how credit is originated, underwritten and delivered. This discussion explores the infrastructure, partnerships and regulatory frameworks that will define the next generation of digital lending.",
+    "id": "30a5ea71"
   },
   {
     "Date": "2026-09-11",
@@ -3925,7 +4281,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "AI is transforming commerce by connecting payments, customer engagement and personalised experiences. As businesses across financial services, e-commerce, telecom and digital platforms adopt AI, customer interactions are moving beyond transactions towards real-time, contextual conversations. This session explores how AI is reshaping the customer journey across channels, from discovery and engagement to payment"
+    "Description": "AI is transforming commerce by connecting payments, customer engagement and personalised experiences. As businesses across financial services, e-commerce, telecom and digital platforms adopt AI, customer interactions are moving beyond transactions towards real-time, contextual conversations. This session explores how AI is reshaping the customer journey across channels, from discovery and engagement to payment",
+    "id": "97ab1193"
   },
   {
     "Date": "2026-09-11",
@@ -3936,7 +4293,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Leaders will discuss the role of partnerships, APIs, and digital infrastructure in enabling seamless, embedded financial experiences. The conversation will highlight how this shift is reshaping customer engagement, innovation, and long-term competitiveness in India\u2019s financial landscape. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "Leaders will discuss the role of partnerships, APIs, and digital infrastructure in enabling seamless, embedded financial experiences. The conversation will highlight how this shift is reshaping customer engagement, innovation, and long-term competitiveness in India\u2019s financial landscape. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "66189c1e"
   },
   {
     "Date": "2026-09-11",
@@ -3947,7 +4305,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "InsurTech, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "As AI becomes more deeply embedded in underwriting, pricing, claims assessment and fraud detection, insurers must establish clear governance frameworks for accountability, transparency and oversight. This session will explore how insurance leaders can ensure that algorithmic decisions remain explainable, fair, auditable and aligned with customer protection. Government and industry voices will focus on how policy intent can translate into stronger infrastructure, innovation and customer outcomes."
+    "Description": "As AI becomes more deeply embedded in underwriting, pricing, claims assessment and fraud detection, insurers must establish clear governance frameworks for accountability, transparency and oversight. This session will explore how insurance leaders can ensure that algorithmic decisions remain explainable, fair, auditable and aligned with customer protection. Government and industry voices will focus on how policy intent can translate into stronger infrastructure, innovation and customer outcomes.",
+    "id": "d2ac76de"
   },
   {
     "Date": "2026-09-11",
@@ -3958,7 +4317,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "Domestic control versus global interoperability The strategic role of standards, messaging, and settlement infrastructure How geopolitics is reshaping payment architecture decisions. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness."
+    "Description": "Domestic control versus global interoperability The strategic role of standards, messaging, and settlement infrastructure How geopolitics is reshaping payment architecture decisions. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness.",
+    "id": "db106726"
   },
   {
     "Date": "2026-09-11",
@@ -3969,7 +4329,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Transaction data has become one of the most valuable assets in digital commerce, offering insights into customer behaviour, merchant performance, and growth opportunities. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale."
+    "Description": "Transaction data has become one of the most valuable assets in digital commerce, offering insights into customer behaviour, merchant performance, and growth opportunities. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale.",
+    "id": "27dbbf00"
   },
   {
     "Date": "2026-09-11",
@@ -3980,7 +4341,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "This discussion will focus on how India's established digital public infrastructure, including UPI, Aadhaar, and the Account Aggregator framework, can extend its governance principles to agentic AI systems in financial services. Research and industry perspectives will help translate emerging technology into practical financial-services use cases."
+    "Description": "This discussion will focus on how India's established digital public infrastructure, including UPI, Aadhaar, and the Account Aggregator framework, can extend its governance principles to agentic AI systems in financial services. Research and industry perspectives will help translate emerging technology into practical financial-services use cases.",
+    "id": "20fc8473"
   },
   {
     "Date": "2026-09-11",
@@ -3991,7 +4353,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Launch of product"
+    "Description": "Launch of product",
+    "id": "8341685e"
   },
   {
     "Date": "2026-09-11",
@@ -4002,7 +4365,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "",
-    "Description": "From building one of India's most iconic internet companies to reimagining financial services through technology, Sachin Bansal has been at the centre of India's digital transformation journey. This fireside chat explores how AI, digital infrastructure and evolving consumer behaviour are redefining finance, and what the next generation of founders must do to create India's future financial giants."
+    "Description": "From building one of India's most iconic internet companies to reimagining financial services through technology, Sachin Bansal has been at the centre of India's digital transformation journey. This fireside chat explores how AI, digital infrastructure and evolving consumer behaviour are redefining finance, and what the next generation of founders must do to create India's future financial giants.",
+    "id": "d41b98f4"
   },
   {
     "Date": "2026-09-11",
@@ -4013,7 +4377,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "A decade of digital lending innovation has reshaped underwriting, distribution, and servicing but the cost of capital that underpins the entire model remains largely untouched. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness."
+    "Description": "A decade of digital lending innovation has reshaped underwriting, distribution, and servicing but the cost of capital that underpins the entire model remains largely untouched. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness.",
+    "id": "9da70a16"
   },
   {
     "Date": "2026-09-11",
@@ -4024,7 +4389,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "This session will discuss modernising cross\u2011border and forex payment rails through automation, real\u2011time compliance checks, and intelligent routing to deliver faster, more transparent, and trusted global transactions. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "This session will discuss modernising cross\u2011border and forex payment rails through automation, real\u2011time compliance checks, and intelligent routing to deliver faster, more transparent, and trusted global transactions. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "efd55ac4"
   },
   {
     "Date": "2026-09-11",
@@ -4035,7 +4401,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "",
-    "Description": "The migration to quantum-resistant financial infrastructure is no longer a long-term strategy, but an immediate regulatory and security mandate. In this session, we discuss the need of\u00a0 Quantum Key Distribution (QKD) sandboxes as the definitive technical pathway to achieve quantum compliance while preserving operational continuity.\u00a0We analyze how an isolated QKD sandbox allows banks to safely stress-test physics-based, hardware-driven encryption across simulated backbone networks."
+    "Description": "The migration to quantum-resistant financial infrastructure is no longer a long-term strategy, but an immediate regulatory and security mandate. In this session, we discuss the need of\u00a0 Quantum Key Distribution (QKD) sandboxes as the definitive technical pathway to achieve quantum compliance while preserving operational continuity.\u00a0We analyze how an isolated QKD sandbox allows banks to safely stress-test physics-based, hardware-driven encryption across simulated backbone networks.",
+    "id": "bdcba26e"
   },
   {
     "Date": "2026-09-11",
@@ -4046,7 +4413,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Payments & Lending",
-    "Description": "The future of lending will be shaped by the convergence of trusted collateral, intelligent risk assessment and digital financial infrastructure. As AI transforms underwriting, servicing and portfolio management, lenders are creating new pathways to credit across gold loans, MSME finance, secured lending and unsecured consumer credit. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale."
+    "Description": "The future of lending will be shaped by the convergence of trusted collateral, intelligent risk assessment and digital financial infrastructure. As AI transforms underwriting, servicing and portfolio management, lenders are creating new pathways to credit across gold loans, MSME finance, secured lending and unsecured consumer credit. The speaker mix will bring a technology-led view of architecture, deployment and the path to scale.",
+    "id": "69d8dba8"
   },
   {
     "Date": "2026-09-11",
@@ -4057,7 +4425,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 102",
     "Tracks": "Payments & Lending, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "Data is transforming every stage of the lending lifecycle\u2014from customer acquisition and underwriting to portfolio management and collections. This discussion explores how lenders are turning intelligence into growth while strengthening trust and financial inclusion."
+    "Description": "Data is transforming every stage of the lending lifecycle\u2014from customer acquisition and underwriting to portfolio management and collections. This discussion explores how lenders are turning intelligence into growth while strengthening trust and financial inclusion.",
+    "id": "7a070e44"
   },
   {
     "Date": "2026-09-11",
@@ -4068,7 +4437,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "Offline verification is emerging as a critical layer for trusted, privacy-preserving and low-friction digital interactions. The discussion will examine operating models, compliance expectations, technical readiness, ecosystem collaboration and the role of offline verification in building scalable trust infrastructure. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development."
+    "Description": "Offline verification is emerging as a critical layer for trusted, privacy-preserving and low-friction digital interactions. The discussion will examine operating models, compliance expectations, technical readiness, ecosystem collaboration and the role of offline verification in building scalable trust infrastructure. Public-policy and industry perspectives will connect national priorities with practical execution, investment and market development.",
+    "id": "14bcf2d0"
   },
   {
     "Date": "2026-09-11",
@@ -4079,7 +4449,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "Knowledge graphs and AI are creating a new intelligence layer for financial services by connecting data, relationships and context across complex enterprise systems. This technical session will explore how graph databases and language models can work together to improve reasoning, decision-making, fraud detection, customer intelligence, risk management and compliance. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption."
+    "Description": "Knowledge graphs and AI are creating a new intelligence layer for financial services by connecting data, relationships and context across complex enterprise systems. This technical session will explore how graph databases and language models can work together to improve reasoning, decision-making, fraud detection, customer intelligence, risk management and compliance. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption.",
+    "id": "2bb66626"
   },
   {
     "Date": "2026-09-11",
@@ -4090,7 +4461,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "This session explores how AI-powered fraud intelligence is helping banks and payment players stay ahead of evolving threats while maintaining seamless customer experiences. It highlights the use of behavioral analytics, adaptive authentication, and real-time risk monitoring to detect fraud without increasing friction. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "This session explores how AI-powered fraud intelligence is helping banks and payment players stay ahead of evolving threats while maintaining seamless customer experiences. It highlights the use of behavioral analytics, adaptive authentication, and real-time risk monitoring to detect fraud without increasing friction. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "f2b20c4e"
   },
   {
     "Date": "2026-09-11",
@@ -4101,7 +4473,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "As data protection requirements evolve, financial institutions are exploring privacy-preserving approaches such as synthetic data, federated learning and secure data-sharing models to support innovation without compromising customer privacy. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness."
+    "Description": "As data protection requirements evolve, financial institutions are exploring privacy-preserving approaches such as synthetic data, federated learning and secure data-sharing models to support innovation without compromising customer privacy. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness.",
+    "id": "b8e254e4"
   },
   {
     "Date": "2026-09-11",
@@ -4112,7 +4485,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "Explainability, auditability, and bias controls in AI systems How boards and regulators should evaluate AI risk Customer trust when financial decisions are increasingly machine-assisted. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes."
+    "Description": "Explainability, auditability, and bias controls in AI systems How boards and regulators should evaluate AI risk Customer trust when financial decisions are increasingly machine-assisted. The speaker mix brings together policy and execution, with emphasis on clear guardrails, practical adoption and market outcomes.",
+    "id": "f8ae0ef3"
   },
   {
     "Date": "2026-09-11",
@@ -4123,7 +4497,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Discovery of products and solutions has been transformed with AI. Search has moved from links to answers, and consumers now want recommendations. \nGet a sneak peek into the state of AI visibility for general insurance - health, motor, travel. See which insurance providers come out on top of AI search, and which sources AI engines trust the most. The session ends with a live AMA with the builders of \"AI search visibility for BFSI\""
+    "Description": "Discovery of products and solutions has been transformed with AI. Search has moved from links to answers, and consumers now want recommendations. \nGet a sneak peek into the state of AI visibility for general insurance - health, motor, travel. See which insurance providers come out on top of AI search, and which sources AI engines trust the most. The session ends with a live AMA with the builders of \"AI search visibility for BFSI\"",
+    "id": "43714cba"
   },
   {
     "Date": "2026-09-11",
@@ -4134,7 +4509,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Unveiling Agentic AI Underwriting Journeys and product showcase"
+    "Description": "Unveiling Agentic AI Underwriting Journeys and product showcase",
+    "id": "20786b4f"
   },
   {
     "Date": "2026-09-11",
@@ -4145,7 +4521,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Announcement"
+    "Description": "Announcement",
+    "id": "24de2023"
   },
   {
     "Date": "2026-09-11",
@@ -4156,7 +4533,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Live demonstration of V2T, showcasing how AI converts voice conversations into text and analyses them to identify potential market abuse, surveillance and compliance risks."
+    "Description": "Live demonstration of V2T, showcasing how AI converts voice conversations into text and analyses them to identify potential market abuse, surveillance and compliance risks.",
+    "id": "1c273773"
   },
   {
     "Date": "2026-09-11",
@@ -4167,7 +4545,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Jasmine 2",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "AI-driven, autonomous systems are transforming tolling and mobility payments into seamless, real-time financial experiences. This session highlights the convergence of infrastructure, payments, and intelligence to enable frictionless transit, smarter revenue models, and scalable mobility ecosystems for the future. A public-policy lens will frame the discussion around execution, ecosystem development and wider economic impact."
+    "Description": "AI-driven, autonomous systems are transforming tolling and mobility payments into seamless, real-time financial experiences. This session highlights the convergence of infrastructure, payments, and intelligence to enable frictionless transit, smarter revenue models, and scalable mobility ecosystems for the future. A public-policy lens will frame the discussion around execution, ecosystem development and wider economic impact.",
+    "id": "0f079bd3"
   },
   {
     "Date": "2026-09-11",
@@ -4178,7 +4557,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Elaboration on AI led services - PNB call-bots, predictive analytics"
+    "Description": "Elaboration on AI led services - PNB call-bots, predictive analytics",
+    "id": "4d239dbd"
   },
   {
     "Date": "2026-09-11",
@@ -4189,7 +4569,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "HR product Launch"
+    "Description": "HR product Launch",
+    "id": "d7bfcd4e"
   },
   {
     "Date": "2026-09-11",
@@ -4200,7 +4581,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Live Product Demo - on OpportunityX the business opportunity platform for MSME manufacturers captures additional data point for credit underwriting"
+    "Description": "Live Product Demo - on OpportunityX the business opportunity platform for MSME manufacturers captures additional data point for credit underwriting",
+    "id": "cbef71b6"
   },
   {
     "Date": "2026-09-11",
@@ -4211,7 +4593,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Across BFSI, the people who sell wait weeks to be paid \u2014 and spend that time chasing what they're owed. Slow payout cycles, disputed numbers, no visibility. \nThis session shows how to run payouts at any frequency you want \u2014 rules managed through DIY configuration, calculation and approval with no manual steps, and partners checking their own earnings and payment status themselves. Bring your own payout scenario and watch it run live."
+    "Description": "Across BFSI, the people who sell wait weeks to be paid \u2014 and spend that time chasing what they're owed. Slow payout cycles, disputed numbers, no visibility. \nThis session shows how to run payouts at any frequency you want \u2014 rules managed through DIY configuration, calculation and approval with no manual steps, and partners checking their own earnings and payment status themselves. Bring your own payout scenario and watch it run live.",
+    "id": "43d7bf9d"
   },
   {
     "Date": "2026-09-11",
@@ -4222,7 +4605,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "RegTech & Compliance",
-    "Description": "India's Payment ecosystem is entering a new phase as the with a unified framework for online, physical, and cross-border payment aggregation. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale."
+    "Description": "India's Payment ecosystem is entering a new phase as the with a unified framework for online, physical, and cross-border payment aggregation. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale.",
+    "id": "0ede37e9"
   },
   {
     "Date": "2026-09-11",
@@ -4233,7 +4617,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "End-to-end AI in credit leverages advanced analytics and automation across the entire lending lifecycle from underwriting to collections. It enables faster, more accurate credit decisions and improves risk assessment using real-time data. Bringing together RBI Innovation Hub and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "End-to-end AI in credit leverages advanced analytics and automation across the entire lending lifecycle from underwriting to collections. It enables faster, more accurate credit decisions and improves risk assessment using real-time data. Bringing together RBI Innovation Hub and financial institutions, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "58162c2a"
   },
   {
     "Date": "2026-09-11",
@@ -4244,7 +4629,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "This session explores how organizations can move beyond pilot AI projects to deliver measurable business impact at scale. It focuses on overcoming challenges in integration, governance, and ROI tracking to turn innovation into sustainable value. Regulatory and industry perspectives will help balance innovation, operating realities and the safeguards required for trusted scale."
+    "Description": "This session explores how organizations can move beyond pilot AI projects to deliver measurable business impact at scale. It focuses on overcoming challenges in integration, governance, and ROI tracking to turn innovation into sustainable value. Regulatory and industry perspectives will help balance innovation, operating realities and the safeguards required for trusted scale.",
+    "id": "0efec8dd"
   },
   {
     "Date": "2026-09-11",
@@ -4255,7 +4641,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "As fraud networks become increasingly sophisticated, Graph AI is transforming the way financial institutions detect and disrupt illicit activity in real time. Participants will gain practical insights into building intelligent financial networks that improve detection accuracy, reduce false positives, and enable proactive financial crime prevention. Drawing on a technology and product perspective, the session will focus on architecture, implementation and the path from idea to scale."
+    "Description": "As fraud networks become increasingly sophisticated, Graph AI is transforming the way financial institutions detect and disrupt illicit activity in real time. Participants will gain practical insights into building intelligent financial networks that improve detection accuracy, reduce false positives, and enable proactive financial crime prevention. Drawing on a technology and product perspective, the session will focus on architecture, implementation and the path from idea to scale.",
+    "id": "5fcdd4a6"
   },
   {
     "Date": "2026-09-11",
@@ -4266,7 +4653,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Banking & Financial Institutions, Cybersecurity & Trust",
-    "Description": "As digital banking and AI accelerate, we stand at the forefront of a financial transformation. But with AI-driven automation, deepfake threats, and hyper-personalized services, how do banks strike the right balance between innovation and security. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "As digital banking and AI accelerate, we stand at the forefront of a financial transformation. But with AI-driven automation, deepfake threats, and hyper-personalized services, how do banks strike the right balance between innovation and security. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "243fa703"
   },
   {
     "Date": "2026-09-11",
@@ -4277,7 +4665,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Wealth & Capital Markets, Digital Public Infrastructure",
-    "Description": "Small savings instruments remain a trusted store of value for millions, yet they are largely illiquid and underleveraged. This panel explores how tokenisation can transform instruments like KVP, NSC, and PPF into digitally tradable, collateralizable assets. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale."
+    "Description": "Small savings instruments remain a trusted store of value for millions, yet they are largely illiquid and underleveraged. This panel explores how tokenisation can transform instruments like KVP, NSC, and PPF into digitally tradable, collateralizable assets. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale.",
+    "id": "253867aa"
   },
   {
     "Date": "2026-09-11",
@@ -4288,7 +4677,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "Creating standardized, cross-border digital identity credentials (like the Universal Trusted Credential). Navigating different regional privacy frameworks while fighting illicit finance. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "Creating standardized, cross-border digital identity credentials (like the Universal Trusted Credential). Navigating different regional privacy frameworks while fighting illicit finance. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "6e42cd31"
   },
   {
     "Date": "2026-09-11",
@@ -4299,7 +4689,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "This session will explore practical use of AI, automation and better decision-making, together with operational efficiency, reliability and scalable execution. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. A technology perspective will keep the discussion practical, from system design and readiness to deployment at scale."
+    "Description": "This session will explore practical use of AI, automation and better decision-making, together with operational efficiency, reliability and scalable execution. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. A technology perspective will keep the discussion practical, from system design and readiness to deployment at scale.",
+    "id": "590f4bd8"
   },
   {
     "Date": "2026-09-11",
@@ -4310,7 +4701,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 102",
     "Tracks": "Payments & Lending",
-    "Description": "Cross-border payments are evolving as global commerce, remittances and digital payment networks become increasingly interconnected. As payment networks expand their international reach, processors enable seamless transaction flows, and regulated players facilitate foreign exchange and remittances, the ecosystem is moving towards faster, more transparent and interoperable cross-border payments. This session brings together leaders across the value chain to explore what is changing in cross-border payments, where the biggest friction points remain, and what it will take to make international payments more seamless for businesses and consumers."
+    "Description": "Cross-border payments are evolving as global commerce, remittances and digital payment networks become increasingly interconnected. As payment networks expand their international reach, processors enable seamless transaction flows, and regulated players facilitate foreign exchange and remittances, the ecosystem is moving towards faster, more transparent and interoperable cross-border payments. This session brings together leaders across the value chain to explore what is changing in cross-border payments, where the biggest friction points remain, and what it will take to make international payments more seamless for businesses and consumers.",
+    "id": "b3044b4f"
   },
   {
     "Date": "2026-09-11",
@@ -4321,7 +4713,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Banking & Financial Institutions, RegTech & Compliance",
-    "Description": "The panel will also discuss the unresolved challenges that industry and ecosystem builders must tackle together, as well as the role of regulators in enabling an environment where applied innovation can scale responsibly, securely, and with meaningful impact. With SEBI and researchers represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "The panel will also discuss the unresolved challenges that industry and ecosystem builders must tackle together, as well as the role of regulators in enabling an environment where applied innovation can scale responsibly, securely, and with meaningful impact. With SEBI and researchers represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "092ddd35"
   },
   {
     "Date": "2026-09-11",
@@ -4332,7 +4725,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Payments & Lending, Banking & Financial Institutions",
-    "Description": "Digital infrastructure and shifting consumer expectations are reshaping how financial products and retail services converge. This trialogue examines how the next decade of digital growth will transform consumer experience, payments, and commerce across India. Senior executives from digital commerce, retail banking, and financial media will discuss cross-sector convergence, scalable platforms, and customer trust."
+    "Description": "Digital infrastructure and shifting consumer expectations are reshaping how financial products and retail services converge. This trialogue examines how the next decade of digital growth will transform consumer experience, payments, and commerce across India. Senior executives from digital commerce, retail banking, and financial media will discuss cross-sector convergence, scalable platforms, and customer trust.",
+    "id": "cae50ee5"
   },
   {
     "Date": "2026-09-11",
@@ -4343,7 +4737,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "This session will explore NITI Aayog's strategic vision for leveraging emerging technologies to achieve India's development goals and aspirations for the centenary of independence. This keynote examines how Agentic AI, tokenisation, and quantum technologies can accelerate financial inclusion, economic prosperity, and equitable growth across sectors. Perspectives from NPCI, NITI Aayog, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "This session will explore NITI Aayog's strategic vision for leveraging emerging technologies to achieve India's development goals and aspirations for the centenary of independence. This keynote examines how Agentic AI, tokenisation, and quantum technologies can accelerate financial inclusion, economic prosperity, and equitable growth across sectors. Perspectives from NPCI, NITI Aayog, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "78eab479"
   },
   {
     "Date": "2026-09-11",
@@ -4354,7 +4749,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "AI is reshaping asset management across the investment value chain, from portfolio construction and risk analytics to research, distribution and personalised investor engagement. This session will explore how asset managers can use AI to improve decision-making, enhance investor journeys, strengthen risk management and scale advisory models responsibly. The speaker mix will bring together capital and operating perspectives on scale, governance and long-term value creation."
+    "Description": "AI is reshaping asset management across the investment value chain, from portfolio construction and risk analytics to research, distribution and personalised investor engagement. This session will explore how asset managers can use AI to improve decision-making, enhance investor journeys, strengthen risk management and scale advisory models responsibly. The speaker mix will bring together capital and operating perspectives on scale, governance and long-term value creation.",
+    "id": "dcdf0c02"
   },
   {
     "Date": "2026-09-11",
@@ -4365,7 +4761,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "\u2022\tAccelerating AI Adoption While Managing Emerging Risks \n\u2022\tResponsible AI Adoption in an AI-Driven Ecosystem \n\u2022\tAI Security, Privacy & Governance \n\u2022\tBalancing Innovation, Risk & Accountability \n\u2022\tIdentity, Data Protection & Runtime Security in Critical Workflows"
+    "Description": "\u2022\tAccelerating AI Adoption While Managing Emerging Risks \n\u2022\tResponsible AI Adoption in an AI-Driven Ecosystem \n\u2022\tAI Security, Privacy & Governance \n\u2022\tBalancing Innovation, Risk & Accountability \n\u2022\tIdentity, Data Protection & Runtime Security in Critical Workflows",
+    "id": "6ac879f9"
   },
   {
     "Date": "2026-09-11",
@@ -4376,7 +4773,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "The GPR Card by Maximize will be officially launched at the iServeU booth. GPR Card is powered by iServeU's prepaid card platform.\n\nThis will include:\n\n- Unveiling of the GPR Card by representatives from Maximize and iServeU.\n- Leadership presence from both organisations during the launch moment.\n- Product walkthrough showcasing the GPR Card's core features.\n- Live demonstration of how the card experience is enabled through iServeU's Prepaid Card Platform and Maximize\u2019s gift card platform.\n- Photo opportunity with Maximize and iServeU delegates following the launch.\n- Networking and interactions with visiting delegates, partners, and industry stakeholders.\n- One-on-one conversations around prepaid card technology, digital gifting, and potential business use cases."
+    "Description": "The GPR Card by Maximize will be officially launched at the iServeU booth. GPR Card is powered by iServeU's prepaid card platform.\n\nThis will include:\n\n- Unveiling of the GPR Card by representatives from Maximize and iServeU.\n- Leadership presence from both organisations during the launch moment.\n- Product walkthrough showcasing the GPR Card's core features.\n- Live demonstration of how the card experience is enabled through iServeU's Prepaid Card Platform and Maximize\u2019s gift card platform.\n- Photo opportunity with Maximize and iServeU delegates following the launch.\n- Networking and interactions with visiting delegates, partners, and industry stakeholders.\n- One-on-one conversations around prepaid card technology, digital gifting, and potential business use cases.",
+    "id": "dea4a597"
   },
   {
     "Date": "2026-09-11",
@@ -4387,7 +4785,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Official launch of Interestng's Loan Marketplace. Distributors see for the first time how they can discover leads, get intelligent scoring on every case, compare loan offers, compare lender payouts, recover rejected leads automatically, and manage sub-agents \u2014 all from one platform. Exclusive starter credits for DSAs who sign up at the stall."
+    "Description": "Official launch of Interestng's Loan Marketplace. Distributors see for the first time how they can discover leads, get intelligent scoring on every case, compare loan offers, compare lender payouts, recover rejected leads automatically, and manage sub-agents \u2014 all from one platform. Exclusive starter credits for DSAs who sign up at the stall.",
+    "id": "e893b5d9"
   },
   {
     "Date": "2026-09-11",
@@ -4398,7 +4797,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "See a live demo of a fraud investigation agent that gathers evidence, scores risk in real time, escalates to a human when it matters, and learns from every past case. MongoDB Atlas powers the full stack behind it \u2014 agent memory, orchestration, governance, and human-in-the-loop control \u2014 turning raw fraud signals into decisions you can trust."
+    "Description": "See a live demo of a fraud investigation agent that gathers evidence, scores risk in real time, escalates to a human when it matters, and learns from every past case. MongoDB Atlas powers the full stack behind it \u2014 agent memory, orchestration, governance, and human-in-the-loop control \u2014 turning raw fraud signals into decisions you can trust.",
+    "id": "c79a0420"
   },
   {
     "Date": "2026-09-11",
@@ -4409,7 +4809,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Digital Public Infrastructure, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "The future of finance will be defined by systems that can seamlessly combine intelligence, trust and accessibility. As AI transforms customer engagement, onboarding, compliance and financial decision-making, institutions must rethink how trust is established and maintained in digital environments. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "The future of finance will be defined by systems that can seamlessly combine intelligence, trust and accessibility. As AI transforms customer engagement, onboarding, compliance and financial decision-making, institutions must rethink how trust is established and maintained in digital environments. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "2596c2e5"
   },
   {
     "Date": "2026-09-11",
@@ -4420,7 +4821,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "India's investment revolution has brought millions of first-time investors into formal financial markets. As the ecosystem matures, the focus is shifting from access and distribution to helping investors achieve better financial outcomes. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "India's investment revolution has brought millions of first-time investors into formal financial markets. As the ecosystem matures, the focus is shifting from access and distribution to helping investors achieve better financial outcomes. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "ee7bc555"
   },
   {
     "Date": "2026-09-11",
@@ -4431,7 +4833,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "This session will introduce a new initiative or solution linked to practical AI adoption, governance and measurable business value. The session will launch OneIntel, an AI-led trade intelligence platform, followed by a discussion on how better data and real-time insights can support trade decisions."
+    "Description": "This session will introduce a new initiative or solution linked to practical AI adoption, governance and measurable business value. The session will launch OneIntel, an AI-led trade intelligence platform, followed by a discussion on how better data and real-time insights can support trade decisions.",
+    "id": "7aeb3d92"
   },
   {
     "Date": "2026-09-11",
@@ -4442,7 +4845,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending, Digital Public Infrastructure",
-    "Description": "This session will explore wider access, affordability and meaningful financial inclusion, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Regulatory and industry perspectives will help balance innovation, operating realities and the safeguards required for trusted scale."
+    "Description": "This session will explore wider access, affordability and meaningful financial inclusion, together with faster, safer and more reliable payments. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Regulatory and industry perspectives will help balance innovation, operating realities and the safeguards required for trusted scale.",
+    "id": "1f30772c"
   },
   {
     "Date": "2026-09-11",
@@ -4453,7 +4857,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "A focused showcase of solutions and use cases linked to market access, investment participation and investor trust. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers."
+    "Description": "A focused showcase of solutions and use cases linked to market access, investment participation and investor trust. The session will demonstrate how the approach works in practice, the problem it addresses and where it can create measurable value for financial institutions, businesses or customers.",
+    "id": "4e96474c"
   },
   {
     "Date": "2026-09-11",
@@ -4464,7 +4869,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "As digital commerce accelerates, merchant payments are evolving beyond transaction processing into intelligent, secure, and seamless payment experiences. AI-powered payment orchestration, tokenisation, intelligent authentication, NFC and offline payments, and unified merchant acceptance are enabling businesses to deliver frictionless checkout across online and offline channels. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption."
+    "Description": "As digital commerce accelerates, merchant payments are evolving beyond transaction processing into intelligent, secure, and seamless payment experiences. AI-powered payment orchestration, tokenisation, intelligent authentication, NFC and offline payments, and unified merchant acceptance are enabling businesses to deliver frictionless checkout across online and offline channels. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption.",
+    "id": "61e8c1fa"
   },
   {
     "Date": "2026-09-11",
@@ -4475,7 +4881,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "The digital lending partnership model is changing as banks and NBFCs increasingly build their own origination, underwriting, servicing and customer engagement capabilities. This session will examine how lending-tech platforms must evolve when lenders no longer depend on them purely for technology. The speaker mix will bring together capital and operating perspectives on scale, governance and long-term value creation."
+    "Description": "The digital lending partnership model is changing as banks and NBFCs increasingly build their own origination, underwriting, servicing and customer engagement capabilities. This session will examine how lending-tech platforms must evolve when lenders no longer depend on them purely for technology. The speaker mix will bring together capital and operating perspectives on scale, governance and long-term value creation.",
+    "id": "b1eb831f"
   },
   {
     "Date": "2026-09-11",
@@ -4486,7 +4893,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Payments & Lending, RegTech & Compliance, Cybersecurity & Trust",
-    "Description": "Very closely aligned with the GFF2026 narrative and gives him room to cover AI, payments, infrastructure, cyber resilience and regulation. The Monetary Authority of Singapore perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area."
+    "Description": "Very closely aligned with the GFF2026 narrative and gives him room to cover AI, payments, infrastructure, cyber resilience and regulation. The Monetary Authority of Singapore perspective will provide a focused view of the policy, infrastructure and trust considerations shaping this area.",
+    "id": "01f210b7"
   },
   {
     "Date": "2026-09-11",
@@ -4497,7 +4905,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 102",
     "Tracks": "Payments & Lending",
-    "Description": "As consumers move across payments, loyalty, benefits and digital commerce, the definition of value is changing. Convenience, choice, relevance and flexibility increasingly shape how consumers decide where to transact and which ecosystems to engage with.\n\nThis session brings together leaders from payments, gifting, loyalty and benefits to explore the new consumer value equation. The discussion will examine how businesses can create meaningful value beyond the transaction, how consumer expectations are evolving, and what it takes to turn individual interactions into deeper, lasting relationships."
+    "Description": "As consumers move across payments, loyalty, benefits and digital commerce, the definition of value is changing. Convenience, choice, relevance and flexibility increasingly shape how consumers decide where to transact and which ecosystems to engage with.\n\nThis session brings together leaders from payments, gifting, loyalty and benefits to explore the new consumer value equation. The discussion will examine how businesses can create meaningful value beyond the transaction, how consumer expectations are evolving, and what it takes to turn individual interactions into deeper, lasting relationships.",
+    "id": "458a8fc1"
   },
   {
     "Date": "2026-09-11",
@@ -4508,7 +4917,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "Cybersecurity & Trust",
-    "Description": "This session will explore cyber resilience, threat detection and secure financial systems, together with India's digital economy, growth priorities and scale. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "This session will explore cyber resilience, threat detection and secure financial systems, together with India's digital economy, growth priorities and scale. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "78f7316d"
   },
   {
     "Date": "2026-09-11",
@@ -4519,7 +4929,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "Using datasets like BhashaDaan to train voice-to-text payment systems. Implementing AI translation models across diverse linguistic regions like South America and Africa. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale."
+    "Description": "Using datasets like BhashaDaan to train voice-to-text payment systems. Implementing AI translation models across diverse linguistic regions like South America and Africa. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale.",
+    "id": "68aa3576"
   },
   {
     "Date": "2026-09-11",
@@ -4530,7 +4941,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "In a fireside conversation, CBO Dhiraj Kalra breaks down Signal OS\u2122 and what it means for BFSI contact centers."
+    "Description": "In a fireside conversation, CBO Dhiraj Kalra breaks down Signal OS\u2122 and what it means for BFSI contact centers.",
+    "id": "4dc01a2f"
   },
   {
     "Date": "2026-09-11",
@@ -4541,7 +4953,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "AI-powered collections agents are opening new possibilities for borrower engagement through smarter reminders, personalised servicing and more structured negotiation journeys. This session will examine whether automation can improve recoveries while avoiding legacy concerns around harassment, opacity and poor customer treatment. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale."
+    "Description": "AI-powered collections agents are opening new possibilities for borrower engagement through smarter reminders, personalised servicing and more structured negotiation journeys. This session will examine whether automation can improve recoveries while avoiding legacy concerns around harassment, opacity and poor customer treatment. Banking, payments and technology leaders will compare what works in practice, the controls needed for safe deployment and the path to scale.",
+    "id": "d82deea8"
   },
   {
     "Date": "2026-09-11",
@@ -4552,7 +4965,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "This focuses on protecting modern applications that integrate AI and machine learning. It goes beyond traditional security by safeguarding models, data, pipelines, and APIs against emerging threats like adversarial attacks and data leakage. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This focuses on protecting modern applications that integrate AI and machine learning. It goes beyond traditional security by safeguarding models, data, pipelines, and APIs against emerging threats like adversarial attacks and data leakage. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "a83c4ded"
   },
   {
     "Date": "2026-09-11",
@@ -4563,7 +4977,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "Payments & Lending, Cybersecurity & Trust",
-    "Description": "As digital payments scale, the nature of payment risks is evolving rapidly. Fraud is becoming more sophisticated, transactions are becoming more interconnected, and payment ecosystems are generating larger volumes of data in real time. With RBI, RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "As digital payments scale, the nature of payment risks is evolving rapidly. Fraud is becoming more sophisticated, transactions are becoming more interconnected, and payment ecosystems are generating larger volumes of data in real time. With RBI, RBI Innovation Hub and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "06ef3368"
   },
   {
     "Date": "2026-09-11",
@@ -4574,7 +4989,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "This panel explores how banks are leveraging AI to simplify and accelerate customer onboarding while ensuring compliance and security. It covers innovations in digital KYC, identity verification, and real-time risk assessment that reduce drop-offs and enhance user experience. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This panel explores how banks are leveraging AI to simplify and accelerate customer onboarding while ensuring compliance and security. It covers innovations in digital KYC, identity verification, and real-time risk assessment that reduce drop-offs and enhance user experience. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "860fa0a3"
   },
   {
     "Date": "2026-09-11",
@@ -4585,7 +5001,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "InsurTech, Digital Public Infrastructure",
-    "Description": "Digital networks are redefining how insurance products are discovered, distributed, and serviced, creating new opportunities to expand coverage across Bharat. By enabling interoperable, open, and technology-driven ecosystems, insurance networks can connect insurers, distributors, intermediaries, and service providers to deliver affordable, personalized, and accessible insurance at scale. The discussion will connect strategic context with practical implementation and the conditions required for scale."
+    "Description": "Digital networks are redefining how insurance products are discovered, distributed, and serviced, creating new opportunities to expand coverage across Bharat. By enabling interoperable, open, and technology-driven ecosystems, insurance networks can connect insurers, distributors, intermediaries, and service providers to deliver affordable, personalized, and accessible insurance at scale. The discussion will connect strategic context with practical implementation and the conditions required for scale.",
+    "id": "44eea32b"
   },
   {
     "Date": "2026-09-11",
@@ -4596,7 +5013,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, RegTech & Compliance",
-    "Description": "This theme explores how advanced analytics, AI, and data-driven insights are transforming credit lifecycle management. It focuses on proactive risk monitoring, early warning systems, and personalized engagement strategies to minimize defaults. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale."
+    "Description": "This theme explores how advanced analytics, AI, and data-driven insights are transforming credit lifecycle management. It focuses on proactive risk monitoring, early warning systems, and personalized engagement strategies to minimize defaults. The discussion will combine financial-sector operating experience with technology perspectives on readiness, execution and scale.",
+    "id": "330ea2c7"
   },
   {
     "Date": "2026-09-11",
@@ -4607,7 +5025,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "As digital payment volumes continue to grow, payment providers are leveraging AI, automation, intelligent reconciliation, and resilient payment infrastructure to deliver reliable, secure, and seamless payment experiences. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale."
+    "Description": "As digital payment volumes continue to grow, payment providers are leveraging AI, automation, intelligent reconciliation, and resilient payment infrastructure to deliver reliable, secure, and seamless payment experiences. Fintech and payments voices will examine what works in practice, where friction remains and how the next phase can scale.",
+    "id": "eb4d078b"
   },
   {
     "Date": "2026-09-11",
@@ -4618,7 +5037,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Distributor Khoj\nFI-CSP\nSBI Funds Academy\nJanNivesh for PAN exempt categories"
+    "Description": "Distributor Khoj\nFI-CSP\nSBI Funds Academy\nJanNivesh for PAN exempt categories",
+    "id": "5144fe13"
   },
   {
     "Date": "2026-09-11",
@@ -4629,7 +5049,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 103",
     "Tracks": "InsurTech, RegTech & Compliance, Digital Public Infrastructure",
-    "Description": "This session will explore insurance access, product innovation and customer trust, together with policy priorities, implementation and ecosystem growth. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes."
+    "Description": "This session will explore insurance access, product innovation and customer trust, together with policy priorities, implementation and ecosystem growth. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes.",
+    "id": "90ee620a"
   },
   {
     "Date": "2026-09-11",
@@ -4640,7 +5061,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Cube",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "An interactive GFF segment designed to spark concise questions, fresh ideas and audience engagement around the changing financial services landscape. The format will encourage quick perspectives on technology, business models, policy and the future of finance."
+    "Description": "An interactive GFF segment designed to spark concise questions, fresh ideas and audience engagement around the changing financial services landscape. The format will encourage quick perspectives on technology, business models, policy and the future of finance.",
+    "id": "b67b4722"
   },
   {
     "Date": "2026-09-11",
@@ -4651,7 +5073,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Studio",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "This session explores how banks can deliver highly tailored customer experiences using AI, data analytics, and real-time insights\u2014without compromising scalability. It highlights strategies for personalized product recommendations, contextual engagement, and predictive servicing across channels. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "This session explores how banks can deliver highly tailored customer experiences using AI, data analytics, and real-time insights\u2014without compromising scalability. It highlights strategies for personalized product recommendations, contextual engagement, and predictive servicing across channels. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "efa8abb2"
   },
   {
     "Date": "2026-09-11",
@@ -4662,7 +5085,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "RegTech & Compliance, Digital Public Infrastructure, AI, Data & Emerging Tech",
-    "Description": "India\u2019s digital public infrastructure has transformed service delivery at scale; the next frontier lies in embedding AI into governance systems. This panel brings together leaders from MeitY, State Government AI teams and fintechs to explore how AI can enhance decision-making, automate workflows, and enable predictive, citizen-centric services. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes."
+    "Description": "India\u2019s digital public infrastructure has transformed service delivery at scale; the next frontier lies in embedding AI into governance systems. This panel brings together leaders from MeitY, State Government AI teams and fintechs to explore how AI can enhance decision-making, automate workflows, and enable predictive, citizen-centric services. Perspectives from NPCI, alongside payments industry leaders, will connect policy intent with practical implementation and market outcomes.",
+    "id": "8d828232"
   },
   {
     "Date": "2026-09-11",
@@ -4673,7 +5097,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Wealth & Capital Markets, RegTech & Compliance, AI, Data & Emerging Tech",
-    "Description": "This session explores how AI-powered early warning systems are transforming credit risk management by enabling timely detection of borrower stress. It highlights the use of transaction data, cash-flow analytics, and predictive models to drive proactive interventions. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This session explores how AI-powered early warning systems are transforming credit risk management by enabling timely detection of borrower stress. It highlights the use of transaction data, cash-flow analytics, and predictive models to drive proactive interventions. With NPCI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "6993ee9c"
   },
   {
     "Date": "2026-09-11",
@@ -4684,7 +5109,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "India's investment ecosystem is undergoing a fundamental transformation, driven by Digital Public Infrastructure, open networks, AI, and seamless digital access. As participation in capital markets continues to expand, the next phase will focus on building interoperable, inclusive, and scalable investment infrastructure that serves every investor\u2014from first-time participants to sophisticated institutions. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption."
+    "Description": "India's investment ecosystem is undergoing a fundamental transformation, driven by Digital Public Infrastructure, open networks, AI, and seamless digital access. As participation in capital markets continues to expand, the next phase will focus on building interoperable, inclusive, and scalable investment infrastructure that serves every investor\u2014from first-time participants to sophisticated institutions. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption.",
+    "id": "1eb20f0b"
   },
   {
     "Date": "2026-09-11",
@@ -4695,7 +5121,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "",
-    "Description": "Reconciliation failures cost enterprises billions annually in write-offs, delays, and manual effort. As Bharat Connect for Business scales, CFOs and treasury heads need a credible path to real-time settlement certainty."
+    "Description": "Reconciliation failures cost enterprises billions annually in write-offs, delays, and manual effort. As Bharat Connect for Business scales, CFOs and treasury heads need a credible path to real-time settlement certainty.",
+    "id": "910cb4db"
   },
   {
     "Date": "2026-09-11",
@@ -4706,7 +5133,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Wealth & Capital Markets",
-    "Description": "As the ecosystem matures, investors are increasingly focused on liquidity and sustainable returns. The discussion examines whether IPOs, strategic acquisitions, secondary transactions and private equity buyouts will define the next phase of value creation for Indian fintech companies. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness."
+    "Description": "As the ecosystem matures, investors are increasingly focused on liquidity and sustainable returns. The discussion examines whether IPOs, strategic acquisitions, secondary transactions and private equity buyouts will define the next phase of value creation for Indian fintech companies. Technology perspectives will help move the conversation from concepts to real-world implementation and readiness.",
+    "id": "7996b0ef"
   },
   {
     "Date": "2026-09-11",
@@ -4717,7 +5145,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Payments & Lending, AI, Data & Emerging Tech",
-    "Description": "AI-driven lending is transforming payments platforms and digital ecosystems into intelligent credit distribution networks. This session explores how transaction data, real-time decisioning, and embedded financial journeys are enabling faster, more contextual, and scalable lending while balancing trust, risk, and financial inclusion. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption."
+    "Description": "AI-driven lending is transforming payments platforms and digital ecosystems into intelligent credit distribution networks. This session explores how transaction data, real-time decisioning, and embedded financial journeys are enabling faster, more contextual, and scalable lending while balancing trust, risk, and financial inclusion. Technology leaders will focus on practical implementation, system readiness and the controls required for trusted adoption.",
+    "id": "8636460e"
   },
   {
     "Date": "2026-09-11",
@@ -4728,7 +5157,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Jasmine 2",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "As India's financial ecosystem enters its next phase of growth, trust, innovation, and resilience will be the cornerstones of sustainable progress. This keynote explores how collaborative regulation, digital public infrastructure, and responsible innovation are shaping the future of a secure, inclusive, and globally competitive financial ecosystem. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "As India's financial ecosystem enters its next phase of growth, trust, innovation, and resilience will be the cornerstones of sustainable progress. This keynote explores how collaborative regulation, digital public infrastructure, and responsible innovation are shaping the future of a secure, inclusive, and globally competitive financial ecosystem. Perspectives from RBI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "8ee29a3a"
   },
   {
     "Date": "2026-09-11",
@@ -4739,7 +5169,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "Payments without borders should primarily be driven by reducing technical friction\u2014through interoperability, standardization (e.g., ISO 20022), and seamless cross-border infrastructure\u2014to enable faster, cheaper, and more inclusive global transactions. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development."
+    "Description": "Payments without borders should primarily be driven by reducing technical friction\u2014through interoperability, standardization (e.g., ISO 20022), and seamless cross-border infrastructure\u2014to enable faster, cheaper, and more inclusive global transactions. The speaker perspectives will keep the conversation focused on real-world outcomes, implementation and market development.",
+    "id": "183c68c4"
   },
   {
     "Date": "2026-09-11",
@@ -4750,7 +5181,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "UPI Tap & Pay on PoS\nMerchant Rewards Program on CBDC Rails\nSBI Securities-\nGlobal Investing - Direct access to US stocks & ETFs for Indian investors"
+    "Description": "UPI Tap & Pay on PoS\nMerchant Rewards Program on CBDC Rails\nSBI Securities-\nGlobal Investing - Direct access to US stocks & ETFs for Indian investors",
+    "id": "ce0677e7"
   },
   {
     "Date": "2026-09-11",
@@ -4761,7 +5193,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "The Studio",
     "Tracks": "",
-    "Description": "Pitch for Scale session brings together 10 promising fintech ventures for a high\u2011impact showcase in front of top investors, industry leaders, and strategic partners"
+    "Description": "Pitch for Scale session brings together 10 promising fintech ventures for a high\u2011impact showcase in front of top investors, industry leaders, and strategic partners",
+    "id": "04386a00"
   },
   {
     "Date": "2026-09-11",
@@ -4772,7 +5205,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 203",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "Artificial Intelligence is fundamentally transforming cybersecurity operations, enabling Security Operations Centres (SOCs) to automate threat detection, investigation, and response at unprecedented scale. This session will explore how CISOs can leverage autonomous security, human-AI collaboration, and next-generation governance to build resilient, adaptive, and future-ready cyber defence strategies. Drawing on a technology and product perspective, the session will focus on architecture, implementation and the path from idea to scale."
+    "Description": "Artificial Intelligence is fundamentally transforming cybersecurity operations, enabling Security Operations Centres (SOCs) to automate threat detection, investigation, and response at unprecedented scale. This session will explore how CISOs can leverage autonomous security, human-AI collaboration, and next-generation governance to build resilient, adaptive, and future-ready cyber defence strategies. Drawing on a technology and product perspective, the session will focus on architecture, implementation and the path from idea to scale.",
+    "id": "88a17257"
   },
   {
     "Date": "2026-09-11",
@@ -4783,7 +5217,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 3",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "Unlocking shared intelligence across banks and partners while preserving data ownership. Use cases where banks, fintechs, and networks collaborate to solve industry\u2011wide challenges. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale."
+    "Description": "Unlocking shared intelligence across banks and partners while preserving data ownership. Use cases where banks, fintechs, and networks collaborate to solve industry\u2011wide challenges. Financial-institution perspectives will focus on what is working in practice and what is required for responsible scale.",
+    "id": "3b6ab7ad"
   },
   {
     "Date": "2026-09-11",
@@ -4794,7 +5229,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "The Grand Theatre",
     "Tracks": "AI, Data & Emerging Tech, Cybersecurity & Trust",
-    "Description": "Fraud rings are deploying AI agents at scale\u2014synthetic IDs, mule orchestration, deepfake scams. Can defensive AI keep pace without breaking fairness and explainability? Perspectives from SEBI, NPCI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes."
+    "Description": "Fraud rings are deploying AI agents at scale\u2014synthetic IDs, mule orchestration, deepfake scams. Can defensive AI keep pace without breaking fairness and explainability? Perspectives from SEBI, NPCI, alongside financial institutions, will connect policy intent with practical implementation and market outcomes.",
+    "id": "b7256ab4"
   },
   {
     "Date": "2026-09-11",
@@ -4805,7 +5241,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 2",
     "Tracks": "Banking & Financial Institutions, AI, Data & Emerging Tech",
-    "Description": "Leveraging AI-driven sales intelligence to expand customer reach, identify and activate cross-sell opportunities, and drive sustained revenue growth across retail, SME, and corporate banking. The focus is on using data and predictive insights to enhance customer engagement, deepen relationships, and unlock growth across diverse segments, including MSMEs. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale."
+    "Description": "Leveraging AI-driven sales intelligence to expand customer reach, identify and activate cross-sell opportunities, and drive sustained revenue growth across retail, SME, and corporate banking. The focus is on using data and predictive insights to enhance customer engagement, deepen relationships, and unlock growth across diverse segments, including MSMEs. Financial-sector leaders will share operating perspectives on execution, risk, customer outcomes and the path to scale.",
+    "id": "89fa609f"
   },
   {
     "Date": "2026-09-11",
@@ -4816,7 +5253,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 206 A&B",
     "Tracks": "Payments & Lending, Cybersecurity & Trust",
-    "Description": "As cross-border financial services expand beyond remittances into global investing, international commerce, multi-currency accounts, and digital wealth management, trust and regulatory alignment are becoming critical enablers of growth. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem."
+    "Description": "As cross-border financial services expand beyond remittances into global investing, international commerce, multi-currency accounts, and digital wealth management, trust and regulatory alignment are becoming critical enablers of growth. The speaker mix will bring practical perspectives on implementation, market development and the next steps for the ecosystem.",
+    "id": "62b60490"
   },
   {
     "Date": "2026-09-11",
@@ -4827,7 +5265,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 205 A&B",
     "Tracks": "Banking & Financial Institutions, Digital Public Infrastructure, Cybersecurity & Trust",
-    "Description": "Business Correspondents (BCs) are evolving from facilitating customer onboarding and KYC into trusted, full-service financial access points for underserved India. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale."
+    "Description": "Business Correspondents (BCs) are evolving from facilitating customer onboarding and KYC into trusted, full-service financial access points for underserved India. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale.",
+    "id": "a44cd941"
   },
   {
     "Date": "2026-09-11",
@@ -4838,7 +5277,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Cube",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "As digital fraud and cyber-enabled financial crime continue to evolve, timely intelligence sharing has become critical to protecting India's digital ecosystem. Participants will gain practical insights into leveraging these platforms to improve risk detection, prevent misuse of telecom resources, and enhance trust in digital financial services. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale."
+    "Description": "As digital fraud and cyber-enabled financial crime continue to evolve, timely intelligence sharing has become critical to protecting India's digital ecosystem. Participants will gain practical insights into leveraging these platforms to improve risk detection, prevent misuse of telecom resources, and enhance trust in digital financial services. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale.",
+    "id": "6ea7f109"
   },
   {
     "Date": "2026-09-11",
@@ -4849,7 +5289,8 @@ const AGENDA_DATA = [
     "Company Name": "Pantomath Financial Services Group",
     "Location / Room": "Hall 202",
     "Tracks": "AI, Data & Emerging Tech",
-    "Description": "This session will explore quantum readiness, security and future financial infrastructure, together with fintech growth, business models and ecosystem development. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale."
+    "Description": "This session will explore quantum readiness, security and future financial infrastructure, together with fintech growth, business models and ecosystem development. The discussion will focus on practical implementation, industry collaboration and the safeguards needed to deliver trusted, scalable outcomes. Bringing together NPCI and payments industry leaders, the session will examine what is needed to move from policy direction to trusted adoption at scale.",
+    "id": "5bd2d7a2"
   },
   {
     "Date": "2026-09-11",
@@ -4860,7 +5301,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Lotus 1",
     "Tracks": "Payments & Lending",
-    "Description": "Payments innovation today is no longer about speed or cost alone\u2014it is about creating new moments where money moves naturally inside real world consumer and merchant journeys. From retail discovery and loyalty to mobility, events, subscriptions, and offline experiences, payments are becoming deeply contextual. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale."
+    "Description": "Payments innovation today is no longer about speed or cost alone\u2014it is about creating new moments where money moves naturally inside real world consumer and merchant journeys. From retail discovery and loyalty to mobility, events, subscriptions, and offline experiences, payments are becoming deeply contextual. The discussion will bring operating perspectives from digital finance, with emphasis on adoption, customer experience and scale.",
+    "id": "6c9aa797"
   },
   {
     "Date": "2026-09-11",
@@ -4871,7 +5313,8 @@ const AGENDA_DATA = [
     "Company Name": "Securities and Exchange Board of India, Pantomath Financial Services Group",
     "Location / Room": "Hall 204 A&B",
     "Tracks": "Payments & Lending",
-    "Description": "This session will examine how tokenised money and real-time payment rails can work together across existing financial infrastructure. Perspectives from the Monetary Authority of Singapore and financial institutions will explore interoperability, settlement, treasury use cases and the safeguards needed to build a trusted next-generation payments stack."
+    "Description": "This session will examine how tokenised money and real-time payment rails can work together across existing financial infrastructure. Perspectives from the Monetary Authority of Singapore and financial institutions will explore interoperability, settlement, treasury use cases and the safeguards needed to build a trusted next-generation payments stack.",
+    "id": "222ab6c2"
   },
   {
     "Date": "2026-09-11",
@@ -4882,7 +5325,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 104 A&B",
     "Tracks": "Banking & Financial Institutions",
-    "Description": "This interactive session will provide a platform for fintech leaders to share perspectives on regulatory, operational, and market opportunities that can help strengthen India's digital financial ecosystem and support sustainable growth. With RBI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution."
+    "Description": "This interactive session will provide a platform for fintech leaders to share perspectives on regulatory, operational, and market opportunities that can help strengthen India's digital financial ecosystem and support sustainable growth. With RBI and financial institutions represented, the conversation will stay grounded in both safeguards and real-world execution.",
+    "id": "6db4a5e7"
   },
   {
     "Date": "2026-09-11",
@@ -4893,7 +5337,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Jasmine",
     "Tracks": "",
-    "Description": "Demo of instant card issuance though our Kisok Machine"
+    "Description": "Demo of instant card issuance though our Kisok Machine",
+    "id": "70fc243c"
   },
   {
     "Date": "2026-09-11",
@@ -4904,7 +5349,8 @@ const AGENDA_DATA = [
     "Company Name": "Axilor Ventures, OneCard, and Chairman, FCC",
     "Location / Room": "The Grand Theatre",
     "Tracks": "Wealth & Capital Markets, AI, Data & Emerging Tech",
-    "Description": "The inaugural session of GFF2026 will set the agenda for the next era of financial innovation, where Agentic AI, tokenisation and quantum technologies converge to reshape finance at population and global scale. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale."
+    "Description": "The inaugural session of GFF2026 will set the agenda for the next era of financial innovation, where Agentic AI, tokenisation and quantum technologies converge to reshape finance at population and global scale. The speaker mix will link public-policy goals with operating experience and the practical steps needed for scale.",
+    "id": "5c17c2bb"
   },
   {
     "Date": "2026-09-11",
@@ -4915,7 +5361,8 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Expo Pavilion",
     "Tracks": "",
-    "Description": "Discover how developers can build and integrate RevRag AI agents directly from AI-powered coding environments using RevRag MCP. We\u2019ll demonstrate how tools such as Claude Code, Codex, and other MCP-compatible platforms can take an agent from concept to a working integration, directly through the coding workflow."
+    "Description": "Discover how developers can build and integrate RevRag AI agents directly from AI-powered coding environments using RevRag MCP. We\u2019ll demonstrate how tools such as Claude Code, Codex, and other MCP-compatible platforms can take an agent from concept to a working integration, directly through the coding workflow.",
+    "id": "e12257b2"
   },
   {
     "Date": "2026-09-11",
@@ -4926,6 +5373,7 @@ const AGENDA_DATA = [
     "Company Name": "",
     "Location / Room": "Hall 104 A&B",
     "Tracks": "",
-    "Description": "As India charts its path towards becoming a developed economy, what role will financial markets, innovation and global capital play in achieving that vision? GIFT City Closed Room with Hon'ble FM."
+    "Description": "As India charts its path towards becoming a developed economy, what role will financial markets, innovation and global capital play in achieving that vision? GIFT City Closed Room with Hon'ble FM.",
+    "id": "ea5e636d"
   }
 ];

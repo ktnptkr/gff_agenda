@@ -4,111 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>GFF 2026 | Global Fintech Fest</title>
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        navy: '#0F172A',
-                        brand: '#4F46E5',
-                        surface: '#F8FAFC'
-                    }
+                    colors: { navy: '#0F172A', brand: '#2563EB', surface: '#F8FAFC' }
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-surface text-slate-800 antialiased pb-20">
+<body class="bg-surface text-slate-800 antialiased pb-24">
 
-    <!-- Hero Header -->
-    <header class="bg-navy pt-12 pb-16 px-4 rounded-b-[2.5rem] shadow-xl relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand/20 to-transparent"></div>
-        <div class="max-w-3xl mx-auto relative z-10 flex justify-between items-end">
-            <div>
-                <p class="text-brand font-bold tracking-wider text-xs mb-1 uppercase">Mumbai, India</p>
-                <h1 class="text-3xl font-extrabold text-white tracking-tight">GFF Agenda <span class="text-slate-400 font-normal">2026</span></h1>
-            </div>
-            <button id="search-toggle" class="bg-white/10 hover:bg-white/20 p-2.5 rounded-full text-white backdrop-blur-sm transition">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-            </button>
-        </div>
-    </header>
-
-    <!-- Search Bar (Hidden by default) -->
-    <div id="search-bar" class="hidden px-4 pt-4 max-w-3xl mx-auto -mb-2 relative z-50">
-        <input type="text" id="search-input" placeholder="Search by event, speaker, company..." class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand/50 transition shadow-lg">
-    </div>
-
-    <!-- Sticky Glassmorphic Filter Bar -->
-    <div class="sticky top-0 z-40 glass-nav border-b border-slate-200/60 shadow-sm mt-6 mx-4 max-w-3xl md:mx-auto rounded-2xl px-4 py-3 flex gap-2 overflow-x-auto hide-scrollbar">
-        <div id="date-filters" class="flex gap-2 flex-shrink-0">
-            <!-- Date buttons populated by JS -->
-        </div>
-        <div class="w-px h-6 bg-slate-300 my-auto mx-2 flex-shrink-0"></div>
-        <select id="track-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-full px-4 py-2 focus:ring-2 focus:ring-brand/50 flex-shrink-0 appearance-none outline-none cursor-pointer max-w-[150px] truncate">
-            <option value="all">All Tracks ▾</option>
-        </select>
-        <select id="format-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-full px-4 py-2 focus:ring-2 focus:ring-brand/50 flex-shrink-0 appearance-none outline-none cursor-pointer max-w-[150px] truncate">
-            <option value="all">All Formats ▾</option>
-        </select>
-    </div>
-
-    <!-- Timeline Feed -->
-    <main class="max-w-3xl mx-auto px-4 mt-8">
-        <div class="relative border-l-2 border-slate-200 ml-3 md:ml-4 space-y-8 pb-10" id="event-feed">
-            <!-- Events populated by JS -->
-        </div>
-    </main>
-
-    <!-- Bottom Drawer (Glassmorphism Modal) -->
-    <div id="drawer-overlay" class="fixed inset-0 bg-navy/40 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300 cursor-pointer"></div>
-    
-    <div id="drawer" class="fixed bottom-0 left-0 right-0 w-full max-w-3xl mx-auto z-50 glass-drawer rounded-t-3xl transform translate-y-full transition-transform duration-300 ease-out shadow-2xl flex flex-col max-h-[85vh]">
-        <div class="p-5 border-b border-slate-200/50 flex justify-between items-center bg-white/50 rounded-t-3xl flex-shrink-0">
-            <span class="text-xs font-bold uppercase tracking-wider text-brand" id="drawer-format">Format</span>
-            <button id="close-drawer" class="p-2 bg-slate-200/50 rounded-full text-slate-600 hover:bg-slate-300 transition">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        <div class="p-6 overflow-y-auto hide-scrollbar flex-1 bg-white/80">
-            <h2 id="drawer-title" class="text-xl font-bold text-navy leading-tight mb-3">Event Title</h2>
-            <div class="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6 font-medium">
-                <span class="flex items-center gap-1">🕒 <span id="drawer-time">10:00 - 10:45</span></span>
-                <span class="flex items-center gap-1">📍 <span id="drawer-room">Hall Name</span></span>
-            </div>
-            
-            <div class="mb-6">
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">About this Session</h3>
-                <p id="drawer-desc" class="text-sm text-slate-700 leading-relaxed">Description goes here...</p>
-            </div>
-
-            <div class="mb-6">
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Speakers & Participants</h3>
-                <div id="drawer-speakers" class="text-sm font-semibold text-slate-800 leading-relaxed whitespace-pre-line">
-                    Speaker names...
+    <!-- Global Header -->
+    <header class="bg-navy pt-10 pb-6 px-4 shadow-md relative z-50">
+        <div class="max-w-3xl mx-auto flex flex-col gap-4">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h1 class="text-2xl font-extrabold text-white tracking-tight">GFF Agenda</h1>
+                    <p class="text-brand font-bold tracking-wider text-xs uppercase mt-1">Mumbai, India 2026</p>
+                </div>
+                
+                <!-- View Toggle: All vs My Agenda -->
+                <div class="flex bg-white/10 rounded-lg p-1 backdrop-blur-sm">
+                    <button id="tab-all" class="px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition">All Sessions</button>
+                    <button id="tab-saved" class="px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition">My Agenda</button>
                 </div>
             </div>
 
-            <div class="mb-6">
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Companies Represented</h3>
-                <p id="drawer-companies" class="text-sm text-slate-600 leading-relaxed">Company names...</p>
+            <!-- Explicit Search Bar -->
+            <div class="relative w-full mt-2">
+                <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                <input type="text" id="search-input" placeholder="Search sessions, speakers, or companies..." class="w-full bg-white/10 border border-white/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-300 focus:outline-none focus:bg-white focus:text-navy focus:placeholder-slate-500 transition">
             </div>
+        </div>
+    </header>
+
+    <!-- Sticky Filters -->
+    <div class="sticky top-0 z-40 glass-nav border-b border-slate-200/60 shadow-sm px-4 py-3">
+        <div class="max-w-3xl mx-auto flex flex-col gap-3">
             
-            <div class="pt-4 border-t border-slate-200/50 flex flex-wrap gap-2" id="drawer-track">
-                <!-- Track tags injected here -->
+            <!-- Date Scroller -->
+            <div id="date-filters" class="flex gap-2 overflow-x-auto hide-scrollbar pb-1"></div>
+            
+            <!-- Explicit Selects -->
+            <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-1 items-center">
+                <div class="flex flex-col flex-shrink-0">
+                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 ml-1">Track</label>
+                    <select id="track-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[160px] truncate"><option value="all">All Tracks</option></select>
+                </div>
+                <div class="flex flex-col flex-shrink-0">
+                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 ml-1">Format</label>
+                    <select id="format-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[160px] truncate"><option value="all">All Formats</option></select>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Ensure data.js is loaded first -->
+    <!-- Timeline Feed -->
+    <main class="max-w-3xl mx-auto px-4 mt-6">
+        <div id="event-feed" class="flex flex-col gap-8 pb-10">
+            <!-- Populated by JS -->
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded-full shadow-2xl z-50 text-sm font-semibold transition-all duration-300 opacity-0 pointer-events-none flex items-center gap-2">
+        <span id="toast-icon"></span> <span id="toast-msg"></span>
+    </div>
+
+    <!-- Empty State Drawer -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-navy/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300 cursor-pointer"></div>
+    <div id="drawer" class="fixed bottom-0 left-0 right-0 w-full max-w-3xl mx-auto z-50 glass-drawer rounded-t-3xl transform translate-y-full transition-transform duration-300 ease-out shadow-2xl flex flex-col max-h-[90vh]">
+        <div class="p-4 border-b border-slate-200/50 flex justify-between items-center bg-white/80 rounded-t-3xl">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand" id="drawer-format"></span>
+            <button id="close-drawer" class="p-2 bg-slate-100 rounded-full text-slate-600 hover:bg-slate-200"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        </div>
+        <div class="p-6 overflow-y-auto hide-scrollbar flex-1 bg-white/95" id="drawer-content">
+            <!-- Injected by JS to prevent raw placeholders -->
+        </div>
+    </div>
+
     <script src="data.js"></script>
     <script src="app.js"></script>
 </body>
