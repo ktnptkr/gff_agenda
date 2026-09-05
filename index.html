@@ -31,37 +31,56 @@
                     <p class="text-brand font-bold tracking-wider text-xs uppercase mt-1">Mumbai, India 2026</p>
                 </div>
                 
-                <!-- View Toggle: All vs My Agenda -->
-                <div class="flex bg-white/10 rounded-lg p-1 backdrop-blur-sm">
-                    <button id="tab-all" class="px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition">All Sessions</button>
-                    <button id="tab-saved" class="px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition">My Agenda</button>
+                <!-- View Toggle: All / My Agenda / Live Now -->
+                <div class="flex bg-white/10 rounded-lg p-1 backdrop-blur-sm overflow-x-auto hide-scrollbar">
+                    <button id="tab-all" class="px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap">All Sessions</button>
+                    <button id="tab-saved" class="px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition whitespace-nowrap">My Agenda</button>
+                    <button id="tab-live" class="px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-red-300 transition whitespace-nowrap flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Live Now
+                    </button>
                 </div>
             </div>
 
             <!-- Explicit Search Bar -->
-            <div class="relative w-full mt-2">
-                <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-                <input type="text" id="search-input" placeholder="Search sessions, speakers, or companies..." class="w-full bg-white/10 border border-white/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-300 focus:outline-none focus:bg-white focus:text-navy focus:placeholder-slate-500 transition">
+            <div class="relative w-full mt-2 flex gap-2">
+                <div class="relative flex-1">
+                    <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+                    <input type="text" id="search-input" placeholder="Search topics, keywords..." class="w-full bg-white/10 border border-white/20 rounded-lg pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-300 focus:outline-none focus:bg-white focus:text-navy focus:placeholder-slate-500 transition">
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Sticky Filters -->
+    <!-- Sticky Filters (Cascading & Synchronized) -->
     <div class="sticky top-0 z-40 glass-nav border-b border-slate-200/60 shadow-sm px-4 py-3">
         <div class="max-w-3xl mx-auto flex flex-col gap-3">
             
             <!-- Date Scroller -->
-            <div id="date-filters" class="flex gap-2 overflow-x-auto hide-scrollbar pb-1"></div>
+            <div id="date-filters" class="flex gap-2 overflow-x-auto hide-scrollbar pb-1">
+                <!-- Injected via JS -->
+            </div>
             
             <!-- Explicit Selects -->
-            <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-1 items-center">
+            <div class="flex gap-2 overflow-x-auto hide-scrollbar pb-1 items-center">
+                <!-- Room -->
                 <div class="flex flex-col flex-shrink-0">
-                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 ml-1">Track</label>
-                    <select id="track-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[160px] truncate"><option value="all">All Tracks</option></select>
+                    <select id="room-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[140px] truncate"><option value="all">All Rooms ▾</option></select>
                 </div>
+                <!-- Track -->
                 <div class="flex flex-col flex-shrink-0">
-                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 ml-1">Format</label>
-                    <select id="format-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[160px] truncate"><option value="all">All Formats</option></select>
+                    <select id="track-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[140px] truncate"><option value="all">All Tracks ▾</option></select>
+                </div>
+                <!-- Format -->
+                <div class="flex flex-col flex-shrink-0">
+                    <select id="format-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[140px] truncate"><option value="all">All Formats ▾</option></select>
+                </div>
+                <!-- Speaker -->
+                <div class="flex flex-col flex-shrink-0">
+                    <select id="speaker-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[140px] truncate"><option value="all">All Speakers ▾</option></select>
+                </div>
+                <!-- Company -->
+                <div class="flex flex-col flex-shrink-0">
+                    <select id="company-filter" class="bg-white border border-slate-200 text-sm font-medium text-slate-700 rounded-lg px-3 py-1.5 focus:ring-2 focus:ring-brand outline-none cursor-pointer max-w-[140px] truncate"><option value="all">All Companies ▾</option></select>
                 </div>
             </div>
         </div>
@@ -69,6 +88,10 @@
 
     <!-- Timeline Feed -->
     <main class="max-w-3xl mx-auto px-4 mt-6">
+        <div class="mb-4 flex justify-between items-center text-sm font-bold text-slate-500">
+            <span id="current-date-header">All Dates</span>
+            <span id="event-count">0 Sessions</span>
+        </div>
         <div id="event-feed" class="flex flex-col gap-8 pb-10">
             <!-- Populated by JS -->
         </div>
