@@ -19,8 +19,8 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 let isChatOpen = false;
 
+// Cleaned up announcements (no room capacity mentions)
 const LIVE_ANNOUNCEMENTS = [
-    { text: "Hall 102 events are underway. Check the agenda for live room updates.", time: "10:35 AM" },
     { text: "Welcome to Global Fintech Fest 2026! Explore tracks and network via attendee chat.", time: "10:15 AM" }
 ];
 
