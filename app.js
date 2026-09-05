@@ -214,22 +214,36 @@ function createMessageHTML(m) {
     const myDisplayName = `${profile.name} (${profile.desig}, ${profile.org})`;
     const isMe = m.user_name === myDisplayName;
 
-    let formattedMessage = escapeHTML(m.message);
+    let formattedMessage = escapeHTML(m.message || '');
+    
+    // Pattern 1: Standard @[Title](ID) format
     const tagRegex = /@\[(.*?)\]\((.*?)\)/g;
     formattedMessage = formattedMessage.replace(tagRegex, (match, title, id) => {
-        return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-brand/10 text-brand font-semibold px-2 py-0.5 rounded-md cursor-pointer hover:underline my-0.5">🗓️ ${title}</span>`;
+        let displayTitle = title;
+        if (!displayTitle || displayTitle.trim() === '') {
+            const found = AGENDA_DATA.find(e => e.id === id);
+            displayTitle = found ? found["Activity Name"] : "View Session";
+        }
+        return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-white/20 text-white font-semibold px-2.5 py-1 rounded-md cursor-pointer hover:underline my-0.5 border border-white/30">📅 ${escapeHTML(displayTitle)}</span>`;
+    });
+
+    // Pattern 2: Fallback for raw session IDs or legacy formats
+    const rawIdRegex = /#session=([a-f0-9]{8})/g;
+    formattedMessage = formattedMessage.replace(rawIdRegex, (match, id) => {
+        const found = AGENDA_DATA.find(e => e.id === id);
+        const displayTitle = found ? found["Activity Name"] : "View Session";
+        return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-white/20 text-white font-semibold px-2.5 py-1 rounded-md cursor-pointer hover:underline my-0.5 border border-white/30">📅 ${escapeHTML(displayTitle)}</span>`;
     });
 
     return `
         <div class="flex flex-col ${isMe ? 'items-end' : 'items-start'}">
-            <span class="text-[10px] font-bold text-slate-400 mb-0.5">${escapeHTML(m.user_name)}</span>
+            <span class="text-[10px] font-bold text-slate-400 mb-0.5">${escapeHTML(m.user_name || 'Attendee')}</span>
             <div class="max-w-[85%] rounded-2xl px-3 py-2 text-xs ${isMe ? 'bg-brand text-white rounded-br-none' : 'bg-slate-200 text-slate-800 rounded-bl-none'}">
                 ${formattedMessage}
             </div>
         </div>
     `;
 }
-
 function escapeHTML(str) {
     return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
 }
