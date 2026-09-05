@@ -20,10 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupListeners();
     renderAgenda();
 
-    // Handle deep link hash AFTER agenda has initial render
     setTimeout(handleUrlHash, 200);
-
-    // Background reminder checker
     setInterval(checkUpcomingReminders, 30000); 
 });
 
@@ -34,7 +31,6 @@ function handleUrlHash() {
         const sessionId = hash.replace('#session=', '');
         const targetEvent = AGENDA_DATA.find(e => e.id === sessionId);
         if (targetEvent) {
-            // If session is on a different date and current view is not 'all', switch date automatically
             if (currentDate !== 'all' && currentDate !== targetEvent.Date) {
                 setDate(targetEvent.Date);
             }
@@ -313,7 +309,6 @@ function renderAgenda() {
 }
 
 // Calendar Exports & Sharing
-// 5. Native Mobile Sharing & Exports
 function exportCalendar(type) {
     const savedEvents = AGENDA_DATA.filter(e => savedSessionIds.includes(e.id));
     if (savedEvents.length === 0) {
@@ -360,7 +355,6 @@ function shareItinerary() {
     }
     const shareUrl = `${window.location.origin}${window.location.pathname}#saved=${savedSessionIds.join(',')}`;
     
-    // Trigger Native Phone Share Sheet (WhatsApp, Telegram, SMS, etc.)
     if (navigator.share) {
         navigator.share({
             title: 'My GFF 2026 Itinerary',
@@ -370,7 +364,6 @@ function shareItinerary() {
             console.log('Share canceled or failed:', error);
         });
     } else {
-        // Fallback for desktop/unsupported browsers
         navigator.clipboard.writeText(shareUrl).then(() => {
             showToast("Itinerary link copied to clipboard!", "🔗");
         });
@@ -382,7 +375,6 @@ function shareSession(id, eventObj) {
     const event = AGENDA_DATA.find(e => e.id === id);
     const shareUrl = `${window.location.origin}${window.location.pathname}#session=${id}`;
     
-    // Trigger Native Phone Share Sheet
     if (navigator.share) {
         navigator.share({
             title: event ? event["Activity Name"] : 'GFF 2026 Session',
@@ -392,12 +384,12 @@ function shareSession(id, eventObj) {
             console.log('Share canceled or failed:', error);
         });
     } else {
-        // Fallback for desktop/unsupported browsers
         navigator.clipboard.writeText(shareUrl).then(() => {
             showToast("Session link copied to clipboard!", "🔗");
         });
     }
 }
+
 // Background Reminder Checker
 function checkUpcomingReminders() {
     if (Notification.permission !== "granted") return;
@@ -523,7 +515,7 @@ function closeDrawer() {
     setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
 }
 
-// Initialize Supabase Client (Replace with your project keys)
+// Supabase Chat Integration
 const SUPABASE_URL = 'https://prsqblepuzjlucnqqvsd.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_5UrWBbB3NAzcmkM1olFlSA_1n139nf8';
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -572,7 +564,6 @@ async function sendChatMessage() {
 
     if (!message) return;
 
-    // Save name locally for future messages
     localStorage.setItem('gff_chat_name', name);
 
     const { error } = await supabaseClient
@@ -621,7 +612,6 @@ function escapeHTML(str) {
     );
 }
 
-// Auto-fill stored name on load
 document.addEventListener("DOMContentLoaded", () => {
     const storedName = localStorage.getItem('gff_chat_name');
     if (storedName) {
