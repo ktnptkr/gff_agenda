@@ -725,6 +725,9 @@ function openDrawer(id) {
     if(shareBtn) shareBtn.setAttribute('onclick', `shareSession('${event.id}')`);
     
     const topicQuery = encodeURIComponent(event["Activity Name"]);
+    const rawDesc = event.Description || '';
+    const isLongDesc = rawDesc.length > 75;
+    const truncatedDesc = isLongDesc ? rawDesc.substring(0, 75) + '...' : rawDesc;
 
     drawerContent.innerHTML = `
         <h2 class="text-xl font-bold text-navy leading-tight mb-4">${event["Activity Name"]}</h2>
@@ -734,12 +737,20 @@ function openDrawer(id) {
             <span class="flex items-center gap-1.5 text-brand">📍 ${event["Location / Room"] || 'TBA'}</span>
         </div>
         
-        ${event.Description ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">About</h3><p class="text-sm text-slate-700 leading-relaxed">${event.Description}</p></div>` : ''}
+        ${rawDesc ? `
+        <div class="mb-6">
+            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">About</h3>
+            <div id="desc-container" class="text-sm text-slate-700 leading-relaxed">
+                <span id="desc-text">${truncatedDesc}</span>
+                ${isLongDesc ? `<button onclick="toggleDescription('${encodeURIComponent(rawDesc)}', event)" id="desc-toggle-btn" class="ml-1 text-brand font-semibold text-xs hover:underline focus:outline-none inline-flex items-center">View More ▾</button>` : ''}
+            </div>
+        </div>` : ''}
+
         ${event["Moderator / Speaker / Participant"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Speakers / Moderators</h3><div class="text-sm font-semibold text-slate-800 leading-relaxed whitespace-pre-line">${event["Moderator / Speaker / Participant"]}</div></div>` : ''}
         ${event["Company Name"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Companies</h3><p class="text-sm text-slate-600 leading-relaxed">${event["Company Name"]}</p></div>` : ''}
         ${event.Tracks ? `<div class="pt-4 border-t border-slate-200/50 flex flex-wrap gap-2 mb-6">${event.Tracks.split(',').map(t => `<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] uppercase tracking-wider font-bold rounded-md shadow-sm">${t.trim()}</span>`).join('')}</div>` : ''}
 
-        <!-- Understand More CTA Section (2 Columns for Google & ChatGPT) -->
+        <!-- Understand More CTA Section -->
         <div class="pt-4 border-t border-slate-200 pb-6">
             <button onclick="toggleResearchMenu()" class="w-full bg-brand hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow-md">
                 🔍 Understand More & Research Topic ▾
@@ -760,6 +771,32 @@ function openDrawer(id) {
         drawerOverlay.classList.remove('opacity-0');
         drawer.classList.remove('translate-y-full');
     }, 10);
+}
+
+function toggleDescription(encodedFullText, e) {
+    if(e) e.stopPropagation();
+    const fullText = decodeURIComponent(encodedFullText);
+    const descTextEl = document.getElementById('desc-text');
+    const toggleBtnEl = document.getElementById('desc-toggle-btn');
+    const container = document.getElementById('desc-container');
+
+    if (!descTextEl || !toggleBtnEl) return;
+
+    const isExpanded = toggleBtnEl.getAttribute('data-expanded') === 'true';
+
+    if (!isExpanded) {
+        container.classList.add('max-h-32', 'overflow-y-auto', 'pr-2', 'bg-slate-50', 'p-2.5', 'rounded-lg', 'border', 'border-slate-100');
+        descTextEl.innerText = fullText;
+        toggleBtnEl.innerText = 'View Less ▴';
+        toggleBtnEl.setAttribute('data-expanded', 'true');
+        toggleBtnEl.className = 'block mt-2 text-brand font-semibold text-xs hover:underline focus:outline-none';
+    } else {
+        container.classList.remove('max-h-32', 'overflow-y-auto', 'pr-2', 'bg-slate-50', 'p-2.5', 'rounded-lg', 'border', 'border-slate-100');
+        descTextEl.innerText = fullText.substring(0, 75) + '...';
+        toggleBtnEl.innerText = 'View More ▾';
+        toggleBtnEl.setAttribute('data-expanded', 'false');
+        toggleBtnEl.className = 'ml-1 text-brand font-semibold text-xs hover:underline focus:outline-none inline-flex items-center';
+    }
 }
 
 function toggleResearchMenu() {
