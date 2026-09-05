@@ -459,7 +459,11 @@ function checkLiveStatus(dateStr, timeStr) {
     return { isLive, isPast, isImminent, isLiveOrImminent: isLive || isImminent, start, end };
 }
 
-let filtered = AGENDA_DATA.filter(e => {
+function renderAgenda() {
+    const feed = document.getElementById('event-feed');
+    if(!feed) return;
+    
+    let filtered = AGENDA_DATA.filter(e => {
         const status = checkLiveStatus(e.Date, e.Time);
         if (viewMode === "saved" && !savedSessionIds.includes(e.id)) return false;
         if (viewMode === "live" && !status.isLive) return false;
@@ -477,6 +481,82 @@ let filtered = AGENDA_DATA.filter(e => {
         }
         return true;
     });
+
+    const dateHeader = document.getElementById('current-date-header');
+    const eventCount = document.getElementById('event-count');
+    if(dateHeader) dateHeader.innerText = currentDate === 'all' ? 'All Dates' : new Date(currentDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    if(eventCount) eventCount.innerText = `${filtered.length} Sessions`;
+
+    if (filtered.length === 0) {
+        feed.innerHTML = `<div class="text-center py-16 text-slate-500 font-medium">No sessions found matching these filters.</div>`;
+        return;
+    }
+
+    const grouped = {};
+    filtered.forEach(e => {
+        const key = currentDate === 'all' ? `${e.Date} | ${e.Time.split("-")[0].trim()}` : e.Time.split("-")[0].trim();
+        if (!grouped[key]) grouped[key] = [];
+        grouped[key].push(e);
+    });
+
+    const sortedKeys = Object.keys(grouped).sort();
+
+    let html = '';
+    sortedKeys.forEach(timeKey => {
+        let displayTime = timeKey;
+        if(currentDate === 'all') {
+            const parts = timeKey.split(" | ");
+            displayTime = `${new Date(parts[0]).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})}, ${parts[1]}`;
+        }
+
+        html += `
+        <div class="relative border-l-2 border-slate-200 ml-2 md:ml-4 pl-6 pb-2">
+            <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-slate-200 ring-4 ring-surface"></div>
+            <h2 class="text-lg font-extrabold text-slate-800 mb-4 -mt-1">${displayTime}</h2>
+            <div class="flex flex-col gap-4">
+        `;
+
+        grouped[timeKey].forEach(event => {
+            const status = checkLiveStatus(event.Date, event.Time);
+            const isSaved = savedSessionIds.includes(event.id);
+            
+            let speakers = event["Moderator / Speaker / Participant"] ? event["Moderator / Speaker / Participant"].replace(/\n/g, ', ') : "";
+            if(speakers.length > 50) speakers = speakers.substring(0, 50) + '...';
+
+            html += `
+            <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm transition-all ${status.isPast ? 'past-event' : 'hover:shadow-md'} ${status.isLive ? 'ring-2 ring-red-500/50' : ''}">
+                <div class="flex justify-between items-start mb-2">
+                    <div class="flex gap-2 items-center flex-wrap">
+                        ${status.isLive ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-red-100 text-red-600 rounded-md live-badge uppercase tracking-wide flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> LIVE NOW</span>' : ''}
+                        ${status.isImminent && !status.isLive ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-orange-100 text-orange-600 rounded-md uppercase tracking-wide">Starting Soon</span>' : ''}
+                        ${status.isPast ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 border border-slate-200 rounded-md uppercase tracking-wide">Completed</span>' : ''}
+                        <span class="text-xs font-semibold px-2 py-0.5 bg-slate-50 text-slate-600 border border-slate-100 rounded-md truncate max-w-[120px]">${event.Format || 'Session'}</span>
+                    </div>
+                    
+                    <div class="flex items-center gap-1 flex-shrink-0">
+                        <button onclick="shareSession('${event.id}', event)" class="p-1.5 rounded-full text-slate-400 hover:text-brand hover:bg-slate-100 transition" aria-label="Share session">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684Z"></path></svg>
+                        </button>
+                        <button onclick="toggleSave('${event.id}', event)" class="p-1.5 rounded-full transition ${isSaved ? 'text-brand bg-brand/10' : 'text-slate-400 hover:bg-slate-100'}" aria-label="Save">
+                            <svg width="20" height="20" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <h3 class="text-base font-bold text-navy leading-snug mb-3 cursor-pointer" onclick="openDrawer('${event.id}')">${event["Activity Name"]}</h3>
+                
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium">
+                    <span class="cursor-pointer" onclick="openDrawer('${event.id}')">🕒 ${event.Time}</span>
+                    <span class="text-brand hover:underline cursor-pointer font-semibold" onclick="openVenueMap('${event["Location / Room"] || 'Main Hall'}')">📍 ${event["Location / Room"] || 'TBA'} (Map)</span>
+                    ${speakers ? `<span class="cursor-pointer" onclick="openDrawer('${event.id}')">👤 ${speakers}</span>` : ''}
+                </div>
+            </div>`;
+        });
+        html += `</div></div>`;
+    });
+
+    feed.innerHTML = html;
+}
 
 // Venue Map Navigation
 function openVenueMap(roomName) {
