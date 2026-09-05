@@ -141,7 +141,7 @@ const PROFANITY_LIST = [
     // Indian Slangs & Profanities
     "chutiya", "bhenchod", "madarchod", "bhosdike", "gandu", "gaand", "harami", 
     "kaminey", "kamina", "saala", "sala", "mc", "bc", "choot", "chodu", 
-    "jhaant", "lauda", "lund", "randi", "kamina", "tatti", "chipkali", "bsdk"
+    "jhaant", "lauda", "lund", "randi", "kamina", "tatti", "chipkali", "bsdk",
 
     // Spam, Scams, & Commercial Solicitation Keywords
     "crypto", "bitcoin", "btc", "eth", "giveaway", "airdrop", "free money", 
