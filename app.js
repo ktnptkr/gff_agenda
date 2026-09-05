@@ -534,7 +534,7 @@ function renderAgenda() {
                     
                     <div class="flex items-center gap-1 flex-shrink-0">
                         <button onclick="shareSession('${event.id}', event)" class="p-1.5 rounded-full text-slate-400 hover:text-brand hover:bg-slate-100 transition" aria-label="Share session">
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684Z"></path></svg>
                         </button>
                         <button onclick="toggleSave('${event.id}', event)" class="p-1.5 rounded-full transition ${isSaved ? 'text-brand bg-brand/10' : 'text-slate-400 hover:bg-slate-100'}" aria-label="Save">
                             <svg width="20" height="20" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
@@ -739,7 +739,7 @@ function openDrawer(id) {
         ${event.Tracks ? `<div class="pt-4 border-t border-slate-200/50 flex flex-wrap gap-2 mb-6">${event.Tracks.split(',').map(t => `<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] uppercase tracking-wider font-bold rounded-md shadow-sm">${t.trim()}</span>`).join('')}</div>` : ''}
 
         <!-- Understand More CTA Section (2 Columns for Google & ChatGPT) -->
-        <div class="pt-4 border-t border-slate-200 pb-2">
+        <div class="pt-4 border-t border-slate-200 pb-6">
             <button onclick="toggleResearchMenu()" class="w-full bg-brand hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow-md">
                 🔍 Understand More & Research Topic ▾
             </button>
@@ -765,7 +765,6 @@ function toggleResearchMenu() {
     const menu = document.getElementById('research-options');
     if(menu) {
         menu.classList.toggle('hidden');
-        // Automatically scroll drawer down smoothly so options are fully in view
         if (!menu.classList.contains('hidden')) {
             const drawerBody = document.getElementById('drawer-content');
             if (drawerBody) {
@@ -773,9 +772,6 @@ function toggleResearchMenu() {
             }
         }
     }
-}
-    const menu = document.getElementById('research-options');
-    if(menu) menu.classList.toggle('hidden');
 }
 
 function openSearchEngine(platform, encodedQuery) {
@@ -793,7 +789,6 @@ function openSearchEngine(platform, encodedQuery) {
         appScheme = `chatgpt://`;
     }
 
-    // Automatically copy topic to clipboard as a backup for AI chat windows
     navigator.clipboard.writeText(query).then(() => {
         showToast(`Topic copied! Ready for ${platform.charAt(0).toUpperCase() + platform.slice(1)}`, "📋");
     }).catch(() => {
