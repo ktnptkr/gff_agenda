@@ -18,8 +18,16 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 let isChatOpen = false;
 
+const LIVE_ANNOUNCEMENTS = [
+    { text: "Hall 102 capacity is currently at 95%. Consider heading to overflow seating in Hall 103.", time: "10:35 AM" },
+    { text: "Room change: Keynote on Quantum AI has been moved from Jasmine 2 to The Grand Theatre.", time: "10:15 AM" }
+];
+
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof AGENDA_DATA === 'undefined') return;
+    
+    checkAnnouncements();
+    handleUrlHash();
     initTabs();
     initDateButtons();
     updateDropdowns();
@@ -27,9 +35,230 @@ document.addEventListener("DOMContentLoaded", () => {
     setupListeners();
     renderAgenda();
 
-    setTimeout(handleUrlHash, 200);
     setInterval(checkUpcomingReminders, 30000); 
 });
+
+// Chat Drawer & Validation Logic
+function toggleChatDrawer() {
+    isChatOpen = !isChatOpen;
+    const drawer = document.getElementById('chat-drawer');
+    if (isChatOpen) {
+        drawer.classList.remove('translate-y-full');
+        checkChatValidationState();
+    } else {
+        drawer.classList.add('translate-y-full');
+    }
+}
+
+function checkChatValidationState() {
+    const savedProfile = localStorage.getItem('gff_user_profile');
+    const gate = document.getElementById('chat-gate');
+    const mainArea = document.getElementById('chat-main-area');
+
+    if (savedProfile) {
+        gate.classList.add('hidden');
+        mainArea.classList.remove('hidden');
+        fetchChatHistory();
+        subscribeToRealtimeChat();
+    } else {
+        gate.classList.remove('hidden');
+        mainArea.classList.add('hidden');
+    }
+}
+
+function submitChatValidation() {
+    const name = document.getElementById('val-name').value.trim();
+    const org = document.getElementById('val-org').value.trim();
+    const email = document.getElementById('val-email').value.trim();
+    const mobile = document.getElementById('val-mobile').value.trim();
+    const desig = document.getElementById('val-desig').value.trim();
+    const attendingRadio = document.querySelector('input[name="val-attending"]:checked');
+    const attending = attendingRadio ? attendingRadio.value : 'Yes';
+
+    if (!name || !org || !email || !desig) {
+        showToast("Please fill in all mandatory fields (*)", "⚠️");
+        return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showToast("Please enter a valid work email address", "⚠️");
+        return;
+    }
+
+    const profile = { name, org, email, mobile, desig, attending };
+    localStorage.setItem('gff_user_profile', JSON.stringify(profile));
+    
+    showToast("Profile verified successfully!", "✅");
+    checkChatValidationState();
+}
+
+async function fetchChatHistory() {
+    const { data, error } = await supabaseClient
+        .from('gff_chat')
+        .select('*')
+        .order('created_at', { ascending: true })
+        .limit(50);
+
+    if (!error && data) {
+        renderMessages(data);
+    }
+}
+
+function subscribeToRealtimeChat() {
+    supabaseClient
+        .channel('public:gff_chat')
+        .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'gff_chat' }, payload => {
+            appendMessageToDOM(payload.new);
+        })
+        .subscribe();
+}
+
+async function sendChatMessage() {
+    const msgInput = document.getElementById('chat-msg-input');
+    const message = msgInput.value.trim();
+    if (!message) return;
+
+    const profile = JSON.parse(localStorage.getItem('gff_user_profile'));
+    if (!profile) {
+        toggleChatDrawer();
+        return;
+    }
+
+    const displayName = `${profile.name} (${profile.desig}, ${profile.org})`;
+
+    const { error } = await supabaseClient
+        .from('gff_chat')
+        .insert([{ user_name: displayName, message: message }]);
+
+    if (!error) {
+        msgInput.value = '';
+        const dropdown = document.getElementById('chat-mention-dropdown');
+        if(dropdown) dropdown.classList.add('hidden');
+    } else {
+        showToast("Failed to send message", "⚠️");
+    }
+}
+
+function handleChatKeyPress(e) {
+    if (e.key === 'Enter') {
+        const dropdown = document.getElementById('chat-mention-dropdown');
+        if(dropdown) dropdown.classList.add('hidden');
+        sendChatMessage();
+    }
+}
+
+function renderMessages(messages) {
+    const container = document.getElementById('chat-messages');
+    if(!container) return;
+    container.innerHTML = messages.map(m => createMessageHTML(m)).join('');
+    container.scrollTop = container.scrollHeight;
+}
+
+function appendMessageToDOM(m) {
+    const container = document.getElementById('chat-messages');
+    if(!container) return;
+    container.innerHTML += createMessageHTML(m);
+    container.scrollTop = container.scrollHeight;
+}
+
+// Session Tagging / Mention Logic in Chat
+function handleChatInput(e) {
+    const val = e.target.value;
+    const cursor = e.target.selectionStart;
+    const textBeforeCursor = val.substring(0, cursor);
+    const lastAtIndex = textBeforeCursor.lastIndexOf('@');
+
+    const dropdown = document.getElementById('chat-mention-dropdown');
+    if(!dropdown) return;
+
+    if (lastAtIndex !== -1 && (lastAtIndex === 0 || textBeforeCursor[lastAtIndex - 1] === ' ')) {
+        const query = textBeforeCursor.substring(lastAtIndex + 1).toLowerCase();
+        
+        const matches = AGENDA_DATA.filter(item => 
+            item["Activity Name"].toLowerCase().includes(query) || 
+            item.Time.toLowerCase().includes(query)
+        ).slice(0, 6);
+
+        if (matches.length > 0) {
+            dropdown.innerHTML = matches.map(m => `
+                <div onclick="selectSessionTag('${m.id}', '${m["Activity Name"].replace(/'/g, "\\'")}')" class="p-2.5 hover:bg-slate-100 cursor-pointer border-b border-slate-100 last:border-b-0">
+                    <p class="font-bold text-navy truncate">🗓️ ${m["Activity Name"]}</p>
+                    <p class="text-[10px] text-slate-400">🕒 ${m.Time} • 📍 ${m["Location / Room"] || 'TBA'}</p>
+                </div>
+            `).join('');
+            dropdown.classList.remove('hidden');
+            return;
+        }
+    }
+    dropdown.classList.add('hidden');
+}
+
+function selectSessionTag(sessionId, sessionTitle) {
+    const input = document.getElementById('chat-msg-input');
+    if(!input) return;
+    const val = input.value;
+    const cursor = input.selectionStart;
+    const textBeforeCursor = val.substring(0, cursor);
+    const lastAtIndex = textBeforeCursor.lastIndexOf('@');
+
+    const textAfterCursor = val.substring(cursor);
+    input.value = `${textBeforeCursor.substring(0, lastAtIndex)}@[${sessionTitle}](${sessionId}) ${textAfterCursor}`;
+    
+    document.getElementById('chat-mention-dropdown').classList.add('hidden');
+    input.focus();
+}
+
+function createMessageHTML(m) {
+    const profile = JSON.parse(localStorage.getItem('gff_user_profile')) || {};
+    const myDisplayName = `${profile.name} (${profile.desig}, ${profile.org})`;
+    const isMe = m.user_name === myDisplayName;
+
+    let formattedMessage = escapeHTML(m.message);
+    const tagRegex = /@\[(.*?)\]\((.*?)\)/g;
+    formattedMessage = formattedMessage.replace(tagRegex, (match, title, id) => {
+        return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-brand/10 text-brand font-semibold px-2 py-0.5 rounded-md cursor-pointer hover:underline my-0.5">🗓️ ${title}</span>`;
+    });
+
+    return `
+        <div class="flex flex-col ${isMe ? 'items-end' : 'items-start'}">
+            <span class="text-[10px] font-bold text-slate-400 mb-0.5">${escapeHTML(m.user_name)}</span>
+            <div class="max-w-[85%] rounded-2xl px-3 py-2 text-xs ${isMe ? 'bg-brand text-white rounded-br-none' : 'bg-slate-200 text-slate-800 rounded-bl-none'}">
+                ${formattedMessage}
+            </div>
+        </div>
+    `;
+}
+
+function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+}
+
+// Announcements & Room Capacity Logic
+function checkAnnouncements() {
+    const banner = document.getElementById('live-announcement-banner');
+    const textEl = document.getElementById('announcement-text');
+    if (banner && textEl && LIVE_ANNOUNCEMENTS.length > 0 && !localStorage.getItem('dismissed_announcement')) {
+        textEl.innerText = LIVE_ANNOUNCEMENTS[0].text;
+        banner.classList.remove('hidden');
+    }
+}
+
+function dismissAnnouncement() {
+    document.getElementById('live-announcement-banner').classList.add('hidden');
+    localStorage.setItem('dismissed_announcement', 'true');
+}
+
+function getRoomCapacity(eventId, hallName) {
+    let hash = 0;
+    for (let i = 0; i < eventId.length; i++) hash += eventId.charCodeAt(i);
+    const percentage = (hash % 65) + 30; 
+    let statusText = "Open Seating";
+    let badgeColor = "bg-emerald-100 text-emerald-700 border-emerald-200";
+    if (percentage > 85) { statusText = "Nearly Full 🔴"; badgeColor = "bg-red-100 text-red-700 border-red-200"; }
+    else if (percentage > 65) { statusText = "Filling Fast 🟡"; badgeColor = "bg-amber-100 text-amber-700 border-amber-200"; }
+    return { percentage, statusText, badgeColor };
+}
 
 // Deep Linking Handler
 function handleUrlHash() {
@@ -65,6 +294,7 @@ function initTabs() {
 
     const resetTabs = () => {
         Object.values(tabs).forEach(t => {
+            if(!t) return;
             t.className = t.id === 'tab-live' 
                 ? "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-red-300 transition whitespace-nowrap flex items-center gap-1.5"
                 : "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition whitespace-nowrap";
@@ -72,20 +302,20 @@ function initTabs() {
         if(actionsBar) actionsBar.classList.add('hidden');
     };
 
-    tabs.all.addEventListener('click', () => {
+    if(tabs.all) tabs.all.addEventListener('click', () => {
         viewMode = "all"; resetTabs();
         tabs.all.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
         updateDropdowns(); renderAgenda();
     });
 
-    tabs.saved.addEventListener('click', () => {
+    if(tabs.saved) tabs.saved.addEventListener('click', () => {
         viewMode = "saved"; resetTabs();
         tabs.saved.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
         if(actionsBar) actionsBar.classList.remove('hidden');
         updateDropdowns(); renderAgenda();
     });
 
-    tabs.live.addEventListener('click', () => {
+    if(tabs.live) tabs.live.addEventListener('click', () => {
         viewMode = "live"; resetTabs();
         tabs.live.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-red-600 shadow transition whitespace-nowrap flex items-center gap-1.5";
         updateDropdowns(); renderAgenda();
@@ -114,6 +344,7 @@ function initTabs() {
 function initDateButtons() {
     const dates = [...new Set(AGENDA_DATA.map(e => e.Date).filter(Boolean))].sort();
     const container = document.getElementById('date-filters');
+    if(!container) return;
     
     let html = `<button onclick="setDate('all')" class="date-btn px-4 py-1.5 rounded-full text-sm font-semibold transition flex-shrink-0 ${currentDate === 'all' ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200'}" data-date="all">All Dates</button>`;
     
@@ -239,8 +470,10 @@ function renderAgenda() {
         return true;
     });
 
-    document.getElementById('current-date-header').innerText = currentDate === 'all' ? 'All Dates' : new Date(currentDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-    document.getElementById('event-count').innerText = `${filtered.length} Sessions`;
+    const dateHeader = document.getElementById('current-date-header');
+    const eventCount = document.getElementById('event-count');
+    if(dateHeader) dateHeader.innerText = currentDate === 'all' ? 'All Dates' : new Date(currentDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    if(eventCount) eventCount.innerText = `${filtered.length} Sessions`;
 
     if (filtered.length === 0) {
         feed.innerHTML = `<div class="text-center py-16 text-slate-500 font-medium">No sessions found matching these filters.</div>`;
@@ -274,6 +507,7 @@ function renderAgenda() {
         grouped[timeKey].forEach(event => {
             const status = checkLiveStatus(event.Date, event.Time);
             const isSaved = savedSessionIds.includes(event.id);
+            const capacity = getRoomCapacity(event.id, event["Location / Room"]);
             
             let speakers = event["Speaker / Participant / Moderator"] ? event["Speaker / Participant / Moderator"].replace(/\n/g, ', ') : "";
             if(speakers.length > 50) speakers = speakers.substring(0, 50) + '...';
@@ -286,6 +520,7 @@ function renderAgenda() {
                         ${status.isImminent && !status.isLive ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-orange-100 text-orange-600 rounded-md uppercase tracking-wide">Starting Soon</span>' : ''}
                         ${status.isPast ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 border border-slate-200 rounded-md uppercase tracking-wide">Completed</span>' : ''}
                         <span class="text-xs font-semibold px-2 py-0.5 bg-slate-50 text-slate-600 border border-slate-100 rounded-md truncate max-w-[120px]">${event.Format || 'Session'}</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 border ${capacity.badgeColor} rounded-md">${capacity.statusText}</span>
                     </div>
                     
                     <div class="flex items-center gap-1 flex-shrink-0">
@@ -300,10 +535,10 @@ function renderAgenda() {
                 
                 <h3 class="text-base font-bold text-navy leading-snug mb-3 cursor-pointer" onclick="openDrawer('${event.id}')">${event["Activity Name"]}</h3>
                 
-                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium cursor-pointer" onclick="openDrawer('${event.id}')">
-                    <span class="flex items-center gap-1">🕒 ${event.Time}</span>
-                    <span class="flex items-center gap-1 text-brand hover:underline">📍 ${event["Location / Room"] || 'TBA'}</span>
-                    ${speakers ? `<span class="flex items-center gap-1">👤 ${speakers}</span>` : ''}
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium">
+                    <span class="cursor-pointer" onclick="openDrawer('${event.id}')">🕒 ${event.Time}</span>
+                    <span class="text-brand hover:underline cursor-pointer font-semibold" onclick="openVenueMap('${event["Location / Room"] || 'Main Hall'}')">📍 ${event["Location / Room"] || 'TBA'} (Map)</span>
+                    ${speakers ? `<span class="cursor-pointer" onclick="openDrawer('${event.id}')">👤 ${speakers}</span>` : ''}
                 </div>
             </div>`;
         });
@@ -313,6 +548,33 @@ function renderAgenda() {
     feed.innerHTML = html;
 }
 
+// Venue Map Navigation
+function openVenueMap(roomName) {
+    const mapModal = document.getElementById('map-modal');
+    const mapOverlay = document.getElementById('map-overlay');
+    const content = document.getElementById('map-content');
+    if(!content) return;
+    content.innerHTML = `
+        <div class="mb-4"><h3 class="text-lg font-bold text-navy">${roomName}</h3><p class="text-xs text-slate-500">Jio World Convention Centre, Mumbai</p></div>
+        <div class="bg-slate-100 rounded-2xl p-4 border border-slate-200 relative overflow-hidden flex flex-col items-center justify-center min-h-[200px]">
+            <span class="text-4xl mb-2">🗺️</span>
+            <p class="text-sm font-bold text-navy">Interactive Floor Plan</p>
+            <p class="text-xs text-slate-600 mt-1">Route: Main Escalator -> Level 2 -> ${roomName}</p>
+        </div>`;
+    mapOverlay.classList.remove('hidden');
+    setTimeout(() => { mapOverlay.classList.remove('opacity-0'); mapModal.classList.remove('translate-y-full'); }, 10);
+}
+
+function closeMapModal() {
+    const mapModal = document.getElementById('map-modal');
+    const mapOverlay = document.getElementById('map-overlay');
+    if(mapOverlay && mapModal) {
+        mapOverlay.classList.add('opacity-0'); 
+        mapModal.classList.add('translate-y-full');
+        setTimeout(() => mapOverlay.classList.add('hidden'), 300);
+    }
+}
+
 // Calendar Exports & Sharing
 function exportCalendar(type) {
     const savedEvents = AGENDA_DATA.filter(e => savedSessionIds.includes(e.id));
@@ -320,16 +582,10 @@ function exportCalendar(type) {
         showToast("No saved sessions in My Agenda to export.", "⚠️");
         return;
     }
-    exportICSFile(savedEvents);
-}
-
-function exportICSFile(events) {
     let icsContent = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//GFF 2026 Agenda//EN\n";
-    
-    events.forEach(e => {
+    savedEvents.forEach(e => {
         const { start, end } = parseTimes(e.Date, e.Time);
         const formatDate = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-        
         icsContent += "BEGIN:VEVENT\n";
         icsContent += `UID:gff2026-${e.id}@globalfintechfest.com\n`;
         icsContent += `DTSTAMP:${formatDate(new Date())}\n`;
@@ -340,7 +596,6 @@ function exportICSFile(events) {
         icsContent += `DESCRIPTION:${e.Description ? e.Description.replace(/\n/g, '\\n') : ''}\n`;
         icsContent += "END:VEVENT\n";
     });
-    
     icsContent += "END:VCALENDAR";
 
     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
@@ -361,17 +616,9 @@ function shareItinerary() {
     const shareUrl = `${window.location.origin}${window.location.pathname}#saved=${savedSessionIds.join(',')}`;
     
     if (navigator.share) {
-        navigator.share({
-            title: 'My GFF 2026 Itinerary',
-            text: 'Check out my customized schedule for Global Fintech Fest 2026:',
-            url: shareUrl,
-        }).catch((error) => {
-            console.log('Share canceled or failed:', error);
-        });
+        navigator.share({ title: 'My GFF 2026 Itinerary', url: shareUrl }).catch(() => {});
     } else {
-        navigator.clipboard.writeText(shareUrl).then(() => {
-            showToast("Itinerary link copied to clipboard!", "🔗");
-        });
+        navigator.clipboard.writeText(shareUrl).then(() => showToast("Link copied!", "🔗"));
     }
 }
 
@@ -383,15 +630,11 @@ function shareSession(id, eventObj) {
     if (navigator.share) {
         navigator.share({
             title: event ? event["Activity Name"] : 'GFF 2026 Session',
-            text: `Check out this session at GFF 2026: "${event ? event["Activity Name"] : ''}" (${event?.Time || ''} at ${event?.["Location / Room"] || ''})`,
+            text: `Check out: "${event?.["Activity Name"]}" at ${event?.["Location / Room"] || ''}`,
             url: shareUrl,
-        }).catch((error) => {
-            console.log('Share canceled or failed:', error);
-        });
+        }).catch(() => {});
     } else {
-        navigator.clipboard.writeText(shareUrl).then(() => {
-            showToast("Session link copied to clipboard!", "🔗");
-        });
+        navigator.clipboard.writeText(shareUrl).then(() => showToast("Session link copied!", "🔗"));
     }
 }
 
@@ -409,10 +652,7 @@ function checkUpcomingReminders() {
         if (diffMinutes >= 9 && diffMinutes <= 11) {
             const notifiedKey = `notified_${id}`;
             if (!localStorage.getItem(notifiedKey)) {
-                new Notification(`Starting Soon: ${event["Activity Name"]}`, {
-                    body: `At ${event["Location / Room"] || 'Main Stage'} in 10 minutes!`,
-                    icon: 'https://www.globalfintechfest.com/favicon.ico'
-                });
+                new Notification(`Starting Soon: ${event["Activity Name"]}`, { body: `At ${event["Location / Room"] || 'Main Stage'} in 10 minutes!` });
                 localStorage.setItem(notifiedKey, 'true');
             }
         }
@@ -450,27 +690,31 @@ function toggleSave(id, eventObj) {
 
 function showToast(msg, icon) {
     const toast = document.getElementById('toast');
+    if(!toast) return;
     document.getElementById('toast-msg').innerText = msg;
     document.getElementById('toast-icon').innerText = icon;
     toast.classList.remove('opacity-0', 'pointer-events-none');
     setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 3000);
 }
 
+// Drawer Logic
 const drawerOverlay = document.getElementById('drawer-overlay');
 const drawer = document.getElementById('drawer');
 const drawerContent = document.getElementById('drawer-content');
 
 function setupDrawer() {
-    document.getElementById('close-drawer').addEventListener('click', closeDrawer);
-    drawerOverlay.addEventListener('click', closeDrawer);
+    const closeBtn = document.getElementById('close-drawer');
+    if(closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if(drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 }
 
 function openDrawer(id) {
     const event = AGENDA_DATA.find(e => e.id === id);
-    if(!event) return;
+    if(!event || !drawerContent) return;
 
     document.getElementById('drawer-format').innerText = event.Format || 'Session';
-    document.getElementById('drawer-share-btn').setAttribute('onclick', `shareSession('${event.id}')`);
+    const shareBtn = document.getElementById('drawer-share-btn');
+    if(shareBtn) shareBtn.setAttribute('onclick', `shareSession('${event.id}')`);
     
     drawerContent.innerHTML = `
         <h2 class="text-xl font-bold text-navy leading-tight mb-4">${event["Activity Name"]}</h2>
@@ -480,28 +724,10 @@ function openDrawer(id) {
             <span class="flex items-center gap-1.5 text-brand">📍 ${event["Location / Room"] || 'TBA'}</span>
         </div>
         
-        ${event.Description ? `
-        <div class="mb-6">
-            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">About</h3>
-            <p class="text-sm text-slate-700 leading-relaxed">${event.Description}</p>
-        </div>` : ''}
-
-        ${event["Speaker / Participant / Moderator"] ? `
-        <div class="mb-6">
-            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Speakers</h3>
-            <div class="text-sm font-semibold text-slate-800 leading-relaxed whitespace-pre-line">${event["Speaker / Participant / Moderator"]}</div>
-        </div>` : ''}
-
-        ${event["Company Name"] ? `
-        <div class="mb-6">
-            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Companies</h3>
-            <p class="text-sm text-slate-600 leading-relaxed">${event["Company Name"]}</p>
-        </div>` : ''}
-        
-        ${event.Tracks ? `
-        <div class="pt-4 border-t border-slate-200/50 flex flex-wrap gap-2">
-            ${event.Tracks.split(',').map(t => `<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] uppercase tracking-wider font-bold rounded-md shadow-sm">${t.trim()}</span>`).join('')}
-        </div>` : ''}
+        ${event.Description ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">About</h3><p class="text-sm text-slate-700 leading-relaxed">${event.Description}</p></div>` : ''}
+        ${event["Speaker / Participant / Moderator"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Speakers</h3><div class="text-sm font-semibold text-slate-800 leading-relaxed whitespace-pre-line">${event["Speaker / Participant / Moderator"]}</div></div>` : ''}
+        ${event["Company Name"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Companies</h3><p class="text-sm text-slate-600 leading-relaxed">${event["Company Name"]}</p></div>` : ''}
+        ${event.Tracks ? `<div class="pt-4 border-t border-slate-200/50 flex flex-wrap gap-2">${event.Tracks.split(',').map(t => `<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] uppercase tracking-wider font-bold rounded-md shadow-sm">${t.trim()}</span>`).join('')}</div>` : ''}
     `;
 
     drawerOverlay.classList.remove('hidden');
@@ -512,199 +738,9 @@ function openDrawer(id) {
 }
 
 function closeDrawer() {
-    drawerOverlay.classList.add('opacity-0');
-    drawer.classList.add('translate-y-full');
-    setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
-}
-
-// Chat Validation & Networking Logic
-let isChatOpen = false;
-
-function toggleChatDrawer() {
-    isChatOpen = !isChatOpen;
-    const drawer = document.getElementById('chat-drawer');
-    if (isChatOpen) {
-        drawer.classList.remove('translate-y-full');
-        checkChatValidationState();
-    } else {
+    if(drawerOverlay && drawer) {
+        drawerOverlay.classList.add('opacity-0');
         drawer.classList.add('translate-y-full');
+        setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
     }
-}
-
-function checkChatValidationState() {
-    const savedProfile = localStorage.getItem('gff_user_profile');
-    const gate = document.getElementById('chat-gate');
-    const mainArea = document.getElementById('chat-main-area');
-
-    if (savedProfile) {
-        gate.classList.add('hidden');
-        mainArea.classList.remove('hidden');
-        fetchChatHistory();
-        subscribeToRealtimeChat();
-    } else {
-        gate.classList.remove('hidden');
-        mainArea.classList.add('hidden');
-    }
-}
-
-function submitChatValidation() {
-    const name = document.getElementById('val-name').value.trim();
-    const org = document.getElementById('val-org').value.trim();
-    const email = document.getElementById('val-email').value.trim();
-    const mobile = document.getElementById('val-mobile').value.trim();
-    const desig = document.getElementById('val-desig').value.trim();
-    const attendingRadio = document.querySelector('input[name="val-attending"]:checked');
-    const attending = attendingRadio ? attendingRadio.value : 'Yes';
-
-    if (!name || !org || !email || !desig) {
-        showToast("Please fill in all mandatory fields (*)", "⚠️");
-        return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        showToast("Please enter a valid work email address", "⚠️");
-        return;
-    }
-
-    const profile = { name, org, email, mobile, desig, attending };
-    localStorage.setItem('gff_user_profile', JSON.stringify(profile));
-    
-    showToast("Profile verified successfully!", "✅");
-    checkChatValidationState();
-}
-
-async function fetchChatHistory() {
-    const { data, error } = await supabaseClient
-        .from('gff_chat')
-        .select('*')
-        .order('created_at', { ascending: true })
-        .limit(50);
-
-    if (!error && data) {
-        renderMessages(data);
-    }
-}
-
-function subscribeToRealtimeChat() {
-    supabaseClient
-        .channel('public:gff_chat')
-        .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'gff_chat' }, payload => {
-            appendMessageToDOM(payload.new);
-        })
-        .subscribe();
-}
-
-async function sendChatMessage() {
-    const msgInput = document.getElementById('chat-msg-input');
-    const message = msgInput.value.trim();
-    if (!message) return;
-
-    const profile = JSON.parse(localStorage.getItem('gff_user_profile'));
-    if (!profile) {
-        toggleChatDrawer();
-        return;
-    }
-
-    const displayName = `${profile.name} (${profile.desig}, ${profile.org})`;
-
-    const { error } = await supabaseClient
-        .from('gff_chat')
-        .insert([{ user_name: displayName, message: message }]);
-
-    if (!error) {
-        msgInput.value = '';
-        document.getElementById('chat-mention-dropdown').classList.add('hidden');
-    } else {
-        showToast("Failed to send message", "⚠️");
-    }
-}
-
-function handleChatKeyPress(e) {
-    if (e.key === 'Enter') {
-        document.getElementById('chat-mention-dropdown').classList.add('hidden');
-        sendChatMessage();
-    }
-}
-
-function renderMessages(messages) {
-    const container = document.getElementById('chat-messages');
-    container.innerHTML = messages.map(m => createMessageHTML(m)).join('');
-    container.scrollTop = container.scrollHeight;
-}
-
-function appendMessageToDOM(m) {
-    const container = document.getElementById('chat-messages');
-    container.innerHTML += createMessageHTML(m);
-    container.scrollTop = container.scrollHeight;
-}
-
-// Session Tagging / Mention Logic in Chat
-function handleChatInput(e) {
-    const val = e.target.value;
-    const cursor = e.target.selectionStart;
-    const textBeforeCursor = val.substring(0, cursor);
-    const lastAtIndex = textBeforeCursor.lastIndexOf('@');
-
-    const dropdown = document.getElementById('chat-mention-dropdown');
-
-    if (lastAtIndex !== -1 && (lastAtIndex === 0 || textBeforeCursor[lastAtIndex - 1] === ' ')) {
-        const query = textBeforeCursor.substring(lastAtIndex + 1).toLowerCase();
-        
-        const matches = AGENDA_DATA.filter(item => 
-            item["Activity Name"].toLowerCase().includes(query) || 
-            item.Time.toLowerCase().includes(query)
-        ).slice(0, 6);
-
-        if (matches.length > 0) {
-            dropdown.innerHTML = matches.map(m => `
-                <div onclick="selectSessionTag('${m.id}', '${m["Activity Name"].replace(/'/g, "\\'")}')" class="p-2.5 hover:bg-slate-100 cursor-pointer border-b border-slate-100 last:border-b-0">
-                    <p class="font-bold text-navy truncate">🗓️ ${m["Activity Name"]}</p>
-                    <p class="text-[10px] text-slate-400">🕒 ${m.Time} • 📍 ${m["Location / Room"] || 'TBA'}</p>
-                </div>
-            `).join('');
-            dropdown.classList.remove('hidden');
-            return;
-        }
-    }
-    dropdown.classList.add('hidden');
-}
-
-function selectSessionTag(sessionId, sessionTitle) {
-    const input = document.getElementById('chat-msg-input');
-    const val = input.value;
-    const cursor = input.selectionStart;
-    const textBeforeCursor = val.substring(0, cursor);
-    const lastAtIndex = textBeforeCursor.lastIndexOf('@');
-
-    const textAfterCursor = val.substring(cursor);
-    input.value = `${textBeforeCursor.substring(0, lastAtIndex)}@[${sessionTitle}](${sessionId}) ${textAfterCursor}`;
-    
-    document.getElementById('chat-mention-dropdown').classList.add('hidden');
-    input.focus();
-}
-
-function createMessageHTML(m) {
-    const profile = JSON.parse(localStorage.getItem('gff_user_profile')) || {};
-    const myDisplayName = `${profile.name} (${profile.desig}, ${profile.org})`;
-    const isMe = m.user_name === myDisplayName;
-
-    let formattedMessage = escapeHTML(m.message);
-    const tagRegex = /@\[(.*?)\]\((.*?)\)/g;
-    formattedMessage = formattedMessage.replace(tagRegex, (match, title, id) => {
-        return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-brand/10 text-brand font-semibold px-2 py-0.5 rounded-md cursor-pointer hover:underline my-0.5">🗓️ ${title}</span>`;
-    });
-
-    return `
-        <div class="flex flex-col ${isMe ? 'items-end' : 'items-start'}">
-            <span class="text-[10px] font-bold text-slate-400 mb-0.5">${escapeHTML(m.user_name)}</span>
-            <div class="max-w-[85%] rounded-2xl px-3 py-2 text-xs ${isMe ? 'bg-brand text-white rounded-br-none' : 'bg-slate-200 text-slate-800 rounded-bl-none'}">
-                ${formattedMessage}
-            </div>
-        </div>
-    `;
-}
-
-function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
 }
