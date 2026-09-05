@@ -1,40 +1,65 @@
-// Application State
-let currentDate = "all"; // 'all' acts as the new default
+let currentDate = "all";
 let currentTrack = "all";
 let currentFormat = "all";
 let currentRoom = "all";
 let currentSpeaker = "all";
 let currentCompany = "all";
 let searchQuery = "";
-let viewMode = "all"; // 'all', 'saved', 'live'
+let viewMode = "all"; 
 let savedSessionIds = JSON.parse(localStorage.getItem('gff_saved_sessions')) || [];
 
-// Current Time Context (Sept 5, 2026 is system default. Edit this to test 'Live Now' feature)
 const CURRENT_TIME = new Date("2026-09-09T10:40:00+05:30"); 
 
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof AGENDA_DATA === 'undefined') return;
+    
+    // Check URL Hash for Deep Links (#session=ID or #saved=ID1,ID2)
+    handleUrlHash();
+
     initTabs();
     initDateButtons();
-    updateDropdowns(); // Synchronize dropdowns based on initial state
+    updateDropdowns();
     setupDrawer();
     setupListeners();
     renderAgenda();
+
+    // Start background reminder checker
+    setInterval(checkUpcomingReminders, 30000); 
 });
 
-// 1. Navigation & Tabs
+// Deep Linking Handler
+function handleUrlHash() {
+    const hash = window.location.hash;
+    if (hash.startsWith('#session=')) {
+        const sessionId = hash.replace('#session=', '');
+        setTimeout(() => openDrawer(sessionId), 500);
+    } else if (hash.startsWith('#saved=')) {
+        const ids = hash.replace('#saved=', '').split(',');
+        savedSessionIds = [...new Set([...savedSessionIds, ...ids])];
+        localStorage.setItem('gff_saved_sessions', JSON.stringify(savedSessionIds));
+        viewMode = 'saved';
+        document.getElementById('tab-all').className = "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition whitespace-nowrap";
+        document.getElementById('tab-saved').className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
+        showToast("Imported shared itinerary successfully!", "✅");
+    }
+}
+
 function initTabs() {
     const tabs = {
         all: document.getElementById('tab-all'),
         saved: document.getElementById('tab-saved'),
         live: document.getElementById('tab-live')
     };
+    const actionsBar = document.getElementById('agenda-actions');
 
-    const resetTabs = () => Object.values(tabs).forEach(t => {
-        t.className = t.id === 'tab-live' 
-            ? "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-red-300 transition whitespace-nowrap flex items-center gap-1.5"
-            : "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition whitespace-nowrap";
-    });
+    const resetTabs = () => {
+        Object.values(tabs).forEach(t => {
+            t.className = t.id === 'tab-live' 
+                ? "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-red-300 transition whitespace-nowrap flex items-center gap-1.5"
+                : "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition whitespace-nowrap";
+        });
+        actionsBar.classList.add('hidden');
+    };
 
     tabs.all.addEventListener('click', () => {
         viewMode = "all"; resetTabs();
@@ -45,6 +70,7 @@ function initTabs() {
     tabs.saved.addEventListener('click', () => {
         viewMode = "saved"; resetTabs();
         tabs.saved.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
+        actionsBar.classList.remove('hidden');
         updateDropdowns(); renderAgenda();
     });
 
@@ -53,13 +79,29 @@ function initTabs() {
         tabs.live.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-red-600 shadow transition whitespace-nowrap flex items-center gap-1.5";
         updateDropdowns(); renderAgenda();
     });
+
+    // Notification Button Permission Request
+    document.getElementById('enable-notif-btn').addEventListener('click', () => {
+        if (!("Notification" in window)) {
+            alert("This browser does not support desktop notifications.");
+            return;
+        }
+        Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+                showToast("Reminders enabled successfully!", "🔔");
+                document.getElementById('enable-notif-btn').innerText = "🔔 Reminders Active";
+                document.getElementById('enable-notif-btn').disabled = true;
+            } else {
+                showToast("Notification permission denied.", "⚠️");
+            }
+        });
+    });
 }
 
 function initDateButtons() {
     const dates = [...new Set(AGENDA_DATA.map(e => e.Date).filter(Boolean))].sort();
     const container = document.getElementById('date-filters');
     
-    // Add 'All Dates' button
     let html = `<button onclick="setDate('all')" class="date-btn px-4 py-1.5 rounded-full text-sm font-semibold transition flex-shrink-0 ${currentDate === 'all' ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200'}" data-date="all">All Dates</button>`;
     
     html += dates.map(date => {
@@ -83,22 +125,19 @@ function setDate(date) {
     renderAgenda();
 }
 
-// 2. Dynamic Dropdown Syncing
 function updateDropdowns() {
-    // Determine the base dataset before dropdown filters are applied
     let baseData = AGENDA_DATA;
     if (currentDate !== 'all') baseData = baseData.filter(e => e.Date === currentDate);
     if (viewMode === 'saved') baseData = baseData.filter(e => savedSessionIds.includes(e.id));
     if (viewMode === 'live') baseData = baseData.filter(e => checkLiveStatus(e.Date, e.Time).isLiveOrImminent);
 
-    // Extraction helper with Regex cleaning
     const extractUnique = (data, key, splitRegex) => {
         const set = new Set();
         data.forEach(e => {
             if (e[key]) {
                 if (splitRegex) {
                     e[key].split(splitRegex).forEach(v => {
-                        let clean = v.replace(/\(.*?\)/g, '').trim(); // Remove titles like "(Moderator)"
+                        let clean = v.replace(/\(.*?\)/g, '').trim();
                         if (clean) set.add(clean);
                     });
                 } else {
@@ -109,7 +148,6 @@ function updateDropdowns() {
         return [...set].sort();
     };
 
-    // Update UI Selects
     populateSelect('room-filter', extractUnique(baseData, 'Location / Room'), currentRoom, 'All Rooms');
     populateSelect('track-filter', extractUnique(baseData, 'Tracks', /,/), currentTrack, 'All Tracks');
     populateSelect('format-filter', extractUnique(baseData, 'Format'), currentFormat, 'All Formats');
@@ -120,8 +158,6 @@ function updateDropdowns() {
 function populateSelect(id, options, currentValue, defaultLabel) {
     const el = document.getElementById(id);
     el.innerHTML = `<option value="all">${defaultLabel} ▾</option>` + options.map(o => `<option value="${o}">${o}</option>`).join('');
-    
-    // If the previous selection is still valid in the new context, keep it. Otherwise, reset to 'all'.
     if (options.includes(currentValue)) {
         el.value = currentValue;
     } else {
@@ -143,7 +179,6 @@ function setupListeners() {
     document.getElementById('search-input').addEventListener('input', e => { searchQuery = e.target.value.toLowerCase(); renderAgenda(); });
 }
 
-// 3. Time & Agenda Rendering
 function parseTimes(dateStr, timeStr) {
     if (!timeStr || !dateStr) return { start: new Date("2099-01-01"), end: new Date("2099-01-01") };
     const parts = timeStr.split("-");
@@ -163,16 +198,13 @@ function checkLiveStatus(dateStr, timeStr) {
     
     const isLive = now >= startTime && now <= endTime;
     const isPast = now > endTime;
-    // Imminent if starting in the next 30 mins
     const isImminent = startTime > now && (startTime - now) <= (30 * 60 * 1000); 
-    
     return { isLive, isPast, isImminent, isLiveOrImminent: isLive || isImminent, start, end };
 }
 
 function renderAgenda() {
     const feed = document.getElementById('event-feed');
     
-    // Core Filter Logic
     let filtered = AGENDA_DATA.filter(e => {
         if (viewMode === "saved" && !savedSessionIds.includes(e.id)) return false;
         if (viewMode === "live" && !checkLiveStatus(e.Date, e.Time).isLiveOrImminent) return false;
@@ -199,7 +231,6 @@ function renderAgenda() {
         return;
     }
 
-    // Grouping by Date AND Time for "All Dates" view clarity
     const grouped = {};
     filtered.forEach(e => {
         const key = currentDate === 'all' ? `${e.Date} | ${e.Time.split("-")[0].trim()}` : e.Time.split("-")[0].trim();
@@ -260,9 +291,100 @@ function renderAgenda() {
     feed.innerHTML = html;
 }
 
-// 4. Save & Conflict Logic
+// 5. Calendar Exports & Itinerary Sharing
+function exportCalendar(type) {
+    const savedEvents = AGENDA_DATA.filter(e => savedSessionIds.includes(e.id));
+    if (savedEvents.length === 0) {
+        showToast("No saved sessions in My Agenda to export.", "⚠️");
+        return;
+    }
+
+    if (type === 'google') {
+        // Export first or batch? Google Cal supports single URL templates. We'll export a ICS file download for batch, and primary link for first. Or generate ICS for both.
+        // Actually .ics handles all calendars (Google, Apple, Outlook) seamlessly.
+        exportICSFile(savedEvents);
+    } else if (type === 'ics') {
+        exportICSFile(savedEvents);
+    }
+}
+
+function exportICSFile(events) {
+    let icsContent = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//GFF 2026 Agenda//EN\n";
+    
+    events.forEach(e => {
+        const { start, end } = parseTimes(e.Date, e.Time);
+        const formatDate = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        
+        icsContent += "BEGIN:VEVENT\n";
+        icsContent += `UID:gff2026-${e.id}@globalfintechfest.com\n`;
+        icsContent += `DTSTAMP:${formatDate(new Date())}\n`;
+        icsContent += `DTSTART:${formatDate(start)}\n`;
+        icsContent += `DTEND:${formatDate(end)}\n`;
+        icsContent += `SUMMARY:${e["Activity Name"]}\n`;
+        icsContent += `LOCATION:${e["Location / Room"] || 'Mumbai'}\n`;
+        icsContent += `DESCRIPTION:${e.Description ? e.Description.replace(/\n/g, '\\n') : ''}\n`;
+        icsContent += "END:VEVENT\n";
+    });
+    
+    icsContent += "END:VCALENDAR";
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.setAttribute('download', 'GFF_2026_My_Agenda.ics');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast("Calendar file downloaded!", "📥");
+}
+
+function shareItinerary() {
+    if (savedSessionIds.length === 0) {
+        showToast("No saved sessions to share.", "⚠️");
+        return;
+    }
+    const shareUrl = `${window.location.origin}${window.location.pathname}#saved=${savedSessionIds.join(',')}`;
+    navigator.clipboard.writeText(shareUrl).then(() => {
+        showToast("Itinerary share link copied to clipboard!", "🔗");
+    });
+}
+
+function shareSession(id) {
+    const shareUrl = `${window.location.origin}${window.location.pathname}#session=${id}`;
+    navigator.clipboard.writeText(shareUrl).then(() => {
+        showToast("Session link copied to clipboard!", "🔗");
+    });
+}
+
+// 6. Background Reminder Checker (10 mins prior)
+function checkUpcomingReminders() {
+    if (Notification.permission !== "granted") return;
+    const now = new Date().getTime();
+
+    savedSessionIds.forEach(id => {
+        const event = AGENDA_DATA.find(e => e.id === id);
+        if (!event) return;
+        const { start } = parseTimes(event.Date, event.Time);
+        const startTime = start.getTime();
+        const diffMinutes = (startTime - now) / (1000 * 60);
+
+        // If session starts in roughly 10 minutes (between 9 and 11 minutes away) and hasn't been notified yet
+        if (diffMinutes >= 9 && diffMinutes <= 11) {
+            const notifiedKey = `notified_${id}`;
+            if (!localStorage.getItem(notifiedKey)) {
+                new Notification(`Starting Soon: ${event["Activity Name"]}`, {
+                    body: `At ${event["Location / Room"] || 'Main Stage'} in 10 minutes!`,
+                    icon: 'https://www.globalfintechfest.com/favicon.ico'
+                });
+                localStorage.setItem(notifiedKey, 'true');
+            }
+        }
+    });
+}
+
+// 7. Save & Conflict Logic
 function toggleSave(id, eventObj) {
-    eventObj.stopPropagation();
+    if(eventObj) eventObj.stopPropagation();
     const eventData = AGENDA_DATA.find(e => e.id === id);
     const newStatus = checkLiveStatus(eventData.Date, eventData.Time);
 
@@ -298,7 +420,7 @@ function showToast(msg, icon) {
     setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 3000);
 }
 
-// 5. Drawer Logic
+// 8. Drawer Logic
 const drawerOverlay = document.getElementById('drawer-overlay');
 const drawer = document.getElementById('drawer');
 const drawerContent = document.getElementById('drawer-content');
@@ -313,13 +435,14 @@ function openDrawer(id) {
     if(!event) return;
 
     document.getElementById('drawer-format').innerText = event.Format || 'Session';
+    document.getElementById('drawer-share-btn').setAttribute('onclick', `shareSession('${event.id}')`);
     
     drawerContent.innerHTML = `
         <h2 class="text-xl font-bold text-navy leading-tight mb-4">${event["Activity Name"]}</h2>
         <div class="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6 font-medium bg-slate-50 p-3 rounded-lg border border-slate-100">
             <span class="flex items-center gap-1.5">📅 ${new Date(event.Date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})}</span>
             <span class="flex items-center gap-1.5">🕒 ${event.Time}</span>
-            <span class="flex items-center gap-1.5 text-brand cursor-pointer hover:underline">📍 ${event["Location / Room"] || 'TBA'} <span class="text-[10px] ml-1">Map →</span></span>
+            <span class="flex items-center gap-1.5 text-brand">📍 ${event["Location / Room"] || 'TBA'}</span>
         </div>
         
         ${event.Description ? `
