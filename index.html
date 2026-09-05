@@ -28,19 +28,44 @@
     💬 <span class="text-xs font-bold hidden md:inline">Attendee Chat</span>
 </button>
 
-<!-- Chat Drawer (Fully Responsive Mobile Layout) -->
+<!-- Chat Drawer (Fully Responsive Mobile Layout with Tagging Support) -->
 <div id="chat-drawer" class="fixed bottom-0 right-0 md:right-6 w-full md:w-96 h-[75vh] md:h-[500px] max-h-[85vh] bg-white rounded-t-3xl md:rounded-2xl shadow-2xl z-50 transform translate-y-full transition-transform duration-300 flex flex-col border border-slate-200">
     <div class="p-4 bg-navy text-white rounded-t-3xl md:rounded-t-2xl flex justify-between items-center flex-shrink-0">
         <h3 class="font-bold text-sm">GFF 2026 Live Networking</h3>
         <button onclick="toggleChatDrawer()" class="text-slate-300 hover:text-white p-1">✕</button>
     </div>
-    <!-- Messages Scroll Area -->
-    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto flex flex-col gap-3 bg-slate-50 text-sm"></div>
-    <!-- Input Box -->
-    <div class="p-3 bg-white border-t border-slate-200 flex gap-2 flex-shrink-0">
-        <input type="text" id="chat-name-input" placeholder="Name" class="w-1/4 bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none">
-        <input type="text" id="chat-msg-input" placeholder="Type a message..." class="flex-1 bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none" onkeypress="handleChatKeyPress(event)">
-        <button onclick="sendChatMessage()" class="bg-brand text-white px-4 py-2 rounded-lg text-xs font-bold">Send</button>
+
+    <!-- Step 1: Validation / Registration Gate -->
+    <div id="chat-gate" class="flex-1 p-6 flex flex-col justify-center gap-3 bg-white overflow-y-auto">
+        <h4 class="font-bold text-navy text-base mb-1">Welcome to GFF Networking</h4>
+        <p class="text-xs text-slate-500 mb-2">Please introduce yourself before joining the attendee chat.</p>
+        
+        <input type="text" id="val-name" placeholder="Full Name *" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand">
+        <input type="text" id="val-org" placeholder="Organization Name *" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand">
+        <input type="email" id="val-email" placeholder="Work Email (Mandatory) *" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand">
+        <input type="tel" id="val-mobile" placeholder="Mobile Number (Optional)" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand">
+        <input type="text" id="val-desig" placeholder="Designation *" class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-brand">
+        
+        <div class="flex items-center gap-2 text-xs text-slate-700 mt-1">
+            <span>Attending GFF 2026? *</span>
+            <label class="flex items-center gap-1 font-semibold"><input type="radio" name="val-attending" value="Yes" checked> Yes</label>
+            <label class="flex items-center gap-1 font-semibold"><input type="radio" name="val-attending" value="No"> No</label>
+        </div>
+
+        <button onclick="submitChatValidation()" class="mt-2 bg-brand text-white py-2.5 rounded-lg text-xs font-bold hover:bg-blue-600 transition">Continue to Chat ➔</button>
+    </div>
+
+    <!-- Step 2: Active Chat Area -->
+    <div id="chat-main-area" class="hidden flex-1 flex flex-col h-full overflow-hidden relative">
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto flex flex-col gap-3 bg-slate-50 text-sm"></div>
+        
+        <!-- Autocomplete Dropdown for @ Session Tagging -->
+        <div id="chat-mention-dropdown" class="hidden absolute bottom-14 left-3 right-3 max-h-44 bg-white border border-slate-200 rounded-xl shadow-xl overflow-y-auto z-20 text-xs"></div>
+
+        <div class="p-3 bg-white border-t border-slate-200 flex gap-2 flex-shrink-0 relative">
+            <input type="text" id="chat-msg-input" placeholder="Type a message or use '@' to tag a session..." class="flex-1 bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-xs focus:outline-none" oninput="handleChatInput(event)" onkeypress="handleChatKeyPress(event)">
+            <button onclick="sendChatMessage()" class="bg-brand text-white px-4 py-2 rounded-lg text-xs font-bold">Send</button>
+        </div>
     </div>
 </div>
 

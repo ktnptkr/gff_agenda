@@ -619,3 +619,72 @@ document.addEventListener("DOMContentLoaded", () => {
         if(input) input.value = storedName;
     }
 });
+// --- Session Tagging / Mention Logic in Chat ---
+function handleChatInput(e) {
+    const val = e.target.value;
+    const cursor = e.target.selectionStart;
+    const textBeforeCursor = val.substring(0, cursor);
+    const lastAtIndex = textBeforeCursor.lastIndexOf('@');
+
+    const dropdown = document.getElementById('chat-mention-dropdown');
+
+    if (lastAtIndex !== -1 && (lastAtIndex === 0 || textBeforeCursor[lastAtIndex - 1] === ' ')) {
+        const query = textBeforeCursor.substring(lastAtIndex + 1).toLowerCase();
+        
+        // Filter sessions by query
+        const matches = AGENDA_DATA.filter(item => 
+            item["Activity Name"].toLowerCase().includes(query) || 
+            item.Time.toLowerCase().includes(query)
+        ).slice(0, 6); // Limit to top 6 matches
+
+        if (matches.length > 0) {
+            dropdown.innerHTML = matches.map(m => `
+                <div onclick="selectSessionTag('${m.id}', '${m["Activity Name"].replace(/'/g, "\\'")}')" class="p-2.5 hover:bg-slate-100 cursor-pointer border-b border-slate-100 last:border-b-0">
+                    <p class="font-bold text-navy truncate">🗓️ ${m["Activity Name"]}</p>
+                    <p class="text-[10px] text-slate-400">🕒 ${m.Time} • 📍 ${m["Location / Room"] || 'TBA'}</p>
+                </div>
+            `).join('');
+            dropdown.classList.remove('hidden');
+            return;
+        }
+    }
+    dropdown.classList.add('hidden');
+}
+
+function selectSessionTag(sessionId, sessionTitle) {
+    const input = document.getElementById('chat-msg-input');
+    const val = input.value;
+    const cursor = input.selectionStart;
+    const textBeforeCursor = val.substring(0, cursor);
+    const lastAtIndex = textBeforeCursor.lastIndexOf('@');
+
+    // Replace the '@query' with the formatted tag: [sessionId|Session Title]
+    const textAfterCursor = val.substring(cursor);
+    input.value = `${textBeforeCursor.substring(0, lastAtIndex)}@[${sessionTitle}](${sessionId}) ${textAfterCursor}`;
+    
+    document.getElementById('chat-mention-dropdown').classList.add('hidden');
+    input.focus();
+}
+
+// Override message rendering to parse session tags into clickable links
+function createMessageHTML(m) {
+    const profile = JSON.parse(localStorage.getItem('gff_user_profile')) || {};
+    const myDisplayName = `${profile.name} (${profile.desig}, ${profile.org})`;
+    const isMe = m.user_name === myDisplayName;
+
+    // Parse @[Title](ID) pattern into clickable UI components
+    let formattedMessage = escapeHTML(m.message);
+    const tagRegex = /@\[(.*?)\]\((.*?)\)/g;
+    formattedMessage = formattedMessage.replace(tagRegex, (match, title, id) => {
+        return `<span onclick="openDrawer('${id}')" class="inline-flex items-center gap-1 bg-brand/10 text-brand font-semibold px-2 py-0.5 rounded-md cursor-pointer hover:underline my-0.5">🗓️ ${title}</span>`;
+    });
+
+    return `
+        <div class="flex flex-col ${isMe ? 'items-end' : 'items-start'}">
+            <span class="text-[10px] font-bold text-slate-400 mb-0.5">${escapeHTML(m.user_name)}</span>
+            <div class="max-w-[85%] rounded-2xl px-3 py-2 text-xs ${isMe ? 'bg-brand text-white rounded-br-none' : 'bg-slate-200 text-slate-800 rounded-bl-none'}">
+                ${formattedMessage}
+            </div>
+        </div>
+    `;
+}
