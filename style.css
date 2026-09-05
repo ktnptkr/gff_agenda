@@ -1,12 +1,12 @@
-/* Custom Scrollbar Hiding */
+/* Custom Scrollbar Hiding for clean mobile view */
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* MBB-grade Glassmorphism */
-.glass {
+.glass-nav {
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .glass-drawer {
@@ -16,12 +16,13 @@
     border-top: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Logic for graying out past events */
+/* Time-aware Logic Styling */
 .past-event {
-    opacity: 0.5;
-    filter: grayscale(100%);
+    opacity: 0.55;
+    filter: grayscale(80%);
 }
 .past-event-badge {
-    background-color: #fee2e2; /* light red */
-    color: #b91c1c; /* dark red */
+    background-color: #fee2e2; 
+    color: #b91c1c; 
+    border: 1px solid #fecaca;
 }
