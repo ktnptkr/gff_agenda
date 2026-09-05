@@ -1,4 +1,5 @@
-let currentDate = "all";
+// Application State
+let currentDate = "all"; 
 let currentTrack = "all";
 let currentFormat = "all";
 let currentRoom = "all";
@@ -12,10 +13,6 @@ const CURRENT_TIME = new Date("2026-09-09T10:40:00+05:30");
 
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof AGENDA_DATA === 'undefined') return;
-    
-    // Check URL Hash for Deep Links (#session=ID or #saved=ID1,ID2)
-    handleUrlHash();
-
     initTabs();
     initDateButtons();
     updateDropdowns();
@@ -23,7 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     setupListeners();
     renderAgenda();
 
-    // Start background reminder checker
+    // Handle deep link hash AFTER agenda has initial render
+    setTimeout(handleUrlHash, 200);
+
+    // Background reminder checker
     setInterval(checkUpcomingReminders, 30000); 
 });
 
@@ -32,7 +32,14 @@ function handleUrlHash() {
     const hash = window.location.hash;
     if (hash.startsWith('#session=')) {
         const sessionId = hash.replace('#session=', '');
-        setTimeout(() => openDrawer(sessionId), 500);
+        const targetEvent = AGENDA_DATA.find(e => e.id === sessionId);
+        if (targetEvent) {
+            // If session is on a different date and current view is not 'all', switch date automatically
+            if (currentDate !== 'all' && currentDate !== targetEvent.Date) {
+                setDate(targetEvent.Date);
+            }
+            openDrawer(sessionId);
+        }
     } else if (hash.startsWith('#saved=')) {
         const ids = hash.replace('#saved=', '').split(',');
         savedSessionIds = [...new Set([...savedSessionIds, ...ids])];
@@ -41,6 +48,7 @@ function handleUrlHash() {
         document.getElementById('tab-all').className = "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition whitespace-nowrap";
         document.getElementById('tab-saved').className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
         showToast("Imported shared itinerary successfully!", "✅");
+        renderAgenda();
     }
 }
 
@@ -58,7 +66,7 @@ function initTabs() {
                 ? "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-red-300 transition whitespace-nowrap flex items-center gap-1.5"
                 : "px-4 py-1.5 rounded-md text-sm font-semibold text-white hover:text-slate-200 transition whitespace-nowrap";
         });
-        actionsBar.classList.add('hidden');
+        if(actionsBar) actionsBar.classList.add('hidden');
     };
 
     tabs.all.addEventListener('click', () => {
@@ -70,7 +78,7 @@ function initTabs() {
     tabs.saved.addEventListener('click', () => {
         viewMode = "saved"; resetTabs();
         tabs.saved.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
-        actionsBar.classList.remove('hidden');
+        if(actionsBar) actionsBar.classList.remove('hidden');
         updateDropdowns(); renderAgenda();
     });
 
@@ -80,22 +88,24 @@ function initTabs() {
         updateDropdowns(); renderAgenda();
     });
 
-    // Notification Button Permission Request
-    document.getElementById('enable-notif-btn').addEventListener('click', () => {
-        if (!("Notification" in window)) {
-            alert("This browser does not support desktop notifications.");
-            return;
-        }
-        Notification.requestPermission().then(permission => {
-            if (permission === "granted") {
-                showToast("Reminders enabled successfully!", "🔔");
-                document.getElementById('enable-notif-btn').innerText = "🔔 Reminders Active";
-                document.getElementById('enable-notif-btn').disabled = true;
-            } else {
-                showToast("Notification permission denied.", "⚠️");
+    const notifBtn = document.getElementById('enable-notif-btn');
+    if(notifBtn) {
+        notifBtn.addEventListener('click', () => {
+            if (!("Notification" in window)) {
+                alert("This browser does not support desktop notifications.");
+                return;
             }
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    showToast("Reminders enabled successfully!", "🔔");
+                    notifBtn.innerText = "🔔 Reminders Active";
+                    notifBtn.disabled = true;
+                } else {
+                    showToast("Notification permission denied.", "⚠️");
+                }
+            });
         });
-    });
+    }
 }
 
 function initDateButtons() {
@@ -157,6 +167,7 @@ function updateDropdowns() {
 
 function populateSelect(id, options, currentValue, defaultLabel) {
     const el = document.getElementById(id);
+    if(!el) return;
     el.innerHTML = `<option value="all">${defaultLabel} ▾</option>` + options.map(o => `<option value="${o}">${o}</option>`).join('');
     if (options.includes(currentValue)) {
         el.value = currentValue;
@@ -171,12 +182,13 @@ function populateSelect(id, options, currentValue, defaultLabel) {
 }
 
 function setupListeners() {
-    document.getElementById('room-filter').addEventListener('change', e => { currentRoom = e.target.value; renderAgenda(); });
-    document.getElementById('track-filter').addEventListener('change', e => { currentTrack = e.target.value; renderAgenda(); });
-    document.getElementById('format-filter').addEventListener('change', e => { currentFormat = e.target.value; renderAgenda(); });
-    document.getElementById('speaker-filter').addEventListener('change', e => { currentSpeaker = e.target.value; renderAgenda(); });
-    document.getElementById('company-filter').addEventListener('change', e => { currentCompany = e.target.value; renderAgenda(); });
-    document.getElementById('search-input').addEventListener('input', e => { searchQuery = e.target.value.toLowerCase(); renderAgenda(); });
+    const addEvt = (id, evt, fn) => { const el = document.getElementById(id); if(el) el.addEventListener(evt, fn); };
+    addEvt('room-filter', 'change', e => { currentRoom = e.target.value; renderAgenda(); });
+    addEvt('track-filter', 'change', e => { currentTrack = e.target.value; renderAgenda(); });
+    addEvt('format-filter', 'change', e => { currentFormat = e.target.value; renderAgenda(); });
+    addEvt('speaker-filter', 'change', e => { currentSpeaker = e.target.value; renderAgenda(); });
+    addEvt('company-filter', 'change', e => { currentCompany = e.target.value; renderAgenda(); });
+    addEvt('search-input', 'input', e => { searchQuery = e.target.value.toLowerCase(); renderAgenda(); });
 }
 
 function parseTimes(dateStr, timeStr) {
@@ -204,6 +216,7 @@ function checkLiveStatus(dateStr, timeStr) {
 
 function renderAgenda() {
     const feed = document.getElementById('event-feed');
+    if(!feed) return;
     
     let filtered = AGENDA_DATA.filter(e => {
         if (viewMode === "saved" && !savedSessionIds.includes(e.id)) return false;
@@ -271,9 +284,17 @@ function renderAgenda() {
                         ${status.isPast ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 border border-slate-200 rounded-md uppercase tracking-wide">Completed</span>' : ''}
                         <span class="text-xs font-semibold px-2 py-0.5 bg-slate-50 text-slate-600 border border-slate-100 rounded-md truncate max-w-[120px]">${event.Format || 'Session'}</span>
                     </div>
-                    <button onclick="toggleSave('${event.id}', event)" class="p-1.5 rounded-full transition flex-shrink-0 ${isSaved ? 'text-brand bg-brand/10' : 'text-slate-400 hover:bg-slate-100'}" aria-label="Save">
-                        <svg width="20" height="20" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
-                    </button>
+                    
+                    <div class="flex items-center gap-1 flex-shrink-0">
+                        <!-- Share Session Icon -->
+                        <button onclick="shareSession('${event.id}', event)" class="p-1.5 rounded-full text-slate-400 hover:text-brand hover:bg-slate-100 transition" aria-label="Share session">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        </button>
+                        <!-- Save Session Icon -->
+                        <button onclick="toggleSave('${event.id}', event)" class="p-1.5 rounded-full transition ${isSaved ? 'text-brand bg-brand/10' : 'text-slate-400 hover:bg-slate-100'}" aria-label="Save">
+                            <svg width="20" height="20" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                        </button>
+                    </div>
                 </div>
                 
                 <h3 class="text-base font-bold text-navy leading-snug mb-3 cursor-pointer" onclick="openDrawer('${event.id}')">${event["Activity Name"]}</h3>
@@ -291,21 +312,14 @@ function renderAgenda() {
     feed.innerHTML = html;
 }
 
-// 5. Calendar Exports & Itinerary Sharing
+// Calendar Exports & Sharing
 function exportCalendar(type) {
     const savedEvents = AGENDA_DATA.filter(e => savedSessionIds.includes(e.id));
     if (savedEvents.length === 0) {
         showToast("No saved sessions in My Agenda to export.", "⚠️");
         return;
     }
-
-    if (type === 'google') {
-        // Export first or batch? Google Cal supports single URL templates. We'll export a ICS file download for batch, and primary link for first. Or generate ICS for both.
-        // Actually .ics handles all calendars (Google, Apple, Outlook) seamlessly.
-        exportICSFile(savedEvents);
-    } else if (type === 'ics') {
-        exportICSFile(savedEvents);
-    }
+    exportICSFile(savedEvents);
 }
 
 function exportICSFile(events) {
@@ -349,14 +363,15 @@ function shareItinerary() {
     });
 }
 
-function shareSession(id) {
+function shareSession(id, eventObj) {
+    if(eventObj) eventObj.stopPropagation();
     const shareUrl = `${window.location.origin}${window.location.pathname}#session=${id}`;
     navigator.clipboard.writeText(shareUrl).then(() => {
         showToast("Session link copied to clipboard!", "🔗");
     });
 }
 
-// 6. Background Reminder Checker (10 mins prior)
+// Background Reminder Checker
 function checkUpcomingReminders() {
     if (Notification.permission !== "granted") return;
     const now = new Date().getTime();
@@ -368,7 +383,6 @@ function checkUpcomingReminders() {
         const startTime = start.getTime();
         const diffMinutes = (startTime - now) / (1000 * 60);
 
-        // If session starts in roughly 10 minutes (between 9 and 11 minutes away) and hasn't been notified yet
         if (diffMinutes >= 9 && diffMinutes <= 11) {
             const notifiedKey = `notified_${id}`;
             if (!localStorage.getItem(notifiedKey)) {
@@ -382,7 +396,7 @@ function checkUpcomingReminders() {
     });
 }
 
-// 7. Save & Conflict Logic
+// Save & Conflict Logic
 function toggleSave(id, eventObj) {
     if(eventObj) eventObj.stopPropagation();
     const eventData = AGENDA_DATA.find(e => e.id === id);
@@ -420,7 +434,7 @@ function showToast(msg, icon) {
     setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 3000);
 }
 
-// 8. Drawer Logic
+// Drawer Logic
 const drawerOverlay = document.getElementById('drawer-overlay');
 const drawer = document.getElementById('drawer');
 const drawerContent = document.getElementById('drawer-content');
