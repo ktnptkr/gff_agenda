@@ -738,19 +738,16 @@ function openDrawer(id) {
         ${event["Company Name"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Companies</h3><p class="text-sm text-slate-600 leading-relaxed">${event["Company Name"]}</p></div>` : ''}
         ${event.Tracks ? `<div class="pt-4 border-t border-slate-200/50 flex flex-wrap gap-2 mb-6">${event.Tracks.split(',').map(t => `<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] uppercase tracking-wider font-bold rounded-md shadow-sm">${t.trim()}</span>`).join('')}</div>` : ''}
 
-        <!-- Understand More CTA Section -->
-        <div class="pt-4 border-t border-slate-200">
+        <!-- Understand More CTA Section (2 Columns for Google & ChatGPT) -->
+        <div class="pt-4 border-t border-slate-200 pb-2">
             <button onclick="toggleResearchMenu()" class="w-full bg-brand hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow-md">
                 🔍 Understand More & Research Topic ▾
             </button>
-            <div id="research-options" class="hidden mt-3 grid grid-cols-3 gap-2">
-                <button onclick="openSearchEngine('google', '${topicQuery}')" class="bg-slate-100 hover:bg-slate-200 text-slate-800 py-2 px-2 rounded-lg text-xs font-semibold text-center transition flex flex-col items-center gap-1">
+            <div id="research-options" class="hidden mt-3 grid grid-cols-2 gap-2">
+                <button onclick="openSearchEngine('google', '${topicQuery}')" class="bg-slate-100 hover:bg-slate-200 text-slate-800 py-2.5 px-2 rounded-lg text-xs font-semibold text-center transition flex items-center justify-center gap-1.5">
                     🌐 <span>Google</span>
                 </button>
-                <button onclick="openSearchEngine('gemini', '${topicQuery}')" class="bg-slate-100 hover:bg-slate-200 text-slate-800 py-2 px-2 rounded-lg text-xs font-semibold text-center transition flex flex-col items-center gap-1">
-                    ✨ <span>Gemini</span>
-                </button>
-                <button onclick="openSearchEngine('chatgpt', '${topicQuery}')" class="bg-slate-100 hover:bg-slate-200 text-slate-800 py-2 px-2 rounded-lg text-xs font-semibold text-center transition flex flex-col items-center gap-1">
+                <button onclick="openSearchEngine('chatgpt', '${topicQuery}')" class="bg-slate-100 hover:bg-slate-200 text-slate-800 py-2.5 px-2 rounded-lg text-xs font-semibold text-center transition flex items-center justify-center gap-1.5">
                     🤖 <span>ChatGPT</span>
                 </button>
             </div>
@@ -766,6 +763,18 @@ function openDrawer(id) {
 
 function toggleResearchMenu() {
     const menu = document.getElementById('research-options');
+    if(menu) {
+        menu.classList.toggle('hidden');
+        // Automatically scroll drawer down smoothly so options are fully in view
+        if (!menu.classList.contains('hidden')) {
+            const drawerBody = document.getElementById('drawer-content');
+            if (drawerBody) {
+                drawerBody.scrollTo({ top: drawerBody.scrollHeight, behavior: 'smooth' });
+            }
+        }
+    }
+}
+    const menu = document.getElementById('research-options');
     if(menu) menu.classList.toggle('hidden');
 }
 
@@ -779,16 +788,12 @@ function openSearchEngine(platform, encodedQuery) {
     if (platform === 'google') {
         webUrl = `https://www.google.com/search?q=${encodedQuery}`;
         appScheme = `google://search?q=${encodedQuery}`;
-    } else if (platform === 'gemini') {
-        // Updated to use Google's standard query parameter structure
-        webUrl = `https://gemini.google.com/?q=${encodedQuery}`;
-        appScheme = `gemini://`;
     } else if (platform === 'chatgpt') {
         webUrl = `https://chatgpt.com/?q=${encodedQuery}`;
         appScheme = `chatgpt://`;
     }
 
-    // Automatically copy topic to clipboard as an extra safety measure
+    // Automatically copy topic to clipboard as a backup for AI chat windows
     navigator.clipboard.writeText(query).then(() => {
         showToast(`Topic copied! Ready for ${platform.charAt(0).toUpperCase() + platform.slice(1)}`, "📋");
     }).catch(() => {
