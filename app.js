@@ -769,28 +769,36 @@ function toggleResearchMenu() {
     if(menu) menu.classList.toggle('hidden');
 }
 
-function openSearchEngine(platform, query) {
+function openSearchEngine(platform, encodedQuery) {
+    const query = decodeURIComponent(encodedQuery);
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
     let webUrl = '';
     let appScheme = '';
 
     if (platform === 'google') {
-        webUrl = `https://www.google.com/search?q=${query}`;
-        appScheme = `google://search?q=${query}`;
+        webUrl = `https://www.google.com/search?q=${encodedQuery}`;
+        appScheme = `google://search?q=${encodedQuery}`;
     } else if (platform === 'gemini') {
-        webUrl = `https://gemini.google.com/app?q=${query}`;
+        webUrl = `https://gemini.google.com/app`;
         appScheme = `gemini://`;
     } else if (platform === 'chatgpt') {
-        webUrl = `https://chatgpt.com/?q=${query}`;
+        webUrl = `https://chatgpt.com/`;
         appScheme = `chatgpt://`;
     }
 
+    // Automatically copy topic to clipboard for instant pasting
+    navigator.clipboard.writeText(query).then(() => {
+        showToast(`Topic copied! Paste into ${platform.charAt(0).toUpperCase() + platform.slice(1)}`, "📋");
+    }).catch(() => {
+        console.log("Clipboard copy failed");
+    });
+
     if (isMobile) {
-        // Try opening native app, fallback to web browser if app isn't installed
         window.location.href = appScheme;
         setTimeout(() => {
             window.open(webUrl, '_blank');
-        }, 500);
+        }, 600);
     } else {
         window.open(webUrl, '_blank');
     }
