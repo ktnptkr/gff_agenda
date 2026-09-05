@@ -11,6 +11,13 @@ let savedSessionIds = JSON.parse(localStorage.getItem('gff_saved_sessions')) || 
 
 const CURRENT_TIME = new Date("2026-09-09T10:40:00+05:30"); 
 
+// Supabase Configuration
+const SUPABASE_URL = 'https://prsqblepuzjlucnqqvsd.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_5UrWBbB3NAzcmkM1olFlSA_1n139nf8';
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+let isChatOpen = false;
+
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof AGENDA_DATA === 'undefined') return;
     initTabs();
@@ -282,11 +289,9 @@ function renderAgenda() {
                     </div>
                     
                     <div class="flex items-center gap-1 flex-shrink-0">
-                        <!-- Share Session Icon -->
                         <button onclick="shareSession('${event.id}', event)" class="p-1.5 rounded-full text-slate-400 hover:text-brand hover:bg-slate-100 transition" aria-label="Share session">
                             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
                         </button>
-                        <!-- Save Session Icon -->
                         <button onclick="toggleSave('${event.id}', event)" class="p-1.5 rounded-full transition ${isSaved ? 'text-brand bg-brand/10' : 'text-slate-400 hover:bg-slate-100'}" aria-label="Save">
                             <svg width="20" height="20" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
                         </button>
@@ -390,7 +395,6 @@ function shareSession(id, eventObj) {
     }
 }
 
-// Background Reminder Checker
 function checkUpcomingReminders() {
     if (Notification.permission !== "granted") return;
     const now = new Date().getTime();
@@ -415,7 +419,6 @@ function checkUpcomingReminders() {
     });
 }
 
-// Save & Conflict Logic
 function toggleSave(id, eventObj) {
     if(eventObj) eventObj.stopPropagation();
     const eventData = AGENDA_DATA.find(e => e.id === id);
@@ -453,7 +456,6 @@ function showToast(msg, icon) {
     setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 3000);
 }
 
-// Drawer Logic
 const drawerOverlay = document.getElementById('drawer-overlay');
 const drawer = document.getElementById('drawer');
 const drawerContent = document.getElementById('drawer-content');
@@ -515,11 +517,7 @@ function closeDrawer() {
     setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
 }
 
-// Supabase Chat Integration
-const SUPABASE_URL = 'https://prsqblepuzjlucnqqvsd.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_5UrWBbB3NAzcmkM1olFlSA_1n139nf8';
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
+// Chat Validation & Networking Logic
 let isChatOpen = false;
 
 function toggleChatDrawer() {
@@ -527,11 +525,53 @@ function toggleChatDrawer() {
     const drawer = document.getElementById('chat-drawer');
     if (isChatOpen) {
         drawer.classList.remove('translate-y-full');
-        fetchChatHistory();
-        subscribeToRealtimeChat();
+        checkChatValidationState();
     } else {
         drawer.classList.add('translate-y-full');
     }
+}
+
+function checkChatValidationState() {
+    const savedProfile = localStorage.getItem('gff_user_profile');
+    const gate = document.getElementById('chat-gate');
+    const mainArea = document.getElementById('chat-main-area');
+
+    if (savedProfile) {
+        gate.classList.add('hidden');
+        mainArea.classList.remove('hidden');
+        fetchChatHistory();
+        subscribeToRealtimeChat();
+    } else {
+        gate.classList.remove('hidden');
+        mainArea.classList.add('hidden');
+    }
+}
+
+function submitChatValidation() {
+    const name = document.getElementById('val-name').value.trim();
+    const org = document.getElementById('val-org').value.trim();
+    const email = document.getElementById('val-email').value.trim();
+    const mobile = document.getElementById('val-mobile').value.trim();
+    const desig = document.getElementById('val-desig').value.trim();
+    const attendingRadio = document.querySelector('input[name="val-attending"]:checked');
+    const attending = attendingRadio ? attendingRadio.value : 'Yes';
+
+    if (!name || !org || !email || !desig) {
+        showToast("Please fill in all mandatory fields (*)", "⚠️");
+        return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showToast("Please enter a valid work email address", "⚠️");
+        return;
+    }
+
+    const profile = { name, org, email, mobile, desig, attending };
+    localStorage.setItem('gff_user_profile', JSON.stringify(profile));
+    
+    showToast("Profile verified successfully!", "✅");
+    checkChatValidationState();
 }
 
 async function fetchChatHistory() {
@@ -556,29 +596,35 @@ function subscribeToRealtimeChat() {
 }
 
 async function sendChatMessage() {
-    const nameInput = document.getElementById('chat-name-input');
     const msgInput = document.getElementById('chat-msg-input');
-    
-    const name = nameInput.value.trim() || 'Anonymous Attendee';
     const message = msgInput.value.trim();
-
     if (!message) return;
 
-    localStorage.setItem('gff_chat_name', name);
+    const profile = JSON.parse(localStorage.getItem('gff_user_profile'));
+    if (!profile) {
+        toggleChatDrawer();
+        return;
+    }
+
+    const displayName = `${profile.name} (${profile.desig}, ${profile.org})`;
 
     const { error } = await supabaseClient
         .from('gff_chat')
-        .insert([{ user_name: name, message: message }]);
+        .insert([{ user_name: displayName, message: message }]);
 
     if (!error) {
         msgInput.value = '';
+        document.getElementById('chat-mention-dropdown').classList.add('hidden');
     } else {
         showToast("Failed to send message", "⚠️");
     }
 }
 
 function handleChatKeyPress(e) {
-    if (e.key === 'Enter') sendChatMessage();
+    if (e.key === 'Enter') {
+        document.getElementById('chat-mention-dropdown').classList.add('hidden');
+        sendChatMessage();
+    }
 }
 
 function renderMessages(messages) {
@@ -593,33 +639,7 @@ function appendMessageToDOM(m) {
     container.scrollTop = container.scrollHeight;
 }
 
-function createMessageHTML(m) {
-    const savedName = localStorage.getItem('gff_chat_name');
-    const isMe = m.user_name === savedName;
-    return `
-        <div class="flex flex-col ${isMe ? 'items-end' : 'items-start'}">
-            <span class="text-[10px] font-bold text-slate-400 mb-0.5">${escapeHTML(m.user_name)}</span>
-            <div class="max-w-[80%] rounded-2xl px-3 py-2 text-xs ${isMe ? 'bg-brand text-white rounded-br-none' : 'bg-slate-200 text-slate-800 rounded-bl-none'}">
-                ${escapeHTML(m.message)}
-            </div>
-        </div>
-    `;
-}
-
-function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, 
-        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-    );
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const storedName = localStorage.getItem('gff_chat_name');
-    if (storedName) {
-        const input = document.getElementById('chat-name-input');
-        if(input) input.value = storedName;
-    }
-});
-// --- Session Tagging / Mention Logic in Chat ---
+// Session Tagging / Mention Logic in Chat
 function handleChatInput(e) {
     const val = e.target.value;
     const cursor = e.target.selectionStart;
@@ -631,11 +651,10 @@ function handleChatInput(e) {
     if (lastAtIndex !== -1 && (lastAtIndex === 0 || textBeforeCursor[lastAtIndex - 1] === ' ')) {
         const query = textBeforeCursor.substring(lastAtIndex + 1).toLowerCase();
         
-        // Filter sessions by query
         const matches = AGENDA_DATA.filter(item => 
             item["Activity Name"].toLowerCase().includes(query) || 
             item.Time.toLowerCase().includes(query)
-        ).slice(0, 6); // Limit to top 6 matches
+        ).slice(0, 6);
 
         if (matches.length > 0) {
             dropdown.innerHTML = matches.map(m => `
@@ -658,7 +677,6 @@ function selectSessionTag(sessionId, sessionTitle) {
     const textBeforeCursor = val.substring(0, cursor);
     const lastAtIndex = textBeforeCursor.lastIndexOf('@');
 
-    // Replace the '@query' with the formatted tag: [sessionId|Session Title]
     const textAfterCursor = val.substring(cursor);
     input.value = `${textBeforeCursor.substring(0, lastAtIndex)}@[${sessionTitle}](${sessionId}) ${textAfterCursor}`;
     
@@ -666,13 +684,11 @@ function selectSessionTag(sessionId, sessionTitle) {
     input.focus();
 }
 
-// Override message rendering to parse session tags into clickable links
 function createMessageHTML(m) {
     const profile = JSON.parse(localStorage.getItem('gff_user_profile')) || {};
     const myDisplayName = `${profile.name} (${profile.desig}, ${profile.org})`;
     const isMe = m.user_name === myDisplayName;
 
-    // Parse @[Title](ID) pattern into clickable UI components
     let formattedMessage = escapeHTML(m.message);
     const tagRegex = /@\[(.*?)\]\((.*?)\)/g;
     formattedMessage = formattedMessage.replace(tagRegex, (match, title, id) => {
@@ -687,4 +703,8 @@ function createMessageHTML(m) {
             </div>
         </div>
     `;
+}
+
+function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
 }
