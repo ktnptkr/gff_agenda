@@ -1,5 +1,4 @@
-// Application State
-let currentDate = "all"; 
+let currentDate = "all";
 let currentTrack = "all";
 let currentFormat = "all";
 let currentRoom = "all";
@@ -11,8 +10,17 @@ let savedSessionIds = JSON.parse(localStorage.getItem('gff_saved_sessions')) || 
 
 const CURRENT_TIME = new Date("2026-09-09T10:40:00+05:30"); 
 
+// Mock Real-Time Announcements (Simulating conference control center updates)
+const LIVE_ANNOUNCEMENTS = [
+    { text: "Hall 102 capacity is currently at 95%. Consider heading to overflow seating in Hall 103.", time: "10:35 AM" },
+    { text: "Room change: Keynote on Quantum AI has been moved from Jasmine 2 to The Grand Theatre.", time: "10:15 AM" }
+];
+
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof AGENDA_DATA === 'undefined') return;
+    
+    checkAnnouncements();
+    handleUrlHash();
     initTabs();
     initDateButtons();
     updateDropdowns();
@@ -20,12 +28,41 @@ document.addEventListener("DOMContentLoaded", () => {
     setupListeners();
     renderAgenda();
 
-    // Handle deep link hash AFTER agenda has initial render
-    setTimeout(handleUrlHash, 200);
-
-    // Background reminder checker
     setInterval(checkUpcomingReminders, 30000); 
 });
+
+function checkAnnouncements() {
+    const banner = document.getElementById('live-announcement-banner');
+    const textEl = document.getElementById('announcement-text');
+    if (LIVE_ANNOUNCEMENTS.length > 0 && !localStorage.getItem('dismissed_announcement')) {
+        textEl.innerText = LIVE_ANNOUNCEMENTS[0].text;
+        banner.classList.remove('hidden');
+    }
+}
+
+function dismissAnnouncement() {
+    document.getElementById('live-announcement-banner').classList.add('hidden');
+    localStorage.setItem('dismissed_announcement', 'true');
+}
+
+// Simulated Room Capacity Algorithm (Deterministic based on ID string length)
+function getRoomCapacity(eventId, hallName) {
+    let hash = 0;
+    for (let i = 0; i < eventId.length; i++) hash += eventId.charCodeAt(i);
+    const percentage = (hash % 65) + 30; // Generates occupancy between 30% and 95%
+    
+    let statusText = "Open Seating";
+    let badgeColor = "bg-emerald-100 text-emerald-700 border-emerald-200";
+    
+    if (percentage > 85) {
+        statusText = "Nearly Full 🔴";
+        badgeColor = "bg-red-100 text-red-700 border-red-200";
+    } else if (percentage > 65) {
+        statusText = "Filling Fast 🟡";
+        badgeColor = "bg-amber-100 text-amber-700 border-amber-200";
+    }
+    return { percentage, statusText, badgeColor };
+}
 
 // Deep Linking Handler
 function handleUrlHash() {
@@ -34,7 +71,6 @@ function handleUrlHash() {
         const sessionId = hash.replace('#session=', '');
         const targetEvent = AGENDA_DATA.find(e => e.id === sessionId);
         if (targetEvent) {
-            // If session is on a different date and current view is not 'all', switch date automatically
             if (currentDate !== 'all' && currentDate !== targetEvent.Date) {
                 setDate(targetEvent.Date);
             }
@@ -91,18 +127,13 @@ function initTabs() {
     const notifBtn = document.getElementById('enable-notif-btn');
     if(notifBtn) {
         notifBtn.addEventListener('click', () => {
-            if (!("Notification" in window)) {
-                alert("This browser does not support desktop notifications.");
-                return;
-            }
+            if (!("Notification" in window)) { alert("Notifications not supported."); return; }
             Notification.requestPermission().then(permission => {
                 if (permission === "granted") {
-                    showToast("Reminders enabled successfully!", "🔔");
+                    showToast("Reminders active!", "🔔");
                     notifBtn.innerText = "🔔 Reminders Active";
                     notifBtn.disabled = true;
-                } else {
-                    showToast("Notification permission denied.", "⚠️");
-                }
+                } else { showToast("Permission denied.", "⚠️"); }
             });
         });
     }
@@ -271,6 +302,7 @@ function renderAgenda() {
         grouped[timeKey].forEach(event => {
             const status = checkLiveStatus(event.Date, event.Time);
             const isSaved = savedSessionIds.includes(event.id);
+            const capacity = getRoomCapacity(event.id, event["Location / Room"]);
             
             let speakers = event["Speaker / Participant / Moderator"] ? event["Speaker / Participant / Moderator"].replace(/\n/g, ', ') : "";
             if(speakers.length > 50) speakers = speakers.substring(0, 50) + '...';
@@ -283,14 +315,13 @@ function renderAgenda() {
                         ${status.isImminent && !status.isLive ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-orange-100 text-orange-600 rounded-md uppercase tracking-wide">Starting Soon</span>' : ''}
                         ${status.isPast ? '<span class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-500 border border-slate-200 rounded-md uppercase tracking-wide">Completed</span>' : ''}
                         <span class="text-xs font-semibold px-2 py-0.5 bg-slate-50 text-slate-600 border border-slate-100 rounded-md truncate max-w-[120px]">${event.Format || 'Session'}</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 border ${capacity.badgeColor} rounded-md">${capacity.statusText}</span>
                     </div>
                     
                     <div class="flex items-center gap-1 flex-shrink-0">
-                        <!-- Share Session Icon -->
                         <button onclick="shareSession('${event.id}', event)" class="p-1.5 rounded-full text-slate-400 hover:text-brand hover:bg-slate-100 transition" aria-label="Share session">
                             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
                         </button>
-                        <!-- Save Session Icon -->
                         <button onclick="toggleSave('${event.id}', event)" class="p-1.5 rounded-full transition ${isSaved ? 'text-brand bg-brand/10' : 'text-slate-400 hover:bg-slate-100'}" aria-label="Save">
                             <svg width="20" height="20" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
                         </button>
@@ -299,10 +330,10 @@ function renderAgenda() {
                 
                 <h3 class="text-base font-bold text-navy leading-snug mb-3 cursor-pointer" onclick="openDrawer('${event.id}')">${event["Activity Name"]}</h3>
                 
-                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium cursor-pointer" onclick="openDrawer('${event.id}')">
-                    <span class="flex items-center gap-1">🕒 ${event.Time}</span>
-                    <span class="flex items-center gap-1 text-brand hover:underline">📍 ${event["Location / Room"] || 'TBA'}</span>
-                    ${speakers ? `<span class="flex items-center gap-1">👤 ${speakers}</span>` : ''}
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium">
+                    <span class="cursor-pointer" onclick="openDrawer('${event.id}')">🕒 ${event.Time}</span>
+                    <span class="text-brand hover:underline cursor-pointer font-semibold flex items-center gap-1" onclick="openVenueMap('${event["Location / Room"] || 'Main Hall'}')">📍 ${event["Location / Room"] || 'TBA'} (View Map)</span>
+                    ${speakers ? `<span class="cursor-pointer" onclick="openDrawer('${event.id}')">👤 ${speakers}</span>` : ''}
                 </div>
             </div>`;
         });
@@ -312,68 +343,59 @@ function renderAgenda() {
     feed.innerHTML = html;
 }
 
-// Calendar Exports & Sharing
-// 5. Native Mobile Sharing & Exports
-function exportCalendar(type) {
-    const savedEvents = AGENDA_DATA.filter(e => savedSessionIds.includes(e.id));
-    if (savedEvents.length === 0) {
-        showToast("No saved sessions in My Agenda to export.", "⚠️");
-        return;
-    }
-    exportICSFile(savedEvents);
+// Interactive Venue Navigation Map
+function openVenueMap(roomName) {
+    const mapModal = document.getElementById('map-modal');
+    const mapOverlay = document.getElementById('map-overlay');
+    const mapContent = document.getElementById('map-content');
+
+    mapContent.innerHTML = `
+        <div class="mb-4">
+            <h3 class="text-lg font-bold text-navy">${roomName}</h3>
+            <p class="text-xs text-slate-500">Jio World Convention Centre, Mumbai (Level 2)</p>
+        </div>
+        <div class="bg-slate-100 rounded-2xl p-4 border border-slate-200 relative overflow-hidden flex flex-col items-center justify-center min-h-[220px]">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#2563eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="relative z-10 text-center">
+                <span class="text-4xl mb-2 block">🗺️</span>
+                <p class="text-sm font-bold text-navy">Interactive Floor Plan</p>
+                <p class="text-xs text-slate-600 mt-1">Walking path from Entrance: <b class="text-brand">Take Main Escalator -> Left Corridor -> ${roomName}</b></p>
+            </div>
+        </div>
+        <div class="mt-4 flex justify-center gap-2">
+            <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full">🛗 Near Elevator</span>
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">🚻 Restrooms Nearby</span>
+        </div>
+    `;
+
+    mapOverlay.classList.remove('hidden');
+    setTimeout(() => {
+        mapOverlay.classList.remove('opacity-0');
+        mapModal.classList.remove('translate-y-full');
+    }, 10);
 }
 
-function exportICSFile(events) {
-    let icsContent = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//GFF 2026 Agenda//EN\n";
-    
-    events.forEach(e => {
-        const { start, end } = parseTimes(e.Date, e.Time);
-        const formatDate = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-        
-        icsContent += "BEGIN:VEVENT\n";
-        icsContent += `UID:gff2026-${e.id}@globalfintechfest.com\n`;
-        icsContent += `DTSTAMP:${formatDate(new Date())}\n`;
-        icsContent += `DTSTART:${formatDate(start)}\n`;
-        icsContent += `DTEND:${formatDate(end)}\n`;
-        icsContent += `SUMMARY:${e["Activity Name"]}\n`;
-        icsContent += `LOCATION:${e["Location / Room"] || 'Mumbai'}\n`;
-        icsContent += `DESCRIPTION:${e.Description ? e.Description.replace(/\n/g, '\\n') : ''}\n`;
-        icsContent += "END:VEVENT\n";
-    });
-    
-    icsContent += "END:VCALENDAR";
-
-    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-    const link = document.createElement('a');
-    link.href = window.URL.createObjectURL(blob);
-    link.setAttribute('download', 'GFF_2026_My_Agenda.ics');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    showToast("Calendar file downloaded!", "📥");
+function closeMapModal() {
+    const mapModal = document.getElementById('map-modal');
+    const mapOverlay = document.getElementById('map-overlay');
+    mapOverlay.classList.add('opacity-0');
+    mapModal.classList.add('translate-y-full');
+    setTimeout(() => mapOverlay.classList.add('hidden'), 300);
 }
 
+document.getElementById('map-overlay').addEventListener('click', closeMapModal);
+
+// Native Sharing
 function shareItinerary() {
     if (savedSessionIds.length === 0) {
         showToast("No saved sessions to share.", "⚠️");
         return;
     }
     const shareUrl = `${window.location.origin}${window.location.pathname}#saved=${savedSessionIds.join(',')}`;
-    
-    // Trigger Native Phone Share Sheet (WhatsApp, Telegram, SMS, etc.)
     if (navigator.share) {
-        navigator.share({
-            title: 'My GFF 2026 Itinerary',
-            text: 'Check out my customized schedule for Global Fintech Fest 2026:',
-            url: shareUrl,
-        }).catch((error) => {
-            console.log('Share canceled or failed:', error);
-        });
+        navigator.share({ title: 'My GFF 2026 Itinerary', url: shareUrl }).catch(() => {});
     } else {
-        // Fallback for desktop/unsupported browsers
-        navigator.clipboard.writeText(shareUrl).then(() => {
-            showToast("Itinerary link copied to clipboard!", "🔗");
-        });
+        navigator.clipboard.writeText(shareUrl).then(() => showToast("Link copied!", "🔗"));
     }
 }
 
@@ -381,41 +403,30 @@ function shareSession(id, eventObj) {
     if(eventObj) eventObj.stopPropagation();
     const event = AGENDA_DATA.find(e => e.id === id);
     const shareUrl = `${window.location.origin}${window.location.pathname}#session=${id}`;
-    
-    // Trigger Native Phone Share Sheet
     if (navigator.share) {
         navigator.share({
             title: event ? event["Activity Name"] : 'GFF 2026 Session',
-            text: `Check out this session at GFF 2026: "${event ? event["Activity Name"] : ''}" (${event?.Time || ''} at ${event?.["Location / Room"] || ''})`,
+            text: `Check out: "${event?.["Activity Name"]}" at ${event?.["Location / Room"] || ''}`,
             url: shareUrl,
-        }).catch((error) => {
-            console.log('Share canceled or failed:', error);
-        });
+        }).catch(() => {});
     } else {
-        // Fallback for desktop/unsupported browsers
-        navigator.clipboard.writeText(shareUrl).then(() => {
-            showToast("Session link copied to clipboard!", "🔗");
-        });
+        navigator.clipboard.writeText(shareUrl).then(() => showToast("Session link copied!", "🔗"));
     }
 }
-// Background Reminder Checker
+
 function checkUpcomingReminders() {
     if (Notification.permission !== "granted") return;
     const now = new Date().getTime();
-
     savedSessionIds.forEach(id => {
         const event = AGENDA_DATA.find(e => e.id === id);
         if (!event) return;
         const { start } = parseTimes(event.Date, event.Time);
-        const startTime = start.getTime();
-        const diffMinutes = (startTime - now) / (1000 * 60);
-
+        const diffMinutes = (start.getTime() - now) / (1000 * 60);
         if (diffMinutes >= 9 && diffMinutes <= 11) {
             const notifiedKey = `notified_${id}`;
             if (!localStorage.getItem(notifiedKey)) {
                 new Notification(`Starting Soon: ${event["Activity Name"]}`, {
                     body: `At ${event["Location / Room"] || 'Main Stage'} in 10 minutes!`,
-                    icon: 'https://www.globalfintechfest.com/favicon.ico'
                 });
                 localStorage.setItem(notifiedKey, 'true');
             }
@@ -423,7 +434,6 @@ function checkUpcomingReminders() {
     });
 }
 
-// Save & Conflict Logic
 function toggleSave(id, eventObj) {
     if(eventObj) eventObj.stopPropagation();
     const eventData = AGENDA_DATA.find(e => e.id === id);
@@ -461,7 +471,6 @@ function showToast(msg, icon) {
     setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 3000);
 }
 
-// Drawer Logic
 const drawerOverlay = document.getElementById('drawer-overlay');
 const drawer = document.getElementById('drawer');
 const drawerContent = document.getElementById('drawer-content');
@@ -483,7 +492,7 @@ function openDrawer(id) {
         <div class="flex flex-wrap items-center gap-4 text-sm text-slate-600 mb-6 font-medium bg-slate-50 p-3 rounded-lg border border-slate-100">
             <span class="flex items-center gap-1.5">📅 ${new Date(event.Date).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})}</span>
             <span class="flex items-center gap-1.5">🕒 ${event.Time}</span>
-            <span class="flex items-center gap-1.5 text-brand">📍 ${event["Location / Room"] || 'TBA'}</span>
+            <span class="flex items-center gap-1.5 text-brand cursor-pointer hover:underline" onclick="openVenueMap('${event["Location / Room"] || 'Main Hall'}')">📍 ${event["Location / Room"] || 'TBA'} <span class="text-[10px] underline ml-1">View Map →</span></span>
         </div>
         
         ${event.Description ? `
