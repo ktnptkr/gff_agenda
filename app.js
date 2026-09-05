@@ -780,16 +780,17 @@ function openSearchEngine(platform, encodedQuery) {
         webUrl = `https://www.google.com/search?q=${encodedQuery}`;
         appScheme = `google://search?q=${encodedQuery}`;
     } else if (platform === 'gemini') {
-        webUrl = `https://gemini.google.com/app`;
+        // Updated to use Google's standard query parameter structure
+        webUrl = `https://gemini.google.com/?q=${encodedQuery}`;
         appScheme = `gemini://`;
     } else if (platform === 'chatgpt') {
-        webUrl = `https://chatgpt.com/`;
+        webUrl = `https://chatgpt.com/?q=${encodedQuery}`;
         appScheme = `chatgpt://`;
     }
 
-    // Automatically copy topic to clipboard for instant pasting
+    // Automatically copy topic to clipboard as an extra safety measure
     navigator.clipboard.writeText(query).then(() => {
-        showToast(`Topic copied! Paste into ${platform.charAt(0).toUpperCase() + platform.slice(1)}`, "📋");
+        showToast(`Topic copied! Ready for ${platform.charAt(0).toUpperCase() + platform.slice(1)}`, "📋");
     }).catch(() => {
         console.log("Clipboard copy failed");
     });
