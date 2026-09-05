@@ -1,91 +1,27 @@
-:root {
-  --paper: #F5F7FA;
-  --surface: #FFFFFF;
-  --surface-2: #EDF0F5;
-  --line: #DCE1EA;
-  --line-2: #C2CAD8;
-  --text: #111725;
-  --text-2: #4E586B;
-  --text-3: #7B8598;
-  --accent: #3A3AA8;
-  --dc: #7B8598;
-  --radius: 8px;
-  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --display: "Archivo", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+/* Custom Scrollbar Hiding */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* MBB-grade Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-
-body {
-  background: var(--paper);
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
+.glass-drawer {
+    background: rgba(248, 250, 252, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Header & Glassmorphism */
-.board {
-  position: sticky; top: 0; z-index: 40;
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
-  backdrop-filter: saturate(1.6) blur(12px);
-  border-bottom: 1px solid var(--line);
-}
-.board-in { max-width: 800px; margin: 0 auto; padding: 10px 20px; }
-.board-top { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
-.wordmark { font-family: var(--display); font-weight: 800; font-size: 17px; }
-.wordmark span { color: var(--accent); }
-.board-sub { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
-
-/* Buttons */
-.board-ctl { display: flex; gap: 10px; align-items: center; margin-top: 10px; }
-.days { display: flex; gap: 5px; }
-.daybtn {
-  padding: 7px 11px; border-radius: 6px; border: 1px solid var(--line);
-  background: var(--surface); font-weight: 600; font-size: 12.5px;
-  cursor: pointer;
-}
-.daybtn[aria-pressed="true"] {
-  background: var(--surface-2); border-color: var(--line-2); color: var(--text);
-}
-
-/* Layout */
-.shell { max-width: 800px; margin: 0 auto; padding: 18px 20px 80px; }
-.daybar { display: flex; align-items: baseline; border-bottom: 2px solid var(--dc); margin-bottom: 15px; padding-bottom: 7px; }
-.daybar h3 { font-family: var(--display); font-size: 15px; margin: 0; }
-.slotrows { display: flex; flex-direction: column; gap: 10px; }
-
-/* Event Row Styling */
-.row {
-  display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px;
-  padding: 12px; border-radius: var(--radius);
-  border-left: 3px solid var(--dc); background: var(--surface);
-  transition: background .12s ease, opacity 0.3s ease;
-  box-shadow: 0 1px 2px rgba(17,23,37,.06);
-}
-.row:hover { background: var(--surface-2); }
-.rtitle { font-family: var(--display); font-weight: 600; font-size: 14.5px; line-height: 1.32; }
-.rmeta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 5px; font-size: 12px; color: var(--text-2); }
-.rfmt { font-weight: 600; color: var(--text); }
-.code, .hall { font-family: var(--mono); font-size: 11px; }
-.rppl { margin-top: 6px; font-size: 12px; color: var(--text-3); }
-.rtags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
-.tag {
-  font-size: 10.5px; font-weight: 600; padding: 2px 6px; border-radius: 4px;
-  background: var(--surface-2); color: var(--text-2); border: 1px solid var(--line);
-}
-
-/* Dynamic State: Past Event */
+/* Logic for graying out past events */
 .past-event {
-  opacity: 0.45;
-  filter: grayscale(100%);
-  pointer-events: none;
+    opacity: 0.5;
+    filter: grayscale(100%);
 }
-.tag.completed {
-  background: #FBE9E7;
-  color: #B3261E;
-  border-color: transparent;
+.past-event-badge {
+    background-color: #fee2e2; /* light red */
+    color: #b91c1c; /* dark red */
 }
