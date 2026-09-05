@@ -740,8 +740,15 @@ function openDrawer(id) {
         ${rawDesc ? `
         <div class="mb-6">
             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">About</h3>
-            <div id="desc-container" class="text-sm text-slate-700 leading-relaxed">
-                <span id="desc-text">${truncatedDesc}</span>
+            
+            <!-- Desktop View: Always show full description -->
+            <div class="hidden md:block text-sm text-slate-700 leading-relaxed">
+                ${escapeHTML(rawDesc)}
+            </div>
+
+            <!-- Mobile View: Truncated with interactive View More toggle -->
+            <div class="md:hidden text-sm text-slate-700 leading-relaxed">
+                <span id="desc-text">${escapeHTML(truncatedDesc)}</span>
                 ${isLongDesc ? `<button onclick="toggleDescription('${encodeURIComponent(rawDesc)}', event)" id="desc-toggle-btn" class="ml-1 text-brand font-semibold text-xs hover:underline focus:outline-none inline-flex items-center">View More ▾</button>` : ''}
             </div>
         </div>` : ''}
@@ -778,20 +785,17 @@ function toggleDescription(encodedFullText, e) {
     const fullText = decodeURIComponent(encodedFullText);
     const descTextEl = document.getElementById('desc-text');
     const toggleBtnEl = document.getElementById('desc-toggle-btn');
-    const container = document.getElementById('desc-container');
 
     if (!descTextEl || !toggleBtnEl) return;
 
     const isExpanded = toggleBtnEl.getAttribute('data-expanded') === 'true';
 
     if (!isExpanded) {
-        container.classList.add('max-h-32', 'overflow-y-auto', 'pr-2', 'bg-slate-50', 'p-2.5', 'rounded-lg', 'border', 'border-slate-100');
         descTextEl.innerText = fullText;
         toggleBtnEl.innerText = 'View Less ▴';
         toggleBtnEl.setAttribute('data-expanded', 'true');
         toggleBtnEl.className = 'block mt-2 text-brand font-semibold text-xs hover:underline focus:outline-none';
     } else {
-        container.classList.remove('max-h-32', 'overflow-y-auto', 'pr-2', 'bg-slate-50', 'p-2.5', 'rounded-lg', 'border', 'border-slate-100');
         descTextEl.innerText = fullText.substring(0, 75) + '...';
         toggleBtnEl.innerText = 'View More ▾';
         toggleBtnEl.setAttribute('data-expanded', 'false');
