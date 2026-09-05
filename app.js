@@ -406,7 +406,7 @@ function updateDropdowns() {
     populateSelect('room-filter', extractUnique(baseData, 'Location / Room'), currentRoom, 'All Rooms');
     populateSelect('track-filter', extractUnique(baseData, 'Tracks', /,/), currentTrack, 'All Tracks');
     populateSelect('format-filter', extractUnique(baseData, 'Format'), currentFormat, 'All Formats');
-    populateSelect('speaker-filter', extractUnique(baseData, 'Speaker / Participant / Moderator', /,|\n/), currentSpeaker, 'All Speakers');
+    populateSelect('speaker-filter', extractUnique(baseData, 'Moderator / Speaker / Participant', /,|\n/), currentSpeaker, 'All Speakers');
     populateSelect('company-filter', extractUnique(baseData, 'Company Name', /,|\n| and | & /), currentCompany, 'All Companies');
 }
 
@@ -471,11 +471,11 @@ function renderAgenda() {
         if (currentRoom !== 'all' && e["Location / Room"] !== currentRoom) return false;
         if (currentTrack !== 'all' && (!e.Tracks || !e.Tracks.includes(currentTrack))) return false;
         if (currentFormat !== 'all' && e.Format !== currentFormat) return false;
-        if (currentSpeaker !== 'all' && (!e["Speaker / Participant / Moderator"] || !e["Speaker / Participant / Moderator"].includes(currentSpeaker))) return false;
+        if (currentSpeaker !== 'all' && (!e["Moderator / Speaker / Participant"] || !e["Moderator / Speaker / Participant"].includes(currentSpeaker))) return false;
         if (currentCompany !== 'all' && (!e["Company Name"] || !e["Company Name"].includes(currentCompany))) return false;
         
         if (searchQuery) {
-            const searchStr = `${e["Activity Name"]} ${e["Speaker / Participant / Moderator"]} ${e["Company Name"]} ${e["Location / Room"]} ${e.Tracks}`.toLowerCase();
+            const searchStr = `${e["Activity Name"]} ${e["Moderator / Speaker / Participant"]} ${e["Company Name"]} ${e["Location / Room"]} ${e.Tracks}`.toLowerCase();
             if (!searchStr.includes(searchQuery)) return false;
         }
         return true;
@@ -519,7 +519,7 @@ function renderAgenda() {
             const status = checkLiveStatus(event.Date, event.Time);
             const isSaved = savedSessionIds.includes(event.id);
             
-            let speakers = event["Speaker / Participant / Moderator"] ? event["Speaker / Participant / Moderator"].replace(/\n/g, ', ') : "";
+            let speakers = event["Moderator / Speaker / Participant"] ? event["Moderator / Speaker / Participant"].replace(/\n/g, ', ') : "";
             if(speakers.length > 50) speakers = speakers.substring(0, 50) + '...';
 
             html += `
@@ -734,7 +734,7 @@ function openDrawer(id) {
         </div>
         
         ${event.Description ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">About</h3><p class="text-sm text-slate-700 leading-relaxed">${event.Description}</p></div>` : ''}
-        ${event["Speaker / Participant / Moderator"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Speakers</h3><div class="text-sm font-semibold text-slate-800 leading-relaxed whitespace-pre-line">${event["Speaker / Participant / Moderator"]}</div></div>` : ''}
+        ${event["Moderator / Speaker / Participant"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Speakers / Moderators</h3><div class="text-sm font-semibold text-slate-800 leading-relaxed whitespace-pre-line">${event["Moderator / Speaker / Participant"]}</div></div>` : ''}
         ${event["Company Name"] ? `<div class="mb-6"><h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Companies</h3><p class="text-sm text-slate-600 leading-relaxed">${event["Company Name"]}</p></div>` : ''}
         ${event.Tracks ? `<div class="pt-4 border-t border-slate-200/50 flex flex-wrap gap-2 mb-6">${event.Tracks.split(',').map(t => `<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[11px] uppercase tracking-wider font-bold rounded-md shadow-sm">${t.trim()}</span>`).join('')}</div>` : ''}
 
