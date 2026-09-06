@@ -1,12 +1,12 @@
-// Application State - Defect #8: Added SessionStorage state persistence
-let currentDate = sessionStorage.getItem('gff_filter_date') || "all"; 
-let currentTrack = sessionStorage.getItem('gff_filter_track') || "all";
-let currentFormat = sessionStorage.getItem('gff_filter_format') || "all";
-let currentRoom = sessionStorage.getItem('gff_filter_room') || "all";
-let currentSpeaker = sessionStorage.getItem('gff_filter_speaker') || "all";
-let currentCompany = sessionStorage.getItem('gff_filter_company') || "all";
-let searchQuery = sessionStorage.getItem('gff_filter_search') || "";
-let viewMode = sessionStorage.getItem('gff_filter_view') || "all"; 
+// Application State
+let currentDate = "all"; 
+let currentTrack = "all";
+let currentFormat = "all";
+let currentRoom = "all";
+let currentSpeaker = "all";
+let currentCompany = "all";
+let searchQuery = "";
+let viewMode = "all"; 
 let savedSessionIds = JSON.parse(localStorage.getItem('gff_saved_sessions')) || [];
 
 // Use actual real-time clock for "Live Now" matching
@@ -26,10 +26,6 @@ const LIVE_ANNOUNCEMENTS = [
 document.addEventListener("DOMContentLoaded", () => {
     if (typeof AGENDA_DATA === 'undefined') return;
     
-    // Restore Search Input
-    const searchInput = document.getElementById('search-input');
-    if(searchInput) searchInput.value = searchQuery;
-
     checkAnnouncements();
     handleUrlHash();
     initTabs();
@@ -40,15 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderAgenda();
 
     setInterval(checkUpcomingReminders, 30000); 
-
-    // Defect #2: Escape key handling to close drawers/modals
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            if (isChatOpen) toggleChatDrawer();
-            closeDrawer();
-            closeMapModal();
-        }
-    });
 });
 
 // Chat Drawer & Validation Logic with GTM Lead Storage
@@ -57,15 +44,9 @@ function toggleChatDrawer() {
     const drawer = document.getElementById('chat-drawer');
     if (isChatOpen) {
         drawer.classList.remove('translate-y-full');
-        // Defect #1: Accessibility rendering removal
-        drawer.removeAttribute('inert');
-        drawer.removeAttribute('aria-hidden');
         checkChatValidationState();
     } else {
         drawer.classList.add('translate-y-full');
-        // Defect #1: Accessibility rendering removal
-        drawer.setAttribute('inert', '');
-        drawer.setAttribute('aria-hidden', 'true');
     }
 }
 
@@ -172,6 +153,7 @@ const PROFANITY_LIST = [
 function containsProfanity(text) {
     if (!text) return false;
     
+    // Convert to lowercase and normalize substitute/leetspeak characters
     const lowerText = text.toLowerCase();
     const normalized = lowerText
         .replace(/[@4]/g, 'a')
@@ -179,9 +161,11 @@ function containsProfanity(text) {
         .replace(/[1!|]/g, 'i')
         .replace(/[0]/g, 'o')
         .replace(/[$5]/g, 's')
-        .replace(/[^a-z0-9\s]/g, '');
+        .replace(/[^a-z0-9\s]/g, ''); // strip punctuation/symbols used for evasion
 
+    // Check for exact word matches or substring matches against the denylist
     return PROFANITY_LIST.some(word => {
+        // Use word boundary check for short words to avoid false positives (e.g., "class" containing "ass")
         if (word.length <= 4) {
             const regex = new RegExp(`\\b${word}\\b`, 'i');
             return regex.test(normalized) || regex.test(lowerText);
@@ -195,11 +179,13 @@ async function sendChatMessage() {
     const message = msgInput.value.trim();
     if (!message) return;
 
+    // Check for Profanity or Spam Keywords
     if (containsProfanity(message)) {
         showToast("Message blocked: Contains prohibited language or spam terms.", "⚠️");
         return;
     }
 
+    // Check for Duplicate Flood protection (comparing against last sent text)
     const lastSent = sessionStorage.getItem('gff_last_msg') || '';
     if (lastSent === message) {
         showToast("Spam protection: Please avoid sending duplicate messages.", "⚠️");
@@ -384,33 +370,24 @@ function initTabs() {
         if(actionsBar) actionsBar.classList.add('hidden');
     };
 
-    if(tabs.all) {
-        if(viewMode === 'all') tabs.all.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
-        tabs.all.addEventListener('click', () => {
-            viewMode = "all"; sessionStorage.setItem('gff_filter_view', viewMode); resetTabs();
-            tabs.all.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
-            updateDropdowns(); renderAgenda();
-        });
-    }
+    if(tabs.all) tabs.all.addEventListener('click', () => {
+        viewMode = "all"; resetTabs();
+        tabs.all.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
+        updateDropdowns(); renderAgenda();
+    });
 
-    if(tabs.saved) {
-        if(viewMode === 'saved') tabs.saved.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
-        tabs.saved.addEventListener('click', () => {
-            viewMode = "saved"; sessionStorage.setItem('gff_filter_view', viewMode); resetTabs();
-            tabs.saved.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
-            if(actionsBar) actionsBar.classList.remove('hidden');
-            updateDropdowns(); renderAgenda();
-        });
-    }
+    if(tabs.saved) tabs.saved.addEventListener('click', () => {
+        viewMode = "saved"; resetTabs();
+        tabs.saved.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-navy shadow transition whitespace-nowrap";
+        if(actionsBar) actionsBar.classList.remove('hidden');
+        updateDropdowns(); renderAgenda();
+    });
 
-    if(tabs.live) {
-        if(viewMode === 'live') tabs.live.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-red-600 shadow transition whitespace-nowrap flex items-center gap-1.5";
-        tabs.live.addEventListener('click', () => {
-            viewMode = "live"; sessionStorage.setItem('gff_filter_view', viewMode); resetTabs();
-            tabs.live.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-red-600 shadow transition whitespace-nowrap flex items-center gap-1.5";
-            updateDropdowns(); renderAgenda();
-        });
-    }
+    if(tabs.live) tabs.live.addEventListener('click', () => {
+        viewMode = "live"; resetTabs();
+        tabs.live.className = "px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-red-600 shadow transition whitespace-nowrap flex items-center gap-1.5";
+        updateDropdowns(); renderAgenda();
+    });
 
     const notifBtn = document.getElementById('enable-notif-btn');
     if(notifBtn) {
@@ -453,7 +430,6 @@ function initDateButtons() {
 
 function setDate(date) {
     currentDate = date;
-    sessionStorage.setItem('gff_filter_date', date);
     document.querySelectorAll('.date-btn').forEach(btn => {
         btn.className = `date-btn px-4 py-1.5 rounded-full text-sm font-semibold transition flex-shrink-0 ${btn.getAttribute('data-date') === date ? 'bg-navy text-white shadow-md' : 'bg-white text-slate-600 border border-slate-200'}`;
     });
@@ -499,28 +475,22 @@ function populateSelect(id, options, currentValue, defaultLabel) {
         el.value = currentValue;
     } else {
         el.value = 'all';
-        if (id === 'room-filter') { currentRoom = 'all'; sessionStorage.setItem('gff_filter_room', 'all'); }
-        if (id === 'track-filter') { currentTrack = 'all'; sessionStorage.setItem('gff_filter_track', 'all'); }
-        if (id === 'format-filter') { currentFormat = 'all'; sessionStorage.setItem('gff_filter_format', 'all'); }
-        if (id === 'speaker-filter') { currentSpeaker = 'all'; sessionStorage.setItem('gff_filter_speaker', 'all'); }
-        if (id === 'company-filter') { currentCompany = 'all'; sessionStorage.setItem('gff_filter_company', 'all'); }
+        if (id === 'room-filter') currentRoom = 'all';
+        if (id === 'track-filter') currentTrack = 'all';
+        if (id === 'format-filter') currentFormat = 'all';
+        if (id === 'speaker-filter') currentSpeaker = 'all';
+        if (id === 'company-filter') currentCompany = 'all';
     }
 }
 
 function setupListeners() {
     const addEvt = (id, evt, fn) => { const el = document.getElementById(id); if(el) el.addEventListener(evt, fn); };
-    
-    addEvt('room-filter', 'change', e => { currentRoom = e.target.value; sessionStorage.setItem('gff_filter_room', currentRoom); renderAgenda(); });
-    addEvt('track-filter', 'change', e => { currentTrack = e.target.value; sessionStorage.setItem('gff_filter_track', currentTrack); renderAgenda(); });
-    addEvt('format-filter', 'change', e => { currentFormat = e.target.value; sessionStorage.setItem('gff_filter_format', currentFormat); renderAgenda(); });
-    addEvt('speaker-filter', 'change', e => { currentSpeaker = e.target.value; sessionStorage.setItem('gff_filter_speaker', currentSpeaker); renderAgenda(); });
-    addEvt('company-filter', 'change', e => { currentCompany = e.target.value; sessionStorage.setItem('gff_filter_company', currentCompany); renderAgenda(); });
-    
-    addEvt('search-input', 'input', e => { 
-        searchQuery = e.target.value; 
-        sessionStorage.setItem('gff_filter_search', searchQuery);
-        renderAgenda(); 
-    });
+    addEvt('room-filter', 'change', e => { currentRoom = e.target.value; renderAgenda(); });
+    addEvt('track-filter', 'change', e => { currentTrack = e.target.value; renderAgenda(); });
+    addEvt('format-filter', 'change', e => { currentFormat = e.target.value; renderAgenda(); });
+    addEvt('speaker-filter', 'change', e => { currentSpeaker = e.target.value; renderAgenda(); });
+    addEvt('company-filter', 'change', e => { currentCompany = e.target.value; renderAgenda(); });
+    addEvt('search-input', 'input', e => { searchQuery = e.target.value.toLowerCase(); renderAgenda(); });
 }
 
 function parseTimes(dateStr, timeStr) {
@@ -562,12 +532,9 @@ function renderAgenda() {
         if (currentSpeaker !== 'all' && (!e["Moderator / Speaker / Participant"] || !e["Moderator / Speaker / Participant"].includes(currentSpeaker))) return false;
         if (currentCompany !== 'all' && (!e["Company Name"] || !e["Company Name"].includes(currentCompany))) return false;
         
-        // Defect #3 & #4: Multi-keyword search using array mapping & space trimming
-        if (searchQuery && searchQuery.trim() !== '') {
-            const tokens = searchQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        if (searchQuery) {
             const searchStr = `${e["Activity Name"]} ${e["Moderator / Speaker / Participant"]} ${e["Company Name"]} ${e["Location / Room"]} ${e.Tracks}`.toLowerCase();
-            const matchesAll = tokens.every(token => searchStr.includes(token));
-            if (!matchesAll) return false;
+            if (!searchStr.includes(searchQuery)) return false;
         }
         return true;
     });
@@ -661,16 +628,8 @@ function openVenueMap(roomName) {
             <p class="text-sm font-bold text-navy">Interactive Floor Plan</p>
             <p class="text-xs text-slate-600 mt-1">Route: Main Escalator -> Level 2 -> ${roomName}</p>
         </div>`;
-    
     mapOverlay.classList.remove('hidden');
-    // Defect #1: Accessibility rendering removal
-    mapOverlay.removeAttribute('aria-hidden');
-    mapModal.removeAttribute('inert');
-
-    setTimeout(() => { 
-        mapOverlay.classList.remove('opacity-0'); 
-        mapModal.classList.remove('translate-y-full'); 
-    }, 10);
+    setTimeout(() => { mapOverlay.classList.remove('opacity-0'); mapModal.classList.remove('translate-y-full'); }, 10);
 }
 
 function closeMapModal() {
@@ -679,11 +638,6 @@ function closeMapModal() {
     if(mapOverlay && mapModal) {
         mapOverlay.classList.add('opacity-0'); 
         mapModal.classList.add('translate-y-full');
-        
-        // Defect #1: Accessibility rendering removal
-        mapOverlay.setAttribute('aria-hidden', 'true');
-        mapModal.setAttribute('inert', '');
-
         setTimeout(() => mapOverlay.classList.add('hidden'), 300);
     }
 }
@@ -827,8 +781,7 @@ function openDrawer(id) {
     const shareBtn = document.getElementById('drawer-share-btn');
     if(shareBtn) shareBtn.setAttribute('onclick', `shareSession('${event.id}')`);
     
-    // Defect #5: Fixed String Escaping by replacing unescaped single quotes inside encodeURIComponent
-    const topicQuery = encodeURIComponent(event["Activity Name"]).replace(/'/g, "%27");
+    const topicQuery = encodeURIComponent(event["Activity Name"]);
     const rawDesc = event.Description || '';
     const isLongDesc = rawDesc.length > 75;
     const truncatedDesc = isLongDesc ? rawDesc.substring(0, 75) + '...' : rawDesc;
@@ -853,7 +806,7 @@ function openDrawer(id) {
             <!-- Mobile View: Truncated with interactive View More toggle -->
             <div class="md:hidden text-sm text-slate-700 leading-relaxed">
                 <span id="desc-text">${escapeHTML(truncatedDesc)}</span>
-                ${isLongDesc ? `<button onclick="toggleDescription('${encodeURIComponent(rawDesc).replace(/'/g, "%27")}', event)" id="desc-toggle-btn" class="ml-1 text-brand font-semibold text-xs hover:underline focus:outline-none inline-flex items-center">View More ▾</button>` : ''}
+                ${isLongDesc ? `<button onclick="toggleDescription('${encodeURIComponent(rawDesc)}', event)" id="desc-toggle-btn" class="ml-1 text-brand font-semibold text-xs hover:underline focus:outline-none inline-flex items-center">View More ▾</button>` : ''}
             </div>
         </div>` : ''}
 
@@ -878,10 +831,6 @@ function openDrawer(id) {
     `;
 
     drawerOverlay.classList.remove('hidden');
-    // Defect #1: Accessibility rendering removal
-    drawerOverlay.removeAttribute('aria-hidden');
-    drawer.removeAttribute('inert');
-    
     setTimeout(() => {
         drawerOverlay.classList.remove('opacity-0');
         drawer.classList.remove('translate-y-full');
@@ -959,11 +908,6 @@ function closeDrawer() {
     if(drawerOverlay && drawer) {
         drawerOverlay.classList.add('opacity-0');
         drawer.classList.add('translate-y-full');
-        
-        // Defect #1: Accessibility rendering removal
-        drawerOverlay.setAttribute('aria-hidden', 'true');
-        drawer.setAttribute('inert', '');
-
         setTimeout(() => drawerOverlay.classList.add('hidden'), 300);
     }
 }
