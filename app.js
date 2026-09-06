@@ -154,15 +154,20 @@ function openGlobalRecommendations(baseEventId = null) {
                 <p class="text-sm text-slate-500 mb-4">Based on your interests and trending topics:</p>
                 <div class="flex flex-col gap-3">
                     ${suggestions.map(s => {
+                        const isSaved = savedSessionIds.includes(s.id);
                         return `
-                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 flex justify-between items-center gap-3 hover:shadow-md transition cursor-pointer" onclick="closeSecondaryModal(); openDrawer('${s.id}')">
+                        <div class="bg-white border border-slate-200 rounded-xl p-3 flex justify-between items-center gap-3 hover:bg-slate-50 hover:shadow-md transition cursor-pointer" onclick="closeSecondaryModal(); openDrawer('${s.id}')">
                             <div class="flex-1">
                                 <h4 class="text-xs font-bold text-navy line-clamp-2 mb-1">${s["Activity Name"]}</h4>
-                                <div class="flex justify-between items-center text-[10px] text-slate-500">
-                                    <span>🕒 ${s.Time} • 📍 ${s["Location / Room"] || 'TBA'}</span>
+                                <div class="flex items-center gap-1.5 text-[10px] text-slate-500">
+                                    <span>🕒 ${s.Time}</span>
+                                    <span>•</span>
+                                    <span>👥 ${getInterestCount(s.id)} attending</span>
                                 </div>
                             </div>
-                            <span class="text-brand font-semibold text-xs flex-shrink-0 px-2">+ View</span>
+                            <button onclick="toggleSave('${s.id}', event)" class="w-8 h-8 flex items-center justify-center rounded-full transition ${isSaved ? 'bg-brand/10 text-brand border-brand/20' : 'bg-white border-slate-200 text-slate-400 hover:bg-slate-50'} shadow-sm flex-shrink-0" aria-label="Bookmark">
+                                <svg width="16" height="16" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            </button>
                         </div>`;
                     }).join('')}
                 </div>
@@ -1006,6 +1011,9 @@ function openDrawer(id) {
     }
 
     drawerContent.innerHTML = drawerHTML;
+    
+    // Auto-scroll the drawer content to the top when navigating between sessions
+    drawerContent.scrollTop = 0;
     
     drawerOverlay.classList.remove('hidden');
     drawerOverlay.removeAttribute('aria-hidden');
